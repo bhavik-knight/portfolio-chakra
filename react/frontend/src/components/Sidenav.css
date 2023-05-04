@@ -1,0 +1,13 @@
+.sidenavButton {
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.sidenavButton:hover {
+    cursor: pointer;
+    border: 2px solid cyan;
+}
+
+.sidenavButton:active {
+    background-color: red;
+}

@@ -1,55 +1,59 @@
-import { Box, Flex, Image, ButtonGroup, Text, Container, IconButton, Icon } from "@chakra-ui/react"
 import { SunIcon, MoonIcon } from "@chakra-ui/icons"
-import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
-import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
+import { FaLinkedinIn, FaGithub } from "./Icons"
+import { Button, Menu, Box, Flex, Image, ButtonGroup, Text, Container, IconButton, Icon } from "@chakra-ui/react"
+
 
 // ref: https://dev.to/davidemaye/how-to-set-up-font-awesome-in-react-5a8d
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedinIn, faGithubSquare } from "@fortawesome/free-brands-svg-icons"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faLinkedinIn, faGithubSquare } from "@fortawesome/free-brands-svg-icons"
 
 
-function Header({ darkMode, setDarkMode }) {
+function Header({ darkMode, changeDarkMode }) {
     const sunIcon = <IconButton
         variant="solid"
-        fontSize={{ base: "sm", lg: "lg" }}
+        fontSize={{ base: "sm", lg: "4xl" }}
         borderRadius="4px"
-        colorScheme="teal"
-        icon={< SunIcon />} onClick={setDarkMode}
+        colorScheme="blackAlpha"
+        icon={< SunIcon />} onClick={changeDarkMode}
     />
 
     const moonIcon = <IconButton
         variant="solid"
-        fontSize={{ base: "sm", lg: "lg" }}
+        fontSize={{ base: "sm", lg: "4xl" }}
         borderRadius="4px"
-        colorScheme="teal"
-        icon={<MoonIcon />} onClick={setDarkMode}
+        colorScheme="blackAlpha"
+        icon={<MoonIcon />} onClick={changeDarkMode}
     />
 
     const linkedinIcon = <IconButton
         variant="solid"
         fontSize={{ base: "sm", lg: "4xl" }}
         borderRadius="4px"
-        colorScheme="teal"
+        colorScheme="blackAlpha"
         icon={<FaLinkedinIn />}
-        onClick={() => console.log(`open linkedin`)}
+        onClick={() => open("https://linkedin.com/in/bhavikbhagat", "_blank")}
     />
 
     const gitHubIcon = <IconButton
         variant="solid"
         fontSize={{ base: "sm", lg: "4xl" }}
         borderRadius="4px"
-        colorScheme="teal"
+        colorScheme="blackalpha"
         icon={<FaGithub />}
-        onClick={() => console.log(`open github`)}
+        onClick={() => open("https://github.com/bhavik-knight", "_blank")}
     />
 
     return (
         <Flex as="nav" className="navbar" h={{ base: "50px", md: "60px" }}>
-            <Image className="logo" src="./bhavik_logo.png" w="10%" />
-            <Container flexGrow="1" bg="transparent">
-                <Text fontSize={{ base: "sm", lg: "4xl" }} textAlign="center"> Bhavik's Portfolio</Text>
+            <Image
+                className="logo"
+                src="./bhavik_logo.png"
+                w={{ base: "40%", md: "15%" }}
+            />
+            <Container flexGrow={{ base: 0, md: "1" }} bg="transparent">
+                <Text fontSize={{ base: "sm", md: "4xl" }} textAlign="center"> Bhavik's Portfolio</Text>
             </Container>
-            <ButtonGroup variant="outline" px={2}>
+            <ButtonGroup display={{ base: "none", md: "inline-flex" }} variant="outline" px={2}>
                 {linkedinIcon}
                 {gitHubIcon}
                 {darkMode ? sunIcon : moonIcon}

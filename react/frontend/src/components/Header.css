@@ -1,5 +1,13 @@
 .logo {
-    background-color: black;
+    background-color: transparent;
     height: 52px;
     padding: 4px;
+}
+
+button {
+    margin-inline: 4px;
+}
+
+button:hover {
+    border: 2px solid cyan;
 }
