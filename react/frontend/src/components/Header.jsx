@@ -28,12 +28,14 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
 function Header({ darkMode, changeDarkMode, title }) {
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
+    let navbarBg = verticalScroll === 0
     let bgColor = `linear-gradient(violet, purple)`
 
     useEffect(() => {
         // check and handle the vertical scroll value constantly
         function handleScroll() {
             setVerticalScroll(window.scrollY)
+            console.log(`nbg ${navbarBg}`)
         }
 
         // add event listener to check for vertical scroll
@@ -70,7 +72,7 @@ function Header({ darkMode, changeDarkMode, title }) {
     return (
         <Flex as="nav"
             className="navbar"
-            bg={{ base: `${bgColor}`, md: `${verticalScroll === 0 ? "none" : bgColor}` }}
+            bg={{ base: `${bgColor}`, md: `${navbarBg ? "transparent" : bgColor}` }}
             h={{ base: "50px", md: "60px" }}
         >
             <Image
