@@ -11,3 +11,7 @@ button {
 button:hover {
     border: 2px solid cyan;
 }
+
+.navbar p {
+    text-transform: capitalize;
+}

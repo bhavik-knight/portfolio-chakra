@@ -2,6 +2,12 @@
 @import url("./components/Footer.css");
 @import url("./components/Sidenav.css");
 
+.container-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
 .header {
     position: fixed;
     left: 0;

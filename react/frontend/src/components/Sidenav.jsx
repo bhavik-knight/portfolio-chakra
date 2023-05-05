@@ -1,28 +1,12 @@
 import { List, ListItem, Button, ButtonGroup, IconButton, Icon, Flex } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
-import {
-    FaHome,
-    FaTools,
-    MdWork,
-    GiFilmProjector,
-    MdSchool,
-    FaAward
-} from "./Icons"
 
-function Sidenav(props) {
-    const icons = {
-        "home": <FaHome />,
-        "skills": <FaTools />,
-        "projects": <GiFilmProjector />,
-        "education": <MdSchool />,
-        "certificates": <FaAward />,
-        "experiences": <MdWork />,
-    }
+function Sidenav({ pages, activePage, selectPage }) {
 
     return (
         <Flex flexWrap="wrap" flexDirection={{ base: "row", md: "column" }}>
             {
-                props.pages.map(page => {
+                Object.keys(pages).map((page) => {
                     return (
                         <Button
                             key={nanoid()}
@@ -30,9 +14,9 @@ function Sidenav(props) {
                             variant="solid"
                             colorScheme="blackAlpha"
                             className="sidenavButton"
-                            onClick={(event) => props.selectPage(event)}
-                            isActive={page === props.activePage}
-                            leftIcon={icons[page]}
+                            onClick={(event) => selectPage(event)}
+                            isActive={page === activePage}
+                            leftIcon={pages[page]["icon"]}
                             size={{ base: "sm", md: "lg" }}
                             width={{ base: "fit-content", md: "200px" }}
                         >
@@ -41,7 +25,7 @@ function Sidenav(props) {
                     )
                 })
             }
-        </Flex>
+        </Flex >
     )
 }
 

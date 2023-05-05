@@ -8,6 +8,7 @@ import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 import { MdWork } from "@react-icons/all-files/md/MdWork"
 import { FaAward } from "@react-icons/all-files/fa/FaAward"
+import { ImLinkedin2 } from "@react-icons/all-files/im/ImLinkedin2"
 
 export const certificateIcon = <Image
     src="certificate_icon.png"
@@ -26,4 +27,5 @@ export {
     FaGithub,
     MdWork,
     FaAward,
+    ImLinkedin2,
 }
