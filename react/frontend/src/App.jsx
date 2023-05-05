@@ -22,13 +22,13 @@ import {
 function App() {
 
   // to toggle the darkmode
-  const [darkMode, setDarkMode] = useBoolean(JSON.parse(localStorage.getItem("darkMode")) || false)
+  const [lightMode, setLightMode] = useBoolean(() => JSON.parse(localStorage.getItem("lightMode")) || false)
   useEffect(() => {
     // set dark mode to the local storage
-    localStorage.setItem("darkMode", darkMode)
-    darkMode ? setBgImg("galaxy_hd.jpg") : setBgImg("snow.jpg")
+    localStorage.setItem("lightMode", lightMode)
+    lightMode ? setBgImg("snow.jpg") : setBgImg("galaxy_hd.jpg")
     console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
-  }, [darkMode])
+  }, [lightMode])
 
   // pages in the portfolio
   const pages = {
@@ -89,8 +89,8 @@ function App() {
       >
         <GridItem area={`header`} className="header">
           <Header
-            darkMode={darkMode}
-            changeDarkMode={setDarkMode.toggle}
+            lightMode={lightMode}
+            changeLightMode={setLightMode.toggle}
             title={currentPage}
           />
         </GridItem>

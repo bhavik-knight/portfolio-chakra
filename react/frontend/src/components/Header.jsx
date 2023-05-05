@@ -25,7 +25,7 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
 }
 
 
-function Header({ darkMode, changeDarkMode, title }) {
+function Header({ lightMode, changeLightMode, title }) {
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
     let navbarBg = verticalScroll === 0
@@ -48,13 +48,13 @@ function Header({ darkMode, changeDarkMode, title }) {
     const sunIcon = getNavbarIconButton(
         "sun",
         <SunIcon />,
-        changeDarkMode
+        changeLightMode
     )
 
     const moonIcon = getNavbarIconButton(
         "moon",
         <MoonIcon />,
-        changeDarkMode
+        changeLightMode
     )
 
     const linkedinIcon = getNavbarIconButton(
@@ -89,7 +89,7 @@ function Header({ darkMode, changeDarkMode, title }) {
             <ButtonGroup spacing={{ base: "-0.5", md: "2" }}>
                 {linkedinIcon}
                 {gitHubIcon}
-                {darkMode ? sunIcon : moonIcon}
+                {lightMode ? moonIcon : sunIcon}
             </ButtonGroup>
         </Flex >
     )
