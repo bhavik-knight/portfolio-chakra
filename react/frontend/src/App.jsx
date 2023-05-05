@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from "react"
-import { Box, Flex, Menu, Grid, GridItem, ButtonGroup, useBoolean } from "@chakra-ui/react"
+import { Box, Flex, Menu, Grid, GridItem, ButtonGroup, useBoolean, useColorMode } from "@chakra-ui/react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
 import { Sidenav } from "./components/Sidenav"
@@ -19,10 +19,14 @@ import {
   MdWork,
 } from "./components/Icons"
 
-function App() {
 
+function App() {
   // to toggle the darkmode
   const [lightMode, setLightMode] = useBoolean(() => JSON.parse(localStorage.getItem("lightMode")) || false)
+  function handleColorMode() {
+    setLightMode.toggle
+  }
+
   useEffect(() => {
     // set dark mode to the local storage
     localStorage.setItem("lightMode", lightMode)
@@ -115,7 +119,6 @@ function App() {
 }
 
 export default App
-
 
 {/*
 // reference: background

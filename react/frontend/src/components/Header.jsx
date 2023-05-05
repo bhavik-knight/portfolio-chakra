@@ -26,6 +26,7 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
 
 
 function Header({ lightMode, changeLightMode, title }) {
+
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
     let navbarBg = verticalScroll === 0
