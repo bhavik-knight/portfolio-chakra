@@ -1,5 +1,5 @@
 import { SunIcon, MoonIcon } from "@chakra-ui/icons"
-import { FaLinkedinIn, FaGithub, } from "./Icons"
+import { icons } from "./Icons"
 import { Button, Menu, Box, Flex, Image, ButtonGroup, Text, Container, IconButton, Icon, useMediaQuery } from "@chakra-ui/react"
 import { useState, useRef, useEffect } from "react"
 
@@ -59,13 +59,13 @@ function Header({ lightMode, changeLightMode, title }) {
 
     const linkedinIcon = getNavbarIconButton(
         "linkedin",
-        <FaLinkedinIn />,
+        icons["linkedin"],
         () => open("https://linkedin.com/in/bhavikbhagat", "_blank")
     )
 
     const gitHubIcon = getNavbarIconButton(
         "github",
-        <FaGithub />,
+        icons["github"],
         () => open("https://github.com/bhavik-knight", "_blank")
     )
 
