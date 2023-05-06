@@ -10,14 +10,7 @@ import { Education } from "./components/Education"
 import { Certificates } from "./components/Certificates"
 import { Experiences } from "./components/Experiences"
 import { About } from "./components/About"
-import {
-  FaHome,
-  FaTools,
-  GiFilmProjector,
-  MdSchool,
-  FaAward,
-  MdWork,
-} from "./components/Icons"
+import { icons } from "./components/Icons"
 
 
 function App() {
@@ -37,32 +30,32 @@ function App() {
   // pages in the portfolio
   const pages = {
     "home": {
-      "icon": <FaHome />,
+      "icon": icons.home,
       "page": <About />,
     },
 
     "skills": {
-      "icon": <FaTools />,
+      "icon": icons.skills,
       "page": <Skills />,
     },
 
     "projects": {
-      "icon": <GiFilmProjector />,
+      "icon": icons.projects,
       "page": <Projects />,
     },
 
     "education": {
-      "icon": <MdSchool />,
+      "icon": icons.education,
       "page": <Education />,
     },
 
     "certificates": {
-      "icon": <FaAward />,
+      "icon": icons.certificates,
       "page": <Certificates />,
     },
 
     "experiences": {
-      "icon": <MdWork />,
+      "icon": icons.experiences,
       "page": <Experiences />,
     }
   }
