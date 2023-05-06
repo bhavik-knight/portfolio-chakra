@@ -1,0 +1,53 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "title": "Halifax Canoe and Kayak",
+            "description": "I have developed this website for booking canoe and kayak adventures. This projects demonstrate my skills in full-stack developement and basic of dev ops. This was a project for Digital Nova Scotia - Skills for Hire program.",
+            "type": "web",
+            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "uri": "http://35.182.245.62",
+            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "technologies": [
+                "php",
+                "javascript",
+                "jquery",
+                "html",
+                "css",
+                "bootstrap",
+                "git",
+                "mysql",
+                "docker",
+                "heroku",
+                "aws"
+            ],
+            "details": [
+                "task1",
+                "task2",
+                "task3"
+            ],
+            "projectImgs": "./projects/hck_dns_sfha/"
+        },
+        {
+            "id": 2,
+            "title": "Hotel Management",
+            "description": "HMGMT",
+            "type": "data",
+            "github": "",
+            "uri": "",
+            "displayImg": "",
+            "technologies": [
+                "sql",
+                "oracle",
+                "ERD",
+                "3NF",
+                "relational database"
+            ],
+            "details": [
+                "task1",
+                "task2"
+            ],
+            "projectImgs": ""
+        }
+    ]
+}
