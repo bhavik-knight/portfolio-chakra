@@ -105,12 +105,12 @@ function App() {
         </GridItem>
 
         {/* main page */}
-        <GridItem as="main" bg="none" area={`main`}>
+        <GridItem as="main" area={`main`}>
           {pages[currentPage].page}
         </GridItem>
 
         {/* footer */}
-        <GridItem as="nav" bg="green.200" area={`footer`} position={{ base: "fixed", md: "absolute" }} className="footer">
+        <GridItem as="nav" bg="orange" area={`footer`} position={{ base: "fixed", md: "absolute" }} className="footer">
           <Footer />
         </GridItem>
       </Grid>

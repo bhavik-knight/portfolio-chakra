@@ -1,6 +1,7 @@
 @import url("./components/Header.css");
 @import url("./components/Footer.css");
 @import url("./components/Sidenav.css");
+@import url("./components/Projects.css");
 
 .container-bg-image {
     background-repeat: no-repeat;

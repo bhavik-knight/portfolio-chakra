@@ -1,0 +1,14 @@
+.tabLable button {
+    text-decoration: wavy;
+}
+
+.projectDisplayImg {
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.projectDisplayImg:hover {
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: 0.3s ease-out;
+}

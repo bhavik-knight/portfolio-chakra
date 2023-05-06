@@ -10,7 +10,6 @@ import { useState, useRef, useEffect } from "react"
 
 // to create icons for navbar with consistent style
 function getNavbarIconButton(btnName, btnIcon, handleClick) {
-
     return (
         <IconButton
             variant="solid"
@@ -29,14 +28,14 @@ function Header({ lightMode, changeLightMode, title }) {
 
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
-    let navbarBg = verticalScroll === 0
+    let navbarBg = (verticalScroll === 0)
     let bgColor = `linear-gradient(violet, purple)`
 
     useEffect(() => {
         // check and handle the vertical scroll value constantly
         function handleScroll() {
             setVerticalScroll(window.scrollY)
-            console.log(`nbg ${navbarBg}`)
+            // console.log(`nbg ${navbarBg}`)
         }
 
         // add event listener to check for vertical scroll
