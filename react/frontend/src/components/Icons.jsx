@@ -25,8 +25,9 @@ import { FaGitAlt } from "@react-icons/all-files/fa/FaGitAlt"
 import { SiAmazonaws } from "@react-icons/all-files/si/SiAmazonaws"
 import { SiHeroku } from "@react-icons/all-files/si/SiHeroku"
 import { FaDocker } from "@react-icons/all-files/fa/FaDocker"
+import { useMediaQuery } from "@chakra-ui/react"
 
-const size = { base: "md", sm: "64px" }
+const size = "32px"
 
 const icons = {
     "home": <FaHome fontSize={size} />,

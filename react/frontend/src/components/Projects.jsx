@@ -1,4 +1,4 @@
-import { projects } from "../data/projects.json"
+import { projects } from "../data/portfolio_db.json"
 import { useState } from "react"
 import {
     Box,
@@ -29,7 +29,7 @@ function Projects() {
         return projectList.map(project =>
             <Card key={nanoid()} bg="none" border="2px solid cyan" maxH="500px" justifyContent="center">
                 <HStack p={0} bg="orange.800">
-                    <Flex p={2} bg="gray" width="40%" maxW="500px">
+                    <Flex p={2} bg="gray" width="40%" maxW="50%">
                         <Img src={project.displayImg} className="projectDisplayImg" />
                     </Flex>
 
@@ -47,7 +47,7 @@ function Projects() {
                                 {
                                     project.technologies.map(tech => {
                                         return (
-                                            <WrapItem key={nanoid()} border="2px solid white">
+                                            <WrapItem key={nanoid()} spacing={2} border="2px solid white" borderRadius="8px">
                                                 {icons[tech]}
                                             </WrapItem>
                                         )

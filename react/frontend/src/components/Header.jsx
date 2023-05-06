@@ -13,7 +13,7 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
     return (
         <IconButton
             variant="solid"
-            fontSize={{ base: "md", lg: "4xl" }}
+            fontSize={{ base: "md", lg: "2xl" }}
             borderRadius="4px"
             colorScheme="transparent"
             name={btnName}
@@ -72,6 +72,7 @@ function Header({ lightMode, changeLightMode, title }) {
     return (
         <Flex as="nav"
             className="navbar"
+            px={4}
             bg={{ base: `${bgColor}`, md: `${navbarBg ? "transparent" : bgColor}` }}
             h={{ base: "50px", md: "60px" }}
         >

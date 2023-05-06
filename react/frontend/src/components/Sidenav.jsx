@@ -1,10 +1,11 @@
-import { List, ListItem, Button, ButtonGroup, IconButton, Icon, Flex } from "@chakra-ui/react"
+import { Stack, Wrap, List, ListItem, Button, ButtonGroup, IconButton, Icon, Flex } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 
 function Sidenav({ pages, activePage, selectPage }) {
 
     return (
-        <Flex flexWrap="wrap" flexDirection={{ base: "row", md: "column" }}>
+        // <Stack as={Wrap} direction={{ base: "row", md: "column" }}>
+        <Wrap>
             {
                 Object.keys(pages).map((page) => {
                     return (
@@ -17,7 +18,7 @@ function Sidenav({ pages, activePage, selectPage }) {
                             onClick={(event) => selectPage(event)}
                             isActive={page === activePage}
                             leftIcon={pages[page]["icon"]}
-                            size={{ base: "sm", md: "lg" }}
+                            fontSize={{ base: "sm", md: "lg" }}
                             width={{ base: "fit-content", md: "200px" }}
                         >
                             {page}
@@ -25,7 +26,8 @@ function Sidenav({ pages, activePage, selectPage }) {
                     )
                 })
             }
-        </Flex >
+        </Wrap>
+        /* </Stack > */
     )
 }
 
