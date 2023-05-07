@@ -25,7 +25,7 @@ import { FaGitAlt } from "@react-icons/all-files/fa/FaGitAlt"
 import { SiAmazonaws } from "@react-icons/all-files/si/SiAmazonaws"
 import { SiHeroku } from "@react-icons/all-files/si/SiHeroku"
 import { FaDocker } from "@react-icons/all-files/fa/FaDocker"
-import { useMediaQuery } from "@chakra-ui/react"
+import { GrMysql } from "@react-icons/all-files/gr/GrMysql"
 
 const size = "32px"
 
@@ -50,6 +50,7 @@ const icons = {
     "aws": <SiAmazonaws fontSize={size} />,
     "heroku": <SiHeroku fontSize={size} />,
     "docker": <FaDocker fontSize={size} />,
+    "mysql": <GrMysql fontSize={size} />,
 }
 
 export { icons }

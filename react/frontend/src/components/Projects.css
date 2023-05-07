@@ -12,3 +12,7 @@
     transform: scale(1.1);
     transition: 0.3s ease-out;
 }
+
+.projectSkills:hover {
+    transition: 0.3s ease-out;
+}

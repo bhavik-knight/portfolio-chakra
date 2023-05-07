@@ -4,11 +4,11 @@
     padding: 4px;
 }
 
-button {
+.navbar button {
     margin-inline: 4px;
 }
 
-button:hover {
+.navbar button:hover {
     border: 2px solid cyan;
 }
 
