@@ -29,6 +29,8 @@ import { FaDocker } from "@react-icons/all-files/fa/FaDocker"
 import { GrMysql } from "@react-icons/all-files/gr/GrMysql"
 import { FaMoon } from "@react-icons/all-files/fa/FaMoon"
 import { FaSun } from "@react-icons/all-files/fa/FaSun"
+import { SiApache } from "@react-icons/all-files/si/SiApache"
+import { FcLinux } from "@react-icons/all-files/fc/FcLinux"
 
 const size = "32px"
 
@@ -56,6 +58,8 @@ const icons = {
     "heroku": <SiHeroku fontSize={size} />,
     "docker": <FaDocker fontSize={size} />,
     "mysql": <GrMysql fontSize={size} />,
+    "apache": <SiApache fontSize={size} />,
+    "linux": <FcLinux fontSize={size} />,
 }
 
 export { icons }
