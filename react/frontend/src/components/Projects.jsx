@@ -22,55 +22,78 @@ import { Tabs, Tab, TabPanels, TabPanel, TabList, } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { icons } from "./Icons"
+import { ProjectCard } from "./ProjectCard"
 
 function Projects() {
 
-    const projectTypes = ["web", "data", "ml", "game"]
+    const projectTypes = ["web", "data", "ai", "game"]
 
     function getProjectCard(projectList) {
         return projectList.map(project =>
             <>
-                <Card key={nanoid()} bg="none" border="2px solid cyan" maxH="500px" justifyContent="center">
-                    <Flex m={0} p={0} bg="">
-                        <Flex mx={1} p={1} bg="gray" height="100%" maxW="30%">
+                {/* dalon's design */}
+                <Card
+                    key={nanoid()}
+                    border="2px solid white"
+                    boxSize={{ base: "100%", md: "50%", xl: "30%" }}
+                    mt={4} p={2}
+                >
+                    <Stack
+                        justifyContent="center"
+                    >
+                        <Flex>
                             <Img src={project.displayImg} className="projectDisplayImg" />
                         </Flex>
 
-                        <Stack>
-                            <CardBody>
-                                <Heading my={1} px="auto" textDecoration="underline">{project.title}</Heading>
-                                <Text my={2}>
-                                    {project.description}
-                                </Text>
-                                <Wrap my={2}>
+                        <Divider />
+                        <CardHeader px={4} py={0}>
+                            <Heading textDecoration="underline">
+                                {project.title}
+                            </Heading>
+                        </CardHeader> p={0}
+                        <CardBody p={0}>
+                            <Text px={4}>
+                                {project.description}
+                            </Text>
+                            <Divider width="95%" px={2} mx="auto" my={2} />
+                            <Flex justifyContent="center">
+                                <Wrap my={2} spacing={4}>
                                     {
                                         project.technologies.map(tech => {
                                             return (
-                                                <WrapItem
-                                                    key={nanoid()}
-                                                    spacing={2}
-                                                    // border="2px solid white"
-                                                    borderRadius="8px"
-                                                >
-                                                    {icons[tech]}
-                                                </WrapItem>
+                                                <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow>
+                                                    <WrapItem
+                                                        className="projectSkills"
+                                                        borderRadius="8px"
+                                                    >
+                                                        {icons[tech]}
+                                                    </WrapItem>
+                                                </Tooltip>
                                             )
                                         })
                                     }
                                 </Wrap>
-                                <Flex mt={2} justifyContent="center">
-                                    <Button width="150px" bg="orange" color="black">Github</Button>
-                                    <Button width="150px" bg="white" color="blue">Details</Button>
-                                    <Button width="150px" bg="green" color="white">Link</Button>
-                                </Flex>
-                            </CardBody>
-                        </Stack>
-                    </Flex >
+
+                            </Flex>
+                        </CardBody>
+                        <CardFooter p={0} justifyContent="center">
+                            <Wrap mt={2}>
+                                <Button width="150px" bg="orange" color="black">Github</Button>
+                                <Button width="150px" bg="white" color="blue">Details</Button>
+                                <Button width="150px" bg="green" color="white">Link</Button>
+                            </Wrap>
+                        </CardFooter>
+                    </Stack>
                 </Card >
 
-                <Card border="2px solid white" mt={4} p={2} bg="none" size={{ base: "sm", md: "lg" }}>
-                    <Stack direction={{ base: "column", md: "row" }} justifyContent="center">
-                        <Flex maxW={{ base: "100%", md: "25%" }}>
+                {/* brain's design */}
+                {/*
+                < Card key={nanoid()} border="2px solid white" mt={4} p={2} >
+                    <Stack
+                        justifyContent="center"
+                        direction={{ base: "column", lg: "row" }}
+                    >
+                        <Flex maxW={{ base: "100%", md: "30%" }}>
                             <Img src={project.displayImg} className="projectDisplayImg" />
                         </Flex>
                         <Flex>
@@ -90,9 +113,8 @@ function Projects() {
                                             {
                                                 project.technologies.map(tech => {
                                                     return (
-                                                        <Tooltip label={tech} aria-label={tech} hasArrow>
+                                                        <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow>
                                                             <WrapItem
-                                                                key={nanoid()}
                                                                 className="projectSkills"
                                                                 borderRadius="8px"
                                                             >
@@ -116,8 +138,8 @@ function Projects() {
                             </Stack>
                         </Flex>
                     </Stack>
-
                 </Card >
+            */}
             </>
         )
     }
@@ -157,6 +179,11 @@ function Projects() {
                         projectTypes.map(type =>
                             <TabPanel key={nanoid()}>
                                 {getProjectCard(projects.filter(p => p["type"] === type))}
+                                {/* {
+                                    projects.filter(p => p.type === type).map(p =>
+                                        <ProjectCard key={nanoid()} project={p} />
+                                    )
+                                } */}
                             </TabPanel>
                         )
                     }
