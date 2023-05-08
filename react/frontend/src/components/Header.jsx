@@ -1,7 +1,7 @@
-import { SunIcon, MoonIcon } from "@chakra-ui/icons"
 import { icons } from "./Icons"
-import { Button, Menu, Box, Flex, Image, ButtonGroup, Text, Container, IconButton, Icon, useMediaQuery } from "@chakra-ui/react"
 import { useState, useRef, useEffect } from "react"
+import { Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
+import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
 
 
 // ref: https://dev.to/davidemaye/how-to-set-up-font-awesome-in-react-5a8d
@@ -11,15 +11,17 @@ import { useState, useRef, useEffect } from "react"
 // to create icons for navbar with consistent style
 function getNavbarIconButton(btnName, btnIcon, handleClick) {
     return (
-        <IconButton
-            variant="solid"
-            fontSize={{ base: "md", lg: "2xl" }}
-            borderRadius="4px"
-            colorScheme="transparent"
-            name={btnName}
-            icon={btnIcon}
-            onClick={handleClick}
-        />
+        <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName}>
+            <IconButton
+                variant="solid"
+                fontSize={{ base: "md", lg: "2xl" }}
+                borderRadius="4px"
+                colorScheme="transparent"
+                name={btnName}
+                icon={btnIcon}
+                onClick={handleClick}
+            />
+        </Tooltip>
     )
 }
 
@@ -71,7 +73,7 @@ function Header({ lightMode, changeLightMode, title }) {
 
     return (
         <Flex as="nav"
-            className="navbar"
+            className="navbar header"
             px={4}
             bg={`${navbarBg ? "transparent" : bgColor}`}
         >

@@ -4,9 +4,10 @@ import { nanoid } from "nanoid"
 function Sidenav({ pages, activePage, selectPage }) {
     return (
         Object.keys(pages).map((page) => {
-            console.log(`sidenav: ${page}`)
             return (
                 <Tooltip
+                    hasArrow
+                    placement="right"
                     key={nanoid()}
                     label={page}
                     aria-label={page}
