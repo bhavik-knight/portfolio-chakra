@@ -11,6 +11,7 @@ import { MdWork } from "@react-icons/all-files/md/MdWork"
 import { FaAward } from "@react-icons/all-files/fa/FaAward"
 import { GrUserWorker } from "@react-icons/all-files/gr/GrUserWorker"
 import { ImLinkedin2 } from "@react-icons/all-files/im/ImLinkedin2"
+import { FaCode } from "@react-icons/all-files/fa/FaCode"
 
 // skills - technologies
 import { FaPython } from "@react-icons/all-files/fa/FaPython"
@@ -35,7 +36,7 @@ const icons = {
     "moon": <FaMoon fontSize={size} />,
     "sun": <FaSun fontSize={size} />,
     "home": <FaHome fontSize={size} />,
-    "skills": <FaTools fontSize={size} />,
+    "skills": <FaCode fontSize={size} />,
     "projects": <GiFilmProjector fontSize={size} />,
     "education": <MdSchool fontSize={size} />,
     "experiences": <MdWork fontSize={size} />,
