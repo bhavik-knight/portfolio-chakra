@@ -1,33 +1,31 @@
-import { Stack, Wrap, List, ListItem, Button, ButtonGroup, IconButton, Icon, Flex } from "@chakra-ui/react"
+import { WrapItem, Text, Divider, Stack, Wrap, List, ListItem, Tooltip, Button, ButtonGroup, IconButton, Icon, Flex, useMediaQuery } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 
 function Sidenav({ pages, activePage, selectPage }) {
-
     return (
-        // <Stack as={Wrap} direction={{ base: "row", md: "column" }}>
-        <Wrap>
-            {
-                Object.keys(pages).map((page) => {
-                    return (
-                        <Button
-                            key={nanoid()}
-                            name={page}
-                            variant="solid"
-                            colorScheme="blackAlpha"
-                            className="sidenavButton"
-                            onClick={(event) => selectPage(event)}
-                            isActive={page === activePage}
-                            leftIcon={pages[page]["icon"]}
-                            fontSize={{ base: "sm", md: "lg" }}
-                            width={{ base: "fit-content", md: "200px" }}
-                        >
-                            {page}
-                        </Button >
-                    )
-                })
-            }
-        </Wrap>
-        /* </Stack > */
+        Object.keys(pages).map((page) => {
+            console.log(`sidenav: ${page}`)
+            return (
+                <Tooltip
+                    key={nanoid()}
+                    label={page}
+                    aria-label={page}
+                >
+                    <Button
+                        key={nanoid()}
+                        name={page}
+                        variant="ghost"
+                        className="sidenavButton"
+                        onClick={(event) => selectPage(event)}
+                        isActive={page === activePage}
+                        leftIcon={pages[page].icon}
+                        border="1px solid cyan"
+                    >
+                        {page}
+                    </Button>
+                </Tooltip>
+            )
+        })
     )
 }
 

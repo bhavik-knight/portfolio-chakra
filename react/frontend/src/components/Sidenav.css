@@ -1,6 +1,7 @@
 .sidenavButton {
     padding: 4px;
     border-radius: 8px;
+    text-transform: capitalize;
 }
 
 .sidenavButton:hover {
