@@ -26,10 +26,14 @@ import { SiAmazonaws } from "@react-icons/all-files/si/SiAmazonaws"
 import { SiHeroku } from "@react-icons/all-files/si/SiHeroku"
 import { FaDocker } from "@react-icons/all-files/fa/FaDocker"
 import { GrMysql } from "@react-icons/all-files/gr/GrMysql"
+import { FaMoon } from "@react-icons/all-files/fa/FaMoon"
+import { FaSun } from "@react-icons/all-files/fa/FaSun"
 
 const size = "32px"
 
 const icons = {
+    "moon": <FaMoon fontSize={size} />,
+    "sun": <FaSun fontSize={size} />,
     "home": <FaHome fontSize={size} />,
     "skills": <FaTools fontSize={size} />,
     "projects": <GiFilmProjector fontSize={size} />,
