@@ -47,13 +47,13 @@ function Header({ lightMode, changeLightMode, title }) {
 
     const sunIcon = getNavbarIconButton(
         "sun",
-        <SunIcon />,
+        icons["sun"],
         changeLightMode
     )
 
     const moonIcon = getNavbarIconButton(
         "moon",
-        <MoonIcon />,
+        icons["moon"],
         changeLightMode
     )
 
@@ -73,24 +73,23 @@ function Header({ lightMode, changeLightMode, title }) {
         <Flex as="nav"
             className="navbar"
             px={4}
-            bg={{ base: `${bgColor}`, md: `${navbarBg ? "transparent" : bgColor}` }}
-            h={{ base: "50px", md: "60px" }}
+            bg={`${navbarBg ? "transparent" : bgColor}`}
         >
             <Image
                 className="logo"
                 src="./bhavik_logo.png"
-                w={{ base: "40%", md: "15%" }}
+                width="15%"
             />
-            <Container flexGrow={{ base: 0, md: "1" }} bg="transparent">
+            <Container bg="transparent">
                 <Text
-                    fontSize={{ base: "sm", md: "4xl" }}
+                    fontSize="4xl"
                     textAlign="center"> {title === "home" ? "Bhavik's Portfolio" : title}
                 </Text>
             </Container>
-            <ButtonGroup spacing={{ base: "-0.5", md: "2" }}>
+            <ButtonGroup spacing={1}>
+                {lightMode ? moonIcon : sunIcon}
                 {linkedinIcon}
                 {gitHubIcon}
-                {lightMode ? moonIcon : sunIcon}
             </ButtonGroup>
         </Flex >
     )
