@@ -9,9 +9,11 @@ function ProjectCard({ project }) {
     return (
         <Card
             key={nanoid()}
-            border="2px solid white"
+            className="projectCard"
             boxSize={{ base: "100%", md: "50%", xl: "30%" }}
             mt={4} p={2}
+            boxShadow="2px 2px 8px aliceblue"
+            _hover={{ border: "2px solid red" }}
         >
             <Stack justifyContent="center">
                 <Flex>
@@ -30,12 +32,10 @@ function ProjectCard({ project }) {
                         {project.description}
                     </Text>
                     <Divider width="95%" px={2} mx="auto" my={2} />
-                    <SimpleGrid
-                        justifyContent="center"
-                        alignItems="center"
+                    <Flex
+                        flexWrap="wrap"
                         gap={2}
-                        minChildWidth="32px"
-                        row="auto"
+                        justifyContent="space-evenly"
                     >
                         {
                             project.technologies.map(tech => {
@@ -48,7 +48,7 @@ function ProjectCard({ project }) {
                                 )
                             })
                         }
-                    </SimpleGrid>
+                    </Flex>
                 </CardBody>
 
                 <CardFooter p={0} justifyContent="center">
