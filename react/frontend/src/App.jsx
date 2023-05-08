@@ -76,13 +76,12 @@ function App() {
   const [bgImg, setBgImg] = useState("galaxy_hd.jpg")
 
   return (
-    <Flex className="container" bgImage={bgImg} flexDirection="column" flexWrap="wrap" >
+    <Flex className="container" bgImage={bgImg} flexDirection="column" flexWrap="wrap">
       <Header
         lightMode={lightMode}
         changeLightMode={setLightMode.toggle}
         title={currentPage}
       />
-
       {/* middle part */}
       <Flex
         minH="100vh"
@@ -91,12 +90,16 @@ function App() {
       >
 
         <Flex
+          className="sidenav"
           as="aside"
           minW="fit-content"
           maxW="200px"
-          bg="green.900"
+          bg="red.900"
           flexDirection={{ base: "row", lg: "column" }}
           flexWrap={{ base: "wrap", lg: "nowrap" }}
+          justifyContent={{ base: "center", lg: "flex-start" }}
+          pt={2}
+          gap={2}
         >
           <Sidenav
             pages={pages}
@@ -104,7 +107,12 @@ function App() {
             selectPage={(event) => handleSelectPage(event)}
           />
         </Flex>
-        <Flex as="main" bg="blue.800">
+        <Flex
+          className="content"
+          as="main"
+          bg="blue.800"
+          px={{ base: 0, lg: "4" }}
+        >
           {pages[currentPage].page}
         </Flex>
       </Flex>
