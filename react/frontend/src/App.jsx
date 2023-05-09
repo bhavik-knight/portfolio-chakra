@@ -14,18 +14,12 @@ import { icons } from "./components/Icons"
 
 
 function App() {
-  // to toggle the darkmode
-  const [lightMode, setLightMode] = useBoolean(() => JSON.parse(localStorage.getItem("lightMode")) || false)
-  function handleColorMode() {
-    setLightMode.toggle
-  }
 
+  // color mode toggle; check the local storage on each color mode change
+  const { colorMode, toggleColorMode } = useColorMode()
   useEffect(() => {
-    // set dark mode to the local storage
-    localStorage.setItem("lightMode", lightMode)
-    lightMode ? setBgImg("snow.jpg") : setBgImg("galaxy_hd.jpg")
     console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
-  }, [lightMode])
+  }, [colorMode])
 
   // pages in the portfolio
   const pages = {
@@ -72,14 +66,12 @@ function App() {
     window.scrollTo(0, 0)
   }, [currentPage])
 
-  // backgroud image: this will depend on other factors than just darkmode
-  const [bgImg, setBgImg] = useState("galaxy_hd.jpg")
-
+  // this is the function that will render the DOM
   return (
-    <Flex className="container" bgImage={bgImg} flexDirection="column" flexWrap="wrap">
+    <Flex className="container" flexDirection="column" flexWrap="wrap">
       <Header
-        lightMode={lightMode}
-        changeLightMode={setLightMode.toggle}
+        colorMode={colorMode}
+        changeColorMode={() => toggleColorMode()}
         title={currentPage}
       />
       {/* middle part */}

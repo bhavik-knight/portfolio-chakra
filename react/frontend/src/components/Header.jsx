@@ -19,14 +19,14 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
                 colorScheme="transparent"
                 name={btnName}
                 icon={btnIcon}
-                onClick={handleClick}
+                onClick={event => handleClick(event)}
             />
         </Tooltip>
     )
 }
 
 
-function Header({ lightMode, changeLightMode, title }) {
+function Header({ colorMode, changeColorMode, title }) {
 
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
@@ -50,13 +50,15 @@ function Header({ lightMode, changeLightMode, title }) {
     const sunIcon = getNavbarIconButton(
         "sun",
         icons["sun"],
-        changeLightMode
+        // changeLightMode,
+        changeColorMode,
     )
 
     const moonIcon = getNavbarIconButton(
         "moon",
         icons["moon"],
-        changeLightMode
+        // changeLightMode,
+        changeColorMode
     )
 
     const linkedinIcon = getNavbarIconButton(
@@ -89,7 +91,7 @@ function Header({ lightMode, changeLightMode, title }) {
                 </Text>
             </Container>
             <ButtonGroup spacing={1}>
-                {lightMode ? moonIcon : sunIcon}
+                {colorMode === "dark" ? sunIcon : moonIcon}
                 {linkedinIcon}
                 {gitHubIcon}
             </ButtonGroup>
