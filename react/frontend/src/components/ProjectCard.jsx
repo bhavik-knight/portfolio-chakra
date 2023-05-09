@@ -40,7 +40,7 @@ function ProjectCard({ project }) {
                         {
                             project.technologies.map(tech => {
                                 return (
-                                    <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow>
+                                    <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow textTransform="capitalize">
                                         <WrapItem className="projectSkills" borderRadius="8px" >
                                             {icons[tech]}
                                         </WrapItem>

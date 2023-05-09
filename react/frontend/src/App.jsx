@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     // set dark mode to the local storage
     localStorage.setItem("lightMode", lightMode)
-    lightMode ? setBgImg("snow.jpg") : setBgImg("galaxy_hd.jpg")
+    lightMode ? setBgImg("linear-gradient(gray, white)") : setBgImg("linear-gradient(black, gray)")
     console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
   }, [lightMode])
 
@@ -73,7 +73,7 @@ function App() {
   }, [currentPage])
 
   // backgroud image: this will depend on other factors than just darkmode
-  const [bgImg, setBgImg] = useState("galaxy_hd.jpg")
+  const [bgImg, setBgImg] = useState("linear-gradient(black, gray)")
 
   return (
     <Flex className="container" bgImage={bgImg} flexDirection="column" flexWrap="wrap">

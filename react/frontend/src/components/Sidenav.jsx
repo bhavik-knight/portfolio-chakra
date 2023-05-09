@@ -11,6 +11,7 @@ function Sidenav({ pages, activePage, selectPage }) {
                     key={nanoid()}
                     label={page}
                     aria-label={page}
+                    textTransform="capitalize"
                 >
                     <Button
                         key={nanoid()}

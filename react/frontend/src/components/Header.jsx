@@ -1,6 +1,6 @@
 import { icons } from "./Icons"
 import { useState, useRef, useEffect } from "react"
-import { Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
+import { Heading, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
 import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
 
 
@@ -11,7 +11,7 @@ import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react
 // to create icons for navbar with consistent style
 function getNavbarIconButton(btnName, btnIcon, handleClick) {
     return (
-        <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName}>
+        <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName} textTransform="capitalize">
             <IconButton
                 variant="solid"
                 fontSize={{ base: "md", lg: "2xl" }}
@@ -77,11 +77,7 @@ function Header({ lightMode, changeLightMode, title }) {
             px={4}
             bg={`${navbarBg ? "transparent" : bgColor}`}
         >
-            <Image
-                className="logo"
-                src="./bhavik_logo.png"
-                width="15%"
-            />
+            <Heading className="logo" width="15%">Bhavik</Heading>
             <Container bg="transparent">
                 <Text
                     fontSize="4xl"
