@@ -1,5 +1,6 @@
 import { icons } from "./Icons"
 import { useState, useRef, useEffect } from "react"
+import { useColorModeValue } from "@chakra-ui/react"
 import { Heading, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
 import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
 
@@ -13,9 +14,11 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
     return (
         <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName} textTransform="capitalize">
             <IconButton
-                variant="solid"
+                variant="ghost"
                 fontSize={{ base: "md", lg: "2xl" }}
                 borderRadius="4px"
+                border="1px solid transparent"
+                _hover={{ borderColor: useColorModeValue("red", "cyan") }}
                 name={btnName}
                 icon={btnIcon}
                 onClick={event => handleClick(event)}

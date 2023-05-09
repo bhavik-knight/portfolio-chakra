@@ -1,3 +1,4 @@
+import { useColorMode, useColorModeValue } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { SimpleGrid, Grid, Stack, Flex, Wrap, WrapItem, } from "@chakra-ui/react"
 import { Img, Heading, Text, Divider } from "@chakra-ui/react"
@@ -5,14 +6,22 @@ import { Tooltip, Button } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { icons } from "./Icons"
 
+const footerButtonStyle = {
+    width: "80px",
+    variant: "solid"
+}
+
 function ProjectCard({ project }) {
     return (
         <Card
             key={nanoid()}
             className="projectCard"
             boxSize={{ base: "100%", md: "50%", xl: "30%" }}
-            mt={4} p={2}
-            _hover={{ border: "2px solid red" }}
+            my={4} p={2} gap={1}
+            border="2px solid"
+            borderColor={useColorModeValue("gray.200", "gray.600")}
+            _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
+            }
         >
             <Stack justifyContent="center">
                 <Flex>
@@ -52,9 +61,9 @@ function ProjectCard({ project }) {
 
                 <CardFooter p={0} justifyContent="center">
                     <Wrap mt={2}>
-                        <Button width="80px" bg="orange" color="black">Github</Button>
-                        <Button width="80px" bg="white" color="blue">Details</Button>
-                        <Button width="80px" bg="green" color="white">Link</Button>
+                        <Button sx={footerButtonStyle} bg="orange" color="black" >Github</Button>
+                        <Button sx={footerButtonStyle} bg={useColorModeValue("black", "white")} color={useColorModeValue("cyan", "blue")}>Details</Button>
+                        <Button sx={footerButtonStyle} bg="green" color="white">Link</Button>
                     </Wrap>
                 </CardFooter>
             </Stack>
