@@ -79,9 +79,10 @@ function Header({ colorMode, changeColorMode, title }) {
             px={4}
             bg={`${navbarBg ? "transparent" : bgColor}`}
         >
-            <Heading className="logo" width="15%">Bhavik</Heading>
-            <Container bg="transparent">
+            <Heading className="logo" minW="fit-content" width="15%">Bhavik</Heading>
+            <Container bg="transparent" justifyContent="center" >
                 <Text
+                    display={{ base: "none", md: "block" }}
                     fontSize="4xl"
                     textAlign="center"> {title === "home" ? "Bhavik's Portfolio" : title}
                 </Text>
