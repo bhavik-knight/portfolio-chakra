@@ -11,6 +11,7 @@ function Sidenav({ pages, activePage, selectPage }) {
                     key={nanoid()}
                     label={page}
                     aria-label={page}
+                    textTransform="capitalize"
                 >
                     <Button
                         key={nanoid()}
@@ -20,7 +21,6 @@ function Sidenav({ pages, activePage, selectPage }) {
                         onClick={(event) => selectPage(event)}
                         isActive={page === activePage}
                         leftIcon={pages[page].icon}
-                        border="1px solid cyan"
                     >
                         {page}
                     </Button>

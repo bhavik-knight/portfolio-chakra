@@ -4,7 +4,6 @@ import { Text, Divider, List, ListItem } from "@chakra-ui/react"
 import { Flex, Stack, VStack, HStack, } from "@chakra-ui/react"
 import { Tabs, Tab, TabPanels, TabPanel, TabList, } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
-import { icons } from "./Icons"
 import { ProjectCard } from "./ProjectCard"
 
 function Projects() {

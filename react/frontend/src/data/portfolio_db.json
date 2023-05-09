@@ -10,6 +10,9 @@
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
+                "linux",
+                "apache",
+                "mysql",
                 "php",
                 "javascript",
                 "jquery",
@@ -17,7 +20,6 @@
                 "css",
                 "bootstrap",
                 "git",
-                "mysql",
                 "docker",
                 "heroku",
                 "aws"
@@ -46,7 +48,6 @@
                 "css",
                 "bootstrap",
                 "git",
-                "mysql",
                 "docker",
                 "heroku",
                 "aws"
