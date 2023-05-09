@@ -123,24 +123,9 @@ function App() {
   )
 }
 
-export default App
+export { App }
 
-{/*
-  // reference: background
-  https://www.yorku.ca/news/wp-content/uploads/sites/242/2023/01/cem-sagisman-x8SqHJo9SUg-unsplash-TW.jpg
-*/}
 
-{/*
-  // class- header
-  <Header
-    lightMode={lightMode}
-    changeLightMode={setLightMode.toggle}
-    title={currentPage}
-  />
 
-  // side nav
-  <Sidenav pages={pages} activePage={currentPage} selectPage={(event) => handleSelectPage(event)} />
-
-  // project pages
-  {pages[currentPage].page}
-*/}
+// reference: transition of ball - can be use to track cursor
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
