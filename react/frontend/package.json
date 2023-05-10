@@ -15,11 +15,9 @@
     "@emotion/styled": "^11.10.8",
     "@popperjs/core": "^2.11.7",
     "@react-icons/all-files": "^4.1.0",
-    "bootstrap": "^5.2.3",
     "framer-motion": "^10.12.5",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0"
   },
