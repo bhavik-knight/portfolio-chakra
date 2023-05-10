@@ -370,5 +370,86 @@
             ],
             "projectImgs": "./projects/hck_dns_sfha/"
         }
+    ],
+    "certificates": [
+        {
+            "id": 1,
+            "title": "Google IT Professional Certificate",
+            "platform": "Coursera",
+            "institute": "NPower Canada",
+            "certificateDetails": [
+                {
+                    "certId": "c1",
+                    "certName": "Technical Support Fundamentals",
+                    "certImg": "./certificates/google_it_professional/c1_fundamentals",
+                    "uri": "https://coursera.org/share/dd6acf709cba5e5942c42e890da220f0",
+                    "learnings": [
+                        "understand how the binary system works",
+                        "assemble a computer from scratch",
+                        "choose and install an operating system on a computer",
+                        "understand what the Internet is, how it works, and the impact it has in the modern world",
+                        "learn how applications are created and how they work under the hood of a computer",
+                        "utilize common problem-solving methodologies and soft skills in an Information Technology setting"
+                    ]
+                },
+                {
+                    "certId": "c2",
+                    "certName": "The Bits and Bytes of Computer Networking",
+                    "certImg": "./certificates/google_it_professional/c2_networking",
+                    "uri": "https://coursera.org/share/605e01e4cb5a3c481139666a9112b644",
+                    "learnings": [
+                        "describe computer networks in terms of a five-layer model",
+                        "understand all of the standard protocols involved with TCP/IP communications",
+                        "grasp powerful network troubleshooting tools and techniques",
+                        "learn network services like DNS and DHCP that help make computer networks run",
+                        "understand cloud computing, everything as a service, and cloud storage"
+                    ]
+                },
+                {
+                    "certId": "c3",
+                    "certName": "Operating Systems and You: Becoming a Power User",
+                    "certImg": "./certificates/google_it_professional/c3_os",
+                    "uri": "https://coursera.org/share/c1ee69aa511fa4a7f19a05d1d92995f2",
+                    "learnings": [
+                        "navigate the Windows and Linux filesystems using a graphical user interface and command line interpreter",
+                        "set up users, groups, and permissions for account access",
+                        "install, configure, and remove software on the Windows and Linux operating systems",
+                        "configure disk partitions and filesystems",
+                        "understand how system processes work and how to manage them",
+                        "work with system logs and remote connection tools",
+                        "utilize operating system knowledge to troubleshoot common issues in an IT Support Specialist role"
+                    ]
+                },
+                {
+                    "certId": "c4",
+                    "certName": "System Administration and IT Infrastructure Services",
+                    "certImg": "./certificates/google_it_professional/c4_sysadmin",
+                    "uri": "https://coursera.org/share/8d81d43f9fefaec24181cd57add956d9",
+                    "learnings": [
+                        "utilize best practices for choosing hardware, vendors, and services for your organization",
+                        "understand how the most common infrastructure services that keep an organization",
+                        "running work, and how to manage infrastructure servers",
+                        "understand how to make the most of the cloud for your organization",
+                        "manage an organization's computers and users using the directory services, Active Directory, and OpenLDAP",
+                        "choose and manage the tools that your organization will use",
+                        "backup your organizatio's data and know how to recover your IT infrastructure in the case of a disaster",
+                        "utilize systems administration knowledge to plan and improve processes for IT environments"
+                    ]
+                },
+                {
+                    "certId": "c5",
+                    "certName": "IT Security: Defense against the digital dark arts",
+                    "certImg": "./certificates/google_it_professional/c5_security",
+                    "uri": "https://coursera.org/share/0c3b147c46e28c84da792addfd4634a7",
+                    "learnings": [
+                        "describe computer networks in terms of a five-layer model",
+                        "understand all of the standard protocols involved with TCP/IP communications",
+                        "grasp powerful network troubleshooting tools and techniques",
+                        "learn network services like DNS and DHCP that help make computer networks run",
+                        "understand cloud computing, everything as a service, and cloud storage"
+                    ]
+                }
+            ]
+        }
     ]
 }
