@@ -14,7 +14,7 @@ function Projects() {
     const [tabIndex, setTabIndex] = useState(0)
 
     return (
-        <VStack m={2} p={2}>
+        <VStack m={2} p={2} bg="lightblue">
             {/* some text */}
             <List spacing={2} m={2} p={2}>
                 <ListItem as={Text}>
