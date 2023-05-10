@@ -101,7 +101,8 @@ function App() {
         <Flex
           className="content"
           as="main"
-          px={{ base: 0, lg: "4" }}
+          px={{ base: 0, lg: "4px" }}
+          mx="auto"
         >
           {pages[currentPage].page}
         </Flex>

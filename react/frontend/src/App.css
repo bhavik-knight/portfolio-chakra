@@ -3,6 +3,7 @@
 @import url("./components/Sidenav.css");
 @import url("./components/Projects.css");
 @import url("./components/ProjectCard.css");
+@import url("./components/Certificates.css");
 
 .container-bg-image {
     background-repeat: no-repeat;
@@ -46,5 +47,7 @@
 
 .content {
     border: 4px solid black;
+    width: auto;
     margin-top: 60px;
+    padding-top: 4px;
 }
