@@ -19,7 +19,7 @@ function Certificates() {
                     Computer Science / IT Certificates
                 </CardHeader>
 
-                <Divider className="divider" width="90%" mx="auto" my={1} />
+                <Divider className="divider" width="95%" mx="auto" my={1} />
 
                 <CardBody as={UnorderedList} className="certificatesTitle" >
                     <ListItem>
@@ -40,7 +40,6 @@ function Certificates() {
             {/* certificates */}
             <Card as="section">
                 <Accordion allowToggle>
-
                     {/* one accordion item - one certificate group */}
                     {
                         certificates.map(certObj =>

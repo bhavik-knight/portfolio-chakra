@@ -100,6 +100,7 @@ function App() {
           />
         </Flex>
         <Flex
+          bg="blue"
           className="content"
           as="main"
           px={{ base: 0, lg: "4px" }}
