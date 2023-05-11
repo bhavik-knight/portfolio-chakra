@@ -1,4 +1,5 @@
 import { nanoid } from "nanoid"
+import { useColorModeValue, useColorMode } from "@chakra-ui/react"
 import { Accordion, AccordionButton, AccordionItem, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
 import { Flex, Divider, Stack, Spacer } from "@chakra-ui/react"
@@ -9,7 +10,8 @@ function ExperienceCard({ job }) {
         <AccordionItem py={2}>
             <AccordionButton
                 as={Heading}
-                fontSize={{ base: "md", lg: "xl" }} _expanded={{ boxShadow: "2px 2px 4px" }}
+                fontSize={{ base: "md", lg: "xl" }}
+                _expanded={{ boxShadow: "0px 2px 4px blue" }}
             >
                 <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap" justifyContent="space-between">
                     <Text>

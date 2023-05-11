@@ -11,12 +11,13 @@ function Experiences() {
     return (
         <Stack
             width="100%"
+            gap={2}
         // bg="lightblue"
         // m={2} p={2}
         >
             <Card
                 as="section"
-                border="2px solid"
+                // border="2px solid"
                 boxShadow="2px 2px 4px"
             >
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
@@ -25,7 +26,7 @@ function Experiences() {
                 <Divider className="divider" width="95%" mx="auto" my={1} />
                 <CardBody>
                     <Text>
-                        Currently, I am looking for Jr. Software Developer role. Open to work on cool projects with hoping to integrate the skills I learned from my diverse work-experience.
+                        Currently, I am looking for Jr. Software Developer role. Open to work on cool projects with hoping to integrate the technical skills and transferable skills I gained from my diverse work-experience.
                     </Text>
                 </CardBody>
             </Card>
@@ -34,7 +35,7 @@ function Experiences() {
             {/* section about work */}
             <Card
                 as="section"
-                border="2px solid"
+                // border="2px solid"
                 boxShadow="2px 2px 4px"
             >
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }}>
@@ -50,8 +51,8 @@ function Experiences() {
             {/* section about volunteer work */}
             <Card
                 as="section"
-                border="2px solid"
-                boxShadow="2px 2px 8px"
+                // border="2px solid"
+                boxShadow="2px 2px 4px"
             >
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }}>
                     Volunteer Experience{volunteer.length > 1 && `s`}
