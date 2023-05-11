@@ -439,5 +439,124 @@
                 }
             ]
         }
+    ],
+    "experiences": [
+        {
+            "id": 1,
+            "title": "Customer Service Associate",
+            "company": "Ttec",
+            "place": "Halifax, NS, Canada",
+            "start": "Oct 2022",
+            "end": "Feb 2023",
+            "responsibilities": [
+                "Increased customer engagement by effectively handling queries and utilizing resources to curb wait times during peak hours, contributing to an increase in revenue generation",
+                "Delivered excellent customer service by identifying individual problems and providing solutions over emails, resulting in a significant improvement in customer satisfaction",
+                "Created quality custom macros for various customer inquiries using the Zendesk environment for the ticketing system, resulting in high productivity and a reduction in service delivery speed"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Clerk",
+            "company": "Atlantic Superstore",
+            "place": "Antigonish / Halifax, NS, Canada",
+            "start": "May 2022",
+            "end": "Oct 2022",
+            "responsibilities": [
+                "Increased Garden Center profit by 20% by upselling products and sharing information about plants, vegetables, and herbs with customers, achieving 'Department of the Week' for consistent performance improvement; also rewarded with supervisor position at times in the absense of my supervisor",
+                "Curbed losses in the Floral department by applying the skills learned in the Garden Center to arrange flowers and bouquets at the front of the store and trained the new members, often received high praise from customers by providing excellent recommendations for special occasions",
+                "Increased customer engagement in the Bulk department by rearranging the products to make them easier to find following customer needs, helping to increase sales during the festival season"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Shipping Associate",
+            "company": "Staples",
+            "place": "Halifax, NS, Canada",
+            "start": "May 2022",
+            "end": "Aug 2022",
+            "responsibilities": [
+                "Created a strong rapport with customers by executing sound judgment, patience, and active listening skills to resolve customers' shipping requirements resulting in an increased customer satisfaction rate",
+                "Demonstrated willingness to learn various skills in the copy center, work with copy center associates in the peak hours, and assist in other departments when needed justified 'Learn, Work, and Grow together' at Staples",
+                "Provided excellent services to the customer in Shipping and Copy Center by accommodating customers with their various needs and helped other departments on demand, demonstraning the teamwork, resulting in minimizing the losses of the company during the downtime"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Cashier",
+            "company": "Tim Hortons",
+            "place": "Antigonish, NS, Canada",
+            "start": "Jun 2021",
+            "end": "Aug 2021",
+            "responsibilities": [
+                "Contributed to increasing revenue of the branch by maintaining a low waiting time during the peak hours at the drive-through by providing excellent customer service and operating the POS with a high accuracy",
+                "Contributed to the team helping in maintaining food and beverages quality by analyzing the patterns of demand of customers at different hours for the various products, which helped in diminishing the food-waste",
+                "Proved the work ethic by working during the various shifts as requested that benefited the crew members by having their time off as needed, which helped in maintaining the overall productivity of the team"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Department Assistant",
+            "company": "Tim Hortons",
+            "place": "Antigonish, NS, Canada",
+            "start": "Jun 2021",
+            "end": "Aug 2021",
+            "responsibilities": [
+                "Contributed to increasing revenue of the branch by maintaining a low waiting time during the peak hours at the drive-through by providing excellent customer service and operating the POS with a high accuracy",
+                "Contributed to the team helping in maintaining food and beverages quality by analyzing the patterns of demand of customers at different hours for the various products, which helped in diminishing the food-waste",
+                "Proved the work ethic by working during the various shifts as requested that benefited the crew members by having their time off as needed, which helped in maintaining the overall productivity of the team"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Technician",
+            "company": "Brainwaves System",
+            "place": "Surat, Gujarat, India",
+            "start": "Apr 2015",
+            "end": "Sep 2019",
+            "responsibilities": [
+                "Boosted company reputation by providing excellent technical support to customers on time as a part of the maintenance and service department for both the hardware and software team",
+                "Modernized the department for the OS installation and Software installation process by introducing new technologies and incorporating remote solutions like TeamViewer to help the customer at remote locations",
+                "Demonstrated excellent inventory management skills by tracking stock and analyzing supply and demand trends, resulting in consistent availability of products and helping increase sales"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Freelancing Tutor",
+            "company": "Self-employed",
+            "place": "Surat, Gujarat, India",
+            "start": "Aug 2014",
+            "end": "Feb 2015",
+            "responsibilities": [
+                "Provided tuition services to the university students for 'Engineering Drawing/Graphics' subject by executing the skills I learned from my previous job as lecturer; helping them understand the material thoroughly and clear the University exams",
+                "Taught Mathematics and Aptitude topics for the competitive exams; resulted in our student gaining very good score in both topics in those exams"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Adhoc Lecturer",
+            "company": "Sarvajanik College of Engineering & Technology",
+            "place": "Surat, Gujarat, India",
+            "start": "Sep 2013",
+            "end": "May 2014",
+            "responsibilities": [
+                "Increased student success rate by 10% in the recent years in the subjects of 'Engineering Drawing/Graphics' and 'Elements of Mechanical Engineering'  by applying a practical approach to curriculum delivery",
+                "Contributed to the development of course material by accumulating interesting example from various reference books, creating new problems and prepared solution, and delived feedback of the assignments and exams on time; resulting in a high-quality study guide for students available free of cost",
+                "Conducted extra classes for curious students on demand to engage them practicing challenging problems under our guidence; created amiable environment for to discuss their problems and guided them; which resulted in 98% students cleared the University exams across different stream for both subjects"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "id": 1,
+            "title": "Community Teaching Assistant",
+            "company": "Massachusettess Instuitute of Technology, edX",
+            "place": "Online",
+            "start": "Jan 2020",
+            "end": "Mar 2020",
+            "responsibilities": [
+                "Helped 100+ online learners expand their knowledge and clear their doubts of the course material, introducing alternative solution methods to challenging problems on all suporting course platforms including discussion forum",
+                "Curated and maintained the Facebook-group for the term as a moderator with Dr. Ana Bell (MIT Professor) creating a plagiarism free support group on the facebook platform for the online learners"
+            ]
+        }
     ]
 }
