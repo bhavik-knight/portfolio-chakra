@@ -11,6 +11,7 @@ function ExperienceCard({ job }) {
             <AccordionButton
                 as={Heading}
                 fontSize={{ base: "md", lg: "xl" }}
+                _hover={{ cursor: "pointer" }}
                 _expanded={{ boxShadow: "0px 2px 8px" }}
             >
                 <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap" justifyContent="space-between">

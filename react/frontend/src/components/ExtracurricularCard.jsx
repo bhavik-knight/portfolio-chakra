@@ -9,8 +9,8 @@ function ExtracurricularCard({ ex }) {
             {/* heading for accordion */}
             <AccordionButton
                 as={Heading}
-                _hover={{ cursor: "pointer" }}
                 fontSize={{ base: "sm", md: "md", lg: "xl" }}
+                _hover={{ cursor: "pointer" }}
                 _expanded={{ boxShadow: "0px 2px 8px" }}
             >
                 <Flex
