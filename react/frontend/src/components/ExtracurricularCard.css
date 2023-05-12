@@ -1,0 +1,10 @@
+.extracurricularImg {
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.extracurricularImg:hover {
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: 0.5s ease-in-out;
+}

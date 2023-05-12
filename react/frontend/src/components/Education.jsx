@@ -1,19 +1,22 @@
+import { education, training, extracurriculars } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text } from "@chakra-ui/react"
 import { Stack, Flex, Divider, Spacer } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
-import { List, ListItem } from "@chakra-ui/react"
+import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Accordion } from "@chakra-ui/react"
-import { education, training } from "../data/portfolio_db.json"
 import { EducationCard } from "./EducationCard"
 import { TrainingCard } from "./TrainingCard"
+import { ExtracurricularCard } from "./ExtracurricularCard"
+
 
 function Education() {
     return (
         <Stack
             width="100%"
             gap={2}
-        // m={2} p={2}
+            p={2}
+        // m={2}
         // bg="lightblue"
         >
             {/* journey */}
@@ -45,13 +48,28 @@ function Education() {
             {/* training */}
             <Card as="section" boxShadow="2px 2px 4px">
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
-                    <Text>Training</Text>
+                    Training
                 </CardHeader>
 
                 <CardBody>
                     <Accordion allowToggle>
                         {
                             training.map(t => <TrainingCard key={nanoid()} t={t} />)
+                        }
+                    </Accordion>
+                </CardBody>
+            </Card>
+
+
+            {/* extra curricular */}
+            <Card as="section" boxShadow="2px 2px 4px">
+                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
+                    Extracurricular Activities
+                </CardHeader>
+                <CardBody>
+                    <Accordion allowToggle>
+                        {
+                            extracurriculars.map(ex => <ExtracurricularCard key={nanoid()} ex={ex} />)
                         }
                     </Accordion>
                 </CardBody>
