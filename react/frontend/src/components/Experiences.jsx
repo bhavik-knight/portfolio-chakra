@@ -38,14 +38,16 @@ function Experiences() {
                 // border="2px solid"
                 boxShadow="2px 2px 4px"
             >
-                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }}>
+                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Work Experience{experiences.length > 1 && `s`}
                 </CardHeader>
-                <Accordion allowToggle>
-                    {
-                        experiences.map(e => <ExperienceCard key={nanoid()} job={e} />)
-                    }
-                </Accordion>
+                <CardBody>
+                    <Accordion allowToggle>
+                        {
+                            experiences.map(e => <ExperienceCard key={nanoid()} job={e} />)
+                        }
+                    </Accordion>
+                </CardBody>
             </Card>
 
             {/* section about volunteer work */}
@@ -54,15 +56,18 @@ function Experiences() {
                 // border="2px solid"
                 boxShadow="2px 2px 4px"
             >
-                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }}>
+                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Volunteer Experience{volunteer.length > 1 && `s`}
                 </CardHeader>
 
-                <Accordion allowToggle>
-                    {
-                        volunteer.map(v => <ExperienceCard key={nanoid()} job={v} />)
-                    }
-                </Accordion>
+
+                <CardBody>
+                    <Accordion allowToggle>
+                        {
+                            volunteer.map(v => <ExperienceCard key={nanoid()} job={v} />)
+                        }
+                    </Accordion>
+                </CardBody>
             </Card>
         </Stack >
     )
