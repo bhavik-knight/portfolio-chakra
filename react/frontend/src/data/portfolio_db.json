@@ -558,5 +558,207 @@
                 "Curated and maintained the Facebook-group for the term as a moderator with Dr. Ana Bell (MIT Professor) creating a plagiarism free support group on the facebook platform for the online learners"
             ]
         }
+    ],
+    "education": [
+        {
+            "id": "1",
+            "institute": "St. Francis Xavier University",
+            "degree": "Post Baccalaureate Diploma",
+            "field": "Artificial Intelligence",
+            "place": "Canada",
+            "start": 2020,
+            "end": 2022,
+            "gpa": 93.29,
+            "maxGPA": 99,
+            "highlights": [
+                "Data Science",
+                "Machine Learning",
+                "Artificial Intelligence",
+                "Software Design",
+                "Theory of Computing"
+            ],
+            "courses": [
+                {
+                    "cid": 162,
+                    "name": "Programming & Data Structures",
+                    "grade": "99"
+                },
+                {
+                    "cid": 215,
+                    "name": "Social lssues: Information Age",
+                    "grade": "96"
+                },
+                {
+                    "cid": 255,
+                    "name": "Advanced Data Structures",
+                    "grade": "98"
+                },
+                {
+                    "cid": 263,
+                    "name": "Computer Organization",
+                    "grade": "99"
+                },
+                {
+                    "cid": 345,
+                    "name": "Computer Graphics",
+                    "grade": "89"
+                },
+                {
+                    "cid": 101,
+                    "name": "Introductory Statistics",
+                    "grade": "99"
+                },
+                {
+                    "cid": 162,
+                    "name": "Programming & Data Structures",
+                    "grade": "99"
+                },
+                {
+                    "cid": 223,
+                    "name": "Introduction to Data Science",
+                    "grade": "98"
+                },
+                {
+                    "cid": 225,
+                    "name": "Coding in Health Analytics",
+                    "grade": "90"
+                },
+                {
+                    "cid": 275,
+                    "name": "Database Management Systems",
+                    "grade": "86"
+                },
+                {
+                    "cid": 277,
+                    "name": "Discrete Structures",
+                    "grade": "95"
+                },
+                {
+                    "cid": 162,
+                    "name": "Programming & Data Structures",
+                    "grade": "99"
+                },
+                {
+                    "cid": 340,
+                    "name": "Evolutionary Computation",
+                    "grade": "88"
+                },
+                {
+                    "cid": 350,
+                    "name": "Biomedical Computation",
+                    "grade": "92"
+                },
+                {
+                    "cid": 356,
+                    "name": "Theory of Computing",
+                    "grade": "95"
+                },
+                {
+                    "cid": 364,
+                    "name": "Mobile Application Development",
+                    "grade": "94"
+                },
+                {
+                    "cid": 444,
+                    "name": "Machine Learning",
+                    "grade": "92"
+                },
+                {
+                    "cid": 485,
+                    "name": "Software Design",
+                    "grade": 86
+                },
+                {
+                    "cid": 495,
+                    "name": "Artificial Intelligence",
+                    "grade": 90
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "institute": "Gujarat Technologial University",
+            "degree": "Bachelor of Engineering",
+            "field": "Mechanical",
+            "place": "India",
+            "start": 2009,
+            "end": 2013,
+            "highlights": [
+                "Operation Research",
+                "Computer Aided Design (CAD)",
+                "Thermal Engineering",
+                "Internal Combusion Engine",
+                "Control Engineering (Elective)"
+            ],
+            "courses": null
+        }
+    ],
+    "training": [
+        {
+            "id": 1,
+            "institute": "Digital Nova Scotia - Skills for Hire",
+            "program": "Data Analytics",
+            "start": "Feb 2023",
+            "end": "Jun 2023",
+            "place": "Online",
+            "learnings": [
+                {
+                    "domain": "Databse Management",
+                    "technologies": "SQL, Relational Database Design, CRUD Operations, Normalization"
+                },
+                {
+                    "domain": "Data Analytics",
+                    "technologies": "Python, Data Wrangling, Exploratory Data Analysis, Data Science, Natural Language Processing"
+                },
+                {
+                    "domain": "Cyber Security",
+                    "technologies": "Security Principles, Business Continuity, Access Control, Network Security Concepts, Security Operations"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "institute": "NPower Canada",
+            "program": "Junior IT Analyst",
+            "start": "Jan 2023",
+            "end": "Apr 2023",
+            "place": "Online",
+            "learnings": [
+                {
+                    "domain": "Techincal",
+                    "technologies": "Computer Networking, Operating Systems, System Admin, Security, Technical Support Fundamentals"
+                },
+                {
+                    "domain": "Personality Development",
+                    "technologies": "Resume, Cover Letter, Time Management, Stress Management, Linkedin, Behavioral Q/A, Mock Interviews"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "institute": "Digital Nova Scotia - Skills for Hire",
+            "program": "Web Development",
+            "start": "Aug 2022",
+            "end": "Dec 2022",
+            "place": "Online",
+            "learnings": [
+                {
+                    "domain": "Front-end",
+                    "technologies": "HTML5, CSS3, JavaScript, JQuery, ReactJS"
+                },
+                {
+                    "domain": "Back-end",
+                    "technologies": "PHP, NodeJS"
+                },
+                {
+                    "domain": "Database",
+                    "technologies": "SQL, MySQL"
+                },
+                {
+                    "domain": "Cloud Computing",
+                    "technologies": "AWS - EC2, RDS, S3"
+                }
+            ]
+        }
     ]
 }
