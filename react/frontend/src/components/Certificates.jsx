@@ -12,9 +12,9 @@ function Certificates() {
     // console.log(`certificates page: ${JSON.stringify(certificates)}`)
 
     return (
-        <Stack m={2} p={2} bg="lightblue" width="100%">
+        <Stack p={2} width="100%">
             {/* card for information on top */}
-            <Card as="section">
+            <Card as="section" boxShadow="2px 2px 4px">
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     Computer Science / IT Certificates
                 </CardHeader>
@@ -38,7 +38,7 @@ function Certificates() {
             </Card>
 
             {/* certificates */}
-            <Card as="section">
+            <Card as="section" boxShadow="2px 2px 4px">
                 <CardBody>
                     <Accordion allowToggle>
                         {/* one accordion item - one certificate group */}

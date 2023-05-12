@@ -12,8 +12,9 @@ function Experiences() {
         <Stack
             width="100%"
             gap={2}
+            p={2}
         // bg="lightblue"
-        // m={2} p={2}
+        // m={2}
         >
             <Card
                 as="section"
