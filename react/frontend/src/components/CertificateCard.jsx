@@ -15,7 +15,7 @@ function CertificateCard({ details }) {
                             key={nanoid()}
                             border="1px solid"
                             p={2} m={2}
-                            boxSize="90%"
+                            boxSize="80%"
                             mx="auto"
                             _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
                             onClick={c.uri !== null ? () => window.open(c.uri, "_blank") : () => "undefined"}
@@ -31,7 +31,7 @@ function CertificateCard({ details }) {
                                 </Heading>
 
                             </CardHeader>
-                            <CardBody my={0}>
+                            <CardBody as={Center} my={0}>
                                 <Image src={c.certImg} alt={c.certName} />
                             </CardBody>
                             <CardFooter>
