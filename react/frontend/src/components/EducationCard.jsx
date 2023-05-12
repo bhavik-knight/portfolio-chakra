@@ -46,7 +46,7 @@ function EducationCard({ edu }) {
                 <Flex mx="auto" width="80%">
                     <Table variant="striped" colorScheme="purple">
                         <TableCaption placement="top">
-                            <Stack direction={{ base: "column", lg: "row" }} justifyContent="center">
+                            <Stack direction={{ base: "column", lg: "row" }} justifyContent="space-between">
                                 <Text fontSize={{ base: "md", lg: "2xl" }}>Courses</Text>
                                 <Button variant="solid" colorScheme="purple" onClick={setShowMore.toggle}>{showMore ? `Show Favorites` : `Show More`}</Button>
                             </Stack>
