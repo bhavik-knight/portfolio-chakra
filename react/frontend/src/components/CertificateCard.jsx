@@ -17,7 +17,7 @@ function CertificateCard({ details }) {
                             p={2} m={2}
                             boxSize="90%"
                             mx="auto"
-                            _hover={{ cursor: "pointer" }}
+                            _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
                             onClick={c.uri !== null ? () => window.open(c.uri, "_blank") : () => "undefined"}
                         >
                             <CardHeader
