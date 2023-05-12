@@ -14,7 +14,7 @@ function Certificate({ c }) {
     return (
         <Card
             key={nanoid()}
-            _hover={{ boxShadow: "2px 2px 8px", border: "2px solid" }}
+            _hover={{ boxShadow: "2px 2px 8px", border: "2px solid", cursor: "pointer" }}
             p={4} m={8}
             mx="auto"
             onClick={() => window.open(c.uri, "_blank")}
