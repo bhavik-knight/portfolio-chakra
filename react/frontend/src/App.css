@@ -4,6 +4,7 @@
 @import url("./components/Projects.css");
 @import url("./components/ProjectCard.css");
 @import url("./components/Certificates.css");
+@import url("./components/CertificateCard.css");
 
 .container-bg-image {
     background-repeat: no-repeat;
