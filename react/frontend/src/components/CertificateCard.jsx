@@ -13,10 +13,12 @@ function CertificateCard({ details }) {
                     return (
                         <Card
                             key={nanoid()}
-                            border="1px solid white"
+                            border="1px solid"
                             p={2} m={2}
-                            boxSize="70%"
+                            boxSize="90%"
                             mx="auto"
+                            _hover={{ cursor: "pointer" }}
+                            onClick={c.uri !== null ? () => window.open(c.uri, "_blank") : () => "undefined"}
                         >
                             <CardHeader
                                 as={Center}
@@ -43,7 +45,7 @@ function CertificateCard({ details }) {
                 })
 
             }
-        </Flex>
+        </Flex >
     )
 }
 
