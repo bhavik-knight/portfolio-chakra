@@ -1,6 +1,6 @@
 import { useColorMode, useColorModeValue } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { SimpleGrid, Grid, Stack, Flex, Wrap, WrapItem, } from "@chakra-ui/react"
+import { Center, SimpleGrid, Grid, Stack, Flex, Wrap, WrapItem, } from "@chakra-ui/react"
 import { Img, Heading, Text, Divider } from "@chakra-ui/react"
 import { Tooltip, Button } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
@@ -17,7 +17,7 @@ function ProjectCard({ project }) {
             key={nanoid()}
             className="projectCard"
             boxSize={{ base: "100%", md: "50%", xl: "30%" }}
-            my={4} p={2} gap={1}
+            my={2} p={2} gap={1}
             border="2px solid"
             borderColor={useColorModeValue("gray.200", "gray.600")}
             _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
@@ -29,8 +29,8 @@ function ProjectCard({ project }) {
                 </Flex>
 
                 <Divider />
-                <CardHeader px={4} py={0}>
-                    <Heading textDecoration="underline">
+                <CardHeader as={Center} px={2} py={0}>
+                    <Heading textDecoration="underline" fontSize={{ base: "lg", md: "2xl" }}>
                         {project.title}
                     </Heading>
                 </CardHeader> p={0}

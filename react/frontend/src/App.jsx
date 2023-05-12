@@ -82,10 +82,11 @@ function App() {
       >
 
         <Flex
+          // bg="lightgreen"
           className="sidenav"
           as="aside"
           minW="fit-content"
-          maxW="200px"
+          maxW="15%"
           flexDirection={{ base: "row", lg: "column" }}
           flexWrap={{ base: "wrap", lg: "nowrap" }}
           justifyContent={{ base: "center", lg: "flex-start" }}
@@ -99,9 +100,13 @@ function App() {
           />
         </Flex>
         <Flex
+          // bg="lightgreen"
           className="content"
           as="main"
-          px={{ base: 0, lg: "4" }}
+          px={{ base: 0, lg: "4px" }}
+          width="70%"
+          mx="auto"
+          justify="center"
         >
           {pages[currentPage].page}
         </Flex>
