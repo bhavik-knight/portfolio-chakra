@@ -21,7 +21,7 @@ function EducationCard({ edu }) {
     // set the course data again on changing the showMore value
     useEffect(() => {
         showMore ? setCourseData(edu.courses) : setCourseData(showLess)
-        console.log(`clicked on course data change ${courseData.length}`)
+        // console.log(`clicked on course data change ${courseData.length}`)
     }, [showMore])
 
     return (
@@ -54,9 +54,9 @@ function EducationCard({ edu }) {
 
                         <Thead>
                             <Tr>
-                                <Th width="10%">Course ID</Th>
-                                <Th width="80%">Course Name</Th>
-                                <Th width="10%">Grade (out of 99)</Th>
+                                <Th width="15%">Course ID</Th>
+                                <Th width="65%">Course Name</Th>
+                                <Th width="20%" textAlign="right">Grade / {edu.maxGPA}</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
@@ -64,9 +64,9 @@ function EducationCard({ edu }) {
                                 courseData && courseData.map(c => {
                                     return (
                                         <Tr key={nanoid()}>
-                                            <Td width="10%">{c.cid}</Td>
-                                            <Td width="80%">{c.name}</Td>
-                                            <Td width="10%" textAlign="right">{c.grade}</Td>
+                                            <Td width="15%">{c.cid}</Td>
+                                            <Td width="65%">{c.name}</Td>
+                                            <Td width="20%" textAlign="right">{c.grade}</Td>
                                         </Tr>
                                     )
                                 })
