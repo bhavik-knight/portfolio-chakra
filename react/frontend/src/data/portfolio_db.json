@@ -581,87 +581,77 @@
                 {
                     "cid": 162,
                     "name": "Programming & Data Structures",
-                    "grade": "99"
+                    "grade": 99
                 },
                 {
                     "cid": 215,
                     "name": "Social lssues: Information Age",
-                    "grade": "96"
+                    "grade": 96
                 },
                 {
                     "cid": 255,
                     "name": "Advanced Data Structures",
-                    "grade": "98"
+                    "grade": 98
                 },
                 {
                     "cid": 263,
                     "name": "Computer Organization",
-                    "grade": "99"
+                    "grade": 99
                 },
                 {
                     "cid": 345,
                     "name": "Computer Graphics",
-                    "grade": "89"
+                    "grade": 89
                 },
                 {
                     "cid": 101,
                     "name": "Introductory Statistics",
-                    "grade": "99"
-                },
-                {
-                    "cid": 162,
-                    "name": "Programming & Data Structures",
-                    "grade": "99"
+                    "grade": 99
                 },
                 {
                     "cid": 223,
                     "name": "Introduction to Data Science",
-                    "grade": "98"
+                    "grade": 98
                 },
                 {
                     "cid": 225,
                     "name": "Coding in Health Analytics",
-                    "grade": "90"
+                    "grade": 90
                 },
                 {
                     "cid": 275,
                     "name": "Database Management Systems",
-                    "grade": "86"
+                    "grade": 86
                 },
                 {
                     "cid": 277,
                     "name": "Discrete Structures",
-                    "grade": "95"
-                },
-                {
-                    "cid": 162,
-                    "name": "Programming & Data Structures",
-                    "grade": "99"
+                    "grade": 95
                 },
                 {
                     "cid": 340,
                     "name": "Evolutionary Computation",
-                    "grade": "88"
+                    "grade": 88
                 },
                 {
                     "cid": 350,
                     "name": "Biomedical Computation",
-                    "grade": "92"
+                    "grade": 92
                 },
                 {
                     "cid": 356,
                     "name": "Theory of Computing",
-                    "grade": "95"
+                    "grade": 95
                 },
                 {
                     "cid": 364,
                     "name": "Mobile Application Development",
-                    "grade": "94"
+                    "grade": 94
                 },
                 {
                     "cid": 444,
                     "name": "Machine Learning",
-                    "grade": "92"
+                    "grade": 92
                 },
                 {
                     "cid": 485,
