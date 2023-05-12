@@ -750,5 +750,34 @@
                 }
             ]
         }
+    ],
+    "extracurriculars": [
+        {
+            "id": 1,
+            "name": "International Collegiate Programming Contest",
+            "year": 2022,
+            "team": "StFX X-abytes 1",
+            "image": "./extracurriculars/icpc_nena_2022_stfx_xabytes_1.png",
+            "details": "I was honored to represent StFX for the 3rd time for programming competition during my 2-year span. This was my first in-person experience of any programming competition. I was member of team X-abyes1 along with Dalon and Vijay.",
+            "uri": null
+        },
+        {
+            "id": 2,
+            "name": "Atlantic Canada Programming Competition",
+            "year": 2021,
+            "team": "StFX X-abytes",
+            "image": "./extracurriculars/acpc_2021_stfx_xabytes.png",
+            "details": "The StFX University were hosting this event online for this year. We were the only team representing our university this time. Despite our heavy course load of 6 courses in our program with some advanced courses like Machine Learning, and Theory of Computing, I was honored to participate for this event with my team members Dalon and Vijay to represent our University. We were ranked 6 out of 12 participating teams.",
+            "uri": "https://atlantic-canada21.kattis.com/contests/atlantic-canada21"
+        },
+        {
+            "id": 1,
+            "name": "Atlantic Canada Programming Competition",
+            "year": 2020,
+            "team": "StFX Green",
+            "image": "./extracurriculars/acpc_2020_stfx_green.png",
+            "details": "I partficiated as a member of team Green representing St. Francis Xavier University. We participated online for this event from India because of Covid restriction we couldn't travel and studying online. We were ranked 4 out of 20 particiapting teams for this event.",
+            "uri": "https://open.kattis.com/contests/xfokus"
+        }
     ]
 }
