@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid"
 import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
-import { Flex, Stack, Spacer, Divider } from "@chakra-ui/react"
+import { Flex, Box, Stack, Spacer, Divider } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Table, Thead, Tbody, Tfoot, Th, Tr, Td, TableCaption, TableContainer } from "@chakra-ui/react"
@@ -38,8 +38,9 @@ function TrainingCard({ t }) {
 
                 <Divider mx="auto" my={1} width="95%" />
 
-                <TableContainer overflow="scroll">
-                    <Table variant="striped" colorScheme="telegram">
+
+                <Flex overflow="hidden" mx="auto" width="80%">
+                    <Table variant="striped" colorScheme="purple">
                         <Thead>
                             <Tr>
                                 <Th>Domain</Th>
@@ -59,7 +60,7 @@ function TrainingCard({ t }) {
                             }
                         </Tbody>
                     </Table>
-                </TableContainer>
+                </Flex>
             </AccordionPanel>
         </AccordionItem >
     )
