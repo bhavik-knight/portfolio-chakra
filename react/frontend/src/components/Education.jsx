@@ -23,7 +23,7 @@ function Education() {
                 </CardHeader>
                 <Divider className="divider" width="95%" mx="auto" my={1} />
                 <CardBody>
-                    <Stack as={List} gap={2} p={2}>
+                    <Stack as={List} gap={2} p={2} textAlign="justify">
                         <ListItem>
                             My journey in the field of Computer Science is a non-traditional approach. I have established my love for coding and passsion for the Computer Science during 2nd semester of my Bachelor of Engineering in Mechanical.
                         </ListItem>
