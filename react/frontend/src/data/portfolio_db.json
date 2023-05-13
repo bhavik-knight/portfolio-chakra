@@ -779,5 +779,79 @@
             "details": "I partficiated as a member of team Green representing St. Francis Xavier University. We particiapted online and connected with team via ms-team because couldn't travel due to Covid19 and we were studying online. We were ranked 4 out of 20 particiapting teams for this event.",
             "uri": "https://open.kattis.com/contests/xfokus"
         }
-    ]
+    ],
+    "skills": {
+        "languages": [
+            "Python",
+            "JavaScript",
+            "C",
+            "C++",
+            "SQL",
+            "Java",
+            "HTML",
+            "CSS",
+            "PHP",
+            "R",
+            "Kotlin"
+        ],
+        "frameworks": [
+            "ReactJS",
+            "ChakraUI",
+            "MaterialUI",
+            "Bootstrap",
+            "jQuery",
+            "Django",
+            "Flask",
+            "TensorFlow",
+            "Keras",
+            "Scikit-Learn",
+            "NumPy",
+            "Pandas",
+            "NLTK",
+            "BeautifulSoup",
+            "Matplotlib",
+            "Plotly",
+            "Seaborn",
+            "PySwarm",
+            "PyGad",
+            "PyGame"
+        ],
+        "technologies": [
+            "Git",
+            "Docker",
+            "Vim",
+            "WSL",
+            "GitHub",
+            "Bitbucket",
+            "GitLab"
+        ],
+        "os": [
+            "Windows",
+            "Linux",
+            "Andriod"
+        ],
+        "management": [
+            "Agile",
+            "Waterfall",
+            "Scrum",
+            "Jira",
+            "Confluence",
+            "Trello"
+        ],
+        "apps": [
+            "TeamViewer",
+            "Google Workspace",
+            "Office365",
+            "Advanced Excel",
+            "VMWare",
+            "Zendesk",
+            "AWS - EC2",
+            "AWS - RDS",
+            "AWS - S3",
+            "MySQL",
+            "Postgre",
+            "SQLite",
+            "Apache"
+        ]
+    }
 }
