@@ -15,7 +15,7 @@ WORKDIR /home/ubuntu/frontend
 COPY ./frontend/package.json .
 
 # install everything that is needed for our project
-RUN npm isntall
+RUN npm install
 
 # copy rest of the stuff from local directory to docker
 COPY ./frontend .
