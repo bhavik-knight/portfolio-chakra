@@ -1,4 +1,4 @@
-import { Heading, Text, Image } from "@chakra-ui/react"
+import { Heading, Text, Image, AspectRatio } from "@chakra-ui/react"
 import { Stack, Container, Flex, Center } from "@chakra-ui/react"
 import { Divider, Spacer, Button } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
@@ -8,10 +8,7 @@ function Home() {
         <Stack
             p={2}
             gap={2}
-            // m={2}
             width="100%"
-        // bg="lightblue"
-        // border="2px solid"
         >
             <Card as="section" p={4}>
                 <Text
@@ -44,13 +41,61 @@ function Home() {
 
             </Card>
 
-            <Card as="section" p={4}>
-                <Flex boxSize={{ base: "sm", md: "md", lg: "lg" }}>
-                    <Image src="./logos/bhavik_sticker.png" />
-                </Flex>
+            <Card as="section" p={2}>
+                <Stack direction={{ base: "column", lg: "row" }} >
+                    <AspectRatio ratio={1}
+                        width={{ base: "100%", xl: "40%" }}
+                    >
+                        <Flex boxSize={{ base: "base", md: "md", lg: "lg" }}>
+                            <Image src="./logos/bhavik_sticker.png" objectFit="fill" alt="bhavik sticker" />
+                        </Flex>
+                    </AspectRatio>
+                    <Flex
+                        // bg="lightgray"
+                        gap={2}
+                        width={{ base: "100%", xl: "60%" }}
+                        direction={{ base: "column", lg: "row" }}
+                        justifyContent="space-evenly"
+                        alignItems="center"
+                        wrap="wrap"
+                    >
+                        <Card
+                            as={Center}
+                            width={{ base: "100%", lg: "40%" }}
+                            height={{ base: "base", md: "200px" }}
+                            _hover={{ boxShadow: "2px 2px 4px" }}
+                        >
+                            Full Stack Developement
+                        </Card>
+                        <Card
+                            as={Center}
+                            width={{ base: "100%", lg: "40%" }}
+                            height={{ base: "base", md: "200px" }}
+                            _hover={{ boxShadow: "2px 2px 4px" }}
+                        >
+                            Data Analyst
+                        </Card>
 
+                        <Card
+                            as={Center}
+                            width={{ base: "100%", lg: "40%" }}
+                            height={{ base: "base", md: "200px" }}
+                            _hover={{ boxShadow: "2px 2px 4px" }}
+                        >
+                            Teamwork
+                        </Card>
+                        <Card
+                            as={Center}
+                            width={{ base: "100%", lg: "40%" }}
+                            height={{ base: "base", md: "200px" }}
+                            _hover={{ boxShadow: "2px 2px 4px" }}
+                        >
+                            Problem Solving
+                        </Card>
+                    </Flex>
+                </Stack>
 
-            </Card>
+            </Card >
 
         </Stack >
     )

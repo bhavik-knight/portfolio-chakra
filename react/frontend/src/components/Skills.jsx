@@ -193,7 +193,12 @@ function Skills() {
                     direction={{ base: "column", lg: "row" }}
                     justifyContent={{ base: "center", md: "space-evenly" }}
                 >
-                    <Card p={1} width="25%" textAlign="center" _hover={{ boxShadow: "1px 1px 2px" }} >
+                    <Card
+                        p={1}
+                        textAlign="center"
+                        _hover={{ boxShadow: "1px 1px 2px" }}
+                        width={{ base: "100%", lg: "25%" }}
+                    >
                         <CardHeader pb={0} textDecoration="underline">Imperative</CardHeader>
                         <CardBody as={List}>
                             <ListItem>Procedural</ListItem>
@@ -204,7 +209,12 @@ function Skills() {
 
                     <Divider orientation={{ base: "horizontal", md: "vertical" }} />
 
-                    <Card p={1} width="25%" textAlign="center" _hover={{ boxShadow: "1px 1px 2px" }} colorScheme="whiteAlpha">
+                    <Card
+                        p={1}
+                        textAlign="center"
+                        _hover={{ boxShadow: "1px 1px 2px" }}
+                        width={{ base: "100%", lg: "25%" }}
+                    >
                         <CardHeader pb={0} textDecoration="underline">Declarative</CardHeader>
                         <CardBody as={List}>
                             <ListItem>Functional</ListItem>
