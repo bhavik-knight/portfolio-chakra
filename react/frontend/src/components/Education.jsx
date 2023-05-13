@@ -28,13 +28,13 @@ function Education() {
                 <CardBody>
                     <Stack as={List} gap={2} p={2} textAlign="justify">
                         <ListItem>
-                            My journey in the field of Computer Science is a non-traditional approach. I have established my love for coding and passsion for the Computer Science during 2nd semester of my Bachelor of Engineering in Mechanical.
+                            My journey in the field of Computer Science is a non-traditional approach. I have established my love for coding and passsion for the Computer Science during 2nd semester of my Bachelor of Engineering in Mechanical when we had a course on Computer Programming using C language. My professor acknowledged my understanding of topics and programming skills saying that I could complete some of the challenges which half of the Computer Science couldn't complete during that time.
                         </ListItem>
                         <ListItem>
-                            Being the first person in my family to pursue science and engineering field without any background or information it was difficut decision for me to dropout or not. I chose latter and completed my Bachelors in Engineering in Mechanical, and within few months I got my first job as an ad-hoc lecuturer.
+                            Being a Software Engineer was my childhood dream, but my undergraduate study was completely different than my dreams. So even after completion of my degree and starting a job, my love for Computer Science never died, and I keep seeking a career path to follow my dream. My journey for the Computer Science started in 2015 when I decided to change my career trajectory in pursite of my dreams. I am forever grateful for Harvard's professor Dr. David Malan for teaching the CS50 course with so much passion which played a pivotal role in my life and career.
                         </ListItem>
                         <ListItem>
-                            My love for Computer Science came knocking time-to-time and I chose to follow my dream to become a Software Engineer, and made decision to change my career. I found Havard's introductory course CS50's video playlist on youtube, and then I signed up for the course through edX. That's how my journey started for the new career, and since then I never looked back. I completed several online courses before I got admission in St. Francis Xavier University's Post Baccaluareate Diploma in Artificial Intelligence program.
+                            I recently graduated with Post Baccalaureate Diploma in Artificial Intelligence from St. Francis Xavier Unviersity where I studied some core subjects of Computer Science and enriched my knowledge and skills to build my career. Checkout my projects and skills in various domains.
                         </ListItem>
                     </Stack>
                 </CardBody>
