@@ -2,7 +2,7 @@ import { nanoid } from "nanoid"
 import { useState, useEffect } from "react"
 import { useBoolean } from "@chakra-ui/react"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
-import { Flex, Container } from "@chakra-ui/react"
+import { Flex, Center, Container } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 import { Button, Tag } from "@chakra-ui/react"
 import { Stack, VStack, HStack } from "@chakra-ui/react"
@@ -35,6 +35,7 @@ function Skills() {
     return (
         <Stack
             p={2}
+            gap={2}
             width="100%"
         // m={2}
         // bg="lightblue"
@@ -50,12 +51,16 @@ function Skills() {
                         <ListItem>
                             I am a Pythonist who is passionate about Artificial Intelligence, having a thorough foundation in Mathematics.
                         </ListItem>
-                        <ListItem>My dominant skills are in the following two domains of Computer Science.
+                        <ListItem>
+                            In a full-stack environment, my dominant skills are in the backend development, but I can also make good UI/UX as a frontend developer.
+                        </ListItem>
+                        <ListItem>
+                            I can setup docker containers and host the website using PaaS like Heroku, Netlify or configure IaaS like AWS - EC2.
                         </ListItem>
                     </List>
                 </CardBody>
-                <Divider className="divider" width="95%" mx="auto" my={1} />
-                <CardFooter my={0} as={Stack}>
+                {/* <Divider className="divider" width="95%" mx="auto" my={1} /> */}
+                <CardFooter my={0} as={Stack} display="none">
                     <Flex justifyContent={{ base: "center", lg: "space-evenly" }} direction={{ base: "column", lg: "row" }}>
                         <Button
                             variant="ghost"
@@ -173,30 +178,42 @@ function Skills() {
                         </ListItem>
                         <ListItem>
 
-                            In Artificial Intelligence, I learned First Order Logic (FOL) which in addition to the facts, can express object, relations and functions.
+                            In Artificial Intelligence, I learned First Order Logic (FOL), which in addition to the facts, can express object, relations and functions.
                         </ListItem>
                         <ListItem>
-                            To perform the CRUD Operations on the databases, we use SQL. Thus, concetually I have knowledge of all programming paradigms.
+                            To perform the CRUD Operations on the databases, I use SQL. Thus, conceptually I have knowledge of all programming paradigms.
                         </ListItem>
                     </UnorderedList>
                 </CardBody>
+
                 <Divider mx="auto" width="95%" my={1} />
-                <CardFooter as={Stack} direction={{ base: "column", lg: "row" }} justifyContent="center">
-                    <List>
-                        <ListItem as="strong" textDecoration="underline">Imperative</ListItem>
-                        <ListItem>Procedural</ListItem>
-                        <ListItem>Object Oriented</ListItem>
-                        <ListItem>Structural</ListItem>
-                    </List>
-                    <Divider orientation="vertical" />
-                    <List>
-                        <ListItem as="strong" textDecoration="underline">Declarative</ListItem>
-                        <ListItem>Functional</ListItem>
-                        <ListItem>Logical</ListItem>
-                        <ListItem>Database</ListItem>
-                    </List>
+
+                <CardFooter
+                    as={Stack}
+                    direction={{ base: "column", lg: "row" }}
+                    justifyContent={{ base: "center", md: "space-evenly" }}
+                >
+                    <Card p={1} width="25%" textAlign="center" _hover={{ boxShadow: "1px 1px 2px" }} >
+                        <CardHeader pb={0} textDecoration="underline">Imperative</CardHeader>
+                        <CardBody as={List}>
+                            <ListItem>Procedural</ListItem>
+                            <ListItem>Object Oriented</ListItem>
+                            <ListItem>Structural</ListItem>
+                        </CardBody>
+                    </Card>
+
+                    <Divider orientation={{ base: "horizontal", md: "vertical" }} />
+
+                    <Card p={1} width="25%" textAlign="center" _hover={{ boxShadow: "1px 1px 2px" }} colorScheme="whiteAlpha">
+                        <CardHeader pb={0} textDecoration="underline">Declarative</CardHeader>
+                        <CardBody as={List}>
+                            <ListItem>Functional</ListItem>
+                            <ListItem>Logical</ListItem>
+                            <ListItem>Database</ListItem>
+                        </CardBody>
+                    </Card>
                 </CardFooter>
-            </Card>
+            </Card >
         </Stack >
     )
 }

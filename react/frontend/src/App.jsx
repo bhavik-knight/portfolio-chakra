@@ -18,7 +18,7 @@ function App() {
   // color mode toggle; check the local storage on each color mode change
   const { colorMode, toggleColorMode } = useColorMode()
   useEffect(() => {
-    console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
+    // console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
   }, [colorMode])
 
   // pages in the portfolio
@@ -105,6 +105,7 @@ function App() {
           as="main"
           px={{ base: 0, lg: "4px" }}
           width="70%"
+          minH="fit-content"
           mx="auto"
           justify="center"
         >

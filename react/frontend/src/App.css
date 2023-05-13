@@ -23,7 +23,7 @@
 
 .footer {
     position: absolute;
-    margin-top: auto;
+    /* margin-top: auto; */
     left: 0;
     right: 0;
     bottom: 0;
