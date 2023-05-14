@@ -1,3 +1,5 @@
+
+import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Heading, Text, Image, AspectRatio } from "@chakra-ui/react"
 import { Stack, Container, Flex, Center } from "@chakra-ui/react"
 import { Divider, Spacer, Button } from "@chakra-ui/react"
@@ -42,7 +44,7 @@ function Home() {
             </Card>
 
             <Card as="section" p={2}>
-                <Stack direction={{ base: "column", lg: "row" }} >
+                <Stack direction={{ base: "column", xl: "row" }} >
                     <AspectRatio ratio={1}
                         width={{ base: "100%", xl: "40%" }}
                     >
@@ -54,43 +56,55 @@ function Home() {
                         // bg="lightgray"
                         gap={2}
                         width={{ base: "100%", xl: "60%" }}
-                        direction={{ base: "column", lg: "row" }}
+                        direction={{ base: "column", xl: "row" }}
                         justifyContent="space-evenly"
                         alignItems="center"
                         wrap="wrap"
                     >
                         <Card
                             as={Center}
-                            width={{ base: "100%", lg: "40%" }}
+                            width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
-                            _hover={{ boxShadow: "2px 2px 4px" }}
+                            className="homeSkills"
                         >
-                            Full Stack Developement
+                            <Text as="strong" className="homeSkillName">Full Stack Developement</Text>
+                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                                Worked on numerous Full Stack project using Django, Flask, PHP, HTML, CSS, JavaScript, jQuery, Bootstrap, ReactJS, ChakraUI, MySQL, Postgreq and hosted the projects on Heroku and AWS using Apache server.
+                            </CardBody>
                         </Card>
                         <Card
                             as={Center}
-                            width={{ base: "100%", lg: "40%" }}
+                            width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
-                            _hover={{ boxShadow: "2px 2px 4px" }}
+                            className="homeSkills"
                         >
-                            Data Analyst
+                            <Text as="strong" className="homeSkillName">Data Analyst</Text>
+                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                                Worked on the projects executing the all stages of the process and created data-pipelines, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, NLTK, etc.
+                            </CardBody>
                         </Card>
 
                         <Card
                             as={Center}
-                            width={{ base: "100%", lg: "40%" }}
+                            width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
-                            _hover={{ boxShadow: "2px 2px 4px" }}
+                            className="homeSkills"
                         >
-                            Teamwork
+                            <Text as="strong" className="homeSkillName">Teamwork</Text>
+                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                                Completed several projects as a team where I contributed during each stage. Experience as a scrum master as well as scribe using the tools like project management tools like Jira, Trello, etc.
+                            </CardBody>
                         </Card>
                         <Card
                             as={Center}
-                            width={{ base: "100%", lg: "40%" }}
+                            width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
-                            _hover={{ boxShadow: "2px 2px 4px" }}
+                            className="homeSkills"
                         >
-                            Problem Solving
+                            <Text as="strong" className="homeSkillName">Problem Solving</Text>
+                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                                Leverage critical thinking, analytical skills, logic and reasoning, in combination with tools like Google, Stackoverflow, chatGPT, and when required help of experienced colleauge to solve the problems.
+                            </CardBody>
                         </Card>
                     </Flex>
                 </Stack>
