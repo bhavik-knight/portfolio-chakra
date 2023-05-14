@@ -69,7 +69,9 @@ function Home() {
                         >
                             <Text as="strong" className="homeSkillName">Full Stack Developement</Text>
                             <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
-                                Worked on numerous Full Stack project using Django, Flask, PHP, HTML, CSS, JavaScript, jQuery, Bootstrap, ReactJS, ChakraUI, MySQL, Postgreq and hosted the projects on Heroku and AWS using Apache server.
+                                <Text noOfLines={[2, 4, 8]}>
+                                    Worked on numerous Full Stack project using Django, Flask, PHP, HTML, CSS, JavaScript, jQuery, Bootstrap, ReactJS, ChakraUI, MySQL, Postgreq and hosted the projects on Heroku and AWS using Apache server.
+                                </Text>
                             </CardBody>
                         </Card>
                         <Card
@@ -80,7 +82,9 @@ function Home() {
                         >
                             <Text as="strong" className="homeSkillName">Data Analyst</Text>
                             <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
-                                Worked on the projects executing the all stages of the process and created data-pipelines, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, NLTK, etc.
+                                <Text noOfLines={[2, 4, 8]}>
+                                    Worked on the projects executing the all stages of the process and created data-pipelines, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, NLTK, etc.
+                                </Text>
                             </CardBody>
                         </Card>
 
@@ -92,7 +96,9 @@ function Home() {
                         >
                             <Text as="strong" className="homeSkillName">Teamwork</Text>
                             <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
-                                Completed several projects as a team where I contributed during each stage. Experience as a scrum master as well as scribe using the tools like project management tools like Jira, Trello, etc.
+                                <Text noOfLines={[2, 4, 8]}>
+                                    Completed several projects as a team where I contributed during each stage. Experience as a scrum master as well as scribe using the tools like project management tools like Jira, Trello, etc.
+                                </Text>
                             </CardBody>
                         </Card>
                         <Card
@@ -103,7 +109,9 @@ function Home() {
                         >
                             <Text as="strong" className="homeSkillName">Problem Solving</Text>
                             <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
-                                Leverage critical thinking, analytical skills, logic and reasoning, in combination with tools like Google, Stackoverflow, chatGPT, and when required help of experienced colleauge to solve the problems.
+                                <Text noOfLines={[2, 4, 8]}>
+                                    Leverage critical thinking, analytical skills, logic and reasoning, in combination with tools like Google, Stackoverflow, chatGPT, and when required help of experienced colleauge to solve the problems.
+                                </Text>
                             </CardBody>
                         </Card>
                     </Flex>
