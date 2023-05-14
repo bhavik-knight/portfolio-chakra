@@ -438,6 +438,133 @@
                     "learnings": "Learned about web development fundamentals; back-end developement Php, NodeJS; front-end development HTML5, CSS3, Javascript (ES6), jQuery; docker; CI/CD Basics; AWS Basics"
                 }
             ]
+        },
+        {
+            "id": 3,
+            "title": "Programming Competitions",
+            "platform": "ICPC Website",
+            "institute": "International Collegiate Programming Contest",
+            "about": "I participated in the ICPC Programming competition representing StFX University as a part of team X-abytes-1 under the guidence of the professor Dr. Milton King.",
+            "certificateDetails": [
+                {
+                    "certId": "icpc_1",
+                    "certName": "Honorable Certificate",
+                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_Bhavik_Bhagat_MEDAL.pdf",
+                    "uri": null,
+                    "learnings": "We had to apply our data strucutres and alogrithm knowledge here. I learned a lot about time-management and how to work under pressure with a team brainstroming the ideas."
+                },
+                {
+                    "certId": "icpc_2",
+                    "certName": "Honorable Certificate",
+                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_MEDAL_team.pdf",
+                    "uri": null,
+                    "learnings": "We had a meeting before the competition where we were introdued the protocols to follow. During this compeition we learned about teamwork, and how to overcome the difficult problems by sharing the ideas to solve a problem and iteratively make the solution efficient."
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "title": "Harvard Certificates",
+            "platform": "Harvard & edX",
+            "institute": "Harvard University",
+            "about": "My first ever Computer Science introductory course. I participated in the various events of Harvard's CS50 courses, and enrolled in other courses.",
+            "certificateDetails": [
+                {
+                    "certId": "harvard_1",
+                    "certName": "CS50's Introduction to Computer Science",
+                    "certImg": "./certificates/harvard/HarvardX_CS50x_Introduction to Computer Science.pdf",
+                    "uri": "https://courses.edx.org/certificates/e85433344ee74aefb3578802c4fc45c7",
+                    "learnings": "I learned general overview of the Computer Science field and learned building blocks like basic data strucutres, algorithm, memory management, and fundamental concepts to build my career. I learned several programming languages like scratch, c, python, html, javascript, and solved challenging assignments like recovering images, spell-checker, game of fifteen using C - langauge."
+                },
+                {
+                    "certId": "harvard_2",
+                    "certName": "Puzzle Day 2019",
+                    "certImg": "./certificates/harvard/Harvardx_CS50x_Puzzle_Day_2019.pdf",
+                    "uri": "https://cs50.harvard.edu/certificates/34f3a67d-6862-4c59-90bb-f2bce5efcba9",
+                    "learnings": "I earned this certificate for participating in the puzzle day event in 2019. I was in the team with members from Belgium, Turkey, Ukraine, and Netherlands. We were colleagues in CS50 course and coordinated using Discord platform. We are rewarded the certificate for solving 9 out of 12 puzzles."
+                },
+                {
+                    "certId": "harvard_3",
+                    "certName": "Puzzle Day 2020",
+                    "certImg": "./certificates/harvard/HarvardX_CS50x_Puzzle_Day_2020.pdf",
+                    "uri": "https://cs50.harvard.edu/certificates/c6b50f16-00d9-4e1b-b37a-0a3953778ac6",
+                    "learnings": "I earned this certificate 2nd year in a row for the puzzle day online event. I participated as a one-member team to challenge myself this year for the event. I was rewarded the certificate for solving 6 out of 8 puzzles."
+                },
+                {
+                    "certId": "harvard_4",
+                    "certName": "Data Science: R Basics",
+                    "certImg": "./certificates/harvard/HarvardX_Data_Science_R_Basics_ edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/baa77fe96adf476d8f892c527d3e572e",
+                    "learnings": "I took the Data Science course to get familiar with the basics of the field because I was fascinated by the Machine Learning concepts that I was introduced in the MIT 6002x course. This was my first course in a specialization of this field."
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "title": "MIT Certificates",
+            "platform": "edX",
+            "institute": "Massachusetts Institute of Technology",
+            "about": "After learning basic concepts of Computer Science from Harvard's CS50 course, I was recommended this course by my peers when I was looking for recommendation for Python coruses.",
+            "certificateDetails": [
+                {
+                    "certId": "mit_1",
+                    "certName": "Introduction to Computer Science and Programming Using Python",
+                    "certImg": "./certificates/mit/MITx_6.00.1x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/23f2cbca51ae432aa9c7b2846468157a",
+                    "learnings": "A deep dive in to core computer science concepts with the help of mathematics on the parts like big-oh analysis. Apart from learning technical skills, I learned time management and stress management as this was my first instructor-paced course where I had to submit assignments and complete exams by the set deadlines."
+                },
+                {
+                    "certId": "mit_2",
+                    "certName": "Introduction to Computational Thinking and Data Science",
+                    "certImg": "./certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/5f707d85691d4dfe9643fdcbfc53d4ee",
+                    "learnings": "After completing the 6001x course from MIT with very good score, Adam Milton-Barker peer from CS50 course recommed me to check this course. This course challenged me in the whole different way, and I decided to build my career in this specialization in the future. I learned about graphs data structure, stochastic programming and statistical thinking, Monte-Carlo simulation, plotting libraries, and introduction to Machine Learning with KNN."
+                },
+                {
+                    "certId": "mit_3",
+                    "certName": "Computational Thinking using Python",
+                    "certImg": "./certificates/mit/MITx_600_XSeries_edX_Credentials.pdf",
+                    "uri": "https://credentials.edx.org/credentials/0b3244958d38408296d5c03d7af6026e/",
+                    "learnings": "This certificate was rewarded to me for completing X series program by completing the 6001x and 6002x courses from MIT."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Microsoft Certificates",
+            "platform": "edX",
+            "institute": "Microsoft",
+            "about": "",
+            "certificateDetails": [
+                {
+                    "certId": "ms_1",
+                    "certName": "Learn to Program in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV276x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/f5e302d222a84dbc89c5e775c64f7886",
+                    "learnings": "I leaned about basic programming concepts like data types, variables, logic, loops, control flows, functions, etc. and got familiar with various terminologies of Java langauge."
+                },
+                {
+                    "certId": "ms_2",
+                    "certName": "Object Oriented Programming in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV277x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/fcb211988bfc4c78911892cc130bc855",
+                    "learnings": "In this course I learned abotu arrays, classes & objects, inheritance, polymorphism, abstract classes, and interfaces."
+                },
+                {
+                    "certId": "ms_3",
+                    "certName": "Algorithms and Data Structures",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV285x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/fe6a9f7c165d44fbbf4876403a56ceda",
+                    "learnings": "During this course I learned abuot various searching and sorting algorithms like bubble sort, selection sort, merge sort, linear search, binary search, and data structures like liked list, stack, queue."
+                },
+                {
+                    "certId": "ms_4",
+                    "certName": "Introduction to Programming in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_Professional_Certificate_edX_Credentials.pdf",
+                    "uri": "https://credentials.edx.org/credentials/1e58f5c8e401420fb36f9e6a38b7079f",
+                    "learnings": "I was rewarded this certificate for completing the series of Java coruses offered by Microsoft. During the entire program I learned how to program using Java Language and terminologies related to the programming language."
+                }
+            ]
         }
     ],
     "experiences": [
@@ -539,9 +666,9 @@
             "start": "Sep 2013",
             "end": "May 2014",
             "responsibilities": [
-                "Increased student success rate by 10% in the recent years in the subjects of 'Engineering Drawing/Graphics' and 'Elements of Mechanical Engineering'  by applying a practical approach to curriculum delivery",
-                "Contributed to the development of course material by accumulating interesting example from various reference books, creating new problems and prepared solution, and delived feedback of the assignments and exams on time; resulting in a high-quality study guide for students available free of cost",
-                "Conducted extra classes for curious students on demand to engage them practicing challenging problems under our guidence; created amiable environment for to discuss their problems and guided them; which resulted in 98% students cleared the University exams across different stream for both subjects"
+                "Increased student success rate by 10% in recent years in the subjects of 'Engineering Drawing/Graphics' and 'Elements of Mechanical Engineering by applying a practical approach to curriculum delivery",
+                "Contributed to the development of course material by accumulating challenging examples from various reference books, creating new problems and preparing solutions, and delivering feedback on the assignments and exams on time, resulting in a high-quality study guide for students available free of cost",
+                "Conducted extra classes for curious students on demand to engage them in practicing challenging problems and guided them in the right direction, resulting in 98% of students clearing the University exams across different streams for both subjects"
             ]
         }
     ],
