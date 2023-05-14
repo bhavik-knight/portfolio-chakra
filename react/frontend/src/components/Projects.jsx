@@ -46,6 +46,8 @@ function Projects() {
                     pt={2}
                     px={2}
                     variant="enclosed"
+                    size={{ base: "base", lg: "md" }}
+                    orientation={{ base: "vertical", lg: "horizontal" }}
                     onChange={(index) => setTabIndex(index)}
                 >
                     {/* tab titles */}
