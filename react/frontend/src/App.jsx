@@ -62,7 +62,7 @@ function App() {
   }
   useEffect(() => {
     localStorage.setItem("currentPage", currentPage)
-    document.title = `Bhavik | ${currentPage}`
+    document.title = `Bhavik | ${currentPage[0].toUpperCase() + currentPage.substring(1)}`
     window.scrollTo(0, 0)
   }, [currentPage])
 
