@@ -5,6 +5,7 @@
 @import url("./components/ProjectCard.css");
 @import url("./components/Certificates.css");
 @import url("./components/ExtracurricularCard.css");
+@import url("./components/Home.css");
 
 .container-bg-image {
     background-repeat: no-repeat;
