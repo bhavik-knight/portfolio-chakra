@@ -83,7 +83,7 @@ function Home() {
                             <Text as="strong" className="homeSkillName">Data Analyst</Text>
                             <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
-                                    Worked on the projects executing the all stages of the process and created data-pipelines, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, NLTK, etc.
+                                    Worked on the projects executing ETL operations to create data-pipelines, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, NLTK, etc.
                                 </Text>
                             </CardBody>
                         </Card>
