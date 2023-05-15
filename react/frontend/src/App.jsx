@@ -57,8 +57,9 @@ function App() {
   // to load a particular page on button click
   const [currentPage, setCurrentPage] = useState(localStorage.getItem("currentPage") || "home")
   function handleSelectPage(event) {
+    console.log(`app - side bar button click event: ${event}`)
+    setCurrentPage(event.currentTarget.name)
     console.log(`app - ${currentPage}`)
-    setCurrentPage(event.target.name)
   }
   useEffect(() => {
     localStorage.setItem("currentPage", currentPage)
@@ -96,7 +97,7 @@ function App() {
           <Sidenav
             pages={pages}
             activePage={currentPage}
-            selectPage={(event) => handleSelectPage(event)}
+            selectPage={handleSelectPage}
           />
         </Flex>
         <Flex
