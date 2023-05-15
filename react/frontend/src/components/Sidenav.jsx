@@ -9,37 +9,69 @@ function Sidenav({ pages, activePage, selectPage }) {
     const [isLarge] = useMediaQuery("(min-width: 992px)")
 
     return (
-        Object.keys(pages).map((page) => {
-            console.log(`buttonicon - ${JSON.stringify(pages[page].icon)}`)
-            return (
-                <Tooltip
-                    hasArrow
-                    placement="right"
-                    key={nanoid()}
-                    label={page}
-                    aria-label={page}
-                    textTransform="capitalize"
-                >
-                    <Button
-                        key={nanoid()}
-                        className="sidenavButton"
-                        variant="ghost"
-                        onClick={(event) => selectPage(event)}
-                        isActive={page === activePage}
-                        name={page}
-                        leftIcon={pages[page].icon}
-                    >
-                        {
-                            isLarge &&
-                            <Text className="sidenavButtonText">
-                                {page}
-                            </Text>
-                        }
-                    </Button>
-                </Tooltip >
-            )
-        })
+        <Stack direction={{ base: "row", lg: "column" }}>
+            {
+                Object.keys(pages).map((page) => {
+                    return (
+                        <Tooltip
+                            hasArrow
+                            placement="right"
+                            key={nanoid()}
+                            label={page}
+                            aria-label={page}
+                            textTransform="capitalize"
+                        >
+
+                            {
+                                isLarge ?
+                                    <Button
+                                        className="sidenavButton"
+                                        variant="ghost"
+                                        onClick={(event) => selectPage(event)}
+                                        isActive={page === activePage}
+                                        name={page}
+                                        leftIcon={pages[page].icon}
+                                    >
+                                        <Text className="sidenavButtonText">
+                                            {page}
+                                        </Text>
+                                    </Button>
+                                    :
+
+                                    <IconButton
+                                        className="sidenavButton"
+                                        variant="ghost"
+                                        onClick={event => selectPage(event)}
+                                        isActive={page === activePage}
+                                        name={page}
+                                        icon={pages[page].icon}
+                                    />
+
+                            }
+
+                        </Tooltip >
+                    )
+                })
+            }
+        </Stack>
     )
 }
 
 export { Sidenav }
+
+// <Button
+//     className="sidenavButton"
+//     variant="ghost"
+//     onClick={(event) => selectPage(event)}
+//     isActive={page === activePage}
+//     name={page}
+//     leftIcon={pages[page].icon}
+//     size={{ base: "sm", lg: "md" }}
+// >
+//     {
+//         isLarge &&
+//         <Text className="sidenavButtonText">
+//             {page}
+//         </Text>
+//     }
+// </Button>

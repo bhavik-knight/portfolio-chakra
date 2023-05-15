@@ -86,8 +86,7 @@ function App() {
           // bg="lightgreen"
           className="sidenav"
           as="aside"
-          minW="fit-content"
-          maxW="15%"
+          width={{ base: "100%", lg: "15%" }}
           flexDirection={{ base: "row", lg: "column" }}
           flexWrap={{ base: "wrap", lg: "nowrap" }}
           justifyContent={{ base: "center", lg: "flex-start" }}

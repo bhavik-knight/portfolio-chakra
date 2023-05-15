@@ -1,7 +1,7 @@
 import { icons } from "./Icons"
 import { useState, useRef, useEffect } from "react"
-import { useColorModeValue } from "@chakra-ui/react"
-import { Heading, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
+import { useColorModeValue, useMediaQuery } from "@chakra-ui/react"
+import { Heading, Spacer, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
 import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
 
 
@@ -11,6 +11,7 @@ import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react
 
 // to create icons for navbar with consistent style
 function getNavbarIconButton(btnName, btnIcon, handleClick) {
+    console.log(`header iconbtn: ${JSON.stringify(btnIcon)}`)
     return (
         <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName} textTransform="capitalize">
             <IconButton
@@ -29,6 +30,8 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
 
 
 function Header({ colorMode, changeColorMode, title }) {
+    // check for the media query
+    const [isLarge] = useMediaQuery("(min-width: 992px)")
 
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
@@ -79,13 +82,16 @@ function Header({ colorMode, changeColorMode, title }) {
             px={4}
             bg={`${navbarBg ? "transparent" : bgColor}`}
         >
-            <Heading className="logo" width="15%">Bhavik</Heading>
-            <Container bg="transparent">
+            <Heading className="logo" width={{ base: "30%", lg: "15%" }}>
+                B{isLarge && "havik"}
+            </Heading>
+            <Spacer />
+            {/* <Container bg="transparent">
                 <Text
                     fontSize="4xl"
                     textAlign="center"> {title === "home" ? "Bhavik's Portfolio" : title}
                 </Text>
-            </Container>
+            </Container> */}
             <ButtonGroup spacing={1}>
                 {colorMode === "dark" ? sunIcon : moonIcon}
                 {linkedinIcon}
