@@ -1,6 +1,7 @@
+import { chakra } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { Flex, Container, Center } from "@chakra-ui/react"
-import { Image, Text, Textarea, Heading } from "@chakra-ui/react"
+import { Button, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useColorModeValue } from "@chakra-ui/react"
@@ -15,24 +16,39 @@ function CertificateCard({ details }) {
                             key={nanoid()}
                             border="1px solid"
                             p={2} m={2}
-                            boxSize="80%"
+                            boxSize="90%"
                             mx="auto"
                             _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
-                            onClick={c.uri !== null ? () => window.open(c.uri, "_blank") : () => "undefined"}
                         >
                             <CardHeader
-                                as={Center}
+                                as={Flex}
                                 my={0}
+                                // bg="blue.200"
+                                alignItems="center"
+                                justifyContent="space-evenly"
                             >
-                                <Heading
-                                    fontSize={{ base: "sm", md: "xl" }}
-                                >
+                                <Heading fontSize={{ base: "sm", md: "xl" }}>
                                     {c.certName}
                                 </Heading>
-
+                                {
+                                    c.uri !== null &&
+                                    <Button
+                                        boxShadow="1px 1px 4px"
+                                        _hover={{ border: "1px solid" }}
+                                        variant="ghost"
+                                        onClick={() => window.open(c.uri, "_blank")}
+                                    >
+                                        Credentials
+                                    </Button>
+                                }
                             </CardHeader>
                             <CardBody as={Center} my={0}>
-                                <Image src={c.certImg} alt={c.certName} />
+                                <chakra.embed
+                                    width={{ base: "300px", lg: "1024px" }}
+                                    height={{ base: "200px", lg: "768px" }}
+                                    src={c.certImg}
+                                    type="application/pdf"
+                                />
                             </CardBody>
                             <CardFooter>
                                 <Text>
