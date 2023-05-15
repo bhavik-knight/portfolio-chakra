@@ -43,11 +43,6 @@ function App() {
       "page": <Education />,
     },
 
-    "certificates": {
-      "icon": icons.certificates,
-      "page": <Certificates />,
-    },
-
     "experiences": {
       "icon": icons.experiences,
       "page": <Experiences />,
