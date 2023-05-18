@@ -385,44 +385,58 @@
                 {
                     "certId": "c1",
                     "certName": "Technical Support Fundamentals",
-                    "certImg": "./certificates/google_it_professional/c1_fundamentals.jpg",
+                    "certImg": "./certificates/google_it_professional/google_it_course_1.pdf",
                     "uri": "https://coursera.org/share/dd6acf709cba5e5942c42e890da220f0",
                     "learnings": "I learned about how to assemble a computer, basics of internet, overview of operation system and applications, problem-solving methodologies and soft-skills required in Information Technology field"
                 },
                 {
                     "certId": "c2",
                     "certName": "The Bits and Bytes of Computer Networking",
-                    "certImg": "./certificates/google_it_professional/c2_networking.jpg",
+                    "certImg": "./certificates/google_it_professional/google_it_course_2.pdf",
                     "uri": "https://coursera.org/share/605e01e4cb5a3c481139666a9112b644",
                     "learnings": "In this course I learned basics of computer networking; five-layer and OSI model; standard protocols; network troubleshooting; basics of DNS and DHCP server"
                 },
                 {
                     "certId": "c3",
                     "certName": "Operating Systems and You: Becoming a Power User",
-                    "certImg": "./certificates/google_it_professional/c3_os.jpg",
+                    "certImg": "./certificates/google_it_professional/google_it_course_3.pdf",
                     "uri": "https://coursera.org/share/c1ee69aa511fa4a7f19a05d1d92995f2",
                     "learnings": "I learned about Windows and Linux OS; file systems; install, configure, and remove software; disk partitioning; set up users, groups and permissions; background processes and management; troubleshoot the common issues regarding OS"
                 },
                 {
                     "certId": "c4",
                     "certName": "System Administration and IT Infrastructure Services",
-                    "certImg": "./certificates/google_it_professional/c4_sysadmin.jpg",
+                    "certImg": "./certificates/google_it_professional/google_it_course_4.pdf",
                     "uri": "https://coursera.org/share/8d81d43f9fefaec24181cd57add956d9",
                     "learnings": "In this course I learned about chosing the best hardware and services for organizations; manage infrastructure servers; Active directory and OpenLDAP; how to backup and recover data; utilize system adminstration knowledge to plan and improve processes for IT environments"
                 },
                 {
                     "certId": "c5",
                     "certName": "IT Security: Defense against the digital dark arts",
-                    "certImg": "./certificates/google_it_professional/c5_security.jpg",
+                    "certImg": "./certificates/google_it_professional/google_it_course_5.pdf",
                     "uri": "https://coursera.org/share/0c3b147c46e28c84da792addfd4634a7",
                     "learnings": "I learned basics of Cloud Computing; everything as a service; cloud storage; security principles and basics of ips/ids/firewall"
                 },
                 {
                     "certId": "c6",
                     "certName": "Google IT Support",
-                    "certImg": "./certificates/google_it_professional/google_it_support.jpg",
+                    "certImg": "./certificates/google_it_professional/google_it_professional_certificate.pdf",
                     "uri": "https://coursera.org/share/50bd1600dd46d9571b0dfd4b102fbc37",
                     "learnings": "During this professional program in addition to fundamental of IT support, I learned differnet domains of IT such as Computer Networking, Operating Systems, System Administration, Computer Security, etc."
+                },
+                {
+                    "certId": "c7",
+                    "certName": "Googlt IT Support Credly Badge",
+                    "certImg": "./certificates/google_it_professional/google_it_support_certificate_badge.pdf",
+                    "uri": "https://www.credly.com/badges/1a31d8bb-5869-4a21-bc53-df7f9c347873",
+                    "learnings": "I was rewarded this badge by Credly for completing the professional certification."
+                },
+                {
+                    "certId": "c8",
+                    "certName": "Junior IT Analyst Program",
+                    "certImg": "./certificates/google_it_professional/NPower_JITA_certificate.pdf",
+                    "uri": null,
+                    "learnings": "I joined NPower Canada's Junior IT Analyst program to get hands on traning in the IT field to enhance my area in the field of Computer Networking and Security to combined my work experience as a Technician. Apart from learning technical skills, I learned valuable soft skills and valuable tips about job search in the Canadian market in this field."
                 }
             ]
         },
@@ -441,6 +455,547 @@
                     "learnings": "Learned about web development fundamentals; back-end developement Php, NodeJS; front-end development HTML5, CSS3, Javascript (ES6), jQuery; docker; CI/CD Basics; AWS Basics"
                 }
             ]
+        },
+        {
+            "id": 3,
+            "title": "Programming Competitions",
+            "platform": "ICPC Website",
+            "institute": "International Collegiate Programming Contest",
+            "about": "I participated in the ICPC Programming competition representing StFX University as a part of team X-abytes-1 under the guidence of the professor Dr. Milton King.",
+            "certificateDetails": [
+                {
+                    "certId": "icpc_1",
+                    "certName": "Honorable Certificate",
+                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_Bhavik_Bhagat_MEDAL.pdf",
+                    "uri": null,
+                    "learnings": "We had to apply our data strucutres and alogrithm knowledge here. I learned a lot about time-management and how to work under pressure with a team brainstroming the ideas."
+                },
+                {
+                    "certId": "icpc_2",
+                    "certName": "Honorable Certificate",
+                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_MEDAL_team.pdf",
+                    "uri": null,
+                    "learnings": "We had a meeting before the competition where we were introdued the protocols to follow. During this compeition we learned about teamwork, and how to overcome the difficult problems by sharing the ideas to solve a problem and iteratively make the solution efficient."
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "title": "Harvard Certificates",
+            "platform": "Harvard & edX",
+            "institute": "Harvard University",
+            "about": "My first ever Computer Science introductory course. I participated in the various events of Harvard's CS50 courses, and enrolled in other courses.",
+            "certificateDetails": [
+                {
+                    "certId": "harvard_1",
+                    "certName": "CS50's Introduction to Computer Science",
+                    "certImg": "./certificates/harvard/HarvardX_CS50x_Introduction to Computer Science.pdf",
+                    "uri": "https://courses.edx.org/certificates/e85433344ee74aefb3578802c4fc45c7",
+                    "learnings": "I learned general overview of the Computer Science field and learned building blocks like basic data strucutres, algorithm, memory management, and fundamental concepts to build my career. I learned several programming languages like scratch, c, python, html, javascript, and solved challenging assignments like recovering images, spell-checker, game of fifteen using C - langauge."
+                },
+                {
+                    "certId": "harvard_2",
+                    "certName": "Puzzle Day 2019",
+                    "certImg": "./certificates/harvard/Harvardx_CS50x_Puzzle_Day_2019.pdf",
+                    "uri": "https://cs50.harvard.edu/certificates/34f3a67d-6862-4c59-90bb-f2bce5efcba9",
+                    "learnings": "I earned this certificate for participating in the puzzle day event in 2019. I was in the team with members from Belgium, Turkey, Ukraine, and Netherlands. We were colleagues in CS50 course and coordinated using Discord platform. We are rewarded the certificate for solving 9 out of 12 puzzles."
+                },
+                {
+                    "certId": "harvard_3",
+                    "certName": "Puzzle Day 2020",
+                    "certImg": "./certificates/harvard/HarvardX_CS50x_Puzzle_Day_2020.pdf",
+                    "uri": "https://cs50.harvard.edu/certificates/c6b50f16-00d9-4e1b-b37a-0a3953778ac6",
+                    "learnings": "I earned this certificate 2nd year in a row for the puzzle day online event. I participated as a one-member team to challenge myself this year for the event. I was rewarded the certificate for solving 6 out of 8 puzzles."
+                },
+                {
+                    "certId": "harvard_4",
+                    "certName": "Data Science: R Basics",
+                    "certImg": "./certificates/harvard/HarvardX_Data_Science_R_Basics_ edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/baa77fe96adf476d8f892c527d3e572e",
+                    "learnings": "I took the Data Science course to get familiar with the basics of the field because I was fascinated by the Machine Learning concepts that I was introduced in the MIT 6002x course. This was my first course in a specialization of this field."
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "title": "MIT Certificates",
+            "platform": "edX",
+            "institute": "Massachusetts Institute of Technology",
+            "about": "After learning basic concepts of Computer Science from Harvard's CS50 course, I was recommended this course by my peers when I was looking for recommendation for Python coruses.",
+            "certificateDetails": [
+                {
+                    "certId": "mit_1",
+                    "certName": "Introduction to Computer Science and Programming Using Python",
+                    "certImg": "./certificates/mit/MITx_6.00.1x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/23f2cbca51ae432aa9c7b2846468157a",
+                    "learnings": "A deep dive in to core computer science concepts with the help of mathematics on the parts like big-oh analysis. Apart from learning technical skills, I learned time management and stress management as this was my first instructor-paced course where I had to submit assignments and complete exams by the set deadlines."
+                },
+                {
+                    "certId": "mit_2",
+                    "certName": "Introduction to Computational Thinking and Data Science",
+                    "certImg": "./certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/5f707d85691d4dfe9643fdcbfc53d4ee",
+                    "learnings": "After completing the 6001x course from MIT with very good score, Adam Milton-Barker peer from CS50 course recommed me to check this course. This course challenged me in the whole different way, and I decided to build my career in this specialization in the future. I learned about graphs data structure, stochastic programming and statistical thinking, Monte-Carlo simulation, plotting libraries, and introduction to Machine Learning with KNN."
+                },
+                {
+                    "certId": "mit_3",
+                    "certName": "Computational Thinking using Python",
+                    "certImg": "./certificates/mit/MITx_600_XSeries_edX_Credentials.pdf",
+                    "uri": "https://credentials.edx.org/credentials/0b3244958d38408296d5c03d7af6026e/",
+                    "learnings": "This certificate was rewarded to me for completing X series program by completing the 6001x and 6002x courses from MIT."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Microsoft Certificates",
+            "platform": "edX",
+            "institute": "Microsoft",
+            "about": "",
+            "certificateDetails": [
+                {
+                    "certId": "ms_1",
+                    "certName": "Learn to Program in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV276x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/f5e302d222a84dbc89c5e775c64f7886",
+                    "learnings": "I leaned about basic programming concepts like data types, variables, logic, loops, control flows, functions, etc. and got familiar with various terminologies of Java langauge."
+                },
+                {
+                    "certId": "ms_2",
+                    "certName": "Object Oriented Programming in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV277x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/fcb211988bfc4c78911892cc130bc855",
+                    "learnings": "In this course I learned abotu arrays, classes & objects, inheritance, polymorphism, abstract classes, and interfaces."
+                },
+                {
+                    "certId": "ms_3",
+                    "certName": "Algorithms and Data Structures",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV285x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/fe6a9f7c165d44fbbf4876403a56ceda",
+                    "learnings": "During this course I learned abuot various searching and sorting algorithms like bubble sort, selection sort, merge sort, linear search, binary search, and data structures like liked list, stack, queue."
+                },
+                {
+                    "certId": "ms_4",
+                    "certName": "Introduction to Programming in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_Professional_Certificate_edX_Credentials.pdf",
+                    "uri": "https://credentials.edx.org/credentials/1e58f5c8e401420fb36f9e6a38b7079f",
+                    "learnings": "I was rewarded this certificate for completing the series of Java coruses offered by Microsoft. During the entire program I learned how to program using Java Language and terminologies related to the programming language."
+                }
+            ]
         }
-    ]
+    ],
+    "experiences": [
+        {
+            "id": 1,
+            "title": "Customer Service Associate",
+            "company": "Ttec",
+            "place": "Halifax, NS, Canada",
+            "start": "Oct 2022",
+            "end": "Feb 2023",
+            "responsibilities": [
+                "Increased customer engagement by effectively handling queries and utilizing resources to curb wait times during peak hours, contributing to an increase in revenue generation",
+                "Delivered excellent customer service by identifying individual problems and providing solutions over emails, resulting in a significant improvement in customer satisfaction",
+                "Created quality custom macros for various customer inquiries using the Zendesk environment for the ticketing system, resulting in high productivity and a reduction in service delivery speed"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Clerk",
+            "company": "Atlantic Superstore",
+            "place": "Antigonish / Halifax, NS, Canada",
+            "start": "May 2022",
+            "end": "Oct 2022",
+            "responsibilities": [
+                "Increased Garden Center profit by 20% by upselling products and sharing information about plants, vegetables, and herbs with customers, achieving 'Department of the Week' for consistent performance improvement; also rewarded with supervisor position at times in the absense of my supervisor",
+                "Curbed losses in the Floral department by applying the skills learned in the Garden Center to arrange flowers and bouquets at the front of the store and trained the new members, often received high praise from customers by providing excellent recommendations for special occasions",
+                "Increased customer engagement in the Bulk department by rearranging the products to make them easier to find following customer needs, helping to increase sales during the festival season"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Shipping Associate",
+            "company": "Staples",
+            "place": "Halifax, NS, Canada",
+            "start": "May 2022",
+            "end": "Aug 2022",
+            "responsibilities": [
+                "Created a strong rapport with customers by executing sound judgment, patience, and active listening skills to resolve customers' shipping requirements resulting in an increased customer satisfaction rate",
+                "Demonstrated willingness to learn various skills in the copy center, work with copy center associates in the peak hours, and assist in other departments when needed justified 'Learn, Work, and Grow together' at Staples",
+                "Provided excellent services to the customer in Shipping and Copy Center by accommodating customers with their various needs and helped other departments on demand, demonstraning the teamwork, resulting in minimizing the losses of the company during the downtime"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Cashier",
+            "company": "Tim Hortons",
+            "place": "Antigonish, NS, Canada",
+            "start": "Jun 2021",
+            "end": "Aug 2021",
+            "responsibilities": [
+                "Contributed to increasing revenue of the branch by maintaining a low waiting time during the peak hours at the drive-through by providing excellent customer service and operating the POS with a high accuracy",
+                "Contributed to the team helping in maintaining food and beverages quality by analyzing the patterns of demand of customers at different hours for the various products, which helped in diminishing the food-waste",
+                "Proved the work ethic by working during the various shifts as requested that benefited the crew members by having their time off as needed, which helped in maintaining the overall productivity of the team"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Department Assistant",
+            "company": "Kavi Narmad Library",
+            "place": "Surat, Gujarat, India",
+            "start": "Nov 2019",
+            "end": "Mar 2020",
+            "responsibilities": [
+                "Applied active listening to identify client needs and the book search and selection process, resulting in high client satisfaction and gaining repeat business",
+                "Transformed the department by applying Dewey Decimal Classification (DDC) to rectify mistakes in sorting books, resulting in around 500+ books being categorized correctly in the library system",
+                "Organized newspapers and magazines by the date and time daily, resulting in increased reliability of the archival system of the library"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Technician",
+            "company": "Brainwaves System",
+            "place": "Surat, Gujarat, India",
+            "start": "Apr 2015",
+            "end": "Sep 2019",
+            "responsibilities": [
+                "Boosted company reputation by providing excellent technical support to customers on time as a part of the maintenance and service department for both the hardware and software team",
+                "Modernized the department for the OS installation and Software installation process by introducing new technologies and incorporating remote solutions like TeamViewer to help the customer at remote locations",
+                "Demonstrated excellent inventory management skills by tracking stock and analyzing supply and demand trends, resulting in consistent availability of products and helping increase sales"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Freelancing Tutor",
+            "company": "Self-employed",
+            "place": "Surat, Gujarat, India",
+            "start": "Aug 2014",
+            "end": "Feb 2015",
+            "responsibilities": [
+                "Provided tuition services to the university students for 'Engineering Drawing/Graphics' subject by executing the skills I learned from my previous job as lecturer; helping them understand the material thoroughly and clear the University exams",
+                "Taught Mathematics and Aptitude topics for the competitive exams; resulted in our student gaining very good score in both topics in those exams"
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Adhoc Lecturer",
+            "company": "Sarvajanik College of Engineering & Technology",
+            "place": "Surat, Gujarat, India",
+            "start": "Sep 2013",
+            "end": "May 2014",
+            "responsibilities": [
+                "Increased student success rate by 10% in recent years in the subjects of 'Engineering Drawing/Graphics' and 'Elements of Mechanical Engineering by applying a practical approach to curriculum delivery",
+                "Contributed to the development of course material by accumulating challenging examples from various reference books, creating new problems and preparing solutions, and delivering feedback on the assignments and exams on time, resulting in a high-quality study guide for students available free of cost",
+                "Conducted extra classes for curious students on demand to engage them in practicing challenging problems and guided them in the right direction, resulting in 98% of students clearing the University exams across different streams for both subjects"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "id": 1,
+            "title": "Community Teaching Assistant",
+            "company": "Massachusettess Instuitute of Technology, edX",
+            "place": "Online",
+            "start": "Jan 2020",
+            "end": "Mar 2020",
+            "responsibilities": [
+                "Helped 100+ online learners expand their knowledge and clear their doubts of the course material, introducing alternative solution methods to challenging problems on all suporting course platforms including discussion forum",
+                "Curated and maintained the Facebook-group for the term as a moderator with Dr. Ana Bell (MIT Professor) creating a plagiarism free support group on the facebook platform for the online learners"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "id": "1",
+            "institute": "St. Francis Xavier University",
+            "degree": "Post Baccalaureate Diploma",
+            "field": "Artificial Intelligence",
+            "place": "Canada",
+            "start": 2020,
+            "end": 2022,
+            "gpa": 93.29,
+            "maxGPA": 99,
+            "highlights": [
+                "Data Science",
+                "Machine Learning",
+                "Artificial Intelligence",
+                "Software Design",
+                "Theory of Computing"
+            ],
+            "courses": [
+                {
+                    "cid": 162,
+                    "name": "Programming & Data Structures",
+                    "grade": 99
+                },
+                {
+                    "cid": 215,
+                    "name": "Social lssues: Information Age",
+                    "grade": 96
+                },
+                {
+                    "cid": 255,
+                    "name": "Advanced Data Structures",
+                    "grade": 98
+                },
+                {
+                    "cid": 263,
+                    "name": "Computer Organization",
+                    "grade": 99
+                },
+                {
+                    "cid": 345,
+                    "name": "Computer Graphics",
+                    "grade": 89
+                },
+                {
+                    "cid": 101,
+                    "name": "Introductory Statistics",
+                    "grade": 99
+                },
+                {
+                    "cid": 223,
+                    "name": "Introduction to Data Science",
+                    "grade": 98
+                },
+                {
+                    "cid": 225,
+                    "name": "Coding in Health Analytics",
+                    "grade": 90
+                },
+                {
+                    "cid": 275,
+                    "name": "Database Management Systems",
+                    "grade": 86
+                },
+                {
+                    "cid": 277,
+                    "name": "Discrete Structures",
+                    "grade": 95
+                },
+                {
+                    "cid": 340,
+                    "name": "Evolutionary Computation",
+                    "grade": 88
+                },
+                {
+                    "cid": 350,
+                    "name": "Biomedical Computation",
+                    "grade": 92
+                },
+                {
+                    "cid": 356,
+                    "name": "Theory of Computing",
+                    "grade": 95
+                },
+                {
+                    "cid": 364,
+                    "name": "Mobile Application Development",
+                    "grade": 94
+                },
+                {
+                    "cid": 444,
+                    "name": "Machine Learning",
+                    "grade": 92
+                },
+                {
+                    "cid": 485,
+                    "name": "Software Design",
+                    "grade": 86
+                },
+                {
+                    "cid": 495,
+                    "name": "Artificial Intelligence",
+                    "grade": 90
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "institute": "Gujarat Technologial University",
+            "degree": "Bachelor of Engineering",
+            "field": "Mechanical",
+            "place": "India",
+            "start": 2009,
+            "end": 2013,
+            "highlights": [
+                "Operation Research",
+                "Computer Aided Design (CAD)",
+                "Thermal Engineering",
+                "Internal Combusion Engine",
+                "Control Engineering (Elective)"
+            ],
+            "courses": null
+        }
+    ],
+    "training": [
+        {
+            "id": 1,
+            "institute": "Digital Nova Scotia - Skills for Hire",
+            "program": "Data Analytics",
+            "start": "Feb 2023",
+            "end": "Jun 2023",
+            "place": "Online",
+            "learnings": [
+                {
+                    "domain": "Databse Management",
+                    "technologies": "SQL, Relational Database Design, CRUD Operations, Normalization"
+                },
+                {
+                    "domain": "Data Analytics",
+                    "technologies": "Python, Data Wrangling, Exploratory Data Analysis, Data Science, Natural Language Processing"
+                },
+                {
+                    "domain": "Cyber Security",
+                    "technologies": "Security Principles, Business Continuity, Access Control, Network Security Concepts, Security Operations"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "institute": "NPower Canada",
+            "program": "Junior IT Analyst",
+            "start": "Jan 2023",
+            "end": "Apr 2023",
+            "place": "Online",
+            "learnings": [
+                {
+                    "domain": "Techincal",
+                    "technologies": "Computer Networking, Operating Systems, System Admin, Security, Technical Support Fundamentals"
+                },
+                {
+                    "domain": "Personality Development",
+                    "technologies": "Resume, Cover Letter, Time Management, Stress Management, Linkedin, Behavioral Q/A, Mock Interviews"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "institute": "Digital Nova Scotia - Skills for Hire",
+            "program": "Web Development",
+            "start": "Aug 2022",
+            "end": "Dec 2022",
+            "place": "Online",
+            "learnings": [
+                {
+                    "domain": "Front-end",
+                    "technologies": "HTML5, CSS3, JavaScript, JQuery, ReactJS"
+                },
+                {
+                    "domain": "Back-end",
+                    "technologies": "PHP, NodeJS"
+                },
+                {
+                    "domain": "Database",
+                    "technologies": "SQL, MySQL"
+                },
+                {
+                    "domain": "Cloud Computing",
+                    "technologies": "AWS - EC2, RDS, S3"
+                }
+            ]
+        }
+    ],
+    "extracurriculars": [
+        {
+            "id": 1,
+            "name": "International Collegiate Programming Contest",
+            "year": 2022,
+            "team": "StFX X-abytes 1",
+            "image": "./extracurriculars/icpc_nena_2022_stfx_xabytes_1.png",
+            "details": "I was honored to represent StFX for the 3rd time for programming competition during my 2-year span. This was my first in-person experience of any programming competition. I was member of team X-abyes1 along with Dalon and Vijay.",
+            "uri": null
+        },
+        {
+            "id": 2,
+            "name": "Atlantic Canada Programming Competition",
+            "year": 2021,
+            "team": "StFX X-abytes",
+            "image": "./extracurriculars/acpc_2021_stfx_xabytes.png",
+            "details": "The StFX University were hosting this event online for this year. We were the only team representing our university this time. Despite our heavy course load of 6 courses in our program with some advanced courses like Machine Learning, and Theory of Computing, I was honored to participate for this event with my team members Dalon and Vijay to represent our University. We were ranked 6 out of 12 participating teams.",
+            "uri": "https://atlantic-canada21.kattis.com/contests/atlantic-canada21"
+        },
+        {
+            "id": 1,
+            "name": "Atlantic Canada Programming Competition",
+            "year": 2020,
+            "team": "StFX Green",
+            "image": "./extracurriculars/acpc_2020_stfx_green.png",
+            "details": "I partficiated as a member of team Green representing St. Francis Xavier University. We particiapted online and connected with team via ms-team because couldn't travel due to Covid19 and we were studying online. We were ranked 4 out of 20 particiapting teams for this event.",
+            "uri": "https://open.kattis.com/contests/xfokus"
+        }
+    ],
+    "skills": {
+        "languages": [
+            "Python",
+            "JavaScript",
+            "C",
+            "C++",
+            "SQL",
+            "Java",
+            "HTML",
+            "CSS",
+            "PHP",
+            "R",
+            "Kotlin"
+        ],
+        "frameworks": [
+            "ReactJS",
+            "ChakraUI",
+            "MaterialUI",
+            "Bootstrap",
+            "jQuery",
+            "Django",
+            "Flask",
+            "TensorFlow",
+            "Keras",
+            "Scikit-Learn",
+            "NumPy",
+            "Pandas",
+            "NLTK",
+            "BeautifulSoup",
+            "Matplotlib",
+            "Plotly",
+            "Seaborn",
+            "PySwarm",
+            "PyGad",
+            "PyGame"
+        ],
+        "technologies": [
+            "Git",
+            "Docker",
+            "Vim",
+            "WSL",
+            "GitHub",
+            "Bitbucket",
+            "GitLab"
+        ],
+        "os": [
+            "Windows",
+            "Linux",
+            "Andriod"
+        ],
+        "management": [
+            "Agile",
+            "Waterfall",
+            "Scrum",
+            "Jira",
+            "Confluence",
+            "Trello"
+        ],
+        "apps": [
+            "TeamViewer",
+            "Google Workspace",
+            "Office365",
+            "Advanced Excel",
+            "VMWare",
+            "Zendesk",
+            "AWS - EC2",
+            "AWS - RDS",
+            "AWS - S3",
+            "MySQL",
+            "Postgre",
+            "SQLite",
+            "Apache"
+        ]
+    }
 }

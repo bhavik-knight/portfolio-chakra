@@ -7,3 +7,9 @@
 .sidenavButton:hover {
     cursor: pointer;
 }
+
+/* @media only screen and (max-device-width:768px) {
+    .sidenavButtonText {
+        display: none;
+    }
+} */

@@ -10,7 +10,7 @@ import { Education } from "./components/Education"
 import { Certificates } from "./components/Certificates"
 import { Experiences } from "./components/Experiences"
 import { Home } from "./components/Home"
-import { icons } from "./components/Icons"
+import { ResponsiveIcons } from "./components/ResponsiveIcons"
 
 
 function App() {
@@ -18,38 +18,33 @@ function App() {
   // color mode toggle; check the local storage on each color mode change
   const { colorMode, toggleColorMode } = useColorMode()
   useEffect(() => {
-    console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
+    // console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
   }, [colorMode])
 
   // pages in the portfolio
   const pages = {
     "home": {
-      "icon": icons.home,
+      "icon": ResponsiveIcons.home,
       "page": <Home />,
     },
 
     "skills": {
-      "icon": icons.skills,
+      "icon": ResponsiveIcons.skills,
       "page": <Skills />,
     },
 
     "projects": {
-      "icon": icons.projects,
+      "icon": ResponsiveIcons.projects,
       "page": <Projects />,
     },
 
     "education": {
-      "icon": icons.education,
+      "icon": ResponsiveIcons.education,
       "page": <Education />,
     },
 
-    "certificates": {
-      "icon": icons.certificates,
-      "page": <Certificates />,
-    },
-
     "experiences": {
-      "icon": icons.experiences,
+      "icon": ResponsiveIcons.experiences,
       "page": <Experiences />,
     }
   }
@@ -57,12 +52,13 @@ function App() {
   // to load a particular page on button click
   const [currentPage, setCurrentPage] = useState(localStorage.getItem("currentPage") || "home")
   function handleSelectPage(event) {
+    console.log(`app - side bar button click event: ${event}`)
+    setCurrentPage(event.currentTarget.name)
     console.log(`app - ${currentPage}`)
-    setCurrentPage(event.target.name)
   }
   useEffect(() => {
     localStorage.setItem("currentPage", currentPage)
-    document.title = `Bhavik | ${currentPage}`
+    document.title = `Bhavik | ${currentPage[0].toUpperCase() + currentPage.substring(1)}`
     window.scrollTo(0, 0)
   }, [currentPage])
 
@@ -85,8 +81,7 @@ function App() {
           // bg="lightgreen"
           className="sidenav"
           as="aside"
-          minW="fit-content"
-          maxW="15%"
+          width={{ base: "100%", lg: "15%" }}
           flexDirection={{ base: "row", lg: "column" }}
           flexWrap={{ base: "wrap", lg: "nowrap" }}
           justifyContent={{ base: "center", lg: "flex-start" }}
@@ -96,15 +91,16 @@ function App() {
           <Sidenav
             pages={pages}
             activePage={currentPage}
-            selectPage={(event) => handleSelectPage(event)}
+            selectPage={handleSelectPage}
           />
         </Flex>
         <Flex
-          bg="blue"
+          // bg="lightgreen"
           className="content"
           as="main"
           px={{ base: 0, lg: "4px" }}
           width="70%"
+          minH="fit-content"
           mx="auto"
           justify="center"
         >

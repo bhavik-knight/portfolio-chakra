@@ -4,6 +4,8 @@
 @import url("./components/Projects.css");
 @import url("./components/ProjectCard.css");
 @import url("./components/Certificates.css");
+@import url("./components/ExtracurricularCard.css");
+@import url("./components/Home.css");
 
 .container-bg-image {
     background-repeat: no-repeat;
@@ -22,7 +24,7 @@
 
 .footer {
     position: absolute;
-    margin-top: auto;
+    /* margin-top: auto; */
     left: 0;
     right: 0;
     bottom: 0;
@@ -46,7 +48,7 @@
 }
 
 .content {
-    border: 4px solid black;
+    /* border: 4px solid black; */
     width: auto;
     margin-top: 60px;
     padding-top: 4px;

@@ -16,8 +16,7 @@ function Projects() {
     const [tabIndex, setTabIndex] = useState(0)
 
     return (
-        <Stack m={2} p={2} bg="lightblue" width="100%">
-
+        <Stack p={2} bg="lightblue" width="100%">
             {/* some text */}
             <Card as="section">
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>

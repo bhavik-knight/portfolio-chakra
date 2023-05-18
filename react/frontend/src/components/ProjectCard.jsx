@@ -54,7 +54,7 @@ function ProjectCard({ project }) {
                                 return (
                                     <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow textTransform="capitalize">
                                         <WrapItem className="projectSkills" borderRadius="8px" >
-                                            {icons[tech]}
+                                            {ResponsiveIcons[tech]}
                                         </WrapItem>
                                     </Tooltip>
                                 )
