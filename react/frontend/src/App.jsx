@@ -10,7 +10,7 @@ import { Education } from "./components/Education"
 import { Certificates } from "./components/Certificates"
 import { Experiences } from "./components/Experiences"
 import { Home } from "./components/Home"
-import { icons } from "./components/Icons"
+import { ResponsiveIcons } from "./components/ResponsiveIcons"
 
 
 function App() {
@@ -24,27 +24,27 @@ function App() {
   // pages in the portfolio
   const pages = {
     "home": {
-      "icon": icons.home,
+      "icon": ResponsiveIcons.home,
       "page": <Home />,
     },
 
     "skills": {
-      "icon": icons.skills,
+      "icon": ResponsiveIcons.skills,
       "page": <Skills />,
     },
 
     "projects": {
-      "icon": icons.projects,
+      "icon": ResponsiveIcons.projects,
       "page": <Projects />,
     },
 
     "education": {
-      "icon": icons.education,
+      "icon": ResponsiveIcons.education,
       "page": <Education />,
     },
 
     "experiences": {
-      "icon": icons.experiences,
+      "icon": ResponsiveIcons.experiences,
       "page": <Experiences />,
     }
   }

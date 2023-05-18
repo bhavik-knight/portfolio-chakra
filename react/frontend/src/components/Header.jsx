@@ -1,4 +1,4 @@
-import { icons } from "./Icons"
+import { ResponsiveIcons } from "./ResponsiveIcons"
 import { useState, useRef, useEffect } from "react"
 import { useColorModeValue, useMediaQuery } from "@chakra-ui/react"
 import { Heading, Spacer, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
@@ -7,7 +7,7 @@ import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react
 
 // ref: https://dev.to/davidemaye/how-to-set-up-font-awesome-in-react-5a8d
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faLinkedinIn, faGithubSquare } from "@fortawesome/free-brands-svg-icons"
+// import { faLinkedinIn, faGithubSquare } from "@fortawesome/free-brands-svg-ResponsiveIcons"
 
 // to create icons for navbar with consistent style
 function getNavbarIconButton(btnName, btnIcon, handleClick) {
@@ -18,8 +18,7 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
                 variant="ghost"
                 fontSize={{ base: "md", lg: "2xl" }}
                 borderRadius="4px"
-                border="1px solid transparent"
-                _hover={{ borderColor: useColorModeValue("red", "cyan") }}
+                _hover={{ border: "1px solid" }}
                 name={btnName}
                 icon={btnIcon}
                 onClick={event => handleClick(event)}
@@ -54,25 +53,25 @@ function Header({ colorMode, changeColorMode, title }) {
 
     const sunIcon = getNavbarIconButton(
         "sun",
-        icons["sun"],
+        ResponsiveIcons["sun"],
         changeColorMode,
     )
 
     const moonIcon = getNavbarIconButton(
         "moon",
-        icons["moon"],
+        ResponsiveIcons["moon"],
         changeColorMode
     )
 
     const linkedinIcon = getNavbarIconButton(
         "linkedin",
-        icons["linkedin"],
+        ResponsiveIcons["linkedin"],
         () => open("https://linkedin.com/in/bhavikbhagat", "_blank")
     )
 
     const gitHubIcon = getNavbarIconButton(
         "github",
-        icons["github"],
+        ResponsiveIcons["github"],
         () => open("https://github.com/bhavik-knight", "_blank")
     )
 

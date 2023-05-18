@@ -4,7 +4,7 @@ import { Center, SimpleGrid, Grid, Stack, Flex, Wrap, WrapItem, } from "@chakra-
 import { Img, Heading, Text, Divider } from "@chakra-ui/react"
 import { Tooltip, Button } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
-import { icons } from "./Icons"
+import { ResponsiveIcons } from "./ResponsiveIcons"
 
 const footerButtonStyle = {
     width: "80px",
@@ -50,7 +50,7 @@ function ProjectCard({ project }) {
                                 return (
                                     <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow textTransform="capitalize">
                                         <WrapItem className="projectSkills" borderRadius="8px" >
-                                            {icons[tech]}
+                                            {ResponsiveIcons[tech]}
                                         </WrapItem>
                                     </Tooltip>
                                 )
