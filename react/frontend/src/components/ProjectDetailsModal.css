@@ -1,0 +1,9 @@
+.project-modal-footer-btns {
+    width: 80px;
+}
+
+@media only screen and (min-device-width:992px) {
+    .project-modal-footer-btns {
+        width: 120px;
+    }
+}

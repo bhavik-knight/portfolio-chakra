@@ -25,9 +25,12 @@
                 "aws"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Created the website as a project for booking the adventure for Canoe and Kayaking from the available trips",
+                "Designed the responsive UI using HTML5, CSS3, Bootstrap, JavaScript, and jQuery from the wireframe design",
+                "Developed the backend and validated the form submitted on the server side using PHP",
+                "Handled the version control using Git and GitHub for all 3-phases of the project",
+                "Launched on the AWS as Iaas, using EC2, configured LAMP Stack and RDS for the MySQL relational database",
+                "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
             ],
             "projectImgs": "./projects/hck_dns_sfha/"
         },
