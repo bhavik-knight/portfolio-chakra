@@ -41,7 +41,7 @@
             "type": "web",
             "group": false,
             "github": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "uri": null,
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
                 "php",

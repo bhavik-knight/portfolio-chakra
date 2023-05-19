@@ -1,9 +1,27 @@
-.project-modal-footer-btns {
+.project-detail-btns {
     width: 80px;
 }
 
+.projectTech {
+    border-radius: 4px;
+}
+
+.projectTech:hover {
+    box-shadow: 1px 1px 4px;
+}
+
+.projectTechName {
+    display: none;
+}
+
 @media only screen and (min-device-width:992px) {
-    .project-modal-footer-btns {
-        width: 120px;
+    .project-detail-btns {
+        width: 100px;
+    }
+
+    .projectTechName {
+        text-transform: capitalize;
+        font-size: small;
+        display: block;
     }
 }
