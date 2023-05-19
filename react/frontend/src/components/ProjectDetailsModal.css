@@ -1,4 +1,5 @@
 .project-detail-btns {
+    text-transform: capitalize;
     width: 80px;
 }
 

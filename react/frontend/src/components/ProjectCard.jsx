@@ -6,6 +6,7 @@ import { Tooltip, Button } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { icons } from "./Icons"
 import { ProjectDetailsModal } from "./ProjectDetailsModal"
+import "./ProjectCard.css"
 
 const footerButtonStyle = {
     width: "80px",
@@ -21,7 +22,7 @@ function ProjectCard({ project }) {
             key={nanoid()}
             className="projectCard"
             boxSize={{ base: "100%", md: "50%", xl: "30%" }}
-            my={2} p={2} gap={1}
+            m={2} p={2} gap={1}
             border="2px solid"
             borderColor={useColorModeValue("gray.200", "gray.600")}
             _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
@@ -33,14 +34,14 @@ function ProjectCard({ project }) {
                 </Flex>
 
                 <Divider />
-                <CardHeader as={Center} px={2} py={0}>
-                    <Heading textDecoration="underline" fontSize={{ base: "lg", md: "2xl" }}>
+                <CardHeader as={Center} px={2} py={0} mx="auto">
+                    <Heading textDecoration="underline" fontSize={{ base: "md", lg: "xl" }}>
                         {project.title}
                     </Heading>
                 </CardHeader> p={0}
 
                 <CardBody p={0}>
-                    <Text px={4}>
+                    <Text px={4} className="projectDetails">
                         {project.description}
                     </Text>
                     {/*

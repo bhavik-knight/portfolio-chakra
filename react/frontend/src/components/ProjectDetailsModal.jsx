@@ -40,10 +40,10 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     </Text>
                     <Spacer />
                     <ButtonGroup gap={2}>
-                        <Button className="project-detail-btns" onClick={() => window.open(project.github, "_blank")}>Github</Button>
+                        <Button className="project-detail-btns" onClick={() => window.open(project.source, "_blank")}>source</Button>
                         {
                             project.uri !== null &&
-                            <Button className="project-detail-btns" onClick={() => window.open("http://35.182.245.62/", "_blank")}>Links</Button>
+                            <Button className="project-detail-btns" onClick={() => window.open(project.uri, "_blank")}>link</Button>
                         }
                         <Button className="project-detail-btns" onClick={onClose}>Close</Button>
                     </ButtonGroup>
@@ -90,6 +90,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                                     as={Center}
                                     boxSize={{ base: "32px", lg: "80px" }}
                                     p={0}
+                                    mx="auto"
                                 >
                                     {ResponsiveIcons[tech]}
                                     <Text
