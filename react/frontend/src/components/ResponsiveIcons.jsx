@@ -63,53 +63,68 @@ import { MdWork } from "@react-icons/all-files/md/MdWork"
 import { FaAward } from "@react-icons/all-files/fa/FaAward"
 
 const ResponsiveIcons = {
+    // light-dark
     "moon": <FaMoon className="icons" />,
     "sun": <FaSun className="icons" />,
+
+    // sidebar
     "home": <FaHome className="icons" />,
     "skills": <FaCode className="icons" />,
     "projects": <GiFilmProjector className="icons" />,
     "education": <MdSchool className="icons" />,
     "experiences": <MdWork className="icons" />,
     "certificates": <FaAward className="icons" />,
+
+    // navbar
     "linkedin": <FaLinkedinIn className="icons" />,
     "github": <FaGithub className="icons" />,
+
+    // languages
     "html": <FaHtml5 className="icons" />,
     "css": <FaCss3 className="icons" />,
     "python": <FaPython className="icons" />,
     "java": <FaJava className="icons" />,
     "javascript": <SiJavascript className="icons" />,
+    "php": <FaPhp className="icons" />,
+    "java": <FaJava className="icons" />,
+    "c++": <SiCplusplus className="icons" />,
+    "sql": <AiOutlineConsoleSql className="icons" />,
+    "rLanguage": <FaRProject className="icons" />,
+    "kotlin": <SiKotlin className="icons" />,
+
+    // framework/libraries
+    "react": <FaReact className="icons" />,
     "jquery": <SiJquery className="icons" />,
     "bootstrap": <FaBootstrap className="icons" />,
-    "php": <FaPhp className="icons" />,
-    "git": <FaGitAlt className="icons" />,
-    "aws": <SiAmazonaws className="icons" />,
-    "heroku": <SiHeroku className="icons" />,
-    "docker": <FaDocker className="icons" />,
-    "mysql": <GrMysql className="icons" />,
-    "apache": <SiApache className="icons" />,
-    "linux": <FcLinux className="icons" />,
-    "java": <FaJava className="icons" />,
-    "cpp": <SiCplusplus className="icons" />,
-    "sql": <AiOutlineConsoleSql className="icons" />,
-    "sqlite": <DiSqllite className="icons" />,
-    "postgre": <SiPostgresql className="icons" />,
-    "rLanguage": <FaRProject className="icons" />,
-    "rStudio": <SiRstudio className="icons" />,
-    "kotlin": <SiKotlin className="icons" />,
     "flask": <SiFlask className="icons" />,
-    "react": <FaReact className="icons" />,
     "keras": <SiKeras className="icons" />,
     "tensorflow": <SiTensorflow className="icons" />,
+
+    // db - server - host
+    "aws": <SiAmazonaws className="icons" />,
+    "netlify": <SiNetlify className="icons" />,
+    "heroku": <SiHeroku className="icons" />,
+    "postgre": <SiPostgresql className="icons" />,
+    "mysql": <GrMysql className="icons" />,
+    "sqlite": <DiSqllite className="icons" />,
+    "apache": <SiApache className="icons" />,
+
+    // tools / os
+    "git": <FaGitAlt className="icons" />,
+    "docker": <FaDocker className="icons" />,
+    "linux": <FcLinux className="icons" />,
+    "rStudio": <SiRstudio className="icons" />,
     "vim": <DiVim className="icons" />,
     "powershell": <SiPowershell className="icons" />,
     "bash": <SiGnubash className="icons" />,
     "vscTerminal": <VscTerminal className="icons" />,
-    "windowsOS": <SiMicrosoft className="icons" />,
+    "windows": <SiMicrosoft className="icons" />,
     "ubuntu": <FaUbuntu className="icons" />,
-    "zorinOS": <SiZorin className="icons" />,
     "linuxMint": <SiLinuxmint className="icons" />,
+    "zorinOS": <SiZorin className="icons" />,
+
+    // project mgmt / apps
     "latex": <SiLatex className="icons" />,
-    "netlify": <SiNetlify className="icons" />,
     "zendesk": <SiZendesk className="icons" />,
     "teamviewer": <SiTeamviewer className="icons" />,
     "advancedExcel": <SiMicrosoftexcel className="icons" />,
