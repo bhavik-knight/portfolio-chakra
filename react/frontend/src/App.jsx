@@ -46,6 +46,11 @@ function App() {
     "experiences": {
       "icon": ResponsiveIcons.experiences,
       "page": <Experiences />,
+    },
+
+    "certificates": {
+      "icon": ResponsiveIcons.certificates,
+      "page": <Certificates />
     }
   }
 
