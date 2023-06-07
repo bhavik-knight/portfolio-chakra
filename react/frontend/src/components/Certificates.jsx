@@ -64,10 +64,10 @@ function Certificates() {
                                             px={4}
                                             justifyContent="space-between"
                                             direction={{ base: "column", md: "row" }}
-                                            flexWrap="wrap"
+                                            flexWrap={{ base: "nowrap", md: "wrap" }}
                                         >
-                                            <Text>{certObj.institute}</Text>
                                             <Text>{certObj.platform}</Text>
+                                            <Text>{certObj.institute}</Text>
                                         </Stack>
                                         <Flex
                                             px={4}

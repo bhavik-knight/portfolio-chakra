@@ -37,7 +37,7 @@ function Home() {
                     </Text>
 
                     <Text as="section">
-                        This portfolio demonstrates my recently learned skilled ReactJS using the latest documentation, and powered by ChakraUI.
+                        This portfolio demonstrates my recently learned ReactJS skills, powered by ChakraUI.
                     </Text>
                 </Stack>
 
@@ -83,7 +83,7 @@ function Home() {
                             <Text as="strong" className="homeSkillName">Data Analyst</Text>
                             <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
-                                    Worked on the projects executing ETL operations to create data-pipelines, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, NLTK, etc.
+                                    Worked on the projects executing ETL operations to create data-pipelines to do EDA, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, etc.
                                 </Text>
                             </CardBody>
                         </Card>

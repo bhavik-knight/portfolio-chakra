@@ -1,6 +1,6 @@
 import { chakra } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
-import { Flex, Container, Center } from "@chakra-ui/react"
+import { Stack, Flex, Container, Center } from "@chakra-ui/react"
 import { Button, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
@@ -21,10 +21,11 @@ function CertificateCard({ details }) {
                             _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
                         >
                             <CardHeader
-                                as={Flex}
+                                bg="blue.200"
+                                as={Stack}
                                 my={0}
-                                // bg="blue.200"
-                                alignItems="center"
+                                direction={{ base: "column", lg: "row" }}
+                                alignItems={{ base: "space-between", lg: "center" }}
                                 justifyContent="space-evenly"
                             >
                                 <Heading fontSize={{ base: "sm", md: "xl" }}>
@@ -33,8 +34,9 @@ function CertificateCard({ details }) {
                                 {
                                     c.uri !== null &&
                                     <Button
-                                        boxShadow="1px 1px 4px"
+                                        p={2}
                                         _hover={{ border: "1px solid" }}
+                                        boxShadow="1px 1px 4px"
                                         variant="ghost"
                                         onClick={() => window.open(c.uri, "_blank")}
                                     >
@@ -56,10 +58,8 @@ function CertificateCard({ details }) {
                                 </Text>
                             </CardFooter>
                         </Card>
-
                     )
                 })
-
             }
         </Flex >
     )

@@ -6,18 +6,19 @@
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "web",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "linux",
-                "apache",
-                "mysql",
                 "php",
                 "javascript",
                 "jquery",
                 "html",
                 "css",
+                "linux",
+                "apache",
+                "sql",
+                "mysql",
                 "bootstrap",
                 "git",
                 "docker",
@@ -25,61 +26,69 @@
                 "aws"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Created the website as a project for booking the adventure for Canoe and Kayaking from the available trips",
+                "Designed the responsive UI using HTML5, CSS3, Bootstrap, JavaScript, and jQuery from the wireframe design",
+                "Developed the backend and validated the form submitted on the server side using PHP",
+                "Handled the version control using Git and GitHub for all 3-phases of the project",
+                "Launched on the AWS as Iaas, using EC2, configured LAMP Stack and RDS for the MySQL relational database",
+                "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
             ],
             "projectImgs": "./projects/hck_dns_sfha/"
         },
         {
             "id": 2,
-            "title": "Halifax Canoe and Kayak",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Nish-Foody",
+            "description": "A website for food ordering and selling. Skills demonstrated as a full-stack developer and documentarian for this final project spanning over 3 months.",
             "type": "web",
-            "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "group": true,
+            "source": "https://bitbucket.org/csci-485/nish-foody/",
+            "uri": null,
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "php",
+                "python",
+                "django",
                 "javascript",
                 "jquery",
                 "html",
                 "css",
+                "postgre",
+                "sql",
                 "bootstrap",
                 "git",
                 "docker",
                 "heroku",
-                "aws"
+                "jira",
+                "confluence",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Developed a fully-functional website for food ordering/selling for the people of Antigonish",
+                "Worked as a full-stack developer in SDLC as a 5-member team to create the website as the final year project",
+                "Surveyed people from different backgrounds for the requirement analysis; and spearheaded the documentation",
+                "Designed the menu page using HTML5, CSS3, and Bootstrap for the UI and the cart for orders using JS/jQuery",
+                "Adopted the Django framework serving REST API that was connected to the PostgreSQL database",
+                "Followed the Agile methodology with tools like JIRA and Confluence pages for the documentation"
             ],
             "projectImgs": "./projects/hck_dns_sfha/"
         },
         {
             "id": 3,
-            "title": "Halifax Canoe and Kayak",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Portfolio Website",
+            "description": "My personal website to demonstrate my skills to the world. This project demonstrates my skill as front-end developer for which I used ReactJS and ChakraUI, and hosted on Netlify.",
             "type": "web",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "source": "https://github.com/bhavik-knight/portfolio-chakra",
+            "uri": "http://bhavikbhagat.netlify.app",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "php",
+                "reactjs",
                 "javascript",
-                "jquery",
+                "chakraui",
                 "html",
                 "css",
-                "bootstrap",
                 "git",
-                "mysql",
                 "docker",
-                "heroku",
-                "aws"
+                "netlify"
             ],
             "details": [
                 "task1",
@@ -90,61 +99,60 @@
         },
         {
             "id": 4,
-            "title": "Hotel Management",
-            "description": "HMGMT",
-            "type": "data",
-            "github": "",
-            "uri": "",
-            "displayImg": "",
+            "title": "Tic-tac-toe",
+            "description": "My first mini-project in the web development area as a backend developer where I used flask microframework. I received constructive critisim on my coding style by Harvard's computer science professor Dr. David Malan in CS50's code-review stream.",
+            "type": "web",
+            "source": "https://github.com/bhavik-knight/cs50beyond/tree/master/tictactoe",
+            "uri": "https://www.youtube.com/watch?v=5aWjlEqwJs4&t=1829s",
+            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "sql",
-                "oracle",
-                "ERD",
-                "3NF",
-                "relational database"
+                "python",
+                "flask",
+                "html",
+                "css",
+                "git",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2"
+                "First experience of utilizing any framework for web-development. I learned about flask micro-framework by reading the official documentation.",
+                "Implemented backend using flask, used stackoverflow/goggle to solve the issues during the developement process",
+                "First time using git for version control and hosted project on the github",
+                "Received the feedback on my project from my idol Dr. David Malan; learned about various aspect i.e., the best coding practicies,  use of MVC in the web developement, etc."
             ],
             "projectImgs": ""
         },
         {
             "id": 5,
-            "title": "data-2",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Hotel Management",
+            "description": "The relational database for Hotel Room reservation / booking developed in 4-phases and deployed on the StFX University's Oracle server setup by the professor.",
             "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "source": null,
+            "uri": null,
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "sql",
+                "oracle",
+                "ERD",
+                "3NF"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Developed the relational database as a 4-member team for the Hotel Management",
+                "Actively participated in creating the ERD diagram, designing and then normalizing the database",
+                "Performed CRUD operations maintaining the constraints placed on the 4/15 tables using SQL",
+                "Prepared some python scripts to generate and load a large amount of data automatically to the database",
+                "Prepared meaningful Views and useful queries on the database by applying joins on the tables",
+                "Deployed the relational database on the university's Oracle Server hosted by the professor"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 6,
-            "title": "data-3",
+            "title": "Crime Analysis",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -169,11 +177,11 @@
         },
         {
             "id": 7,
-            "title": "ML-1",
+            "title": "Food-Order Analysis",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "ai",
+            "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -198,11 +206,11 @@
         },
         {
             "id": 8,
-            "title": "ml-2",
+            "title": "Sentiment Analysis",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "ai",
+            "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -227,11 +235,11 @@
         },
         {
             "id": 9,
-            "title": "ml-3",
+            "title": "Multi-class Image Classification",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -256,11 +264,11 @@
         },
         {
             "id": 10,
-            "title": "ml4",
+            "title": "Deep Learning on MNIST Dataset",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -285,11 +293,11 @@
         },
         {
             "id": 11,
-            "title": "game-1",
+            "title": "Evolutionary Computation - Final Project",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "game",
+            "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -314,11 +322,11 @@
         },
         {
             "id": 12,
-            "title": "game-2",
+            "title": "Particle Swarm Optimization",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "game",
+            "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -343,11 +351,69 @@
         },
         {
             "id": 13,
-            "title": "game-3",
+            "title": "Minesweeper",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "game",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "uri": "http://35.182.245.62",
+            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "technologies": [
+                "php",
+                "javascript",
+                "jquery",
+                "html",
+                "css",
+                "bootstrap",
+                "git",
+                "mysql",
+                "docker",
+                "heroku",
+                "aws"
+            ],
+            "details": [
+                "task1",
+                "task2",
+                "task3"
+            ],
+            "projectImgs": "./projects/hck_dns_sfha/"
+        },
+        {
+            "id": 14,
+            "title": "Snake",
+            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "type": "game",
+            "group": false,
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "uri": "http://35.182.245.62",
+            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "technologies": [
+                "php",
+                "javascript",
+                "jquery",
+                "html",
+                "css",
+                "bootstrap",
+                "git",
+                "mysql",
+                "docker",
+                "heroku",
+                "aws"
+            ],
+            "details": [
+                "task1",
+                "task2",
+                "task3"
+            ],
+            "projectImgs": "./projects/hck_dns_sfha/"
+        },
+        {
+            "id": 15,
+            "title": "8 - Puzzle solver AI using A*",
+            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "type": "game",
+            "group": false,
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [

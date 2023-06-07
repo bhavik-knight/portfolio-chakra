@@ -16,7 +16,7 @@ function Projects() {
     const [tabIndex, setTabIndex] = useState(0)
 
     return (
-        <Stack p={2} bg="lightblue" width="100%">
+        <Stack p={2} width="100%" >
             {/* some text */}
             <Card as="section">
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
@@ -51,10 +51,10 @@ function Projects() {
                 >
                     {/* tab titles */}
                     <TabList className="tabLabel">
-                        <Tab _selected={{ bg: "red", color: "black" }}>Web Dev</Tab>
-                        <Tab _selected={{ bg: "green", color: "white" }}>Data</Tab>
-                        <Tab _selected={{ bg: "blue", color: "white" }}>ML / AI</Tab>
-                        <Tab _selected={{ bg: "yellow", color: "black" }}>Game Dev</Tab>
+                        <Tab _selected={{ bg: "red", color: "black" }} className="projectType">Web Dev</Tab>
+                        <Tab _selected={{ bg: "green", color: "white" }} className="projectType">Data</Tab>
+                        <Tab _selected={{ bg: "blue", color: "white" }} className="projectType">ML / AI</Tab>
+                        <Tab _selected={{ bg: "yellow", color: "black" }} className="projectType">Game Dev</Tab>
                     </TabList>
 
                     {/* tab content */}
