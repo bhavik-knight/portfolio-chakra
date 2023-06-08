@@ -21,10 +21,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 function CertificateCardCarousel({ details }) {
     const [isMobile] = useMediaQuery("(max-width: 768px)")
     const [cardWidth, setCardWidth] = useState(1024)
-    const [cardHeight, setCardHeight] = useState(512)
+    const [cardHeight, setCardHeight] = useState(768)
     useEffect(() => {
         setCardWidth(isMobile ? 300 : 1024)
-        setCardHeight(isMobile ? 128 : 512)
+        setCardHeight(isMobile ? 128 : 768)
     }, [isMobile])
 
     // to keep track of the current carousel
@@ -119,7 +119,7 @@ function CertificateCardCarousel({ details }) {
                             file={c.certImg}
                             externalLinkTarget="_blank"
                             loading={
-                                <Center width={cardWidth}>
+                                <Center width={cardWidth} height={cardHeight}>
                                     <Spinner size="xl" />
                                 </Center>
                             }
@@ -128,7 +128,8 @@ function CertificateCardCarousel({ details }) {
                                 pageNumber={1}
                                 renderTextLayer
                                 renderAnnotationLayer
-                                width={cardWidth * 0.9}
+                                width={cardWidth}
+                                scale={0.7}
                                 height={cardHeight}
                             />
                         </Document>
