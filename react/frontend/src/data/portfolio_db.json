@@ -573,7 +573,7 @@
                 {
                     "certId": "harvard_4",
                     "certName": "Data Science: R Basics",
-                    "certImg": "./certificates/harvard/Harvardx_Data_Science_R_Basics_ edX.pdf",
+                    "certImg": "./certificates/harvard/Harvardx_Data_Science_R_Basics_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/baa77fe96adf476d8f892c527d3e572e",
                     "learnings": "I took the Data Science course to get familiar with the basics of the field because I was fascinated by the Machine Learning concepts that I was introduced in the MIT 6002x course. This was my first course in a specialization of this field."
                 }
