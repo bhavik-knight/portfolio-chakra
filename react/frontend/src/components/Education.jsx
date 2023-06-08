@@ -9,6 +9,7 @@ import { EducationCard } from "./EducationCard"
 import { TrainingCard } from "./TrainingCard"
 import { ExtracurricularCard } from "./ExtracurricularCard"
 import { CertificateCard } from "./CertificateCard"
+import { CertificateCardCarousel } from "./CertificateCardCarousel"
 
 
 function Education() {
@@ -105,7 +106,7 @@ function Education() {
                                         </Flex>
                                         <Divider className="divider" mx="auto" my={2} width="90%" />
 
-                                        <CertificateCard details={certObj.certificateDetails} />
+                                        <CertificateCardCarousel details={certObj.certificateDetails} />
                                     </AccordionPanel>
                                 </AccordionItem>
                             )

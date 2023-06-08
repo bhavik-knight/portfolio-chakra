@@ -1,10 +1,11 @@
-import { chakra } from "@chakra-ui/react"
+// import "./CertificateCard.css"
+import { chakra, useMediaQuery } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { Stack, Flex, Container, Center } from "@chakra-ui/react"
 import { Button, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { useColorModeValue } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
 import { Document, Page, pdfjs } from "react-pdf"
 import "react-pdf/dist/esm/Page/AnnotationLayer.css"
 import "react-pdf/dist/esm/Page/TextLayer.css"
@@ -17,6 +18,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 
 function CertificateCard({ details }) {
+
+    const [isMobile] = useMediaQuery("(max-width: 768px)")
+    const [cardWidth, setCardWidth] = useState(800)
+    useEffect(() => {
+        setCardWidth(isMobile ? 300 : 800)
+    }, [isMobile])
+
+
     return (
         <Flex p={4} wrap="wrap">
             {
@@ -31,12 +40,11 @@ function CertificateCard({ details }) {
                             _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
                         >
                             <CardHeader
-                                // bg="blue.200"
                                 as={Stack}
                                 my={0}
                                 direction={{ base: "column", lg: "row" }}
                                 alignItems={{ base: "space-between", lg: "center" }}
-                                justifyContent="space-evenly"
+                                justifyContent={{ base: "center", lg: "space-evenly" }}
                             >
                                 <Heading fontSize={{ base: "sm", md: "xl" }}>
                                     {c.certName}
@@ -45,6 +53,7 @@ function CertificateCard({ details }) {
                                     c.uri !== null &&
                                     <Button
                                         p={2}
+                                        size={{ base: "xs", lg: "md" }}
                                         _hover={{ border: "1px solid" }}
                                         boxShadow="1px 1px 4px"
                                         variant="ghost"
@@ -63,7 +72,7 @@ function CertificateCard({ details }) {
                                 /> */}
                                 {
                                     <Document file={c.certImg}>
-                                        <Page pageNumber={1} width={800} height={512}></Page>
+                                        <Page pageNumber={1} width={cardWidth} className="certificate-card"></Page>
                                     </Document>
                                 }
                             </CardBody>

@@ -1,5 +1,3 @@
-
-import "./CertificateCardCarousel.css"
 import { IconButton, Spinner, chakra } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { Wrap, Box, Stack, VStack, HStack, Flex, Spacer, Container, Center } from "@chakra-ui/react"
@@ -7,6 +5,7 @@ import { Button, ButtonGroup, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useState, useRef, useEffect } from "react"
+import { useMediaQuery } from "@chakra-ui/react"
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons"
 import { Document, Page } from "react-pdf"
 import { pdfjs } from 'react-pdf';
@@ -20,6 +19,13 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 
 function CertificateCardCarousel({ details }) {
+    const [isMobile] = useMediaQuery("(max-width: 768px)")
+    const [cardWidth, setCardWidth] = useState(1024)
+    const [cardHeight, setCardHeight] = useState(512)
+    useEffect(() => {
+        setCardWidth(isMobile ? 300 : 1024)
+        setCardHeight(isMobile ? 128 : 512)
+    }, [isMobile])
 
     // to keep track of the current carousel
     const length = details.length
@@ -70,11 +76,6 @@ function CertificateCardCarousel({ details }) {
     }, [handleNextClick])
 
 
-    // styles for cards & carousel
-    const cardWidth = 1024;
-    const cardHeight = 768;
-
-
     // the certificates data cards preparation
     const card =
         details.map(c => {
@@ -84,12 +85,12 @@ function CertificateCardCarousel({ details }) {
                     m={2}
                     mx="auto"
                     p={2}
-                    // border="1px dashed"
-                    _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
                 >
                     <CardHeader
                         as={Stack}
+                        mx="auto"
                         my={0}
+                        width="95%"
                         direction={{ base: "column", lg: "row" }}
                         alignItems={{ base: "space-between", lg: "center" }}
                         justifyContent="space-between"
@@ -102,9 +103,9 @@ function CertificateCardCarousel({ details }) {
                             <>
                                 <Button
                                     p={2}
-                                    _hover={{ border: "1px solid" }}
-                                    boxShadow="1px 1px 4px"
-                                    variant="ghost"
+                                    size={{ base: "xs", lg: "md" }}
+                                    _hover={{ boxShadow: "1px 1px 4px" }}
+                                    variant="outline"
                                     onClick={() => window.open(c.uri, "_blank")}
                                 >
                                     Credentials
@@ -112,29 +113,39 @@ function CertificateCardCarousel({ details }) {
                             </>
                         }
                     </CardHeader>
-                    <CardBody as={Center} my={0}>
-                        {/* <chakra.embed
-                            width={{ base: `256px`, lg: `${cardWidth * 0.8}px` }}
-                            height={{ base: `64px`, lg: `${512}px` }}
-                            src={c.certImg}
-                        /> */}
 
-                        <Document file={c.certImg} externalLinkTarget="_blank" loading={<Spinner size="xl" />}>
-                            <Page pageNumber={1} className="certificate-card" />
+                    <CardBody as={Center} my={0}>
+                        <Document
+                            file={c.certImg}
+                            externalLinkTarget="_blank"
+                            loading={
+                                <Center width={cardWidth}>
+                                    <Spinner size="xl" />
+                                </Center>
+                            }
+                        >
+                            <Page
+                                pageNumber={1}
+                                renderTextLayer
+                                renderAnnotationLayer
+                                width={cardWidth * 0.9}
+                                height={cardHeight}
+                            />
                         </Document>
                     </CardBody>
-                    <CardFooter as={Text} textAlign="justify">
-                        {c.learnings}
-                    </CardFooter>
+
+                    {
+                        !isMobile &&
+                        <CardFooter as={Text} textAlign="justify" mx="auto" width="95%">
+                            {c.learnings}
+                        </CardFooter>
+                    }
                 </Card>
             )
         })
 
     return (
-        <Box
-            border="1px solid red"
-            p={2}
-        >
+        <Box>
             {/* show current & total number of certificates */}
             <Center as={Text}>{current + 1} of {length}</Center>
 
@@ -144,13 +155,15 @@ function CertificateCardCarousel({ details }) {
                     aria-label="left-arrow-button"
                     icon={<ArrowLeftIcon />}
                     onClick={handlePrevClick}
+                    variant="ghost"
+                    size={{ base: "sm", lg: "md" }}
+                    _hover={{ boxShadow: "1px 1px 4px" }}
                 />
 
                 {/* carousel part */}
                 <Wrap
                     overflow="hidden"
                     width={`${cardWidth}px`}
-                    // height={`${cardHeight}px`}
                     height="fit-content"
                     border="1px solid"
                     borderRadius="0.5em"
@@ -160,6 +173,8 @@ function CertificateCardCarousel({ details }) {
                     <Center
                         className="certificates-card-container"
                         width={`${cardWidth * length}px`}
+                        transition="transform ease-out 1s"
+                        transform={`translate(${-(current * cardWidth)})`}
                     >
                         {
                             card.map((_, index) => {
@@ -177,20 +192,31 @@ function CertificateCardCarousel({ details }) {
                     aria-label="right-arrow-button"
                     icon={<ArrowRightIcon />}
                     onClick={handleNextClick}
+                    variant="ghost"
+                    _hover={{ boxShadow: "1px 1px 4px" }}
+                    _size={{ base: "xs", lg: "md" }}
                 />
 
             </HStack >
 
             {/* pagination area */}
-            < Center as={ButtonGroup} spacing={2} >
+            < Center
+                as={ButtonGroup}
+                my={2}
+                spacing={2}
+                variant="ghost"
+                _size={{ base: "xs", lg: "md" }}
+            >
                 {
                     showButtons(current).map((b, index) => {
                         return (
                             <Button
                                 key={nanoid()}
-                                className="dots"
                                 onClick={() => handlePageClick(b)}
                                 isActive={b === current}
+                                variant="outline"
+                                _hover={{ boxShadow: "1px 1px 4px" }}
+                                _size={{ base: "xs", lg: "md" }}
                             >
                                 {b + 1}
                             </Button>
