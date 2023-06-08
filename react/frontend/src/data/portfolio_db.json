@@ -79,7 +79,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/portfolio-chakra",
             "uri": "http://bhavikbhagat.netlify.app",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/portfolio/p1_landing_page.png",
             "technologies": [
                 "reactjs",
                 "javascript",
@@ -95,7 +95,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": "./projects/portfolio/"
         },
         {
             "id": 4,
