@@ -26,8 +26,7 @@ function ProjectCard({ project }) {
             m={2} p={2} gap={1}
             border="2px solid"
             borderColor={useColorModeValue("gray.200", "gray.600")}
-            _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
-            }
+            _hover={{ boxShadow: "4px 4px 16px" }}
         >
             <Stack justifyContent="center">
                 <Flex>
