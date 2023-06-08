@@ -7,7 +7,8 @@ import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useState, useRef, useEffect } from "react"
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons"
-import { Document, Page, pdfjs } from "react-pdf"
+import { Document, Page } from "react-pdf"
+import { pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
@@ -15,6 +16,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     'pdfjs-dist/build/pdf.worker.min.js',
     import.meta.url,
 ).toString();
+
 
 function CertificateCardCarousel({ details }) {
 
@@ -117,10 +119,11 @@ function CertificateCardCarousel({ details }) {
                             src={c.certImg}
                         /> */}
 
+                        {/*
                         <Document file={c.certImg}>
-                            <Page pageNumber={1} />
+                            <Page pageNumber={1} width={800} height={512}></Page>
                         </Document>
-
+                        */}
                     </CardBody>
                     <CardFooter as={Text} textAlign="justify">
                         {c.learnings}
@@ -149,7 +152,8 @@ function CertificateCardCarousel({ details }) {
                 <Wrap
                     overflow="hidden"
                     width={`${cardWidth}px`}
-                    height={`${cardHeight}px`}
+                    // height={`${cardHeight}px`}
+                    height="fit-content"
                     border="1px solid"
                     borderRadius="0.5em"
                     alignItems="center"
