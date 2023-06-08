@@ -16,12 +16,10 @@ function Skills() {
             p={2}
             gap={2}
             width="100%"
-        // m={2}
-        // bg="lightblue"
         >
             {/* introduction */}
-            <Card as="section" _hover={{ boxShadow: "2px 2px 4px 2px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" py={2}>
                     Skills
                 </CardHeader>
                 <Divider className="divider" width="95%" mx="auto" my={1} />
@@ -54,8 +52,8 @@ function Skills() {
             </Card>
 
             {/* programming languages */}
-            <Card as="section" _hover={{ boxShadow: "2px 2px 4px 2px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1} fontSize={{ base: "md", lg: "2xl" }}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Programming Languages
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
@@ -70,8 +68,8 @@ function Skills() {
             </Card>
 
             {/* frameworks/libraries */}
-            <Card as="section" _hover={{ boxShadow: "2px 2px 4px 2px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1} fontSize={{ base: "md", lg: "2xl" }}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Frameworks | Libraries
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
@@ -86,8 +84,8 @@ function Skills() {
             </Card>
 
             {/* Technologies & OS */}
-            <Card as="section" _hover={{ boxShadow: "2px 2px 4px 2px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1} fontSize={{ base: "md", lg: "2xl" }}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Technologies | Operating Systems
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
@@ -110,8 +108,8 @@ function Skills() {
             </Card>
 
             {/* applications */}
-            <Card as="section" _hover={{ boxShadow: "2px 2px 4px 2px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1} fontSize={{ base: "md", lg: "2xl" }}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Applications | Database | Cloud
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
@@ -126,8 +124,8 @@ function Skills() {
             </Card>
 
             {/* project management */}
-            <Card as="section" _hover={{ boxShadow: "2px 2px 4px 2px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1} fontSize={{ base: "md", lg: "2xl" }}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Project Management
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
