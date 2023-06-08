@@ -11,7 +11,7 @@ import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react
 
 // to create icons for navbar with consistent style
 function getNavbarIconButton(btnName, btnIcon, handleClick) {
-    console.log(`header iconbtn: ${JSON.stringify(btnIcon)}`)
+
     return (
         <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName} textTransform="capitalize">
             <IconButton
