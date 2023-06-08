@@ -1,5 +1,6 @@
 
-import { IconButton, chakra } from "@chakra-ui/react"
+import "./CertificateCardCarousel.css"
+import { IconButton, Spinner, chakra } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { Wrap, Box, Stack, VStack, HStack, Flex, Spacer, Container, Center } from "@chakra-ui/react"
 import { Button, ButtonGroup, Image, Text, Heading } from "@chakra-ui/react"
@@ -63,7 +64,7 @@ function CertificateCardCarousel({ details }) {
         }
 
         // trigger next button click after 4 seconds
-        timeRef.current = setTimeout(() => handleNextClick(), 4000)
+        timeRef.current = setTimeout(() => handleNextClick(), 10000)
 
         return () => clearTimeout(timeRef.current)
     }, [handleNextClick])
@@ -83,7 +84,7 @@ function CertificateCardCarousel({ details }) {
                     m={2}
                     mx="auto"
                     p={2}
-                    border="1px dashed"
+                    // border="1px dashed"
                     _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
                 >
                     <CardHeader
@@ -91,7 +92,7 @@ function CertificateCardCarousel({ details }) {
                         my={0}
                         direction={{ base: "column", lg: "row" }}
                         alignItems={{ base: "space-between", lg: "center" }}
-                        justifyContent="space-around"
+                        justifyContent="space-between"
                     >
                         <Heading fontSize={{ base: "sm", md: "xl" }}>
                             {c.certName}
@@ -99,7 +100,6 @@ function CertificateCardCarousel({ details }) {
                         {
                             c.uri !== null &&
                             <>
-                                <Spacer />
                                 <Button
                                     p={2}
                                     _hover={{ border: "1px solid" }}
@@ -119,11 +119,9 @@ function CertificateCardCarousel({ details }) {
                             src={c.certImg}
                         /> */}
 
-                        {/*
-                        <Document file={c.certImg}>
-                            <Page pageNumber={1} width={800} height={512}></Page>
+                        <Document file={c.certImg} externalLinkTarget="_blank" loading={<Spinner size="xl" />}>
+                            <Page pageNumber={1} className="certificate-card" />
                         </Document>
-                        */}
                     </CardBody>
                     <CardFooter as={Text} textAlign="justify">
                         {c.learnings}

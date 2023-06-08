@@ -5,6 +5,16 @@ import { Button, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useColorModeValue } from "@chakra-ui/react"
+import { Document, Page, pdfjs } from "react-pdf"
+import "react-pdf/dist/esm/Page/AnnotationLayer.css"
+import "react-pdf/dist/esm/Page/TextLayer.css"
+
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.js',
+    import.meta.url,
+).toString();
+
 
 function CertificateCard({ details }) {
     return (
@@ -21,7 +31,7 @@ function CertificateCard({ details }) {
                             _hover={{ cursor: "pointer", boxShadow: "2px 2px 8px" }}
                         >
                             <CardHeader
-                                bg="blue.200"
+                                // bg="blue.200"
                                 as={Stack}
                                 my={0}
                                 direction={{ base: "column", lg: "row" }}
@@ -45,12 +55,17 @@ function CertificateCard({ details }) {
                                 }
                             </CardHeader>
                             <CardBody as={Center} my={0}>
-                                <chakra.embed
+                                {/* <chakra.embed
                                     width={{ base: "300px", lg: "1024px" }}
                                     height={{ base: "200px", lg: "768px" }}
                                     src={c.certImg}
                                     type="application/pdf"
-                                />
+                                /> */}
+                                {
+                                    <Document file={c.certImg}>
+                                        <Page pageNumber={1} width={800} height={512}></Page>
+                                    </Document>
+                                }
                             </CardBody>
                             <CardFooter>
                                 <Text>
