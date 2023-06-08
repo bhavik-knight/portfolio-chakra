@@ -124,7 +124,7 @@
         {
             "id": 5,
             "title": "Hotel Management",
-            "description": "The relational database for Hotel Room reservation / booking developed in 4-phases and deployed on the StFX University's Oracle server setup by the professor.",
+            "description": "The relational database for Hotel Room reservation / booking that is developed in 4-phases and deployed on the StFX University's Oracle server setup by the professor.",
             "type": "data",
             "group": false,
             "source": null,
