@@ -39,9 +39,9 @@ function Header({ colorMode, changeColorMode, title }) {
     const [bgColor, setBgColor] = useState()
     useEffect(() => {
         navbarBg ?
-            setBgColor("transparent)") :
+            setBgColor("transparent") :
             colorMode === "dark" ? setBgColor("black") : setBgColor("gray")
-    }, [verticalScroll])
+    }, [verticalScroll, colorMode])
 
     useEffect(() => {
         // check and handle the vertical scroll value constantly
