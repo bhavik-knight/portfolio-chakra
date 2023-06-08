@@ -36,7 +36,12 @@ function Header({ colorMode, changeColorMode, title }) {
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
     let navbarBg = (verticalScroll === 0)
-    let bgColor = `linear-gradient(violet, purple)`
+    const [bgColor, setBgColor] = useState()
+    useEffect(() => {
+        navbarBg ?
+            setBgColor("transparent)") :
+            colorMode === "dark" ? setBgColor("black") : setBgColor("gray")
+    }, [verticalScroll])
 
     useEffect(() => {
         // check and handle the vertical scroll value constantly
@@ -80,9 +85,13 @@ function Header({ colorMode, changeColorMode, title }) {
         <Flex as="nav"
             className="navbar header"
             px={4}
-            bg={`${navbarBg ? "transparent" : bgColor}`}
+            bg={bgColor}
+            boxShadow={navbarBg && "0px 0px 16px 0px"}
         >
-            <Heading className="logo" width={{ base: "30%", lg: "15%" }}>
+            <Heading
+                className="logo"
+                width={{ base: "30%", lg: "15%" }}
+            >
                 B{isLarge && "havik"}
             </Heading>
             <Spacer />
