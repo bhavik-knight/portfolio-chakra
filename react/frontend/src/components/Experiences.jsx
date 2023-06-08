@@ -9,18 +9,8 @@ import { ExperienceCard } from "./ExperienceCard"
 
 function Experiences() {
     return (
-        <Stack
-            width="100%"
-            gap={2}
-            p={2}
-        // bg="lightblue"
-        // m={2}
-        >
-            <Card
-                as="section"
-                // border="2px solid"
-                boxShadow="2px 2px 4px"
-            >
+        <Stack width="100%" gap={2} p={2}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     Experiences
                 </CardHeader>
@@ -34,11 +24,7 @@ function Experiences() {
 
 
             {/* section about work */}
-            <Card
-                as="section"
-                // border="2px solid"
-                boxShadow="2px 2px 4px"
-            >
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Work Experience{experiences.length > 1 && `s`}
                 </CardHeader>
@@ -52,11 +38,7 @@ function Experiences() {
             </Card>
 
             {/* section about volunteer work */}
-            <Card
-                as="section"
-                // border="2px solid"
-                boxShadow="2px 2px 4px"
-            >
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Volunteer Experience{volunteer.length > 1 && `s`}
                 </CardHeader>

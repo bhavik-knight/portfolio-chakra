@@ -1,3 +1,4 @@
+import "./Footer.css"
 import { Flex } from "@chakra-ui/react"
 
 function Footer(props) {

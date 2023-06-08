@@ -1,12 +1,3 @@
-@import url("./components/Header.css");
-@import url("./components/Footer.css");
-@import url("./components/Sidenav.css");
-@import url("./components/Projects.css");
-@import url("./components/ProjectCard.css");
-@import url("./components/Certificates.css");
-@import url("./components/ExtracurricularCard.css");
-@import url("./components/Home.css");
-
 .container-bg-image {
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,8 +24,6 @@
 .navbar {
     justify-content: space-between;
     align-items: center;
-    border: 4px solid black;
-    border-radius: 8px;
     height: fit-content;
 }
 

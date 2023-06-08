@@ -1,3 +1,4 @@
+import "./Certificates.css"
 import { nanoid } from "nanoid"
 import { Flex, HStack, VStack, Stack, Box, Wrap, Container, Divider } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
@@ -6,6 +7,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
 import { certificates } from "../data/portfolio_db.json"
 import { CertificateCard } from "./CertificateCard"
+import { CertificateCardCarousel } from "./CertificateCardCarousel"
 
 function Certificates() {
 
@@ -77,7 +79,7 @@ function Certificates() {
                                         </Flex>
                                         <Divider className="divider" mx="auto" my={2} width="90%" />
 
-                                        <CertificateCard details={certObj.certificateDetails} />
+                                        <CertificateCardCarousel details={certObj.certificateDetails} />
                                     </AccordionPanel>
                                 </AccordionItem>
                             )

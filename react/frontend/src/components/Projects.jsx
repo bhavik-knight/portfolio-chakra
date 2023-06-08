@@ -1,3 +1,4 @@
+import "./Projects.css"
 import { projects } from "../data/portfolio_db.json"
 import { useState } from "react"
 import { Divider, UnorderedList, List, ListItem } from "@chakra-ui/react"
@@ -18,7 +19,7 @@ function Projects() {
     return (
         <Stack p={2} width="100%" >
             {/* some text */}
-            <Card as="section">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     Projects
                 </CardHeader>
@@ -37,7 +38,7 @@ function Projects() {
             </Card>
 
 
-            <Card as="section">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 {/* tabs for different types of project */}
                 <Tabs
                     isFitted

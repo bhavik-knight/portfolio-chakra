@@ -448,56 +448,56 @@
                 {
                     "certId": "c1",
                     "certName": "Technical Support Fundamentals",
-                    "certImg": "./certificates/google_it_professional/google_it_course_1.pdf",
+                    "certImg": "./certificates/google/google_it_course_1.pdf",
                     "uri": "https://coursera.org/share/dd6acf709cba5e5942c42e890da220f0",
                     "learnings": "I learned about how to assemble a computer, basics of internet, overview of operation system and applications, problem-solving methodologies and soft-skills required in Information Technology field"
                 },
                 {
                     "certId": "c2",
                     "certName": "The Bits and Bytes of Computer Networking",
-                    "certImg": "./certificates/google_it_professional/google_it_course_2.pdf",
+                    "certImg": "./certificates/google/google_it_course_2.pdf",
                     "uri": "https://coursera.org/share/605e01e4cb5a3c481139666a9112b644",
                     "learnings": "In this course I learned basics of computer networking; five-layer and OSI model; standard protocols; network troubleshooting; basics of DNS and DHCP server"
                 },
                 {
                     "certId": "c3",
                     "certName": "Operating Systems and You: Becoming a Power User",
-                    "certImg": "./certificates/google_it_professional/google_it_course_3.pdf",
+                    "certImg": "./certificates/google/google_it_course_3.pdf",
                     "uri": "https://coursera.org/share/c1ee69aa511fa4a7f19a05d1d92995f2",
                     "learnings": "I learned about Windows and Linux OS; file systems; install, configure, and remove software; disk partitioning; set up users, groups and permissions; background processes and management; troubleshoot the common issues regarding OS"
                 },
                 {
                     "certId": "c4",
                     "certName": "System Administration and IT Infrastructure Services",
-                    "certImg": "./certificates/google_it_professional/google_it_course_4.pdf",
+                    "certImg": "./certificates/google/google_it_course_4.pdf",
                     "uri": "https://coursera.org/share/8d81d43f9fefaec24181cd57add956d9",
                     "learnings": "In this course I learned about chosing the best hardware and services for organizations; manage infrastructure servers; Active directory and OpenLDAP; how to backup and recover data; utilize system adminstration knowledge to plan and improve processes for IT environments"
                 },
                 {
                     "certId": "c5",
                     "certName": "IT Security: Defense against the digital dark arts",
-                    "certImg": "./certificates/google_it_professional/google_it_course_5.pdf",
+                    "certImg": "./certificates/google/google_it_course_5.pdf",
                     "uri": "https://coursera.org/share/0c3b147c46e28c84da792addfd4634a7",
                     "learnings": "I learned basics of Cloud Computing; everything as a service; cloud storage; security principles and basics of ips/ids/firewall"
                 },
                 {
                     "certId": "c6",
                     "certName": "Google IT Support",
-                    "certImg": "./certificates/google_it_professional/google_it_professional_certificate.pdf",
+                    "certImg": "./certificates/google/google_it_professional_certificate.pdf",
                     "uri": "https://coursera.org/share/50bd1600dd46d9571b0dfd4b102fbc37",
                     "learnings": "During this professional program in addition to fundamental of IT support, I learned differnet domains of IT such as Computer Networking, Operating Systems, System Administration, Computer Security, etc."
                 },
                 {
                     "certId": "c7",
                     "certName": "Googlt IT Support Credly Badge",
-                    "certImg": "./certificates/google_it_professional/google_it_support_certificate_badge.pdf",
+                    "certImg": "./certificates/google/google_it_support_certificate_badge.pdf",
                     "uri": "https://www.credly.com/badges/1a31d8bb-5869-4a21-bc53-df7f9c347873",
                     "learnings": "I was rewarded this badge by Credly for completing the professional certification."
                 },
                 {
                     "certId": "c8",
                     "certName": "Junior IT Analyst Program",
-                    "certImg": "./certificates/google_it_professional/NPower_JITA_certificate.pdf",
+                    "certImg": "./certificates/google/NPower_JITA_certificate.pdf",
                     "uri": null,
                     "learnings": "I joined NPower Canada's Junior IT Analyst program to get hands on traning in the IT field to enhance my area in the field of Computer Networking and Security to combined my work experience as a Technician. Apart from learning technical skills, I learned valuable soft skills and valuable tips about job search in the Canadian market in this field."
                 }
@@ -513,7 +513,7 @@
                 {
                     "certId": "dns_1",
                     "certName": "Proficient in Web Development",
-                    "certImg": "./certificates/dns/dns_sfha_web.jpg",
+                    "certImg": "./certificates/dns/dns_sfha_web.pdf",
                     "uri": null,
                     "learnings": "Learned about web development fundamentals; back-end developement Php, NodeJS; front-end development HTML5, CSS3, Javascript (ES6), jQuery; docker; CI/CD Basics; AWS Basics"
                 }
@@ -552,7 +552,7 @@
                 {
                     "certId": "harvard_1",
                     "certName": "CS50's Introduction to Computer Science",
-                    "certImg": "./certificates/harvard/HarvardX_CS50x_Introduction to Computer Science.pdf",
+                    "certImg": "./certificates/harvard/Harvardx_CS50x_Introduction_to_Computer_Science.pdf",
                     "uri": "https://courses.edx.org/certificates/e85433344ee74aefb3578802c4fc45c7",
                     "learnings": "I learned general overview of the Computer Science field and learned building blocks like basic data strucutres, algorithm, memory management, and fundamental concepts to build my career. I learned several programming languages like scratch, c, python, html, javascript, and solved challenging assignments like recovering images, spell-checker, game of fifteen using C - langauge."
                 },
@@ -566,14 +566,14 @@
                 {
                     "certId": "harvard_3",
                     "certName": "Puzzle Day 2020",
-                    "certImg": "./certificates/harvard/HarvardX_CS50x_Puzzle_Day_2020.pdf",
+                    "certImg": "./certificates/harvard/Harvardx_CS50x_Puzzle_Day_2020.pdf",
                     "uri": "https://cs50.harvard.edu/certificates/c6b50f16-00d9-4e1b-b37a-0a3953778ac6",
                     "learnings": "I earned this certificate 2nd year in a row for the puzzle day online event. I participated as a one-member team to challenge myself this year for the event. I was rewarded the certificate for solving 6 out of 8 puzzles."
                 },
                 {
                     "certId": "harvard_4",
                     "certName": "Data Science: R Basics",
-                    "certImg": "./certificates/harvard/HarvardX_Data_Science_R_Basics_ edX.pdf",
+                    "certImg": "./certificates/harvard/Harvardx_Data_Science_R_Basics_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/baa77fe96adf476d8f892c527d3e572e",
                     "learnings": "I took the Data Science course to get familiar with the basics of the field because I was fascinated by the Machine Learning concepts that I was introduced in the MIT 6002x course. This was my first course in a specialization of this field."
                 }

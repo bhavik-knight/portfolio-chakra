@@ -9,19 +9,14 @@ import { EducationCard } from "./EducationCard"
 import { TrainingCard } from "./TrainingCard"
 import { ExtracurricularCard } from "./ExtracurricularCard"
 import { CertificateCard } from "./CertificateCard"
+import { CertificateCardCarousel } from "./CertificateCardCarousel"
 
 
 function Education() {
     return (
-        <Stack
-            width="100%"
-            gap={2}
-            p={2}
-        // m={2}
-        // bg="lightblue"
-        >
+        <Stack width="100%" gap={2} p={2}>
             {/* journey */}
-            <Card display={{ base: "none", md: "flex" }} boxShadow="2px 2px 4px">
+            <Card as="section" display={{ base: "none", md: "flex" }} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     My journey
                 </CardHeader>
@@ -32,7 +27,7 @@ function Education() {
                             My journey in the field of Computer Science is a non-traditional approach. I have established my love for coding and passsion for the Computer Science during 2nd semester of my Bachelor of Engineering in Mechanical when we had a course on Computer Programming using C language. My professor acknowledged my understanding of topics and programming skills saying that I could complete some of the challenges which half of the Computer Science couldn't complete during that time.
                         </ListItem>
                         <ListItem>
-                            Being a Software Engineer was my childhood dream, but my undergraduate study was completely different than my dreams. So even after completion of my degree and starting a job, my love for Computer Science never died, and I keep seeking a career path to follow my dream. My journey for the Computer Science started in 2015 when I decided to change my career trajectory in pursite of my dreams. I am forever grateful for Harvard's professor Dr. David Malan for teaching the CS50 course with so much passion which played a pivotal role in my life and career.
+                            Becoming a Software Engineer was my childhood dream, but my undergraduate study was different. Even after completion of my degree and starting a job, my love for Computer Science never died, and I keep seeking a career path to follow my dream. My journey for the Computer Science started in 2015 when I decided to change my career trajectory in pursite of my dreams. I am forever grateful for Harvard's professor Dr. David Malan for teaching the CS50 course with so much passion which played a pivotal role in my life and career.
                         </ListItem>
                         <ListItem>
                             I recently graduated with Post Baccalaureate Diploma in Artificial Intelligence from St. Francis Xavier Unviersity where I studied some core subjects of Computer Science and enriched my knowledge and skills to build my career. Checkout my projects and skills in various domains.
@@ -47,7 +42,7 @@ function Education() {
             }
 
             {/* training */}
-            <Card as="section" boxShadow="2px 2px 4px">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Training
                 </CardHeader>
@@ -62,7 +57,7 @@ function Education() {
             </Card>
 
             {/* certificates */}
-            <Card as="section" boxShadow="2px 2px 4px">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Certificates
                 </CardHeader>
@@ -72,19 +67,19 @@ function Education() {
                         {/* one accordion item - one certificate group */}
                         {
                             certificates.map(certObj =>
-                                <AccordionItem key={nanoid()}>
+                                <AccordionItem key={nanoid()} py={2}>
                                     <AccordionButton
                                         as={Heading}
                                         fontSize={{ base: "sm", md: "md", lg: "xl" }}
                                         _hover={{ cursor: "pointer" }}
                                         _expanded={{ boxShadow: "0px 2px 8px" }}
                                     >
-                                        <HStack as="span" flex="1" justifyContent="space-between">
-                                            <Heading fontSize={{ base: "sm", md: "2xl" }}>
+                                        <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
+                                            <Text>
                                                 {certObj.title}
-                                            </Heading>
-                                            <AccordionIcon />
-                                        </HStack>
+                                            </Text>
+                                        </Flex>
+                                        <AccordionIcon />
                                     </AccordionButton>
                                     <AccordionPanel p={2}>
                                         <Stack as={Flex}
@@ -105,7 +100,7 @@ function Education() {
                                         </Flex>
                                         <Divider className="divider" mx="auto" my={2} width="90%" />
 
-                                        <CertificateCard details={certObj.certificateDetails} />
+                                        <CertificateCardCarousel details={certObj.certificateDetails} />
                                     </AccordionPanel>
                                 </AccordionItem>
                             )
@@ -117,7 +112,7 @@ function Education() {
 
 
             {/* extra curricular */}
-            <Card as="section" boxShadow="2px 2px 4px">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Extracurricular Activities
                 </CardHeader>
