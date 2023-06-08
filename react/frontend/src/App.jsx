@@ -48,10 +48,10 @@ function App() {
             "page": <Experiences />,
         },
 
-        "certificates": {
-            "icon": ResponsiveIcons.certificates,
-            "page": <Certificates />
-        }
+        // "certificates": {
+        //     "icon": ResponsiveIcons.certificates,
+        //     "page": <Certificates />
+        // }
     }
 
     // to load a particular page on button click
