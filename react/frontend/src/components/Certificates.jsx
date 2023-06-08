@@ -1,3 +1,4 @@
+import "./Certificates.css"
 import { nanoid } from "nanoid"
 import { Flex, HStack, VStack, Stack, Box, Wrap, Container, Divider } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
@@ -6,18 +7,16 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
 import { certificates } from "../data/portfolio_db.json"
 import { CertificateCard } from "./CertificateCard"
+import { CertificateCardCarousel } from "./CertificateCardCarousel"
 
 function Certificates() {
 
     // console.log(`certificates page: ${JSON.stringify(certificates)}`)
 
     return (
-        <Stack
-            width="100%"
-        // m={2} p={2} bg="lightblue"
-        >
+        <Stack p={2} width="100%">
             {/* card for information on top */}
-            <Card as="section">
+            <Card as="section" boxShadow="2px 2px 4px">
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     Computer Science / IT Certificates
                 </CardHeader>
@@ -41,14 +40,19 @@ function Certificates() {
             </Card>
 
             {/* certificates */}
-            <Card as="section">
+            <Card as="section" boxShadow="2px 2px 4px">
                 <CardBody>
                     <Accordion allowToggle>
                         {/* one accordion item - one certificate group */}
                         {
                             certificates.map(certObj =>
                                 <AccordionItem key={nanoid()}>
-                                    <AccordionButton>
+                                    <AccordionButton
+                                        as={Heading}
+                                        fontSize={{ base: "sm", md: "md", lg: "xl" }}
+                                        _hover={{ cursor: "pointer" }}
+                                        _expanded={{ boxShadow: "0px 2px 8px" }}
+                                    >
                                         <HStack as="span" flex="1" justifyContent="space-between">
                                             <Heading fontSize={{ base: "sm", md: "2xl" }}>
                                                 {certObj.title}
@@ -56,8 +60,10 @@ function Certificates() {
                                             <AccordionIcon />
                                         </HStack>
                                     </AccordionButton>
-                                    <AccordionPanel pb={2}>
+                                    <AccordionPanel p={2}>
                                         <Stack as={Flex}
+                                            pt={2}
+                                            px={4}
                                             justifyContent="space-between"
                                             direction={{ base: "column", md: "row" }}
                                             flexWrap={{ base: "nowrap", md: "wrap" }}
@@ -66,14 +72,14 @@ function Certificates() {
                                             <Text>{certObj.institute}</Text>
                                         </Stack>
                                         <Flex
-                                            // bg="lightcoral"
+                                            px={4}
                                             mt={1} flexShrink="1"
                                         >
                                             <Text>{certObj.about}</Text>
                                         </Flex>
                                         <Divider className="divider" mx="auto" my={2} width="90%" />
 
-                                        <CertificateCard details={certObj.certificateDetails} />
+                                        <CertificateCardCarousel details={certObj.certificateDetails} />
                                     </AccordionPanel>
                                 </AccordionItem>
                             )

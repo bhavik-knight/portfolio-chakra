@@ -1,3 +1,4 @@
+import "./Projects.css"
 import { projects } from "../data/portfolio_db.json"
 import { useState } from "react"
 import { Divider, UnorderedList, List, ListItem } from "@chakra-ui/react"
@@ -16,8 +17,7 @@ function Projects() {
     const [tabIndex, setTabIndex] = useState(0)
 
     return (
-        <Stack m={2} p={2} bg="lightblue" width="100%">
-
+        <Stack p={2} width="100%" >
             {/* some text */}
             <Card as="section">
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
@@ -46,14 +46,16 @@ function Projects() {
                     pt={2}
                     px={2}
                     variant="enclosed"
+                    size={{ base: "base", lg: "md" }}
+                    orientation={{ base: "vertical", lg: "horizontal" }}
                     onChange={(index) => setTabIndex(index)}
                 >
                     {/* tab titles */}
                     <TabList className="tabLabel">
-                        <Tab _selected={{ bg: "red", color: "black" }}>Web Dev</Tab>
-                        <Tab _selected={{ bg: "green", color: "white" }}>Data</Tab>
-                        <Tab _selected={{ bg: "blue", color: "white" }}>ML / AI</Tab>
-                        <Tab _selected={{ bg: "yellow", color: "black" }}>Game Dev</Tab>
+                        <Tab _selected={{ bg: "red", color: "black" }} className="projectType">Web Dev</Tab>
+                        <Tab _selected={{ bg: "green", color: "white" }} className="projectType">Data</Tab>
+                        <Tab _selected={{ bg: "blue", color: "white" }} className="projectType">ML / AI</Tab>
+                        <Tab _selected={{ bg: "yellow", color: "black" }} className="projectType">Game Dev</Tab>
                     </TabList>
 
                     {/* tab content */}

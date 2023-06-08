@@ -58,9 +58,9 @@ import { MdWork } from "@react-icons/all-files/md/MdWork"
 import { FaAward } from "@react-icons/all-files/fa/FaAward"
 import { FaCode } from "@react-icons/all-files/fa/FaCode"
 
-import { Container } from "@chakra-ui/react"
+import { Container, useMediaQuery } from "@chakra-ui/react"
 
-const size = "32px"
+const size = "16px"
 
 const Numpy = () => <Container bgImage="./logos/numpy.svg" boxSize={size} />
 

@@ -6,18 +6,19 @@
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "web",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "linux",
-                "apache",
-                "mysql",
                 "php",
                 "javascript",
                 "jquery",
                 "html",
                 "css",
+                "linux",
+                "apache",
+                "sql",
+                "mysql",
                 "bootstrap",
                 "git",
                 "docker",
@@ -25,61 +26,69 @@
                 "aws"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Created the website as a project for booking the adventure for Canoe and Kayaking from the available trips",
+                "Designed the responsive UI using HTML5, CSS3, Bootstrap, JavaScript, and jQuery from the wireframe design",
+                "Developed the backend and validated the form submitted on the server side using PHP",
+                "Handled the version control using Git and GitHub for all 3-phases of the project",
+                "Launched on the AWS as Iaas, using EC2, configured LAMP Stack and RDS for the MySQL relational database",
+                "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
             ],
             "projectImgs": "./projects/hck_dns_sfha/"
         },
         {
             "id": 2,
-            "title": "Halifax Canoe and Kayak",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Nish-Foody",
+            "description": "A website for food ordering and selling. Skills demonstrated as a full-stack developer and documentarian for this final project spanning over 3 months.",
             "type": "web",
-            "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "group": true,
+            "source": "https://bitbucket.org/csci-485/nish-foody/",
+            "uri": null,
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "php",
+                "python",
+                "django",
                 "javascript",
                 "jquery",
                 "html",
                 "css",
+                "postgre",
+                "sql",
                 "bootstrap",
                 "git",
                 "docker",
                 "heroku",
-                "aws"
+                "jira",
+                "confluence",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Developed a fully-functional website for food ordering/selling for the people of Antigonish",
+                "Worked as a full-stack developer in SDLC as a 5-member team to create the website as the final year project",
+                "Surveyed people from different backgrounds for the requirement analysis; and spearheaded the documentation",
+                "Designed the menu page using HTML5, CSS3, and Bootstrap for the UI and the cart for orders using JS/jQuery",
+                "Adopted the Django framework serving REST API that was connected to the PostgreSQL database",
+                "Followed the Agile methodology with tools like JIRA and Confluence pages for the documentation"
             ],
             "projectImgs": "./projects/hck_dns_sfha/"
         },
         {
             "id": 3,
-            "title": "Halifax Canoe and Kayak",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Portfolio Website",
+            "description": "My personal website to demonstrate my skills to the world. This project demonstrates my skill as front-end developer for which I used ReactJS and ChakraUI, and hosted on Netlify.",
             "type": "web",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "source": "https://github.com/bhavik-knight/portfolio-chakra",
+            "uri": "http://bhavikbhagat.netlify.app",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "php",
+                "reactjs",
                 "javascript",
-                "jquery",
+                "chakraui",
                 "html",
                 "css",
-                "bootstrap",
                 "git",
-                "mysql",
                 "docker",
-                "heroku",
-                "aws"
+                "netlify"
             ],
             "details": [
                 "task1",
@@ -90,61 +99,60 @@
         },
         {
             "id": 4,
-            "title": "Hotel Management",
-            "description": "HMGMT",
-            "type": "data",
-            "github": "",
-            "uri": "",
-            "displayImg": "",
+            "title": "Tic-tac-toe",
+            "description": "My first mini-project in the web development area as a backend developer where I used flask microframework. I received constructive critisim on my coding style by Harvard's computer science professor Dr. David Malan in CS50's code-review stream.",
+            "type": "web",
+            "source": "https://github.com/bhavik-knight/cs50beyond/tree/master/tictactoe",
+            "uri": "https://www.youtube.com/watch?v=5aWjlEqwJs4&t=1829s",
+            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "sql",
-                "oracle",
-                "ERD",
-                "3NF",
-                "relational database"
+                "python",
+                "flask",
+                "html",
+                "css",
+                "git",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2"
+                "First experience of utilizing any framework for web-development. I learned about flask micro-framework by reading the official documentation.",
+                "Implemented backend using flask, used stackoverflow/goggle to solve the issues during the developement process",
+                "First time using git for version control and hosted project on the github",
+                "Received the feedback on my project from my idol Dr. David Malan; learned about various aspect i.e., the best coding practicies,  use of MVC in the web developement, etc."
             ],
             "projectImgs": ""
         },
         {
             "id": 5,
-            "title": "data-2",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Hotel Management",
+            "description": "The relational database for Hotel Room reservation / booking developed in 4-phases and deployed on the StFX University's Oracle server setup by the professor.",
             "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "source": null,
+            "uri": null,
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "sql",
+                "oracle",
+                "ERD",
+                "3NF"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Developed the relational database as a 4-member team for the Hotel Management",
+                "Actively participated in creating the ERD diagram, designing and then normalizing the database",
+                "Performed CRUD operations maintaining the constraints placed on the 4/15 tables using SQL",
+                "Prepared some python scripts to generate and load a large amount of data automatically to the database",
+                "Prepared meaningful Views and useful queries on the database by applying joins on the tables",
+                "Deployed the relational database on the university's Oracle Server hosted by the professor"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 6,
-            "title": "data-3",
+            "title": "Crime Analysis",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -169,11 +177,11 @@
         },
         {
             "id": 7,
-            "title": "ML-1",
+            "title": "Food-Order Analysis",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "ai",
+            "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -198,11 +206,11 @@
         },
         {
             "id": 8,
-            "title": "ml-2",
+            "title": "Sentiment Analysis",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "ai",
+            "type": "data",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -227,11 +235,11 @@
         },
         {
             "id": 9,
-            "title": "ml-3",
+            "title": "Multi-class Image Classification",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -256,11 +264,11 @@
         },
         {
             "id": 10,
-            "title": "ml4",
+            "title": "Deep Learning on MNIST Dataset",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -285,11 +293,11 @@
         },
         {
             "id": 11,
-            "title": "game-1",
+            "title": "Evolutionary Computation - Final Project",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "game",
+            "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -314,11 +322,11 @@
         },
         {
             "id": 12,
-            "title": "game-2",
+            "title": "Particle Swarm Optimization",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "game",
+            "type": "ai",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -343,11 +351,69 @@
         },
         {
             "id": 13,
-            "title": "game-3",
+            "title": "Minesweeper",
             "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "game",
             "group": false,
-            "github": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "uri": "http://35.182.245.62",
+            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "technologies": [
+                "php",
+                "javascript",
+                "jquery",
+                "html",
+                "css",
+                "bootstrap",
+                "git",
+                "mysql",
+                "docker",
+                "heroku",
+                "aws"
+            ],
+            "details": [
+                "task1",
+                "task2",
+                "task3"
+            ],
+            "projectImgs": "./projects/hck_dns_sfha/"
+        },
+        {
+            "id": 14,
+            "title": "Snake",
+            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "type": "game",
+            "group": false,
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
+            "uri": "http://35.182.245.62",
+            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "technologies": [
+                "php",
+                "javascript",
+                "jquery",
+                "html",
+                "css",
+                "bootstrap",
+                "git",
+                "mysql",
+                "docker",
+                "heroku",
+                "aws"
+            ],
+            "details": [
+                "task1",
+                "task2",
+                "task3"
+            ],
+            "projectImgs": "./projects/hck_dns_sfha/"
+        },
+        {
+            "id": 15,
+            "title": "8 - Puzzle solver AI using A*",
+            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "type": "game",
+            "group": false,
+            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
             "technologies": [
@@ -382,44 +448,58 @@
                 {
                     "certId": "c1",
                     "certName": "Technical Support Fundamentals",
-                    "certImg": "./certificates/google_it_professional/c1_fundamentals.jpg",
+                    "certImg": "./certificates/google/google_it_course_1.pdf",
                     "uri": "https://coursera.org/share/dd6acf709cba5e5942c42e890da220f0",
                     "learnings": "I learned about how to assemble a computer, basics of internet, overview of operation system and applications, problem-solving methodologies and soft-skills required in Information Technology field"
                 },
                 {
                     "certId": "c2",
                     "certName": "The Bits and Bytes of Computer Networking",
-                    "certImg": "./certificates/google_it_professional/c2_networking.jpg",
+                    "certImg": "./certificates/google/google_it_course_2.pdf",
                     "uri": "https://coursera.org/share/605e01e4cb5a3c481139666a9112b644",
                     "learnings": "In this course I learned basics of computer networking; five-layer and OSI model; standard protocols; network troubleshooting; basics of DNS and DHCP server"
                 },
                 {
                     "certId": "c3",
                     "certName": "Operating Systems and You: Becoming a Power User",
-                    "certImg": "./certificates/google_it_professional/c3_os.jpg",
+                    "certImg": "./certificates/google/google_it_course_3.pdf",
                     "uri": "https://coursera.org/share/c1ee69aa511fa4a7f19a05d1d92995f2",
                     "learnings": "I learned about Windows and Linux OS; file systems; install, configure, and remove software; disk partitioning; set up users, groups and permissions; background processes and management; troubleshoot the common issues regarding OS"
                 },
                 {
                     "certId": "c4",
                     "certName": "System Administration and IT Infrastructure Services",
-                    "certImg": "./certificates/google_it_professional/c4_sysadmin.jpg",
+                    "certImg": "./certificates/google/google_it_course_4.pdf",
                     "uri": "https://coursera.org/share/8d81d43f9fefaec24181cd57add956d9",
                     "learnings": "In this course I learned about chosing the best hardware and services for organizations; manage infrastructure servers; Active directory and OpenLDAP; how to backup and recover data; utilize system adminstration knowledge to plan and improve processes for IT environments"
                 },
                 {
                     "certId": "c5",
                     "certName": "IT Security: Defense against the digital dark arts",
-                    "certImg": "./certificates/google_it_professional/c5_security.jpg",
+                    "certImg": "./certificates/google/google_it_course_5.pdf",
                     "uri": "https://coursera.org/share/0c3b147c46e28c84da792addfd4634a7",
                     "learnings": "I learned basics of Cloud Computing; everything as a service; cloud storage; security principles and basics of ips/ids/firewall"
                 },
                 {
                     "certId": "c6",
                     "certName": "Google IT Support",
-                    "certImg": "./certificates/google_it_professional/google_it_support.jpg",
+                    "certImg": "./certificates/google/google_it_professional_certificate.pdf",
                     "uri": "https://coursera.org/share/50bd1600dd46d9571b0dfd4b102fbc37",
                     "learnings": "During this professional program in addition to fundamental of IT support, I learned differnet domains of IT such as Computer Networking, Operating Systems, System Administration, Computer Security, etc."
+                },
+                {
+                    "certId": "c7",
+                    "certName": "Googlt IT Support Credly Badge",
+                    "certImg": "./certificates/google/google_it_support_certificate_badge.pdf",
+                    "uri": "https://www.credly.com/badges/1a31d8bb-5869-4a21-bc53-df7f9c347873",
+                    "learnings": "I was rewarded this badge by Credly for completing the professional certification."
+                },
+                {
+                    "certId": "c8",
+                    "certName": "Junior IT Analyst Program",
+                    "certImg": "./certificates/google/NPower_JITA_certificate.pdf",
+                    "uri": null,
+                    "learnings": "I joined NPower Canada's Junior IT Analyst program to get hands on traning in the IT field to enhance my area in the field of Computer Networking and Security to combined my work experience as a Technician. Apart from learning technical skills, I learned valuable soft skills and valuable tips about job search in the Canadian market in this field."
                 }
             ]
         },
@@ -433,9 +513,136 @@
                 {
                     "certId": "dns_1",
                     "certName": "Proficient in Web Development",
-                    "certImg": "./certificates/dns/dns_sfha_web.jpg",
+                    "certImg": "./certificates/dns/dns_sfha_web.pdf",
                     "uri": null,
                     "learnings": "Learned about web development fundamentals; back-end developement Php, NodeJS; front-end development HTML5, CSS3, Javascript (ES6), jQuery; docker; CI/CD Basics; AWS Basics"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Programming Competitions",
+            "platform": "ICPC Website",
+            "institute": "International Collegiate Programming Contest",
+            "about": "I participated in the ICPC Programming competition representing StFX University as a part of team X-abytes-1 under the guidence of the professor Dr. Milton King.",
+            "certificateDetails": [
+                {
+                    "certId": "icpc_1",
+                    "certName": "Honorable Certificate",
+                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_Bhavik_Bhagat_MEDAL.pdf",
+                    "uri": null,
+                    "learnings": "We had to apply our data strucutres and alogrithm knowledge here. I learned a lot about time-management and how to work under pressure with a team brainstroming the ideas."
+                },
+                {
+                    "certId": "icpc_2",
+                    "certName": "Honorable Certificate",
+                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_MEDAL_team.pdf",
+                    "uri": null,
+                    "learnings": "We had a meeting before the competition where we were introdued the protocols to follow. During this compeition we learned about teamwork, and how to overcome the difficult problems by sharing the ideas to solve a problem and iteratively make the solution efficient."
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "title": "Harvard Certificates",
+            "platform": "Harvard & edX",
+            "institute": "Harvard University",
+            "about": "My first ever Computer Science introductory course. I participated in the various events of Harvard's CS50 courses, and enrolled in other courses.",
+            "certificateDetails": [
+                {
+                    "certId": "harvard_1",
+                    "certName": "CS50's Introduction to Computer Science",
+                    "certImg": "./certificates/harvard/Harvardx_CS50x_Introduction_to_Computer_Science.pdf",
+                    "uri": "https://courses.edx.org/certificates/e85433344ee74aefb3578802c4fc45c7",
+                    "learnings": "I learned general overview of the Computer Science field and learned building blocks like basic data strucutres, algorithm, memory management, and fundamental concepts to build my career. I learned several programming languages like scratch, c, python, html, javascript, and solved challenging assignments like recovering images, spell-checker, game of fifteen using C - langauge."
+                },
+                {
+                    "certId": "harvard_2",
+                    "certName": "Puzzle Day 2019",
+                    "certImg": "./certificates/harvard/Harvardx_CS50x_Puzzle_Day_2019.pdf",
+                    "uri": "https://cs50.harvard.edu/certificates/34f3a67d-6862-4c59-90bb-f2bce5efcba9",
+                    "learnings": "I earned this certificate for participating in the puzzle day event in 2019. I was in the team with members from Belgium, Turkey, Ukraine, and Netherlands. We were colleagues in CS50 course and coordinated using Discord platform. We are rewarded the certificate for solving 9 out of 12 puzzles."
+                },
+                {
+                    "certId": "harvard_3",
+                    "certName": "Puzzle Day 2020",
+                    "certImg": "./certificates/harvard/Harvardx_CS50x_Puzzle_Day_2020.pdf",
+                    "uri": "https://cs50.harvard.edu/certificates/c6b50f16-00d9-4e1b-b37a-0a3953778ac6",
+                    "learnings": "I earned this certificate 2nd year in a row for the puzzle day online event. I participated as a one-member team to challenge myself this year for the event. I was rewarded the certificate for solving 6 out of 8 puzzles."
+                },
+                {
+                    "certId": "harvard_4",
+                    "certName": "Data Science: R Basics",
+                    "certImg": "./certificates/harvard/Harvardx_Data_Science_R_Basics_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/baa77fe96adf476d8f892c527d3e572e",
+                    "learnings": "I took the Data Science course to get familiar with the basics of the field because I was fascinated by the Machine Learning concepts that I was introduced in the MIT 6002x course. This was my first course in a specialization of this field."
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "title": "MIT Certificates",
+            "platform": "edX",
+            "institute": "Massachusetts Institute of Technology",
+            "about": "After learning basic concepts of Computer Science from Harvard's CS50 course, I was recommended this course by my peers when I was looking for recommendation for Python coruses.",
+            "certificateDetails": [
+                {
+                    "certId": "mit_1",
+                    "certName": "Introduction to Computer Science and Programming Using Python",
+                    "certImg": "./certificates/mit/MITx_6.00.1x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/23f2cbca51ae432aa9c7b2846468157a",
+                    "learnings": "A deep dive in to core computer science concepts with the help of mathematics on the parts like big-oh analysis. Apart from learning technical skills, I learned time management and stress management as this was my first instructor-paced course where I had to submit assignments and complete exams by the set deadlines."
+                },
+                {
+                    "certId": "mit_2",
+                    "certName": "Introduction to Computational Thinking and Data Science",
+                    "certImg": "./certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/5f707d85691d4dfe9643fdcbfc53d4ee",
+                    "learnings": "After completing the 6001x course from MIT with very good score, Adam Milton-Barker peer from CS50 course recommed me to check this course. This course challenged me in the whole different way, and I decided to build my career in this specialization in the future. I learned about graphs data structure, stochastic programming and statistical thinking, Monte-Carlo simulation, plotting libraries, and introduction to Machine Learning with KNN."
+                },
+                {
+                    "certId": "mit_3",
+                    "certName": "Computational Thinking using Python",
+                    "certImg": "./certificates/mit/MITx_600_XSeries_edX_Credentials.pdf",
+                    "uri": "https://credentials.edx.org/credentials/0b3244958d38408296d5c03d7af6026e/",
+                    "learnings": "This certificate was rewarded to me for completing X series program by completing the 6001x and 6002x courses from MIT."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Microsoft Certificates",
+            "platform": "edX",
+            "institute": "Microsoft",
+            "about": "",
+            "certificateDetails": [
+                {
+                    "certId": "ms_1",
+                    "certName": "Learn to Program in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV276x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/f5e302d222a84dbc89c5e775c64f7886",
+                    "learnings": "I leaned about basic programming concepts like data types, variables, logic, loops, control flows, functions, etc. and got familiar with various terminologies of Java langauge."
+                },
+                {
+                    "certId": "ms_2",
+                    "certName": "Object Oriented Programming in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV277x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/fcb211988bfc4c78911892cc130bc855",
+                    "learnings": "In this course I learned abotu arrays, classes & objects, inheritance, polymorphism, abstract classes, and interfaces."
+                },
+                {
+                    "certId": "ms_3",
+                    "certName": "Algorithms and Data Structures",
+                    "certImg": "./certificates/microsoft/Microsoft_DEV285x_Certificate_edX.pdf",
+                    "uri": "https://courses.edx.org/certificates/fe6a9f7c165d44fbbf4876403a56ceda",
+                    "learnings": "During this course I learned abuot various searching and sorting algorithms like bubble sort, selection sort, merge sort, linear search, binary search, and data structures like liked list, stack, queue."
+                },
+                {
+                    "certId": "ms_4",
+                    "certName": "Introduction to Programming in Java",
+                    "certImg": "./certificates/microsoft/Microsoft_Professional_Certificate_edX_Credentials.pdf",
+                    "uri": "https://credentials.edx.org/credentials/1e58f5c8e401420fb36f9e6a38b7079f",
+                    "learnings": "I was rewarded this certificate for completing the series of Java coruses offered by Microsoft. During the entire program I learned how to program using Java Language and terminologies related to the programming language."
                 }
             ]
         }
@@ -496,14 +703,14 @@
         {
             "id": 5,
             "title": "Department Assistant",
-            "company": "Tim Hortons",
-            "place": "Antigonish, NS, Canada",
-            "start": "Jun 2021",
-            "end": "Aug 2021",
+            "company": "Kavi Narmad Library",
+            "place": "Surat, Gujarat, India",
+            "start": "Nov 2019",
+            "end": "Mar 2020",
             "responsibilities": [
-                "Contributed to increasing revenue of the branch by maintaining a low waiting time during the peak hours at the drive-through by providing excellent customer service and operating the POS with a high accuracy",
-                "Contributed to the team helping in maintaining food and beverages quality by analyzing the patterns of demand of customers at different hours for the various products, which helped in diminishing the food-waste",
-                "Proved the work ethic by working during the various shifts as requested that benefited the crew members by having their time off as needed, which helped in maintaining the overall productivity of the team"
+                "Applied active listening to identify client needs and the book search and selection process, resulting in high client satisfaction and gaining repeat business",
+                "Transformed the department by applying Dewey Decimal Classification (DDC) to rectify mistakes in sorting books, resulting in around 500+ books being categorized correctly in the library system",
+                "Organized newspapers and magazines by the date and time daily, resulting in increased reliability of the archival system of the library"
             ]
         },
         {
@@ -539,9 +746,9 @@
             "start": "Sep 2013",
             "end": "May 2014",
             "responsibilities": [
-                "Increased student success rate by 10% in the recent years in the subjects of 'Engineering Drawing/Graphics' and 'Elements of Mechanical Engineering'  by applying a practical approach to curriculum delivery",
-                "Contributed to the development of course material by accumulating interesting example from various reference books, creating new problems and prepared solution, and delived feedback of the assignments and exams on time; resulting in a high-quality study guide for students available free of cost",
-                "Conducted extra classes for curious students on demand to engage them practicing challenging problems under our guidence; created amiable environment for to discuss their problems and guided them; which resulted in 98% students cleared the University exams across different stream for both subjects"
+                "Increased student success rate by 10% in recent years in the subjects of 'Engineering Drawing/Graphics' and 'Elements of Mechanical Engineering by applying a practical approach to curriculum delivery",
+                "Contributed to the development of course material by accumulating challenging examples from various reference books, creating new problems and preparing solutions, and delivering feedback on the assignments and exams on time, resulting in a high-quality study guide for students available free of cost",
+                "Conducted extra classes for curious students on demand to engage them in practicing challenging problems and guided them in the right direction, resulting in 98% of students clearing the University exams across different streams for both subjects"
             ]
         }
     ],
@@ -750,5 +957,108 @@
                 }
             ]
         }
-    ]
+    ],
+    "extracurriculars": [
+        {
+            "id": 1,
+            "name": "International Collegiate Programming Contest",
+            "year": 2022,
+            "team": "StFX X-abytes 1",
+            "image": "./extracurriculars/icpc_nena_2022_stfx_xabytes_1.png",
+            "details": "I was honored to represent StFX for the 3rd time for programming competition during my 2-year span. This was my first in-person experience of any programming competition. I was member of team X-abyes1 along with Dalon and Vijay.",
+            "uri": null
+        },
+        {
+            "id": 2,
+            "name": "Atlantic Canada Programming Competition",
+            "year": 2021,
+            "team": "StFX X-abytes",
+            "image": "./extracurriculars/acpc_2021_stfx_xabytes.png",
+            "details": "The StFX University were hosting this event online for this year. We were the only team representing our university this time. Despite our heavy course load of 6 courses in our program with some advanced courses like Machine Learning, and Theory of Computing, I was honored to participate for this event with my team members Dalon and Vijay to represent our University. We were ranked 6 out of 12 participating teams.",
+            "uri": "https://atlantic-canada21.kattis.com/contests/atlantic-canada21"
+        },
+        {
+            "id": 1,
+            "name": "Atlantic Canada Programming Competition",
+            "year": 2020,
+            "team": "StFX Green",
+            "image": "./extracurriculars/acpc_2020_stfx_green.png",
+            "details": "I partficiated as a member of team Green representing St. Francis Xavier University. We particiapted online and connected with team via ms-team because couldn't travel due to Covid19 and we were studying online. We were ranked 4 out of 20 particiapting teams for this event.",
+            "uri": "https://open.kattis.com/contests/xfokus"
+        }
+    ],
+    "skills": {
+        "languages": [
+            "Python",
+            "JavaScript",
+            "C",
+            "C++",
+            "SQL",
+            "Java",
+            "HTML",
+            "CSS",
+            "PHP",
+            "R",
+            "Kotlin"
+        ],
+        "frameworks": [
+            "ReactJS",
+            "ChakraUI",
+            "MaterialUI",
+            "Bootstrap",
+            "jQuery",
+            "Django",
+            "Flask",
+            "TensorFlow",
+            "Keras",
+            "Scikit-Learn",
+            "NumPy",
+            "Pandas",
+            "NLTK",
+            "BeautifulSoup",
+            "Matplotlib",
+            "Plotly",
+            "Seaborn",
+            "PySwarm",
+            "PyGad",
+            "PyGame"
+        ],
+        "technologies": [
+            "Git",
+            "Docker",
+            "Vim",
+            "WSL",
+            "GitHub",
+            "Bitbucket",
+            "GitLab"
+        ],
+        "os": [
+            "Windows",
+            "Linux",
+            "Andriod"
+        ],
+        "management": [
+            "Agile",
+            "Waterfall",
+            "Scrum",
+            "Jira",
+            "Confluence",
+            "Trello"
+        ],
+        "apps": [
+            "TeamViewer",
+            "Google Workspace",
+            "Office365",
+            "Advanced Excel",
+            "VMWare",
+            "Zendesk",
+            "AWS - EC2",
+            "AWS - RDS",
+            "AWS - S3",
+            "MySQL",
+            "Postgre",
+            "SQLite",
+            "Apache"
+        ]
+    }
 }
