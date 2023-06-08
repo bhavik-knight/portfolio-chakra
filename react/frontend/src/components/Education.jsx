@@ -14,15 +14,9 @@ import { CertificateCardCarousel } from "./CertificateCardCarousel"
 
 function Education() {
     return (
-        <Stack
-            width="100%"
-            gap={2}
-            p={2}
-        // m={2}
-        // bg="lightblue"
-        >
+        <Stack width="100%" gap={2} p={2}>
             {/* journey */}
-            <Card display={{ base: "none", md: "flex" }} boxShadow="2px 2px 4px">
+            <Card as="section" display={{ base: "none", md: "flex" }} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     My journey
                 </CardHeader>
@@ -48,7 +42,7 @@ function Education() {
             }
 
             {/* training */}
-            <Card as="section" boxShadow="2px 2px 4px">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Training
                 </CardHeader>
@@ -63,7 +57,7 @@ function Education() {
             </Card>
 
             {/* certificates */}
-            <Card as="section" boxShadow="2px 2px 4px">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Certificates
                 </CardHeader>
@@ -73,19 +67,19 @@ function Education() {
                         {/* one accordion item - one certificate group */}
                         {
                             certificates.map(certObj =>
-                                <AccordionItem key={nanoid()}>
+                                <AccordionItem key={nanoid()} py={2}>
                                     <AccordionButton
                                         as={Heading}
                                         fontSize={{ base: "sm", md: "md", lg: "xl" }}
                                         _hover={{ cursor: "pointer" }}
                                         _expanded={{ boxShadow: "0px 2px 8px" }}
                                     >
-                                        <HStack as="span" flex="1" justifyContent="space-between">
-                                            <Heading fontSize={{ base: "sm", md: "2xl" }}>
+                                        <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
+                                            <Text>
                                                 {certObj.title}
-                                            </Heading>
-                                            <AccordionIcon />
-                                        </HStack>
+                                            </Text>
+                                        </Flex>
+                                        <AccordionIcon />
                                     </AccordionButton>
                                     <AccordionPanel p={2}>
                                         <Stack as={Flex}
@@ -118,7 +112,7 @@ function Education() {
 
 
             {/* extra curricular */}
-            <Card as="section" boxShadow="2px 2px 4px">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
                     Extracurricular Activities
                 </CardHeader>

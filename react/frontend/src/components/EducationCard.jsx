@@ -25,7 +25,7 @@ function EducationCard({ edu }) {
     }, [showMore])
 
     return (
-        <Card as="section" boxShadow="2px 2px 4px">
+        <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
             <CardHeader as={Heading} p={4}>
                 <Stack>
                     <Flex direction={{ base: "column", lg: "row" }} fontSize={{ base: "md", lg: "2xl" }} wrap="wrap">
