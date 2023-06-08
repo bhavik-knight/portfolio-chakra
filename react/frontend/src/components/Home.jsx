@@ -1,4 +1,3 @@
-
 import "./Home.css"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Heading, Text, Image, AspectRatio } from "@chakra-ui/react"
@@ -13,7 +12,7 @@ function Home() {
             gap={2}
             width="100%"
         >
-            <Card as="section" p={4}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <Text
                     px={8}
                     fontSize={{ base: "md", md: "lg", lg: "4xl" }}
@@ -44,7 +43,7 @@ function Home() {
 
             </Card>
 
-            <Card as="section" p={2}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <Stack direction={{ base: "column", xl: "row" }} >
                     <AspectRatio ratio={1}
                         width={{ base: "100%", xl: "40%" }}
@@ -54,7 +53,6 @@ function Home() {
                         </Flex>
                     </AspectRatio>
                     <Flex
-                        // bg="lightgray"
                         gap={2}
                         width={{ base: "100%", xl: "60%" }}
                         direction={{ base: "column", xl: "row" }}
@@ -64,6 +62,8 @@ function Home() {
                     >
                         <Card
                             as={Center}
+                            borderBottom="1px solid red"
+                            _hover={{ boxShadow: "2px 2px 8px red" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
@@ -77,6 +77,8 @@ function Home() {
                         </Card>
                         <Card
                             as={Center}
+                            borderBottom="1px solid green"
+                            _hover={{ boxShadow: "2px 2px 8px green" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
@@ -91,6 +93,8 @@ function Home() {
 
                         <Card
                             as={Center}
+                            borderBottom="1px solid blue"
+                            _hover={{ boxShadow: "2px 2px 8px blue" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
@@ -104,6 +108,8 @@ function Home() {
                         </Card>
                         <Card
                             as={Center}
+                            borderBottom="1px solid yellow"
+                            _hover={{ boxShadow: "2px 2px 8px yellow" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
