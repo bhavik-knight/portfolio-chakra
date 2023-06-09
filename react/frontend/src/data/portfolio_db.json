@@ -74,7 +74,7 @@
                 "Adopted the Django framework serving REST API that was connected to the PostgreSQL database",
                 "Followed the Agile methodology with tools like JIRA and Confluence pages for the documentation"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 3,
@@ -100,7 +100,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/portfolio/"
+            "projectImgs": ""
         },
         {
             "id": 4,

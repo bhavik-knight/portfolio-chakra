@@ -64,9 +64,9 @@ function Projects() {
                             projectTypes.map(type =>
                                 <TabPanel as={Flex} key={nanoid()} justifyContent="space-evenly" flexWrap="wrap" px={2}>
                                     {
-                                        projects.filter(p => p.type === type).map(p =>
-                                            <ProjectCard key={nanoid()} project={p} />
-                                        )
+                                        projects
+                                            .filter(p => p.type === type)
+                                            .map(p => <ProjectCard key={nanoid()} project={p} />)
                                     }
                                 </TabPanel>
                             )

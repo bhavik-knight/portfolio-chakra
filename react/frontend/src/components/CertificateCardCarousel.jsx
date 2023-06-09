@@ -157,7 +157,7 @@ function CertificateCardCarousel({ details }) {
                     icon={<ArrowLeftIcon />}
                     onClick={handlePrevClick}
                     variant="ghost"
-                    size={{ base: "sm", lg: "md" }}
+                    size={{ base: "xs", lg: "md" }}
                     _hover={{ boxShadow: "1px 1px 4px" }}
                 />
 
@@ -178,7 +178,7 @@ function CertificateCardCarousel({ details }) {
                         transform={`translate(${-(current * cardWidth)})`}
                     >
                         {
-                            card.map((_, index) => {
+                            card.map((c, index) => {
                                 return (
                                     <Box key={nanoid()} width={cardWidth}>
                                         {card[current]}
@@ -205,8 +205,6 @@ function CertificateCardCarousel({ details }) {
                 as={ButtonGroup}
                 my={2}
                 spacing={2}
-                variant="ghost"
-                _size={{ base: "xs", lg: "md" }}
             >
                 {
                     showButtons(current).map((b, index) => {

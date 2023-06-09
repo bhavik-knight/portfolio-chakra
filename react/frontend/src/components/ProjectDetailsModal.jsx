@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react"
 
 import { useDisclosure } from "@chakra-ui/react"
-import { Flex, Stack, Center, Container } from "@chakra-ui/react"
+import { Box, Flex, Stack, Center, Container } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Button, ButtonGroup, Tooltip } from "@chakra-ui/react"
 import { Heading, Text, Divider, Spacer, Img } from "@chakra-ui/react"
@@ -19,19 +19,15 @@ import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Tag } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { useState, useEffect } from "react"
-
+import { RenderCarousel } from "./RenderCarousel"
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
-
-    // project images data
-    const [projectImgs, setProjectImages] = useState([])
-
 
     return (
         <Modal onClose={onClose}
             isOpen={isOpen}
             isCentered
-            size={{ base: "sm", lg: "6xl" }}
+            size={{ base: "2xl", lg: "6xl" }}
         >
             <ModalOverlay />
             <ModalContent>
@@ -73,6 +69,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
 
                     {/* project images carousel */}
                     {/* <Card py={2}><Img src={project.displayImg} /></Card> */}
+                    {project.projectImgs !== "" && <RenderCarousel items={project.projectImgs} />}
                 </ModalBody>
 
                 <Divider mx="auto" width="95%" />
