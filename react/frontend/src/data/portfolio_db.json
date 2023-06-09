@@ -987,78 +987,85 @@
             "uri": "https://open.kattis.com/contests/xfokus"
         }
     ],
-    "skills": {
-        "languages": [
-            "Python",
-            "JavaScript",
-            "C",
-            "C++",
-            "SQL",
-            "Java",
-            "HTML",
-            "CSS",
-            "PHP",
-            "R",
-            "Kotlin"
-        ],
-        "frameworks": [
-            "ReactJS",
-            "ChakraUI",
-            "MaterialUI",
-            "Bootstrap",
-            "jQuery",
-            "Django",
-            "Flask",
-            "TensorFlow",
-            "Keras",
-            "Scikit-Learn",
-            "NumPy",
-            "Pandas",
-            "NLTK",
-            "BeautifulSoup",
-            "Matplotlib",
-            "Plotly",
-            "Seaborn",
-            "PySwarm",
-            "PyGad",
-            "PyGame"
-        ],
-        "technologies": [
-            "Git",
-            "Docker",
-            "Vim",
-            "WSL",
-            "GitHub",
-            "Bitbucket",
-            "GitLab"
-        ],
-        "os": [
-            "Windows",
-            "Linux",
-            "Andriod"
-        ],
-        "management": [
-            "Agile",
-            "Waterfall",
-            "Scrum",
-            "Jira",
-            "Confluence",
-            "Trello"
-        ],
-        "apps": [
-            "TeamViewer",
-            "Google Workspace",
-            "Office365",
-            "Advanced Excel",
-            "VMWare",
-            "Zendesk",
-            "AWS - EC2",
-            "AWS - RDS",
-            "AWS - S3",
-            "MySQL",
-            "Postgre",
-            "SQLite",
-            "Apache"
-        ]
-    }
+    "skills": [
+        {
+            "id": 0,
+            "languages": [
+                "Python",
+                "JavaScript",
+                "C",
+                "C++",
+                "SQL",
+                "Java",
+                "HTML",
+                "CSS",
+                "PHP",
+                "R",
+                "Kotlin"
+            ],
+            "frameworks": [
+                "ReactJS",
+                "ChakraUI",
+                "MaterialUI",
+                "Bootstrap",
+                "jQuery",
+                "Django",
+                "Flask",
+                "TensorFlow",
+                "Keras",
+                "Scikit-Learn",
+                "NumPy",
+                "Pandas",
+                "NLTK",
+                "BeautifulSoup",
+                "Matplotlib",
+                "Plotly",
+                "Seaborn",
+                "PySwarm",
+                "PyGad",
+                "PyGame"
+            ],
+            "technologies": [
+                "Git",
+                "Docker",
+                "Vim",
+                "WSL",
+                "GitHub",
+                "Bitbucket",
+                "GitLab"
+            ],
+            "os": [
+                "Windows",
+                "Linux",
+                "Andriod"
+            ],
+            "management": [
+                "Agile",
+                "Waterfall",
+                "Scrum",
+                "Jira",
+                "Confluence",
+                "Trello"
+            ],
+            "apps": [
+                "TeamViewer",
+                "Google Workspace",
+                "Office365",
+                "Advanced Excel",
+                "VMWare",
+                "VirtualBox",
+                "Zendesk",
+                "AWS - EC2",
+                "AWS - RDS",
+                "AWS - S3",
+                "GCP - GCE",
+                "GCP - Firestore",
+                "GCP - Firebase",
+                "Apache",
+                "MySQL",
+                "Postgre",
+                "SQLite"
+            ]
+        }
+    ]
 }

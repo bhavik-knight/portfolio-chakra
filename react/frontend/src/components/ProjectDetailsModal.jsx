@@ -18,9 +18,14 @@ import { Heading, Text, Divider, Spacer, Img } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Tag } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
+import { useState, useEffect } from "react"
 
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
+
+    // project images data
+    const [projectImgs, setProjectImages] = useState([])
+
 
     return (
         <Modal onClose={onClose}
@@ -65,7 +70,9 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                         }
                     </UnorderedList>
                     <Divider mx="auto" my={1} />
-                    <Card py={2}><Img src={project.displayImg} /></Card>
+
+                    {/* project images carousel */}
+                    {/* <Card py={2}><Img src={project.displayImg} /></Card> */}
                 </ModalBody>
 
                 <Divider mx="auto" width="95%" />
