@@ -33,7 +33,12 @@
                 "Launched on the AWS as Iaas, using EC2, configured LAMP Stack and RDS for the MySQL relational database",
                 "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": [
+                "./projects/hck_dns_sfha/hck_1_landing_page.png",
+                "./projects/hck_dns_sfha/hck_2_menu_dark_mode.png",
+                "./projects/hck_dns_sfha/hck_3_form_validation.png",
+                "./projects/hck_dns_sfha/hck_4_form_details.png"
+            ]
         },
         {
             "id": 2,

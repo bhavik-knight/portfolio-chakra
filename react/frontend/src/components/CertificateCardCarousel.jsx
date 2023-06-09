@@ -230,3 +230,7 @@ function CertificateCardCarousel({ details }) {
 }
 
 export { CertificateCardCarousel }
+
+
+// checkout this pdf-viewer as well
+// https://react-pdf-viewer.dev/docs/options/

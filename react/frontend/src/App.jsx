@@ -104,7 +104,7 @@ function App() {
                     className="content"
                     as="main"
                     px={{ base: 0, lg: "4px" }}
-                    width="70%"
+                    width={{ base: "100%", lg: "80%" }}
                     minH="fit-content"
                     mx="auto"
                     justify="center"

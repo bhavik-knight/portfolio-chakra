@@ -44,21 +44,21 @@ function Home() {
             </Card>
 
             <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
-                <Stack direction={{ base: "column", xl: "row" }} >
-                    <AspectRatio ratio={1}
-                        width={{ base: "100%", xl: "40%" }}
-                    >
-                        <Flex boxSize={{ base: "base", md: "md", lg: "lg" }}>
-                            <Image src="./logos/bhavik_sticker.png" objectFit="fill" alt="bhavik sticker" />
-                        </Flex>
-                    </AspectRatio>
+                <Stack direction={{ base: "column", xl: "row" }}>
                     <Flex
-                        gap={2}
+                        width={{ base: "100%", xl: "40%" }}
+                        boxSize={{ base: "base", md: "md", lg: "lg" }}
+                        mx="auto"
+                    >
+                        <Image src="./logos/bhavik_sticker.png" objectFit="contain" alt="bhavik sticker" />
+                    </Flex>
+                    <Flex
                         width={{ base: "100%", xl: "60%" }}
                         direction={{ base: "column", xl: "row" }}
-                        justifyContent="space-evenly"
+                        justifyContent="space-around"
                         alignItems="center"
                         wrap="wrap"
+                        p={0}
                     >
                         <Card
                             as={Center}
@@ -69,7 +69,7 @@ function Home() {
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Full Stack Developement</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Worked on numerous Full Stack project using Django, Flask, PHP, HTML, CSS, JavaScript, jQuery, Bootstrap, ReactJS, ChakraUI, MySQL, Postgreq and hosted the projects on Heroku and AWS using Apache server.
                                 </Text>
@@ -84,7 +84,7 @@ function Home() {
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Data Analyst</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Worked on the projects executing ETL operations to create data-pipelines to do EDA, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, etc.
                                 </Text>
@@ -100,7 +100,7 @@ function Home() {
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Teamwork</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Completed several projects as a team where I contributed during each stage. Experience as a scrum master as well as scribe using the tools like project management tools like Jira, Trello, etc.
                                 </Text>
@@ -115,7 +115,7 @@ function Home() {
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Problem Solving</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Leverage critical thinking, analytical skills, logic and reasoning, in combination with tools like Google, Stackoverflow, chatGPT, and when required help of experienced colleauge to solve the problems.
                                 </Text>
