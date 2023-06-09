@@ -15,11 +15,13 @@
     "@emotion/styled": "^11.10.8",
     "@popperjs/core": "^2.11.7",
     "@react-icons/all-files": "^4.1.0",
+    "firebase": "^9.22.0",
     "framer-motion": "^10.12.5",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "react-pdf": "^7.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

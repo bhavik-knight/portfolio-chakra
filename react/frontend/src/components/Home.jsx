@@ -1,4 +1,4 @@
-
+import "./Home.css"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Heading, Text, Image, AspectRatio } from "@chakra-ui/react"
 import { Stack, Container, Flex, Center } from "@chakra-ui/react"
@@ -12,7 +12,7 @@ function Home() {
             gap={2}
             width="100%"
         >
-            <Card as="section" p={4}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <Text
                     px={8}
                     fontSize={{ base: "md", md: "lg", lg: "4xl" }}
@@ -43,32 +43,33 @@ function Home() {
 
             </Card>
 
-            <Card as="section" p={2}>
-                <Stack direction={{ base: "column", xl: "row" }} >
-                    <AspectRatio ratio={1}
-                        width={{ base: "100%", xl: "40%" }}
-                    >
-                        <Flex boxSize={{ base: "base", md: "md", lg: "lg" }}>
-                            <Image src="./logos/bhavik_sticker.png" objectFit="fill" alt="bhavik sticker" />
-                        </Flex>
-                    </AspectRatio>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
+                <Stack direction={{ base: "column", xl: "row" }}>
                     <Flex
-                        // bg="lightgray"
-                        gap={2}
+                        width={{ base: "100%", xl: "40%" }}
+                        boxSize={{ base: "base", md: "md", lg: "lg" }}
+                        mx="auto"
+                    >
+                        <Image src="./logos/bhavik_sticker.png" objectFit="contain" alt="bhavik sticker" />
+                    </Flex>
+                    <Flex
                         width={{ base: "100%", xl: "60%" }}
                         direction={{ base: "column", xl: "row" }}
-                        justifyContent="space-evenly"
+                        justifyContent="space-around"
                         alignItems="center"
                         wrap="wrap"
+                        p={0}
                     >
                         <Card
                             as={Center}
+                            borderBottom="1px solid red"
+                            _hover={{ boxShadow: "2px 2px 8px red" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Full Stack Developement</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Worked on numerous Full Stack project using Django, Flask, PHP, HTML, CSS, JavaScript, jQuery, Bootstrap, ReactJS, ChakraUI, MySQL, Postgreq and hosted the projects on Heroku and AWS using Apache server.
                                 </Text>
@@ -76,12 +77,14 @@ function Home() {
                         </Card>
                         <Card
                             as={Center}
+                            borderBottom="1px solid green"
+                            _hover={{ boxShadow: "2px 2px 8px green" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Data Analyst</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Worked on the projects executing ETL operations to create data-pipelines to do EDA, and communicated the results using the tools like Numpy, Pandas, Plotly, Ggplot, etc.
                                 </Text>
@@ -90,12 +93,14 @@ function Home() {
 
                         <Card
                             as={Center}
+                            borderBottom="1px solid blue"
+                            _hover={{ boxShadow: "2px 2px 8px blue" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Teamwork</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Completed several projects as a team where I contributed during each stage. Experience as a scrum master as well as scribe using the tools like project management tools like Jira, Trello, etc.
                                 </Text>
@@ -103,12 +108,14 @@ function Home() {
                         </Card>
                         <Card
                             as={Center}
+                            borderBottom="1px solid yellow"
+                            _hover={{ boxShadow: "2px 2px 8px yellow" }}
                             width={{ base: "100%", md: "80%", xl: "40%" }}
                             height={{ base: "base", md: "200px" }}
                             className="homeSkills"
                         >
                             <Text as="strong" className="homeSkillName">Problem Solving</Text>
-                            <CardBody className="homeSkillDetails" width="100%" textAlign="justify">
+                            <CardBody className="homeSkillDetails" textAlign="justify">
                                 <Text noOfLines={[2, 4, 8]}>
                                     Leverage critical thinking, analytical skills, logic and reasoning, in combination with tools like Google, Stackoverflow, chatGPT, and when required help of experienced colleauge to solve the problems.
                                 </Text>

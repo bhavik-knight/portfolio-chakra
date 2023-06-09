@@ -1,3 +1,4 @@
+import "./Header.css"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { useState, useRef, useEffect } from "react"
 import { useColorModeValue, useMediaQuery } from "@chakra-ui/react"
@@ -11,7 +12,7 @@ import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react
 
 // to create icons for navbar with consistent style
 function getNavbarIconButton(btnName, btnIcon, handleClick) {
-    console.log(`header iconbtn: ${JSON.stringify(btnIcon)}`)
+
     return (
         <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName} textTransform="capitalize">
             <IconButton
@@ -35,7 +36,12 @@ function Header({ colorMode, changeColorMode, title }) {
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
     let navbarBg = (verticalScroll === 0)
-    let bgColor = `linear-gradient(violet, purple)`
+    const [bgColor, setBgColor] = useState()
+    useEffect(() => {
+        navbarBg ?
+            setBgColor("transparent") :
+            colorMode === "dark" ? setBgColor("black") : setBgColor("gray")
+    }, [verticalScroll, colorMode])
 
     useEffect(() => {
         // check and handle the vertical scroll value constantly
@@ -79,14 +85,19 @@ function Header({ colorMode, changeColorMode, title }) {
         <Flex as="nav"
             className="navbar header"
             px={4}
-            bg={`${navbarBg ? "transparent" : bgColor}`}
+            bg={bgColor}
+            boxShadow={navbarBg && "0px 0px 16px 0px"}
         >
-            <Heading className="logo" width={{ base: "30%", lg: "15%" }}>
+            <Heading
+                className="logo"
+                width={{ base: "30%", lg: "15%" }}
+            >
                 B{isLarge && "havik"}
             </Heading>
             <Spacer />
             {/* <Container bg="transparent">
                 <Text
+                    display={{ base: "none", md: "block" }}
                     fontSize="4xl"
                     textAlign="center"> {title === "home" ? "Bhavik's Portfolio" : title}
                 </Text>

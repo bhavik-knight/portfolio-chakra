@@ -1,3 +1,4 @@
+import "./ProjectCard.css"
 import { useColorMode, useColorModeValue, useDisclosure } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Center, SimpleGrid, Grid, Stack, Flex, Wrap, WrapItem, } from "@chakra-ui/react"
@@ -25,8 +26,7 @@ function ProjectCard({ project }) {
             m={2} p={2} gap={1}
             border="2px solid"
             borderColor={useColorModeValue("gray.200", "gray.600")}
-            _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
-            }
+            _hover={{ boxShadow: "4px 4px 16px" }}
         >
             <Stack justifyContent="center">
                 <Flex>
@@ -44,25 +44,6 @@ function ProjectCard({ project }) {
                     <Text px={4} className="projectDetails">
                         {project.description}
                     </Text>
-                    {/*
-                    <Flex
-                        flexWrap="wrap"
-                        gap={2}
-                        justifyContent="space-evenly"
-                    >
-                        {
-                            project.technologies.map(tech => {
-                                return (
-                                    <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow textTransform="capitalize">
-                                        <WrapItem className="projectSkills" borderRadius="8px" >
-                                            {ResponsiveIcons[tech]}
-                                        </WrapItem>
-                                    </Tooltip>
-                                )
-                            })
-                        }
-                    </Flex>
-                    */}
                 </CardBody>
 
                 <Divider width="95%" px={2} mx="auto" my={2} />

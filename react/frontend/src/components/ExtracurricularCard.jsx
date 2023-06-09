@@ -1,3 +1,4 @@
+import "./ExtracurricularCard.css"
 import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
 import { Flex, Stack, Image } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"

@@ -1,3 +1,4 @@
+import "./Sidenav.css"
 import { useState, useEffect } from "react"
 import { Button, ButtonGroup, IconButton, Icon, Tooltip } from "@chakra-ui/react"
 import { WrapItem, Text, Divider, Stack, Wrap, List, ListItem, Flex, useMediaQuery } from "@chakra-ui/react"
