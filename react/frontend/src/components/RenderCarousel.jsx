@@ -7,25 +7,9 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 import { BiRadioCircle } from "@react-icons/all-files/bi/BiRadioCircle"
 import { VscCircleFilled } from "@react-icons/all-files/vsc/VscCircleFilled"
-import { useMediaQuery } from "@chakra-ui/react"
 
 
-function RenderCarousel({ items }) {
-    const [cardWidth, setCardWidth] = useState(992)
-    const [cardHeight, setCardHeight] = useState(512)
-
-    const [isMobile] = useMediaQuery("(max-width: 768px)")
-    useEffect(() => {
-        if (isMobile) {
-            setCardWidth(400)
-            setCardHeight(200)
-        } else {
-            setCardWidth(992)
-            setCardHeight(512)
-        }
-
-    }, [isMobile])
-
+function RenderCarousel({ items, cardWidth, cardHeight }) {
     // total number of items to be rendered
     const length = items.length
 
@@ -112,19 +96,7 @@ function RenderCarousel({ items }) {
                         transition="transform ease-out 1s"
                         transform={`translate(${-(current * cardWidth)}px)`}
                     >
-                        {
-                            items.map((item, index) => {
-                                return (
-                                    <Box
-                                        key={nanoid()}
-                                        width={`${cardWidth}px`}
-                                        mx="auto"
-                                    >
-                                        <Image src={item} />
-                                    </Box>
-                                )
-                            })
-                        }
+                        {items}
 
                     </Flex>
                 </Card>
@@ -141,22 +113,17 @@ function RenderCarousel({ items }) {
             </HStack >
 
             {/* pagination area */}
-            < Center as={HStack} my={2} spacing={2} >
+            <Center as={ButtonGroup} mx="auto" my={2} isAttached>
                 {
                     showButtons(current).map((b, index) => {
                         return (
                             <IconButton
                                 key={nanoid()}
                                 onClick={() => handleBtnClick(b)}
-                                isRound
                                 variant="ghost"
                                 _hover={{ boxShadow: "1px 1px 4px 1px" }}
                                 _size={{ base: "sm", lg: "xl" }}
-                                icon={
-                                    (current === b) ?
-                                        <VscCircleFilled /> :
-                                        <BiRadioCircle />
-                                }
+                                icon={current === b ? <VscCircleFilled /> : <BiRadioCircle />}
                             />
                         )
                     })
