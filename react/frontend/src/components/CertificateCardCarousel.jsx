@@ -4,27 +4,20 @@ import { Wrap, Box, Stack, VStack, HStack, Flex, Spacer, Container, Center } fro
 import { Button, ButtonGroup, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, useCallback } from "react"
 import { useMediaQuery } from "@chakra-ui/react"
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons"
-import { Document, Page } from "react-pdf"
-import { pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.js',
-    import.meta.url,
-).toString();
+import { Worker, Viewer } from "@react-pdf-viewer/core"
+import "@react-pdf-viewer/core/lib/styles/index.css"
 
 
 function CertificateCardCarousel({ details }) {
     const [isMobile] = useMediaQuery("(max-width: 768px)")
-    const [cardWidth, setCardWidth] = useState(1024)
-    const [cardHeight, setCardHeight] = useState(768)
+    const [cardWidth, setCardWidth] = useState(992)
+    const [cardHeight, setCardHeight] = useState(512)
     useEffect(() => {
-        setCardWidth(isMobile ? 300 : 1024)
-        setCardHeight(isMobile ? 128 : 768)
+        setCardWidth(isMobile ? 300 : 992)
+        setCardHeight(isMobile ? 128 : 512)
     }, [isMobile])
 
     // to keep track of the current carousel
@@ -77,7 +70,7 @@ function CertificateCardCarousel({ details }) {
 
 
     // the certificates data cards preparation
-    const card =
+    const card = useCallback(
         details.map(c => {
             return (
                 <Card
@@ -114,25 +107,16 @@ function CertificateCardCarousel({ details }) {
                         }
                     </CardHeader>
 
-                    <CardBody as={Center} my={0}>
-                        <Document
-                            file={c.certImg}
-                            externalLinkTarget="_blank"
-                            loading={
-                                <Center width={cardWidth} height={cardHeight}>
-                                    <Spinner size="xl" />
-                                </Center>
-                            }
-                        >
-                            <Page
-                                pageNumber={1}
-                                renderTextLayer
-                                renderAnnotationLayer
-                                width={cardWidth}
-                                scale={0.7}
-                                height={cardHeight}
+                    <CardBody
+                        my={0} mx="auto"
+                        width={cardWidth * 0.7}
+                        height={{ base: `${cardHeight}`, lg: `${cardHeight * 0.7}` }}
+                    >
+                        <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
+                            <Viewer
+                                fileUrl={c.certImg}
                             />
-                        </Document>
+                        </Worker>
                     </CardBody>
 
                     {
@@ -143,7 +127,9 @@ function CertificateCardCarousel({ details }) {
                     }
                 </Card>
             )
-        })
+        }),
+        [details]
+    )
 
     return (
         <Box>
