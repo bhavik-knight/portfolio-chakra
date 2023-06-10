@@ -603,7 +603,7 @@
                     "certName": "Introduction to Computational Thinking and Data Science",
                     "certImg": "./certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/5f707d85691d4dfe9643fdcbfc53d4ee",
-                    "learnings": "After completing the 6001x course from MIT with very good score, Adam Milton-Barker peer from CS50 course recommed me to check this course. This course challenged me in the whole different way, and I decided to build my career in this specialization in the future. I learned about graphs data structure, stochastic programming and statistical thinking, Monte-Carlo simulation, plotting libraries, and introduction to Machine Learning with KNN."
+                    "learnings": "This course challenged me in a whole new way, and I decided to build my career in the Data Science / Machine Learning in the future. I learned about graph data structure and related algorithms, stochastic programming and statistical thinking, Monte-Carlo simulation, various plotting libraries, and introduction to Machine Learning with KNN."
                 },
                 {
                     "certId": "mit_3",
