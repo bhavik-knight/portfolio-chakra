@@ -52,10 +52,10 @@ function Projects() {
                 >
                     {/* tab titles */}
                     <TabList className="tabLabel">
-                        <Tab _selected={{ bg: "red", color: "black" }} className="projectType">Web Dev</Tab>
-                        <Tab _selected={{ bg: "green", color: "white" }} className="projectType">Data</Tab>
-                        <Tab _selected={{ bg: "blue", color: "white" }} className="projectType">ML / AI</Tab>
-                        <Tab _selected={{ bg: "yellow", color: "black" }} className="projectType">Game Dev</Tab>
+                        <Tab _selected={{ bg: "red", color: "black" }} _hover={{ border: `1px solid red` }}>Web Dev</Tab>
+                        <Tab _selected={{ bg: "green", color: "white" }} _hover={{ border: `1px solid green` }}>Data</Tab>
+                        <Tab _selected={{ bg: "blue", color: "white" }} _hover={{ border: `1px solid blue` }}>ML/AI</Tab>
+                        <Tab _selected={{ bg: "yellow", color: "black" }} _hover={{ border: `1px solid yellow` }}>Game Dev</Tab>
                     </TabList>
 
                     {/* tab content */}
