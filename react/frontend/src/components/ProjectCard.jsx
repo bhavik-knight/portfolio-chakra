@@ -1,4 +1,3 @@
-import "./ProjectCard.css"
 import { useColorMode, useColorModeValue, useDisclosure } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Center, SimpleGrid, Grid, Stack, Flex, Wrap, WrapItem, } from "@chakra-ui/react"
@@ -7,7 +6,6 @@ import { Tooltip, Button } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { icons } from "./Icons"
 import { ProjectDetailsModal } from "./ProjectDetailsModal"
-import "./ProjectCard.css"
 
 const footerButtonStyle = {
     width: "80px",
@@ -41,7 +39,7 @@ function ProjectCard({ project }) {
                 </CardHeader> p={0}
 
                 <CardBody p={0}>
-                    <Text px={4} className="projectDetails">
+                    <Text px={4} className="projectDetails" textAlign="justify">
                         {project.description}
                     </Text>
                 </CardBody>
@@ -56,6 +54,11 @@ function ProjectCard({ project }) {
                             bg={useColorModeValue("black", "white")}
                             color={useColorModeValue("cyan", "blue")}
                             onClick={onOpen}
+                            _hover={{
+                                color: `${useColorModeValue("blue", "cyan")}`,
+                                bg: `transparent`,
+                                border: `1px solid`
+                            }}
                         >
                             Details
                         </Button>
