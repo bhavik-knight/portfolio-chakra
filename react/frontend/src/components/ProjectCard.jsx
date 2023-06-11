@@ -44,25 +44,6 @@ function ProjectCard({ project }) {
                     <Text px={4} className="projectDetails">
                         {project.description}
                     </Text>
-                    {/*
-                    <Flex
-                        flexWrap="wrap"
-                        gap={2}
-                        justifyContent="space-evenly"
-                    >
-                        {
-                            project.technologies.map(tech => {
-                                return (
-                                    <Tooltip key={nanoid()} label={tech} aria-label={tech} hasArrow textTransform="capitalize">
-                                        <WrapItem className="projectSkills" borderRadius="8px" >
-                                            {ResponsiveIcons[tech]}
-                                        </WrapItem>
-                                    </Tooltip>
-                                )
-                            })
-                        }
-                    </Flex>
-                    */}
                 </CardBody>
 
                 <Divider width="95%" px={2} mx="auto" my={2} />

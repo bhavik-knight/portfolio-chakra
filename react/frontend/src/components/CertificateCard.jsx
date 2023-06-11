@@ -6,15 +6,6 @@ import { Button, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
-import { Document, Page, pdfjs } from "react-pdf"
-import "react-pdf/dist/esm/Page/AnnotationLayer.css"
-import "react-pdf/dist/esm/Page/TextLayer.css"
-
-
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.js',
-    import.meta.url,
-).toString();
 
 
 function CertificateCard({ details }) {
@@ -64,17 +55,12 @@ function CertificateCard({ details }) {
                                 }
                             </CardHeader>
                             <CardBody as={Center} my={0}>
-                                {/* <chakra.embed
+                                <chakra.embed
                                     width={{ base: "300px", lg: "1024px" }}
                                     height={{ base: "200px", lg: "768px" }}
                                     src={c.certImg}
                                     type="application/pdf"
-                                /> */}
-                                {
-                                    <Document file={c.certImg}>
-                                        <Page pageNumber={1} width={cardWidth} className="certificate-card"></Page>
-                                    </Document>
-                                }
+                                />
                             </CardBody>
                             <CardFooter>
                                 <Text>

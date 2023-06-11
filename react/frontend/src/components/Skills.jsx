@@ -12,11 +12,7 @@ import { ProgrammingParadigms } from "./ProgrammingParadigms"
 function Skills() {
 
     return (
-        <Stack
-            p={2}
-            gap={2}
-            width="100%"
-        >
+        <Stack p={2} gap={2}>
             {/* introduction */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2}>
@@ -58,7 +54,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills.languages.map(l => {
+                        skills[0].languages.map(l => {
                             return (
                                 <Tag key={nanoid()}>{l}</Tag>
                             )
@@ -74,7 +70,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills.frameworks.map(fw => {
+                        skills[0].frameworks.map(fw => {
                             return (
                                 <Tag key={nanoid()}>{fw}</Tag>
                             )
@@ -90,7 +86,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills.technologies.map(tech => {
+                        skills[0].technologies.map(tech => {
                             return (
                                 <Tag key={nanoid()}>{tech}</Tag>
                             )
@@ -98,7 +94,7 @@ function Skills() {
                     }
 
                     {
-                        skills.os.map(o => {
+                        skills[0].os.map(o => {
                             return (
                                 <Tag key={nanoid()}>{o}</Tag>
                             )
@@ -114,7 +110,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills.apps.map(app => {
+                        skills[0].apps.map(app => {
                             return (
                                 <Tag key={nanoid()}>{app}</Tag>
                             )
@@ -130,7 +126,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills.management.map(mgmt => {
+                        skills[0].management.map(mgmt => {
                             return (
                                 <Tag key={nanoid()}>{mgmt}</Tag>
                             )

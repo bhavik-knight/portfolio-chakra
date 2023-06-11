@@ -33,7 +33,12 @@
                 "Launched on the AWS as Iaas, using EC2, configured LAMP Stack and RDS for the MySQL relational database",
                 "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": [
+                "./projects/hck_dns_sfha/hck_1_landing_page.png",
+                "./projects/hck_dns_sfha/hck_2_menu_dark_mode.png",
+                "./projects/hck_dns_sfha/hck_3_form_validation.png",
+                "./projects/hck_dns_sfha/hck_4_form_details.png"
+            ]
         },
         {
             "id": 2,
@@ -69,7 +74,7 @@
                 "Adopted the Django framework serving REST API that was connected to the PostgreSQL database",
                 "Followed the Agile methodology with tools like JIRA and Confluence pages for the documentation"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 3,
@@ -95,7 +100,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/portfolio/"
+            "projectImgs": ""
         },
         {
             "id": 4,
@@ -173,7 +178,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 7,
@@ -202,7 +207,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 8,
@@ -231,7 +236,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 9,
@@ -260,7 +265,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 10,
@@ -289,7 +294,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 11,
@@ -318,7 +323,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 12,
@@ -347,7 +352,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 13,
@@ -376,7 +381,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 14,
@@ -405,7 +410,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 15,
@@ -434,7 +439,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         }
     ],
     "certificates": [
@@ -598,7 +603,7 @@
                     "certName": "Introduction to Computational Thinking and Data Science",
                     "certImg": "./certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/5f707d85691d4dfe9643fdcbfc53d4ee",
-                    "learnings": "After completing the 6001x course from MIT with very good score, Adam Milton-Barker peer from CS50 course recommed me to check this course. This course challenged me in the whole different way, and I decided to build my career in this specialization in the future. I learned about graphs data structure, stochastic programming and statistical thinking, Monte-Carlo simulation, plotting libraries, and introduction to Machine Learning with KNN."
+                    "learnings": "This course challenged me in a whole new way, and I decided to build my career in the Data Science / Machine Learning in the future. I learned about graph data structure and related algorithms, stochastic programming and statistical thinking, Monte-Carlo simulation, various plotting libraries, and introduction to Machine Learning with KNN."
                 },
                 {
                     "certId": "mit_3",
@@ -987,78 +992,85 @@
             "uri": "https://open.kattis.com/contests/xfokus"
         }
     ],
-    "skills": {
-        "languages": [
-            "Python",
-            "JavaScript",
-            "C",
-            "C++",
-            "SQL",
-            "Java",
-            "HTML",
-            "CSS",
-            "PHP",
-            "R",
-            "Kotlin"
-        ],
-        "frameworks": [
-            "ReactJS",
-            "ChakraUI",
-            "MaterialUI",
-            "Bootstrap",
-            "jQuery",
-            "Django",
-            "Flask",
-            "TensorFlow",
-            "Keras",
-            "Scikit-Learn",
-            "NumPy",
-            "Pandas",
-            "NLTK",
-            "BeautifulSoup",
-            "Matplotlib",
-            "Plotly",
-            "Seaborn",
-            "PySwarm",
-            "PyGad",
-            "PyGame"
-        ],
-        "technologies": [
-            "Git",
-            "Docker",
-            "Vim",
-            "WSL",
-            "GitHub",
-            "Bitbucket",
-            "GitLab"
-        ],
-        "os": [
-            "Windows",
-            "Linux",
-            "Andriod"
-        ],
-        "management": [
-            "Agile",
-            "Waterfall",
-            "Scrum",
-            "Jira",
-            "Confluence",
-            "Trello"
-        ],
-        "apps": [
-            "TeamViewer",
-            "Google Workspace",
-            "Office365",
-            "Advanced Excel",
-            "VMWare",
-            "Zendesk",
-            "AWS - EC2",
-            "AWS - RDS",
-            "AWS - S3",
-            "MySQL",
-            "Postgre",
-            "SQLite",
-            "Apache"
-        ]
-    }
+    "skills": [
+        {
+            "id": 0,
+            "languages": [
+                "Python",
+                "JavaScript",
+                "C",
+                "C++",
+                "SQL",
+                "Java",
+                "HTML",
+                "CSS",
+                "PHP",
+                "R",
+                "Kotlin"
+            ],
+            "frameworks": [
+                "ReactJS",
+                "ChakraUI",
+                "MaterialUI",
+                "Bootstrap",
+                "jQuery",
+                "Django",
+                "Flask",
+                "TensorFlow",
+                "Keras",
+                "Scikit-Learn",
+                "NumPy",
+                "Pandas",
+                "NLTK",
+                "BeautifulSoup",
+                "Matplotlib",
+                "Plotly",
+                "Seaborn",
+                "PySwarm",
+                "PyGad",
+                "PyGame"
+            ],
+            "technologies": [
+                "Git",
+                "Docker",
+                "Vim",
+                "WSL",
+                "GitHub",
+                "Bitbucket",
+                "GitLab"
+            ],
+            "os": [
+                "Windows",
+                "Linux",
+                "Andriod"
+            ],
+            "management": [
+                "Agile",
+                "Waterfall",
+                "Scrum",
+                "Jira",
+                "Confluence",
+                "Trello"
+            ],
+            "apps": [
+                "TeamViewer",
+                "Google Workspace",
+                "Office365",
+                "Advanced Excel",
+                "VMWare",
+                "VirtualBox",
+                "Zendesk",
+                "AWS - EC2",
+                "AWS - RDS",
+                "AWS - S3",
+                "GCP - GCE",
+                "GCP - Firestore",
+                "GCP - Firebase",
+                "Apache",
+                "MySQL",
+                "Postgre",
+                "SQLite"
+            ]
+        }
+    ]
 }

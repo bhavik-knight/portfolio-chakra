@@ -11,22 +11,54 @@ import {
 } from "@chakra-ui/react"
 
 import { useDisclosure } from "@chakra-ui/react"
-import { Flex, Stack, Center, Container } from "@chakra-ui/react"
+import { Box, Flex, Stack, Center, Container } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Button, ButtonGroup, Tooltip } from "@chakra-ui/react"
 import { Heading, Text, Divider, Spacer, Img } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
-import { Tag } from "@chakra-ui/react"
+import { Image, Tag } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
-
+import { useState, useEffect, useCallback } from "react"
+import { useMediaQuery } from "@chakra-ui/react"
+import { RenderCarousel } from "./RenderCarousel"
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
+    const [cardWidth, setCardWidth] = useState(992)
+    const [cardHeight, setCardHeight] = useState(512)
+
+    const [isMobile] = useMediaQuery("(max-width: 768px)")
+    useEffect(() => {
+        if (isMobile) {
+            setCardWidth(400)
+            setCardHeight(200)
+        } else {
+            setCardWidth(992)
+            setCardHeight(512)
+        }
+
+    }, [isMobile])
+
+    // compute only once
+    const projectImages = project.projectImgs !== "" && useCallback(
+        project.projectImgs?.map(url => {
+            return (
+                <Box
+                    key={nanoid()}
+                    width={cardWidth}
+                    height={cardHeight}
+                >
+                    <Image src={url} />
+                </Box>
+            )
+        }),
+        [project]
+    )
 
     return (
         <Modal onClose={onClose}
             isOpen={isOpen}
             isCentered
-            size={{ base: "sm", lg: "6xl" }}
+            size={{ base: "2xl", lg: "6xl" }}
         >
             <ModalOverlay />
             <ModalContent>
@@ -65,7 +97,13 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                         }
                     </UnorderedList>
                     <Divider mx="auto" my={1} />
-                    <Card py={2}><Img src={project.displayImg} /></Card>
+
+                    {/* project images carousel */}
+                    {/* <Card py={2}><Img src={project.displayImg} /></Card> */}
+                    {
+                        project.projectImgs !== "" &&
+                        <RenderCarousel items={projectImages} cardWidth={cardWidth} cardHeight={cardHeight} />
+                    }
                 </ModalBody>
 
                 <Divider mx="auto" width="95%" />
