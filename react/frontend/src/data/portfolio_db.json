@@ -178,7 +178,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 7,
@@ -207,7 +207,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 8,
@@ -236,7 +236,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 9,
@@ -265,7 +265,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 10,
@@ -294,7 +294,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 11,
@@ -323,7 +323,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 12,
@@ -352,7 +352,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 13,
@@ -381,7 +381,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 14,
@@ -410,7 +410,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         },
         {
             "id": 15,
@@ -439,7 +439,7 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": "./projects/hck_dns_sfha/"
+            "projectImgs": ""
         }
     ],
     "certificates": [

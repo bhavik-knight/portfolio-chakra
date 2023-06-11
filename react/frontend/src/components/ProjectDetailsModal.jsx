@@ -40,7 +40,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
 
     // compute only once
     const projectImages = project.projectImgs !== "" && useCallback(
-        project.projectImgs.map(url => {
+        project.projectImgs?.map(url => {
             return (
                 <Box
                     key={nanoid()}
