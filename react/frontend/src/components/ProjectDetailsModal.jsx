@@ -46,8 +46,9 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     key={nanoid()}
                     width={cardWidth}
                     height={cardHeight}
+                    as={Center}
                 >
-                    <Image src={url} />
+                    <Image src={url} objectFit="fill" />
                 </Box>
             )
         }),
