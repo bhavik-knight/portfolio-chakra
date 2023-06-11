@@ -8,7 +8,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "displayImg": "projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -70,7 +70,8 @@
                 "heroku",
                 "jira",
                 "confluence",
-                "windows"
+                "windows",
+                "slack"
             ],
             "details": [
                 "Developed a fully-functional website for food ordering/selling for the people of Antigonish",
@@ -118,7 +119,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/portfolio-chakra",
             "uri": "http://bhavikbhagat.netlify.app",
-            "displayImg": "./projects/portfolio/1_landing_page.png",
+            "displayImg": "projects/portfolio/1_landing_page.png",
             "technologies": [
                 "reactjs",
                 "javascript",
@@ -145,7 +146,7 @@
             "type": "web",
             "source": "https://github.com/bhavik-knight/cs50beyond/tree/master/tictactoe",
             "uri": "https://www.youtube.com/watch?v=5aWjlEqwJs4&t=1829s",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "displayImg": "projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "python",
                 "flask",
@@ -164,18 +165,20 @@
         },
         {
             "id": 5,
-            "title": "Hotel Management",
+            "title": "Hotel Management System",
             "description": "The relational database for Hotel Room reservation / booking that is developed in 4-phases and deployed on the StFX University's Oracle server setup by the professor.",
             "type": "data",
             "group": false,
             "source": null,
             "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "displayImg": "projects/hotel_mgmt/hms_group.png",
             "technologies": [
                 "sql",
                 "oracle",
                 "ERD",
-                "3NF"
+                "3NF",
+                "windows",
+                "slack"
             ],
             "details": [
                 "Developed the relational database as a 4-member team for the Hotel Management",
@@ -211,31 +214,57 @@
         {
             "id": 6,
             "title": "Crime Analysis",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "A comprehensive study of factors influencing crime in the USA over three decades (1980s, 1990s, 2000s). R programming language and RStudio is used for this group project. The meetings were in person and Office365 is used to collaborate.",
             "type": "data",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": null,
+            "uri": null,
+            "displayImg": "projects/crime_analysis/0_group.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "r",
+                "rstudio",
+                "ggplot",
+                "reshape",
+                "dplyr",
+                "modelr",
+                "rmarkdown",
+                "tidyverse",
+                "windows",
+                "msteams"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "R-language and RStudio used for the project, the ggplot for plotting, along with geomap and other supporting libraries",
+                "Generated R-markdown report presenting our work from the data collection to our findings on the factors affecting crime-rate",
+                "Data Collection: The Analysis of the USA data obtained from the Kaggle and FBI crime data explorer",
+                "Data Wrangling: Split and merged datasets performing ETL to convert the raw data into valuable information",
+                "Visualization: Generated high-quality and meaningful plots by executing functions from the ggplot2 library",
+                "Exploratory Data Analysis: To find a correlation between Crime rate and two factors: Unemployment & Education",
+                "Modeling: To understand how different types of crime are evolving over the decades in the USA",
+                "Summurized how unemployment-rate and crime-rate evolved over the three decades",
+                "Prepared residual-plots demonstrating distribution of errors to conclude the robustness of our models"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/crime_analysis/0_group.png",
+                "projects/crime_analysis/1_datasets.png",
+                "projects/crime_analysis/2_data_wrangling1.png",
+                "projects/crime_analysis/3_pipeline.png",
+                "projects/crime_analysis/4_crime_us_dataset.png",
+                "projects/crime_analysis/5_crime_homicide_dataset.png",
+                "projects/crime_analysis/6_data_wragling2.png",
+                "projects/crime_analysis/7_data_wrangling3.png",
+                "projects/crime_analysis/8_data_normalization.png",
+                "projects/crime_analysis/9_viz_crimerate.png",
+                "projects/crime_analysis/10_viz_unemployment.png",
+                "projects/crime_analysis/11_viz_unemployment_geomap.png",
+                "projects/crime_analysis/12_viz_perpetrator_age.png",
+                "projects/crime_analysis/13_viz_highschool_dropout.png",
+                "projects/crime_analysis/14_crimerate_decades.png",
+                "projects/crime_analysis/15_modeling1.png",
+                "projects/crime_analysis/16_modeling2.png",
+                "projects/crime_analysis/17_modeling3.png",
+                "projects/crime_analysis/18_residual.png",
+                "projects/crime_analysis/19_summary.png"
+            ]
         },
         {
             "id": 7,
@@ -728,7 +757,7 @@
             "title": "Clerk",
             "company": "Atlantic Superstore",
             "place": "Antigonish / Halifax, NS, Canada",
-            "start": "May 2022",
+            "start": "May 2021",
             "end": "Oct 2022",
             "responsibilities": [
                 "Increased Garden Center profit by 20% by upselling products and sharing information about plants, vegetables, and herbs with customers, achieving 'Department of the Week' for consistent performance improvement; also rewarded with supervisor position at times in the absense of my supervisor",
