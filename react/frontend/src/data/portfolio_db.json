@@ -8,7 +8,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -34,10 +34,16 @@
                 "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
             ],
             "projectImgs": [
-                "./projects/hck_dns_sfha/hck_1_landing_page.png",
-                "./projects/hck_dns_sfha/hck_2_menu_dark_mode.png",
-                "./projects/hck_dns_sfha/hck_3_form_validation.png",
-                "./projects/hck_dns_sfha/hck_4_form_details.png"
+                "projects/hck_dns_sfha/1_landing_page.png",
+                "projects/hck_dns_sfha/2_menu_dark_mode.png",
+                "projects/hck_dns_sfha/3_form_validation.png",
+                "projects/hck_dns_sfha/4_form_details.png",
+                "projects/hck_dns_sfha/5_confirm_booking.png",
+                "projects/hck_dns_sfha/6_book_another.png",
+                "projects/hck_dns_sfha/7_add_adventure.png",
+                "projects/hck_dns_sfha/8_add_success.png",
+                "projects/hck_dns_sfha/9_all_adventures.png",
+                "projects/hck_dns_sfha/10_new_adventures.png"
             ]
         },
         {
@@ -48,7 +54,7 @@
             "group": true,
             "source": "https://bitbucket.org/csci-485/nish-foody/",
             "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "projects/nish_foody/1_landing_page.png",
             "technologies": [
                 "python",
                 "django",
@@ -74,7 +80,35 @@
                 "Adopted the Django framework serving REST API that was connected to the PostgreSQL database",
                 "Followed the Agile methodology with tools like JIRA and Confluence pages for the documentation"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/nish_foody/0_final_roles.png",
+                "projects/nish_foody/1_landing_page.png",
+                "projects/nish_foody/2_signup.png",
+                "projects/nish_foody/3_login.png",
+                "projects/nish_foody/4_profile.png",
+                "projects/nish_foody/5_menu.png",
+                "projects/nish_foody/6_menu_items.png",
+                "projects/nish_foody/7_popular_items.png",
+                "projects/nish_foody/8_cart.png",
+                "projects/nish_foody/9_add_cart.png",
+                "projects/nish_foody/9_clear_cart.png",
+                "projects/nish_foody/10_order.png",
+                "projects/nish_foody/11_order_status.png",
+                "projects/nish_foody/12_seller.png",
+                "projects/nish_foody/13_admin.png",
+                "projects/nish_foody/14_approval_seller_item.png",
+                "projects/nish_foody/15_update_seller_item.png",
+                "projects/nish_foody/16_future_work.png",
+                "projects/nish_foody/17_jira.png",
+                "projects/nish_foody/18_bitbucket.png",
+                "projects/nish_foody/19_deployment.png",
+                "projects/nish_foody/20_ci_cd.png",
+                "projects/nish_foody/21_testing.png",
+                "projects/nish_foody/22_initial_roles.png",
+                "projects/nish_foody/23_survey.png",
+                "projects/nish_foody/24_system_design.png",
+                "projects/nish_foody/25_tech_stack.png"
+            ]
         },
         {
             "id": 3,
@@ -84,7 +118,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/portfolio-chakra",
             "uri": "http://bhavikbhagat.netlify.app",
-            "displayImg": "./projects/portfolio/p1_landing_page.png",
+            "displayImg": "./projects/portfolio/1_landing_page.png",
             "technologies": [
                 "reactjs",
                 "javascript",
@@ -100,7 +134,9 @@
                 "task2",
                 "task3"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/portfolio/1_landing_page.png"
+            ]
         },
         {
             "id": 4,
@@ -109,7 +145,7 @@
             "type": "web",
             "source": "https://github.com/bhavik-knight/cs50beyond/tree/master/tictactoe",
             "uri": "https://www.youtube.com/watch?v=5aWjlEqwJs4&t=1829s",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "python",
                 "flask",
@@ -134,7 +170,7 @@
             "group": false,
             "source": null,
             "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "sql",
                 "oracle",
@@ -149,7 +185,28 @@
                 "Prepared meaningful Views and useful queries on the database by applying joins on the tables",
                 "Deployed the relational database on the university's Oracle Server hosted by the professor"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/hotel_mgmt/0_erd.png",
+                "projects/hotel_mgmt/1_erd.png",
+                "projects/hotel_mgmt/2_create_guest.png",
+                "projects/hotel_mgmt/3_create_company.png",
+                "projects/hotel_mgmt/4_create_bookingmode_bookstatus.png",
+                "projects/hotel_mgmt/5_insert_guest_company_bookstatus.png",
+                "projects/hotel_mgmt/6_insert_bookingmode.png",
+                "projects/hotel_mgmt/7_query1.png",
+                "projects/hotel_mgmt/8_query2.png",
+                "projects/hotel_mgmt/9_query3.png",
+                "projects/hotel_mgmt/10_update1.png",
+                "projects/hotel_mgmt/11_update2.png",
+                "projects/hotel_mgmt/12_update3.png",
+                "projects/hotel_mgmt/13_view1.png",
+                "projects/hotel_mgmt/14_view2.png",
+                "projects/hotel_mgmt/15_view3.png",
+                "projects/hotel_mgmt/16_create_data1.png",
+                "projects/hotel_mgmt/17_create_data2.png",
+                "projects/hotel_mgmt/18_sqlldr.png",
+                "projects/hotel_mgmt/19_assumptions.png"
+            ]
         },
         {
             "id": 6,
@@ -159,7 +216,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -188,7 +245,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -217,7 +274,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -246,7 +303,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -275,7 +332,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -304,7 +361,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -333,7 +390,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -362,7 +419,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -391,7 +448,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -420,7 +477,7 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
