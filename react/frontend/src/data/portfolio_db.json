@@ -168,7 +168,7 @@
             "title": "Hotel Management System",
             "description": "The relational database for Hotel Management System for booking/reserving the room. The project was developed in 4-phases using waterfall methodology and deployed on the StFX University's Oracle server setup by the professor.",
             "type": "data",
-            "group": false,
+            "group": true,
             "source": null,
             "uri": null,
             "displayImg": "projects/hotel_mgmt/hms_group.png",
@@ -217,7 +217,7 @@
             "title": "Crime Analysis",
             "description": "A comprehensive study of factors influencing crime in the USA over three decades (1980s, 1990s, 2000s). R programming language and RStudio is used for this group project.",
             "type": "data",
-            "group": false,
+            "group": true,
             "source": null,
             "uri": null,
             "displayImg": "projects/crime_analysis/0_group.png",
@@ -269,6 +269,35 @@
         },
         {
             "id": 7,
+            "title": "Sentiment Analysis",
+            "description": "The tweets dataset having 3000+ tweets were investigated to determined if tweets are positive, negative or neutral. Demonstrated  the expertise in preprocessing the English-language sentences (tweets)",
+            "type": "data",
+            "group": false,
+            "source": null,
+            "uri": null,
+            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "technologies": [
+                "python",
+                "nltk",
+                "scikit-learn",
+                "wordcloud",
+                "regex",
+                "textblob",
+                "colab",
+                "matplotlib"
+            ],
+            "details": [
+                "Removed hyperlinks, punctuations, whitespaces, hashtags, mentiones, RT, emojis, etc using RegEx and other methods",
+                "Removed stopwords using NLTK & applied lemmatization to convert cleaned tweets to meaningful words for the anaylsis purpose",
+                "Determined the polarity of cleaned tweets using TextBlob library; based on results evaluated the sentiment of each tweet",
+                "Visulized the positive, negative or neutral sentiments of over 3000 tweets using pie-chart",
+                "Determined top 10 popular words for each sentiment using scikit-learn by eliminating common words in the process",
+                "Presented the popular words for each sentiment using wordcloud"
+            ],
+            "projectImgs": ""
+        },
+        {
+            "id": 8,
             "title": "Food-Order Analysis",
             "description": "The analysis of food-order of Restaurants. First-time using google-colab platform for the analysis purpose. Transformed and visualized the data for different scenarios using Python programming language.",
             "type": "data",
@@ -290,34 +319,6 @@
                 "Visualized the top 10 most popular restaurants for each cusine type and highlighted top 3 restaurants",
                 "Investigated proportation of review of the given restaurant (Shake Shack) and demonstrated the findings using appropriate plots",
                 "Determined the correlation between ratings and food preparation time using the r-value (person correlation cofficient)"
-            ],
-            "projectImgs": ""
-        },
-        {
-            "id": 8,
-            "title": "Sentiment Analysis",
-            "description": "The tweets dataset having 3000+ tweets were investigated to determined if tweets are positive, negative or neutral where I demonstrated expertise in preprocessing part of the NLP with libaraies like NLTK (Natual Language ToolKit), textblob, scikit-learn, and wordcloud",
-            "type": "data",
-            "group": false,
-            "source": null,
-            "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
-            "technologies": [
-                "python",
-                "nltk",
-                "scikit-learn",
-                "wordcloud",
-                "regex",
-                "textblob",
-                "colab",
-                "matplotlib"
-            ],
-            "details": [
-                "Removed hyperlinks, punctuations, whitespaces, hashtags, mentiones, RT, emojis, etc using RegEx (regular expressions) and other methods",
-                "Removed stopwords using Natual Language Toolkit & applied the lemmatization operation to convert the clearned tweets to meaningful words for the anaylsis purpose",
-                "Determined the polarity of the cleaned tweets using TextBlob library and based on the results checked the sentiment of each tweets",
-                "Visulized the positive, negative or neutral sentiments of over 3000 tweets using pie-chart",
-                "Determined the most popular words for each sentiment using Scikit-learn by eliminating common words between each sentiment and presented the result using wordcloud"
             ],
             "projectImgs": ""
         },
