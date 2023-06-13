@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Halifax Canoe and Kayak",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of cloud-computing using AWS Cloud. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "web",
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
@@ -166,7 +166,7 @@
         {
             "id": 5,
             "title": "Hotel Management System",
-            "description": "The relational database for Hotel Room reservation / booking that is developed in 4-phases and deployed on the StFX University's Oracle server setup by the professor.",
+            "description": "The relational database for Hotel Management System for booking/reserving the room. The project was developed in 4-phases using waterfall methodology and deployed on the StFX University's Oracle server setup by the professor.",
             "type": "data",
             "group": false,
             "source": null,
@@ -189,6 +189,7 @@
                 "Deployed the relational database on the university's Oracle Server hosted by the professor"
             ],
             "projectImgs": [
+                "projects/hotel_mgmt/hms_group.png",
                 "projects/hotel_mgmt/0_erd.png",
                 "projects/hotel_mgmt/1_erd.png",
                 "projects/hotel_mgmt/2_create_guest.png",
@@ -214,7 +215,7 @@
         {
             "id": 6,
             "title": "Crime Analysis",
-            "description": "A comprehensive study of factors influencing crime in the USA over three decades (1980s, 1990s, 2000s). R programming language and RStudio is used for this group project. The meetings were in person and Office365 is used to collaborate.",
+            "description": "A comprehensive study of factors influencing crime in the USA over three decades (1980s, 1990s, 2000s). R programming language and RStudio is used for this group project.",
             "type": "data",
             "group": false,
             "source": null,
@@ -269,118 +270,140 @@
         {
             "id": 7,
             "title": "Food-Order Analysis",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "The analysis of food-order of Restaurants. First-time using google-colab platform for the analysis purpose. Transformed and visualized the data for different scenarios using Python programming language.",
             "type": "data",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "source": null,
+            "uri": null,
             "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "pandas",
+                "numpy",
+                "matplotlib",
+                "seaborn",
+                "plotly",
+                "colab"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Checked the number of restaurants for each cuisine type & visualized the result using appropreate plot",
+                "Visualized the top 10 most popular restaurants for each cusine type and highlighted top 3 restaurants",
+                "Investigated proportation of review of the given restaurant (Shake Shack) and demonstrated the findings using appropriate plots",
+                "Determined the correlation between ratings and food preparation time using the r-value (person correlation cofficient)"
             ],
             "projectImgs": ""
         },
         {
             "id": 8,
             "title": "Sentiment Analysis",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "The tweets dataset having 3000+ tweets were investigated to determined if tweets are positive, negative or neutral where I demonstrated expertise in preprocessing part of the NLP with libaraies like NLTK (Natual Language ToolKit), textblob, scikit-learn, and wordcloud",
             "type": "data",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
+            "source": null,
+            "uri": null,
             "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "nltk",
+                "scikit-learn",
+                "wordcloud",
+                "regex",
+                "textblob",
+                "colab",
+                "matplotlib"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Removed hyperlinks, punctuations, whitespaces, hashtags, mentiones, RT, emojis, etc using RegEx (regular expressions) and other methods",
+                "Removed stopwords using Natual Language Toolkit & applied the lemmatization operation to convert the clearned tweets to meaningful words for the anaylsis purpose",
+                "Determined the polarity of the cleaned tweets using TextBlob library and based on the results checked the sentiment of each tweets",
+                "Visulized the positive, negative or neutral sentiments of over 3000 tweets using pie-chart",
+                "Determined the most popular words for each sentiment using Scikit-learn by eliminating common words between each sentiment and presented the result using wordcloud"
             ],
             "projectImgs": ""
         },
         {
             "id": 9,
-            "title": "Multi-class Image Classification",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Multi-Class Image Classification",
+            "description": "A deep learning on the Intel Image Classification dataset accquired from Kaggle. Demontrated skills in deep learning using Convolutional Neural Network (CNN) for the dataset to achieve about 80% accuray for the multi-class (6 classes) classification on the test data.",
             "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/deep_learning_project_444",
+            "uri": null,
+            "displayImg": "./projects/multiclass_classification/0_dataset.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "deep learning",
+                "keras",
+                "tensforflow",
+                "scikit-learn",
+                "numpy",
+                "pandas",
+                "matplotlib"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Proprocessed the images data acquired from Kaggle using scikit-learn, numpy, and panda according to the requirement",
+                "Utilized Keras to load data for the CNN which was based on LeNet with minor improvements to start the training",
+                "Achieved about 64% accuracy on the training data and about 31% accuracy on testing data with 1 epoch with this first model",
+                "For the next traning I added some feature maps at the dense layer before fully-connected layer to improve the model which gave me about 84% accuracy on the traning data for 5 epoches",
+                "To improve the model, experimented by converting the images to grayscale but it resulted in some erros regarding reshaping which was countered by adding rescaling layer (ideadlly solution was to do data-augmentation).",
+                "The above model after dropping some layers in between to provent overfitting improved the traning accuracy up to about 94%, and testing accuracy reached to 76% for 10 epoches",
+                "Since my GPU was not powerful enough, I didn't have capability to experiment much with large number of epoches, so what I though the best model is up to that point I trained it through 100 epoches",
+                "Added few Conv2D layers, and some batch normalization resulted in around 99% accuracy on traning data and 80% accuracy on the testing data",
+                "Experiments with different number of epoches, I concluded that increasing ephoces beyond a number doesn't necessarily improve the accuray, but performing cross validation does, and the ideal number of epoches for my model is 30",
+                "Plotted the results for different number of epoches with the model used for that particular training/testing",
+                "Craeted a table to show all the models and their perforamce to compare the models that I improved from basic LeNet to the best model I achived",
+                "Summarized my project and the thoughts techniques that can be used to improve the model in the future"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/multiclass_classification/1_all_models.png",
+                "projects/multiclass_classification/2_basic_cnn_e1.png",
+                "projects/multiclass_classification/3_basic_cnn_e1.png",
+                "projects/multiclass_classification/4_basic_cnn2_auc.png",
+                "projects/multiclass_classification/5_improved_cnn_auc.png",
+                "projects/multiclass_classification/6_best_cnn1.png",
+                "projects/multiclass_classification/7_best_cnn2.png",
+                "projects/multiclass_classification/8_best_cnn3.png",
+                "projects/multiclass_classification/9_best_cnn_auc.png"
+            ]
         },
         {
             "id": 10,
             "title": "Deep Learning on MNIST Dataset",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "The cross-discipline competition between MACS, Bacher of Computer Science and PBDAI having total of 80+ students taking Machine Learnign Course at StFX. The MNIST dataset was given to us and the task was to get the least errors on the test data for which we were not given any labels.",
             "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": null,
+            "uri": null,
+            "displayImg": "./projects/mnist_deep_learning/0_mnist_data.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "keral",
+                "tensforflow",
+                "matplotlib",
+                "numpy",
+                "pandas"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Achieved 2nd rank in the competition which was a big achievement for me; having no prior Data Science experience as I was learning that pre-requisite course in the parallel during the same term",
+                "Improved LeNet of Yann LeCun for this particular tasks by adding different layers to improve accuracy of the model",
+                "Conv2D layer to generate 32 feature maps, with 5x5 kernel, with unit stride and relu activation with bias",
+                "Normalization layers to stabilize the images, and converge faster",
+                "Pooling layer to extract the best feature of some regions to enhaced learning",
+                "Dropping few layers in-between to mitigate over-fitting by dropping connection and learn the patterns instead of memorizing",
+                "Dense layer to get fully-connected neural network layer, and Softmax layer with 10 units because this was a 10-class classification",
+                "Utilized all the layers above and using Stratified-Shffle-Split technique on the traning data to perform traning, testing and improve accuracy over 30 epochs",
+                "Generated error data from my internal training/testing, and my prediction on the test data to submit for the competition."
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/mnist_deep_learning/1_second_lowest_error.png",
+                "projects/mnist_deep_learning/2_imports.png",
+                "projects/mnist_deep_learning/3_q4_cnn.png",
+                "projects/mnist_deep_learning/4_get_mnist_data.png",
+                "projects/mnist_deep_learning/5_get_performance_stratified_shuffle_split.png",
+                "projects/mnist_deep_learning/6_traning_cnn.png",
+                "projects/mnist_deep_learning/7_generate_errors.png",
+                "projects/mnist_deep_learning/8_best_cnn_model.png"
+            ]
         },
         {
             "id": 11,
