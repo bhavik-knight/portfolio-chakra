@@ -8,6 +8,8 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    useColorMode,
+    useColorModeValue,
 } from "@chakra-ui/react"
 
 import { useDisclosure } from "@chakra-ui/react"
@@ -42,13 +44,12 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     const projectImages = project.projectImgs !== "" && useCallback(
         project.projectImgs?.map(url => {
             return (
-                <Box
-                    key={nanoid()}
-                    width={cardWidth}
-                    height={cardHeight}
-                    as={Center}
-                >
-                    <Image src={url} objectFit="fill" />
+                <Box key={nanoid()}>
+                    <Image
+                        src={url}
+                        width={cardWidth}
+                        height={cardHeight}
+                    />
                 </Box>
             )
         }),
@@ -73,7 +74,9 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     </Text>
                     <Spacer />
                     <ButtonGroup gap={2}>
-                        <Button className="project-detail-btns" onClick={() => window.open(project.source, "_blank")}>source</Button>
+                        {
+                            project.source != null && <Button className="project-detail-btns" onClick={() => window.open(project.source, "_blank")}>source</Button>
+                        }
                         {
                             project.uri !== null &&
                             <Button className="project-detail-btns" onClick={() => window.open(project.uri, "_blank")}>link</Button>
