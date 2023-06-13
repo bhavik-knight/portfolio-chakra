@@ -44,16 +44,13 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     const projectImages = project.projectImgs !== "" && useCallback(
         project.projectImgs?.map(url => {
             return (
-                <Box
-                    key={nanoid()}
-                    width={cardWidth}
-                    height={cardHeight}
-                    bgPosition="center center"
-                    bgSize="contain"
-                    bgColor="white"
-                    bgImage={`url(${url})`}
-                    bgRepeat="no-repeat"
-                />
+                <Box key={nanoid()}>
+                    <Image
+                        src={url}
+                        width={cardWidth}
+                        height={cardHeight}
+                    />
+                </Box>
             )
         }),
         [project]

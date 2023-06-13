@@ -88,8 +88,8 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
                 <Card
                     overflow="hidden"
                     width={cardWidth}
-                    border="1px solid"
-                    borderRadius="0.5em"
+                    // border="1px solid"
+                    borderRadius="1em"
                 >
                     <Flex
                         width={cardWidth * length}
@@ -134,3 +134,6 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
 }
 
 export { RenderCarousel }
+
+{/*
+*/}
