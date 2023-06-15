@@ -492,7 +492,7 @@
             "type": "game",
             "group": false,
             "source": "https://github.com/bhavik-knight/minesweeper",
-            "uri": null,
+            "uri": "https://youtu.be/BzG0DbutIa8",
             "displayImg": "projects/minesweeper/0_minesweeper.gif",
             "technologies": [
                 "python",
@@ -501,8 +501,8 @@
                 "wsl"
             ],
             "details": [
-                "Demontrated the use of Pygame library to deliver the working project by reading & understanding the documentations",
-                "Implemented the modular code using DRY principles, doc-strings, and effectively used defensive programming using python style guide",
+                "Demonstrated the use of Pygame library by reading and understanding the documenatation to deliver the working game",
+                "Implemented the modular code using DRY principles, and effectively used defensive programming using python style guide",
                 "Recorded a project video & posted on my youtube channel explaining all features and basic explaination of the program"
             ],
             "projectImgs": [
