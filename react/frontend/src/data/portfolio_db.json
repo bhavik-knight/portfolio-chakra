@@ -488,89 +488,100 @@
         {
             "id": 13,
             "title": "Minesweeper",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "My version of the classic Minesweeper game to demontrate Object Oriented Programming skills in python langague using PyGame library",
             "type": "game",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/minesweeper",
+            "uri": null,
+            "displayImg": "projects/minesweeper/0_minesweeper.gif",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "pygame",
+                "windows",
+                "wsl"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Demontrated the use of Pygame library to deliver the working project by reading & understanding the documentations",
+                "Implemented the modular code using DRY principles, doc-strings, and effectively used defensive programming using python style guide",
+                "Recorded a project video & posted on my youtube channel explaining all features and basic explaination of the program"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/minesweeper/1_game_window.png",
+                "projects/minesweeper/2_main.png",
+                "projects/minesweeper/3_play1.png",
+                "projects/minesweeper/4_play2.png",
+                "projects/minesweeper/5_play3.png",
+                "projects/minesweeper/6_play4.png",
+                "projects/minesweeper/7_play5.png",
+                "projects/minesweeper/8_play6.png",
+                "projects/minesweeper/9_tile.png",
+                "projects/minesweeper/10_grid1.png",
+                "projects/minesweeper/11_grid2.png",
+                "projects/minesweeper/12_grid3.png",
+                "projects/minesweeper/13_grid4.png",
+                "projects/minesweeper/14_grid5.png",
+                "projects/minesweeper/15_grid6.png",
+                "projects/minesweeper/16_contants.png",
+                "projects/minesweeper/17_buttons.png",
+                "projects/minesweeper/18_mines10.png",
+                "projects/minesweeper/19_game_won.png",
+                "projects/minesweeper/20_game_lost.png",
+                "projects/minesweeper/21_flags.png"
+            ]
         },
         {
             "id": 14,
             "title": "Snake",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "My spin on classing Snake - game from the old Nokia phones.",
             "type": "game",
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
             "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "scratch",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "This was my first attempt at programming after I decided to change my career from Mechanical Engineering to Computer Science",
+                "The first mini-project submitted for the Harvard's CS50 course using the langauge Scratch",
+                "Demonstrated expertise in this graphical programming language to implement the functionality with increasing difficulty level"
             ],
             "projectImgs": ""
         },
         {
             "id": 15,
-            "title": "8 - Puzzle solver AI using A*",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "8 Puzzle AI Solver",
+            "description": "Implimented A* algorithm to solve the 8 Puzzle. Demonstrated expertise in the Object Oriented Programming, Data Structures and Algorithms.",
             "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/8Puzzle-AI",
+            "uri": null,
+            "displayImg": "/projects/puzzle_8_ai/0_Astar_progress_animation.gif",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Created the grid and moved for the classic 8 Puzzle game using Object Oriented Programming",
+                "Implemented the A* algorithm to find the mininum number of moves to solve the game from the given initial configuration",
+                "Demonstrated DRY principles and Code modularity to extend the code for N-puzzle game",
+                "Modularized the game for the N-Puzzle given the size of grid N"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/puzzle_8_ai/1_astar1.png",
+                "projects/puzzle_8_ai/2_astar2.png",
+                "projects/puzzle_8_ai/3_astart3.png",
+                "projects/puzzle_8_ai/4_best_cost.png",
+                "projects/puzzle_8_ai/5_grid.png",
+                "projects/puzzle_8_ai/6_grid2.png",
+                "projects/puzzle_8_ai/7_grid3.png",
+                "projects/puzzle_8_ai/8_grid4.png",
+                "projects/puzzle_8_ai/9_grid5.png",
+                "projects/puzzle_8_ai/10_node.png",
+                "projects/puzzle_8_ai/11_config.png",
+                "projects/puzzle_8_ai/12_run.png"
+            ]
         }
     ],
     "certificates": [
