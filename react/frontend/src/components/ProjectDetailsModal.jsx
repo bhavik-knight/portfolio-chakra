@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react"
 
 import { useDisclosure } from "@chakra-ui/react"
-import { Box, Flex, Stack, Center, Container } from "@chakra-ui/react"
+import { Box, Flex, Stack, Center, Container, Grid } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Button, ButtonGroup, Tooltip } from "@chakra-ui/react"
 import { Heading, Text, Divider, Spacer, Img } from "@chakra-ui/react"
@@ -44,13 +44,17 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     const projectImages = project.projectImgs !== "" && useCallback(
         project.projectImgs?.map(url => {
             return (
-                <Box key={nanoid()}>
+                <Grid key={nanoid()}
+                    w={cardWidth}
+                    maxH={cardHeight}
+                    justifyContent="center"
+                    alignItems="center"
+                >
                     <Image
                         src={url}
-                        width={cardWidth}
-                        height={cardHeight}
+                        objectPosition="center"
                     />
-                </Box>
+                </Grid>
             )
         }),
         [project]

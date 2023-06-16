@@ -72,7 +72,7 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
             </Center>
 
             {/* moddle carousel card area */}
-            <HStack>
+            <HStack mx="auto">
                 {/* left arrow button */}
                 <IconButton
                     isRound
@@ -87,8 +87,8 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
                 {/* carousel part */}
                 <Card
                     overflow="hidden"
-                    width={cardWidth}
-                    // border="1px solid"
+                    w={cardWidth}
+                    border="1px solid"
                     borderRadius="1em"
                 >
                     <Flex
