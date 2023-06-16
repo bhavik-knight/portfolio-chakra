@@ -294,7 +294,35 @@
                 "Determined top 10 popular words for each sentiment using scikit-learn by eliminating common words in the process",
                 "Presented the popular words for each sentiment using wordcloud"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/sentiment_analysis/1_load.png",
+                "projects/sentiment_analysis/2_hyperlinks.png",
+                "projects/sentiment_analysis/3_stopwords.png",
+                "projects/sentiment_analysis/4_mentions_hashtags.png",
+                "projects/sentiment_analysis/5_rt.png",
+                "projects/sentiment_analysis/6_emojis_whitespace.png",
+                "projects/sentiment_analysis/7_lemmatize1.png",
+                "projects/sentiment_analysis/8_lemmatize2.png",
+                "projects/sentiment_analysis/9_clean.png",
+                "projects/sentiment_analysis/10_polarity.png",
+                "projects/sentiment_analysis/11_sentiments.png",
+                "projects/sentiment_analysis/12_distribution.png",
+                "projects/sentiment_analysis/13_plot.png",
+                "projects/sentiment_analysis/14_most_common1.png",
+                "projects/sentiment_analysis/15_most_common2.png",
+                "projects/sentiment_analysis/16_most_common3.png",
+                "projects/sentiment_analysis/17_wordcloud.png",
+                "projects/sentiment_analysis/18_positive_wordcloud.png",
+                "projects/sentiment_analysis/18_top10_positive.png",
+                "projects/sentiment_analysis/19_negative_wordcloud.png",
+                "projects/sentiment_analysis/20_top10_negative.png",
+                "projects/sentiment_analysis/21_neutral_wordcloud.png",
+                "projects/sentiment_analysis/22_top10_neutral.png",
+                "projects/sentiment_analysis/23_likes.png",
+                "projects/sentiment_analysis/24_avg_likes.png",
+                "projects/sentiment_analysis/25_retweets.png",
+                "projects/sentiment_analysis/26_avg_retweets.png"
+            ]
         },
         {
             "id": 8,
