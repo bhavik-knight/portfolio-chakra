@@ -532,26 +532,38 @@
         {
             "id": 14,
             "title": "Snake",
-            "description": "My spin on classing Snake - game from the old Nokia phones.",
+            "description": "My spin on classing Snake game from the old Nokia phones.",
             "type": "game",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": "https://scratch.mit.edu/projects/72395498/editor/",
+            "uri": "https://scratch.mit.edu/projects/72395498/fullscreen/",
+            "displayImg": "projects/snake/snake.gif",
             "technologies": [
                 "scratch",
                 "windows"
             ],
             "details": [
                 "This was my first attempt at programming after I decided to change my career from Mechanical Engineering to Computer Science",
-                "The first mini-project submitted for the Harvard's CS50 course using the langauge Scratch",
-                "Demonstrated expertise in this graphical programming language to implement the functionality with increasing difficulty level"
+                "The first mini-project submitted for the Harvard's CS50 course using the graphical langauge Scratch",
+                "Demonstrated expertise in this programming language to implement the functionality with increasing difficulty level",
+                "Learned and implemented programming concepts like variables, conditional, loops and control structure"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/snake/0_instructions_page.png",
+                "projects/snake/1_code1.png",
+                "projects/snake/2_code2.png",
+                "projects/snake/3_home_page.png",
+                "projects/snake/4_level1.png",
+                "projects/snake/5_level2.png",
+                "projects/snake/6_level3.png",
+                "projects/snake/7_level4.png",
+                "projects/snake/8_game_over.png",
+                "projects/snake/9_last_page.png"
+            ]
         },
         {
             "id": 15,
-            "title": "8 Puzzle AI Solver",
+            "title": "8 Puzzle Solver AI",
             "description": "Implimented A* algorithm to solve the 8 Puzzle. Demonstrated expertise in the Object Oriented Programming, Data Structures and Algorithms.",
             "type": "ai",
             "group": false,
