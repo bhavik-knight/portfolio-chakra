@@ -29,7 +29,7 @@ function ProjectCard({ project }) {
             _hover={{ boxShadow: "4px 4px 16px" }}
         >
             <Stack justifyContent="center">
-                <Flex>
+                <Flex m="auto">
                     <Img src={project.displayImg} className="projectDisplayImg" />
                 </Flex>
 
