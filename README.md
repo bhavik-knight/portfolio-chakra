@@ -9,3 +9,4 @@ reference:
 - Multi-class classification [image](https://www.kaggle.com/datasets/puneet6060/intel-image-classification)
 - MNist [image](https://en.wikipedia.org/wiki/MNIST_database)
 - Minesweeper [image](https://tenor.com/view/minesweeper-mine-sweeper-fast-speedrun-gif-24760449)
+- Snake [image](https://en.wikipedia.org/wiki/Snake_(video_game_genre))
