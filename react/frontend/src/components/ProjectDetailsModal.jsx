@@ -53,6 +53,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     <Image
                         src={url}
                         objectPosition="center"
+                        h={cardHeight}
                     />
                 </Grid>
             )
