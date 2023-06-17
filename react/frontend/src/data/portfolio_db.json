@@ -275,7 +275,7 @@
             "group": false,
             "source": null,
             "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "displayImg": "projects/sentiment_analysis/0_sentiment_analysis.jpg",
             "technologies": [
                 "python",
                 "nltk",
@@ -327,16 +327,17 @@
         {
             "id": 8,
             "title": "Food-Order Analysis",
-            "description": "The analysis of food-order of Restaurants. First-time using google-colab platform for the analysis purpose. Transformed and visualized the data for different scenarios using Python programming language.",
+            "description": "The analysis of New York Restaurants. First experience of using google-colab platform for the analysis purpose. Transformed and visualized the data for different scenarios using Python programming language.",
             "type": "data",
             "group": false,
-            "source": null,
-            "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/food-order-analysis",
+            "uri": "https://github.com/bhavik-knight/food-order-analysis/blob/main/FoodOrderAnalysis.ipynb",
+            "displayImg": "projects/food_order_analysis/0_food_order_analysis.jpg",
             "technologies": [
                 "python",
                 "pandas",
                 "numpy",
+                "scipy",
                 "matplotlib",
                 "seaborn",
                 "plotly",
@@ -346,9 +347,32 @@
                 "Checked the number of restaurants for each cuisine type & visualized the result using appropreate plot",
                 "Visualized the top 10 most popular restaurants for each cusine type and highlighted top 3 restaurants",
                 "Investigated proportation of review of the given restaurant (Shake Shack) and demonstrated the findings using appropriate plots",
-                "Determined the correlation between ratings and food preparation time using the r-value (person correlation cofficient)"
+                "Determined the correlation between ratings and food preparation time using the r-value (person correlation cofficient)",
+                "Created various plots like pie-chart, bar-chart, box-plot using libraries like matplotlib, seaborn and plotly"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/food_order_analysis/1_imports.png",
+                "projects/food_order_analysis/2_describe.png",
+                "projects/food_order_analysis/3_describe2.png",
+                "projects/food_order_analysis/4_total_time.png",
+                "projects/food_order_analysis/5_restaurants_by_cuisine_type.png",
+                "projects/food_order_analysis/6_plot1.png",
+                "projects/food_order_analysis/7_viz_restaurants_by_cuisine_type.png",
+                "projects/food_order_analysis/8_viz_top5_cuisine_type_with_most_restaurants.png",
+                "projects/food_order_analysis/9_top10_most_popular.png",
+                "projects/food_order_analysis/11_viz_top10_most_popular.png",
+                "projects/food_order_analysis/12_top10_most_popular_by_cuisine_type.png",
+                "projects/food_order_analysis/13_viz2.png",
+                "projects/food_order_analysis/14_viz3.png",
+                "projects/food_order_analysis/15_viz4.png",
+                "projects/food_order_analysis/16_viz5.png",
+                "projects/food_order_analysis/17_viz6.png",
+                "projects/food_order_analysis/18_ratings_of_shake_shack.png",
+                "projects/food_order_analysis/19_viz_shake_shack.png",
+                "projects/food_order_analysis/20_correlation_rating_food_prep_time.png",
+                "projects/food_order_analysis/21_viz_correlation.png",
+                "projects/food_order_analysis/22_correlation_calculation.png"
+            ]
         },
         {
             "id": 9,
