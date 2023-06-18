@@ -128,40 +128,22 @@
                 "css",
                 "git",
                 "docker",
-                "netlify"
+                "netlify",
+                "firebase",
+                "firestore"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Leveraged vite tool to create the app for the faster build time for ReactJS app",
+                "Demonstrated expertise in component library like ChakraUI to create reusable modular components",
+                "Utilized react hooks like useState, useEffect, useRef, useCallback effectively when needed",
+                "Created database on GCP's firebase (Backend-as-a-Service) and used Firestore for storing files for the app",
+                "Containerized the app using Docker, and pushed the docker image on DockerHub",
+                "Created 4 other mini-projects to learn different features like fetching data, craeteing carousel for this app",
+                "Hosted the app on the Netlify platform which pulls latest image from the Github's master-branch"
             ],
             "projectImgs": [
                 "projects/portfolio/1_landing_page.png"
             ]
-        },
-        {
-            "id": 4,
-            "title": "Tic-tac-toe",
-            "description": "My first mini-project in the web development area as a backend developer where I used flask microframework. I received constructive critisim on my coding style by Harvard's computer science professor Dr. David Malan in CS50's code-review stream.",
-            "type": "web",
-            "source": "https://github.com/bhavik-knight/cs50beyond/tree/master/tictactoe",
-            "uri": "https://www.youtube.com/watch?v=5aWjlEqwJs4&t=1829s",
-            "displayImg": "projects/hck_dns_sfha/1_landing_page.png",
-            "technologies": [
-                "python",
-                "flask",
-                "html",
-                "css",
-                "git",
-                "windows"
-            ],
-            "details": [
-                "First experience of utilizing any framework for web-development. I learned about flask micro-framework by reading the official documentation.",
-                "Implemented backend using flask, used stackoverflow/goggle to solve the issues during the developement process",
-                "First time using git for version control and hosted project on the github",
-                "Received the feedback on my project from my idol Dr. David Malan; learned about various aspect i.e., the best coding practicies,  use of MVC in the web developement, etc."
-            ],
-            "projectImgs": ""
         },
         {
             "id": 5,
@@ -273,8 +255,8 @@
             "description": "The tweets dataset having 3000+ tweets were investigated to determined if tweets are positive, negative or neutral. Demonstrated  the expertise in preprocessing the English-language sentences (tweets)",
             "type": "data",
             "group": false,
-            "source": null,
-            "uri": null,
+            "source": "https://colab.research.google.com/drive/1i29rcmjD2ZZtTYin1WWm7-AYaqjamlZ7?usp=sharing",
+            "uri": "https://github.com/bhavik-knight/sentiment-analysis-dns/blob/main/SentimentAnalysis.ipynb",
             "displayImg": "projects/sentiment_analysis/0_sentiment_analysis.jpg",
             "technologies": [
                 "python",
@@ -330,8 +312,8 @@
             "description": "The analysis of New York Restaurants. First experience of using google-colab platform for the analysis purpose. Transformed and visualized the data for different scenarios using Python programming language.",
             "type": "data",
             "group": false,
-            "source": "https://github.com/bhavik-knight/food-order-analysis",
-            "uri": "https://github.com/bhavik-knight/food-order-analysis/blob/main/FoodOrderAnalysis.ipynb",
+            "source": "https://colab.research.google.com/drive/1ItCiGpwr7wKJQ-v42_geB2Hit3PwNDBU?usp=sharing",
+            "uri": "https://github.com/bhavik-knight/food-order-analysis-dns/blob/main/FoodOrderAnalysis.ipynb",
             "displayImg": "projects/food_order_analysis/0_food_order_analysis.jpg",
             "technologies": [
                 "python",
@@ -464,7 +446,7 @@
             "description": "The evolutionary computation project that uses the genetic algorithm based on the survival of the fittest. This project demonstrate the use of the GA that is used to generate high quality solutions to optimization and research problems.",
             "type": "ai",
             "group": true,
-            "source": "https://github.com/bhavik-knight/350-ec-final-project",
+            "source": "https://github.com/bhavik-knight/340-ec-final-project",
             "uri": null,
             "displayImg": "projects/image_reconstruction/0_genetic_algorithms.png",
             "technologies": [
@@ -511,31 +493,50 @@
         {
             "id": 12,
             "title": "Particle Swarm Optimization",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "An evolutionary algorithm to sovle optimization problem that emulates the social behavior of birds looking for food. This algorithm is a special one as it doens't need a problem to be differential unlike other classical optimization techniques",
             "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/pso-ec-a3",
+            "uri": null,
+            "displayImg": "projects/pso/0_pso_shubert.gif",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "pyswarms",
+                "matplotlib",
+                "windows",
+                "latex"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Ther idea is to improve the candidate solution against the fitness function iteratively",
+                "Each particle has in the swarm (group) has a position, velocity vector and fitness value and their best position and fiteness values are recorded",
+                "By communication the particles know the global best position and global best value of the swarm",
+                "The parameters of the algorithms are number of dimensions, lower and upper bound. The hyper-parameters are number of particles, max iterations, inertia component, congition of the particle component (local), and social influence of swarm component (global)",
+                "Optimized several functions like Sphere, Beale, Booth, Levi, etc. and generated the plots of the cost  vs iteration for each and particles' movements",
+                "Created a report of my work and findings in a research paper like format using LaTeX"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/pso/1_paper1.png",
+                "projects/pso/2_paper2.png",
+                "projects/pso/3_table.png",
+                "projects/pso/4_components.png",
+                "projects/pso/5_funcitons.png",
+                "projects/pso/6_cost_iteration1.png",
+                "projects/pso/7_cost_iteration2.png",
+                "projects/pso/8_code1.png",
+                "projects/pso/9_code2.png",
+                "projects/pso/10_code3.png",
+                "projects/pso/11_code4.png",
+                "projects/pso/12_code5.png",
+                "projects/pso/13_code6.png",
+                "projects/pso/14_animation1.gif",
+                "projects/pso/15_animation2.gif",
+                "projects/pso/16_animation3.gif",
+                "projects/pso/17_anitmation4.gif",
+                "projects/pso/18_animation5.gif",
+                "projects/pso/19_animation6.gif",
+                "projects/pso/20_animation7.gif",
+                "projects/pso/21_animation8.gif"
+            ]
         },
         {
             "id": 13,
@@ -874,19 +875,6 @@
         },
         {
             "id": 2,
-            "title": "Clerk",
-            "company": "Atlantic Superstore",
-            "place": "Antigonish / Halifax, NS, Canada",
-            "start": "May 2021",
-            "end": "Oct 2022",
-            "responsibilities": [
-                "Increased Garden Center profit by 20% by upselling products and sharing information about plants, vegetables, and herbs with customers, achieving 'Department of the Week' for consistent performance improvement; also rewarded with supervisor position at times in the absense of my supervisor",
-                "Curbed losses in the Floral department by applying the skills learned in the Garden Center to arrange flowers and bouquets at the front of the store and trained the new members, often received high praise from customers by providing excellent recommendations for special occasions",
-                "Increased customer engagement in the Bulk department by rearranging the products to make them easier to find following customer needs, helping to increase sales during the festival season"
-            ]
-        },
-        {
-            "id": 3,
             "title": "Shipping Associate",
             "company": "Staples",
             "place": "Halifax, NS, Canada",
@@ -899,7 +887,7 @@
             ]
         },
         {
-            "id": 4,
+            "id": 3,
             "title": "Cashier",
             "company": "Tim Hortons",
             "place": "Antigonish, NS, Canada",
@@ -909,6 +897,19 @@
                 "Contributed to increasing revenue of the branch by maintaining a low waiting time during the peak hours at the drive-through by providing excellent customer service and operating the POS with a high accuracy",
                 "Contributed to the team helping in maintaining food and beverages quality by analyzing the patterns of demand of customers at different hours for the various products, which helped in diminishing the food-waste",
                 "Proved the work ethic by working during the various shifts as requested that benefited the crew members by having their time off as needed, which helped in maintaining the overall productivity of the team"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Clerk",
+            "company": "Atlantic Superstore",
+            "place": "Antigonish / Halifax, NS, Canada",
+            "start": "May 2021",
+            "end": "Oct 2022",
+            "responsibilities": [
+                "Increased Garden Center profit by 20% by upselling products and sharing information about plants, vegetables, and herbs with customers, achieving 'Department of the Week' for consistent performance improvement; also rewarded with supervisor position at times in the absense of my supervisor",
+                "Curbed losses in the Floral department by applying the skills learned in the Garden Center to arrange flowers and bouquets at the front of the store and trained the new members, often received high praise from customers by providing excellent recommendations for special occasions",
+                "Increased customer engagement in the Bulk department by rearranging the products to make them easier to find following customer needs, helping to increase sales during the festival season"
             ]
         },
         {
@@ -1232,7 +1233,7 @@
                 "Matplotlib",
                 "Plotly",
                 "Seaborn",
-                "PySwarm",
+                "PySwarms",
                 "PyGad",
                 "PyGame"
             ],

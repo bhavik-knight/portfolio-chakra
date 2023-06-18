@@ -12,3 +12,4 @@ reference:
 - Snake [image](https://en.wikipedia.org/wiki/Snake_(video_game_genre))
 - Sentiment Analysis [image](https://www.thehumancapitalhub.com/articles/Employee-Sentiment-Analysis-And-What-You-Need-To-Know)
 - Food-Order Analysis [image](https://yugdamor.medium.com/food-order-analysis-eda-data-analysis-9a817ebb0967)
+- PSO [image](https://www.matlabsolutions.com/genetic-algorithm/particle-swarm-optimization-algorithm-in-matlab.php)

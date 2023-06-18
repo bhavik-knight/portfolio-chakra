@@ -84,3 +84,32 @@ export { Projects }
 
 // reference: import data from urls
 // https://medium.com/frontendweb/how-to-read-local-json-file-in-react-js-564125235fc7
+
+
+{/* json tic-tac-toe removed for now
+        {
+            "id": 4,
+            "title": "Tic-tac-toe",
+            "description": "My first mini-project in the web development area as a backend developer where I used flask microframework. I received constructive critisim on my coding style by Harvard's computer science professor Dr. David Malan in CS50's code-review stream.",
+            "type": "web",
+            "source": "https://github.com/bhavik-knight/cs50beyond/tree/master/tictactoe",
+            "uri": "https://www.youtube.com/watch?v=5aWjlEqwJs4&t=1829s",
+            "displayImg": "projects/hck_dns_sfha/1_landing_page.png",
+            "technologies": [
+                "python",
+                "flask",
+                "html",
+                "css",
+                "git",
+                "windows"
+            ],
+            "details": [
+                "First experience of utilizing any framework for web-development. I learned about flask micro-framework by reading the official documentation.",
+                "Implemented backend using flask, used stackoverflow/goggle to solve the issues during the developement process",
+                "First time using git for version control and hosted project on the github",
+                "Received the feedback on my project from my idol Dr. David Malan; learned about various aspect i.e., the best coding practicies,  use of MVC in the web developement, etc."
+            ],
+            "projectImgs": ""
+        },
+
+*/}
