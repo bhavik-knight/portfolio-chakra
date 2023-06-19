@@ -33,9 +33,6 @@ function Certificates() {
                     <ListItem>
                         Checkout my certificates from prestigious institutions like Harvard, MIT, Microsoft, Google, etc.
                     </ListItem>
-                    {/* <ListItem>
-                        Click on any certificates to check the credentials online
-                    </ListItem> */}
                 </CardBody>
             </Card>
 

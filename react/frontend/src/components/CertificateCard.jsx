@@ -6,6 +6,8 @@ import { Button, Image, Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
+import { Worker, Viewer } from "@react-pdf-viewer/core"
+import "@react-pdf-viewer/core/lib/styles/index.css"
 
 
 function CertificateCard({ details }) {
@@ -55,12 +57,19 @@ function CertificateCard({ details }) {
                                 }
                             </CardHeader>
                             <CardBody as={Center} my={0}>
-                                <chakra.embed
+                                {/* <chakra.embed
                                     width={{ base: "300px", lg: "1024px" }}
                                     height={{ base: "200px", lg: "768px" }}
                                     src={c.certImg}
                                     type="application/pdf"
-                                />
+                                /> */}
+                                {
+                                    <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
+                                        <Viewer
+                                            fileUrl={c.certImg}
+                                        />
+                                    </Worker>
+                                }
                             </CardBody>
                             <CardFooter>
                                 <Text>
