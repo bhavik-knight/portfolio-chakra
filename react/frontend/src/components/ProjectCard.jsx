@@ -56,6 +56,11 @@ function ProjectCard({ project }) {
                             bg={useColorModeValue("black", "white")}
                             color={useColorModeValue("cyan", "blue")}
                             onClick={onOpen}
+                            _hover={{
+                                color: `${useColorModeValue("blue", "cyan")}`,
+                                bg: `transparent`,
+                                border: `1px solid`
+                            }}
                         >
                             Details
                         </Button>
