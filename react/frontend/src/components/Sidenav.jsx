@@ -13,7 +13,7 @@ function Sidenav({ pages, activePage, selectPage }) {
             // bg="lightgreen"
             className="sidenav"
             as="aside"
-            width={{ base: "100%", lg: "10%" }}
+            width={{ base: "100%", lg: "fit-content" }}
             height={{ base: "fit-content" }}
             justifyContent={{ base: "center", lg: "flex-start" }}
             direction={{ base: "row", lg: "column" }}
@@ -34,7 +34,7 @@ function Sidenav({ pages, activePage, selectPage }) {
                             textTransform="capitalize"
                         >
                             {/* <ButtonGroup> */}
-                            <ButtonGroup>
+                            <ButtonGroup size={{ base: "md", md: "lg", lg: "md" }}>
                                 {
                                     isLarge ?
                                         <Button
