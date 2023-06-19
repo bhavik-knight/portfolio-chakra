@@ -9,7 +9,7 @@ import { BiRadioCircle } from "@react-icons/all-files/bi/BiRadioCircle"
 import { VscCircleFilled } from "@react-icons/all-files/vsc/VscCircleFilled"
 
 
-function RenderCarousel({ items, cardWidth, cardHeight }) {
+function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
     // total number of items to be rendered
     const length = items.length
 
@@ -32,7 +32,7 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
     }
 
     // pagination buttons
-    function showButtons(active, siblings = 2) {
+    function getButtons(active, siblings = 2) {
         const numberOfButtons = siblings * 2 + 1
 
         // if we have less data then total number of buttons; show less buttons
@@ -63,6 +63,43 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
         // cleaning up the timer
         return () => clearTimeout(timeRef.current)
     }, [handleNextClick])
+
+
+    // pagination buttons
+    const paginationButtons = (btnType) => {
+        // to get the numbered pagination or dots
+        let btns = null
+
+        btnType == "dots" ?
+            btns = getButtons(current).map((b, index) => {
+                return (
+                    <IconButton
+                        key={nanoid()}
+                        onClick={() => handleBtnClick(b)}
+                        variant="ghost"
+                        _hover={{ boxShadow: "1px 1px 4px 1px" }}
+                        _size={{ base: "sm", lg: "xl" }}
+                        icon={current === b ? <VscCircleFilled /> : <BiRadioCircle />}
+                    />
+                )
+            }) :
+            btns = getButtons(current).map((b, index) => {
+                return (
+                    <Button
+                        key={nanoid()}
+                        onClick={() => handleBtnClick(b)}
+                        isActive={b === current}
+                        variant="outline"
+                        _hover={{ boxShadow: "1px 1px 4px" }}
+                        _size={{ base: "xs", lg: "md" }}
+                    >
+                        {b + 1}
+                    </Button>
+                )
+            })
+
+        return btns
+    }
 
     return (
         <Box mx="auto" p={4}>
@@ -113,22 +150,33 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
             </HStack >
 
             {/* pagination area */}
-            <Center as={ButtonGroup} mx="auto" my={2} isAttached>
-                {
-                    showButtons(current).map((b, index) => {
-                        return (
-                            <IconButton
-                                key={nanoid()}
-                                onClick={() => handleBtnClick(b)}
-                                variant="ghost"
-                                _hover={{ boxShadow: "1px 1px 4px 1px" }}
-                                _size={{ base: "sm", lg: "xl" }}
-                                icon={current === b ? <VscCircleFilled /> : <BiRadioCircle />}
-                            />
-                        )
-                    })
-                }
-            </Center >
+            <Flex
+                mx="auto"
+                width="90%"
+                direction="row"
+                alignItems="center"
+            >
+                <Button
+                    onClick={() => handleBtnClick(0)}
+                    size={{ base: "sm", lg: "md" }}
+                    width="fit-content"
+                >
+                    first
+                </Button>
+
+                {/* dots or numbered pagination */}
+                <Center as={ButtonGroup} mx="auto" my={2} isAttached>
+                    {paginationButtons(btnType)}
+                </Center >
+
+                <Button
+                    onClick={() => handleBtnClick(0)}
+                    size={{ base: "sm", lg: "md" }}
+                    width="fit-content"
+                >
+                    last
+                </Button>
+            </Flex>
         </Box >
     )
 }
