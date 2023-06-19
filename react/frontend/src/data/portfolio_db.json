@@ -136,13 +136,19 @@
                 "Leveraged vite tool to create the app for the faster build time for ReactJS app",
                 "Demonstrated expertise in component library like ChakraUI to create reusable modular components",
                 "Utilized react hooks like useState, useEffect, useRef, useCallback effectively when needed",
-                "Created database on GCP's firebase (Backend-as-a-Service) and used Firestore for storing files for the app",
+                "Created database on GCP's firebase (Backend-as-a-Service) and used Storaage for files",
                 "Containerized the app using Docker, and pushed the docker image on DockerHub",
-                "Created 4 other mini-projects to learn different features like fetching data, craeteing carousel for this app",
+                "Created mini-projects to experiment with features like fetching data, creating carousel, learn different hooks, dark-mode, etc.",
                 "Hosted the app on the Netlify platform which pulls latest image from the Github's master-branch"
             ],
             "projectImgs": [
-                "projects/portfolio/1_landing_page.png"
+                "projects/portfolio/1_landing_page.png",
+                "projects/portfolio/2_netlify.png",
+                "projects/portfolio/3_carousel.png",
+                "projects/portfolio/4_tenzies.png",
+                "projects/portfolio/5_meme_generator.png",
+                "projects/portfolio/6_firebase_database.png",
+                "projects/portfolio/7_storage.png"
             ]
         },
         {
@@ -156,6 +162,7 @@
             "displayImg": "projects/hotel_mgmt/hms_group.png",
             "technologies": [
                 "sql",
+                "python",
                 "oracle",
                 "ERD",
                 "3NF",
@@ -200,8 +207,8 @@
             "description": "A comprehensive study of factors influencing crime in the USA over three decades (1980s, 1990s, 2000s). Increase in crime-rate in the recent times (like mass shooting) was the purpose behind choosing this project",
             "type": "data",
             "group": true,
-            "source": null,
-            "uri": null,
+            "source": "https://github.com/bhavik-knight/crime-analysis-ha",
+            "uri": "https://github.com/bhavik-knight/crime-analysis-ha/blob/master/project/report/crime_analysis_project_report.pdf",
             "displayImg": "projects/crime_analysis/0_group.png",
             "technologies": [
                 "r",
@@ -216,7 +223,6 @@
                 "msteams"
             ],
             "details": [
-                "R-language and RStudio used for the project, the ggplot for plotting, along with geomap and other supporting libraries",
                 "Generated R-markdown report presenting our work from the data collection to our findings on the factors affecting crime-rate",
                 "Data Collection: The Analysis of the USA data obtained from the Kaggle and FBI crime data explorer",
                 "Data Wrangling: Split and merged datasets performing ETL to convert the raw data into valuable information",
