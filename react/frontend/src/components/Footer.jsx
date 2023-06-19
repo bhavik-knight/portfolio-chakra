@@ -1,4 +1,3 @@
-import "./Footer.css"
 import { Center, Flex, Text } from "@chakra-ui/react"
 
 function Footer(props) {
@@ -10,6 +9,8 @@ function Footer(props) {
             h={{ base: "50px", md: "60px" }}
             boxShadow="0 0 16px 0"
             justifyContent="center"
+            // position="abosolute"
+            left="0" right="0" bottom="0"
         >
             <Text as={Center}>
                 © {year} Developed by Bhavik Bhagat
