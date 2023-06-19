@@ -30,6 +30,7 @@
 .sidenav {
     margin-top: 60px;
     left: 0;
+    top: 60px;
 }
 
 .sidenav * {
