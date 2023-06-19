@@ -18,7 +18,7 @@ function Education() {
             {/* journey */}
             <Card as="section" display={{ base: "none", md: "flex" }} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
-                    My journey
+                    My Journey
                 </CardHeader>
                 <Divider className="divider" width="95%" mx="auto" my={1} />
                 <CardBody>
