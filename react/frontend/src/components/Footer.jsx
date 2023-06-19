@@ -5,6 +5,7 @@ function Footer(props) {
     const year = new Date().getFullYear();
     return (
         <Flex
+            mt={2}
             className="navbar"
             h={{ base: "50px", md: "60px" }}
             boxShadow="0 0 16px 0"
