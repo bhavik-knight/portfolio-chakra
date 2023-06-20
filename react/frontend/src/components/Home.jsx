@@ -12,7 +12,7 @@ function Home() {
             <Card
                 as={Center}
                 borderBottom={`1px solid ${color}`}
-                _hover={{ boxShadow: `1px 1px 16px ${color}` }}
+                _hover={{ boxShadow: `2px 2px 16px ${color}` }}
                 width={{ base: "100%", md: "80%", xl: "40%" }}
                 height={{ base: "100px", md: "200px" }}
                 className="homeSkills"
