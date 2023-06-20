@@ -8,10 +8,12 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    useColorMode,
+    useColorModeValue,
 } from "@chakra-ui/react"
 
 import { useDisclosure } from "@chakra-ui/react"
-import { Box, Flex, Stack, Center, Container } from "@chakra-ui/react"
+import { Box, Flex, Stack, Center, Container, Grid } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Button, ButtonGroup, Tooltip } from "@chakra-ui/react"
 import { Heading, Text, Divider, Spacer, Img } from "@chakra-ui/react"
@@ -29,8 +31,8 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     const [isMobile] = useMediaQuery("(max-width: 768px)")
     useEffect(() => {
         if (isMobile) {
-            setCardWidth(400)
-            setCardHeight(200)
+            setCardWidth(window.innerWidth)
+            setCardHeight(window.innerHeight * 0.7)
         } else {
             setCardWidth(992)
             setCardHeight(512)
@@ -42,14 +44,18 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     const projectImages = project.projectImgs !== "" && useCallback(
         project.projectImgs?.map(url => {
             return (
-                <Box
-                    key={nanoid()}
-                    width={cardWidth}
-                    height={cardHeight}
-                    as={Center}
+                <Grid key={nanoid()}
+                    w={cardWidth}
+                    maxH={cardHeight}
+                    justifyContent="center"
+                    alignItems="center"
                 >
-                    <Image src={url} objectFit="fill" />
-                </Box>
+                    <Image
+                        src={url}
+                        objectPosition="center"
+                        h={cardHeight}
+                    />
+                </Grid>
             )
         }),
         [project]
@@ -73,7 +79,9 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     </Text>
                     <Spacer />
                     <ButtonGroup gap={2}>
-                        <Button className="project-detail-btns" onClick={() => window.open(project.source, "_blank")}>source</Button>
+                        {
+                            project.source != null && <Button className="project-detail-btns" onClick={() => window.open(project.source, "_blank")}>source</Button>
+                        }
                         {
                             project.uri !== null &&
                             <Button className="project-detail-btns" onClick={() => window.open(project.uri, "_blank")}>link</Button>

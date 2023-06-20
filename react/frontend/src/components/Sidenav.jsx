@@ -1,4 +1,3 @@
-import "./Sidenav.css"
 import { useState, useEffect } from "react"
 import { Button, ButtonGroup, IconButton, Icon, Tooltip } from "@chakra-ui/react"
 import { WrapItem, Text, Divider, Stack, Wrap, List, ListItem, Flex, useMediaQuery } from "@chakra-ui/react"
@@ -10,7 +9,19 @@ function Sidenav({ pages, activePage, selectPage }) {
     const [isLarge] = useMediaQuery("(min-width: 992px)")
 
     return (
-        <Stack direction={{ base: "row", lg: "column" }}>
+        <Stack
+            // bg="lightgreen"
+            className="sidenav"
+            as="aside"
+            width={{ base: "100%", lg: "fit-content" }}
+            height={{ base: "fit-content" }}
+            justifyContent={{ base: "center", lg: "flex-start" }}
+            direction={{ base: "row", lg: "column" }}
+            pt={{ base: 0, lg: 2 }}
+            mt="60px"
+            position="sticky"
+            left={0}
+        >
             {
                 Object.keys(pages).map((page) => {
                     return (
@@ -22,34 +33,36 @@ function Sidenav({ pages, activePage, selectPage }) {
                             aria-label={page}
                             textTransform="capitalize"
                         >
-
-                            {
-                                isLarge ?
-                                    <Button
-                                        className="sidenavButton"
-                                        variant="ghost"
-                                        onClick={(event) => selectPage(event)}
-                                        isActive={page === activePage}
-                                        name={page}
-                                        leftIcon={pages[page].icon}
-                                    >
-                                        <Text className="sidenavButtonText">
-                                            {page}
-                                        </Text>
-                                    </Button>
-                                    :
-
-                                    <IconButton
-                                        className="sidenavButton"
-                                        variant="ghost"
-                                        onClick={event => selectPage(event)}
-                                        isActive={page === activePage}
-                                        name={page}
-                                        icon={pages[page].icon}
-                                    />
-
-                            }
-
+                            {/* <ButtonGroup> */}
+                            <ButtonGroup size={{ base: "md", md: "lg", lg: "md" }}>
+                                {
+                                    isLarge ?
+                                        <Button
+                                            variant="ghost"
+                                            onClick={(event) => selectPage(event)}
+                                            isActive={page === activePage}
+                                            name={page}
+                                            leftIcon={pages[page].icon}
+                                            borderRadius="10px"
+                                            width="100%"
+                                            justifyContent="flex-start"
+                                            px={2}
+                                        >
+                                            <Text textTransform="capitalize">
+                                                {page}
+                                            </Text>
+                                        </Button>
+                                        :
+                                        <IconButton
+                                            variant="ghost"
+                                            onClick={event => selectPage(event)}
+                                            isActive={page === activePage}
+                                            name={page}
+                                            icon={pages[page].icon}
+                                        />
+                                }
+                            </ButtonGroup>
+                            {/* </ButtonGroup> */}
                         </Tooltip >
                     )
                 })

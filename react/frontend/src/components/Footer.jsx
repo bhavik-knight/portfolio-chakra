@@ -1,10 +1,20 @@
-import "./Footer.css"
-import { Flex } from "@chakra-ui/react"
+import { Center, Flex, Text } from "@chakra-ui/react"
 
 function Footer(props) {
+    const year = new Date().getFullYear();
     return (
-        <Flex bg="yellow" className="navbar" h={{ base: "50px", md: "60px" }}>
-            Footer
+        <Flex
+            mt={2}
+            className="navbar"
+            h={{ base: "50px", md: "60px" }}
+            boxShadow="0 0 16px 0"
+            justifyContent="center"
+            // position="abosolute"
+            left="0" right="0" bottom="0"
+        >
+            <Text as={Center}>
+                © {year} Developed by Bhavik Bhagat
+            </Text>
         </ Flex>
     )
 }

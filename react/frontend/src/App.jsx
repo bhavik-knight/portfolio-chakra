@@ -77,35 +77,21 @@ function App() {
             />
             {/* middle part */}
             <Flex
-                minH="100vh"
                 flexdirection={{ base: "column", lg: "row" }}
                 flexWrap={{ base: "wrap", lg: "nowrap" }}
             >
+                <Sidenav
+                    pages={pages}
+                    activePage={currentPage}
+                    selectPage={handleSelectPage}
+                />
 
                 <Flex
-                    // bg="lightgreen"
-                    className="sidenav"
-                    as="aside"
-                    width={{ base: "100%", lg: "15%" }}
-                    flexDirection={{ base: "row", lg: "column" }}
-                    flexWrap={{ base: "wrap", lg: "nowrap" }}
-                    justifyContent={{ base: "center", lg: "flex-start" }}
-                    pt={2}
-                    gap={2}
-                >
-                    <Sidenav
-                        pages={pages}
-                        activePage={currentPage}
-                        selectPage={handleSelectPage}
-                    />
-                </Flex>
-                <Flex
-                    // bg="lightgreen"
+                    minH="100vh"
                     className="content"
                     as="main"
                     px={{ base: 0, lg: "4px" }}
-                    width={{ base: "100%", lg: "80%" }}
-                    minH="fit-content"
+                    width={{ base: "100%", lg: "85%" }}
                     mx="auto"
                     justify="center"
                 >
@@ -120,7 +106,6 @@ function App() {
 }
 
 export { App }
-
 
 
 // reference: transition of ball - can be use to track cursor
