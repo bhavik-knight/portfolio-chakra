@@ -28,7 +28,7 @@ function ProjectCard({ project }) {
             }
         >
             <Stack justifyContent="center">
-                <Flex>
+                <Flex as={Center}>
                     <Img src={project.displayImg} className="projectDisplayImg" />
                 </Flex>
 
