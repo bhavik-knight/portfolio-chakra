@@ -78,7 +78,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
                         onClick={() => handleBtnClick(b)}
                         variant="ghost"
                         _hover={{ boxShadow: "1px 1px 4px 1px" }}
-                        _size={{ base: "sm", lg: "xl" }}
+                        _size={{ base: "xs", lg: "xl" }}
                         icon={current === b ? <VscCircleFilled /> : <BiRadioCircle />}
                     />
                 )
@@ -152,7 +152,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
             {/* pagination area */}
             <Flex
                 mx="auto"
-                width="90%"
+                width={{ base: "100%", lg: "90%" }}
                 direction="row"
                 alignItems="center"
             >
@@ -165,9 +165,15 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
                 </Button>
 
                 {/* dots or numbered pagination */}
-                <Center as={ButtonGroup} mx="auto" my={2} isAttached>
+                <ButtonGroup
+                    as={Center}
+                    mx="auto"
+                    my={2}
+                    isAttached
+                    _size={{ base: "xs", lg: "md" }}
+                >
                     {paginationButtons(btnType)}
-                </Center >
+                </ButtonGroup >
 
                 <Button
                     onClick={() => handleBtnClick(0)}

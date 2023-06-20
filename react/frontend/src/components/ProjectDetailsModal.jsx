@@ -31,8 +31,8 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     const [isMobile] = useMediaQuery("(max-width: 768px)")
     useEffect(() => {
         if (isMobile) {
-            setCardWidth(400)
-            setCardHeight(200)
+            setCardWidth(window.innerWidth)
+            setCardHeight(window.innerHeight * 0.7)
         } else {
             setCardWidth(992)
             setCardHeight(512)
