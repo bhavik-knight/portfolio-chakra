@@ -41,7 +41,7 @@ function ProjectCard({ project }) {
                 </CardHeader>
 
                 <CardBody p={0}>
-                    <Text px={4} className="projectDetails">
+                    <Text px={4} className="projectDetails" textAlign="justify">
                         {project.description}
                     </Text>
                 </CardBody>
