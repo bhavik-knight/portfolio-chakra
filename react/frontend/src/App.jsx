@@ -10,6 +10,7 @@ import { Education } from "./components/Education"
 import { Certificates } from "./components/Certificates"
 import { Experiences } from "./components/Experiences"
 import { Home } from "./components/Home"
+import { Contact } from "./components/Contact"
 import { ResponsiveIcons } from "./components/ResponsiveIcons"
 
 
@@ -48,6 +49,11 @@ function App() {
             "page": <Experiences />,
         },
 
+        "contact": {
+            "icon": ResponsiveIcons.contact,
+            "page": <Contact />
+        }
+
         // "certificates": {
         //     "icon": ResponsiveIcons.certificates,
         //     "page": <Certificates />
@@ -57,7 +63,6 @@ function App() {
     // to load a particular page on button click
     const [currentPage, setCurrentPage] = useState(localStorage.getItem("currentPage") || "home")
     function handleSelectPage(event) {
-        console.log(`app - side bar button click event: ${event}`)
         setCurrentPage(event.currentTarget.name)
         console.log(`app - ${currentPage}`)
     }
@@ -66,6 +71,7 @@ function App() {
         document.title = `Bhavik | ${currentPage[0].toUpperCase() + currentPage.substring(1)}`
         window.scrollTo(0, 0)
     }, [currentPage])
+
 
     // this is the function that will render the DOM
     return (
