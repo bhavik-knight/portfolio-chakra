@@ -61,6 +61,8 @@ import { GiFilmProjector } from "@react-icons/all-files/gi/GiFilmProjector"
 import { MdSchool } from "@react-icons/all-files/md/MdSchool"
 import { MdWork } from "@react-icons/all-files/md/MdWork"
 import { FaAward } from "@react-icons/all-files/fa/FaAward"
+import { GoMail } from "@react-icons/all-files/go/GoMail"
+import { MdContactMail } from "@react-icons/all-files/md/MdContactMail"
 
 const ResponsiveIcons = {
     // light-dark
@@ -73,6 +75,7 @@ const ResponsiveIcons = {
     "projects": <GiFilmProjector className="icons" />,
     "education": <MdSchool className="icons" />,
     "experiences": <MdWork className="icons" />,
+    "contact": <MdContactMail className="icons" />,
     "certificates": <FaAward className="icons" />,
 
     // navbar
