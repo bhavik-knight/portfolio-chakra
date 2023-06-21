@@ -10,7 +10,8 @@ import { Formik, Field, useFormik } from "formik"
 // some styles for the form
 const formDataStyles = {
     p: 2,
-    my: 8,
+    my: { base: 4, lg: 8 },
+    spacing: 0,
 }
 
 // component
@@ -29,11 +30,14 @@ function Contact() {
     })
 
     function createFormField({ label, type, fieldType, placeholder }) {
-        console.log(`creating: ${label}, ${type}, ${fieldType}, ${placeholder}`)
         return (
             <FormControl>
                 <Stack {...formDataStyles}>
-                    <FormLabel htmlFor={label}>{label[0]?.toUpperCase() + label?.slice(1)}</FormLabel>
+                    <FormLabel
+                        htmlFor={label}
+                    >
+                        {label[0]?.toUpperCase() + label?.slice(1)}
+                    </FormLabel>
                     <Field
                         as={fieldType}
                         id={label}
@@ -51,12 +55,13 @@ function Contact() {
 
     return (
         <Stack p={2} gap={2} width="100%">
-            <Card as="section" display={{ base: "none", md: "flex" }} _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader>
                     Contact Me
                 </CardHeader>
 
                 <Divider mx="auto" width="95%" />
+
                 <CardBody>
                     <Stack
                         direction={{ base: "column", lg: "row" }}
@@ -65,7 +70,8 @@ function Contact() {
                     >
                         <Box
                             w={{ base: "100%", lg: "60%" }}
-                            p="2em"
+                            px={{ base: 2, lg: "2em" }}
+                            // my={{ base: 0, lg: 4 }}
                             border="1px solid gray"
                             borderRadius="1em"
                         >
@@ -117,8 +123,8 @@ function Contact() {
                                         )
                                     }
 
-                                    <Center>
-                                        <Button type=" submit">send</Button>
+                                    <Center {...formDataStyles}>
+                                        <Button type="submit">SEND</Button>
                                     </Center>
 
                                 </form>
@@ -134,7 +140,11 @@ function Contact() {
                             <Image src="logos/BhavikQR.png" alt="qr-code" borderRadius="1em" />
                         </Box>
                     </Stack>
+
                 </CardBody>
+
+                <Divider mx="auto" width="95%" />
+
                 <CardFooter>
                     Please fill the details to send me an email. Thank you.
                 </CardFooter>
