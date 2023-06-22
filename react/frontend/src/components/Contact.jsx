@@ -28,6 +28,7 @@ const socialBtnStyles = {
 }
 
 // validation the form input data
+const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 const formValidationSchema = yup.object({
     name: yup
         .string()
@@ -37,9 +38,8 @@ const formValidationSchema = yup.object({
         .string(),
     email: yup
         .string()
-        .min(3, "Email must be at least 3 characters long!")
-        .email("Invalid email! Please check your email.")
-        .required("Email is required to send the email!"),
+        .required("Email is required to send the email!")
+        .matches(emailRegEx, "Invalid email! Please check your email."),
     subject: yup
         .string()
         .max(64, "Subject cannot be longer than 64 characters")
@@ -55,6 +55,7 @@ function Contact() {
     const formik = useFormik({
         initialValues: {
             name: "",
+            phone: "",
             email: "",
             subject: "",
             message: "",
