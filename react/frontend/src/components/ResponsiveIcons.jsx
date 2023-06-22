@@ -3,6 +3,7 @@ import { useMediaQuery } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
 
 // skills - technologies
+import { PhoneIcon } from "@chakra-ui/icons"
 import { SiLinuxmint } from "@react-icons/all-files/si/SiLinuxmint"
 import { SiZorin } from "@react-icons/all-files/si/SiZorin"
 import { FaConfluence } from "@react-icons/all-files/fa/FaConfluence"
@@ -50,6 +51,9 @@ import { FaSun } from "@react-icons/all-files/fa/FaSun"
 import { SiApache } from "@react-icons/all-files/si/SiApache"
 import { FcLinux } from "@react-icons/all-files/fc/FcLinux"
 import { FaCode } from "@react-icons/all-files/fa/FaCode"
+import { CgTerminal } from "@react-icons/all-files/cg/CgTerminal"
+import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane"
+
 
 // top navbar
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
@@ -63,24 +67,38 @@ import { MdWork } from "@react-icons/all-files/md/MdWork"
 import { FaAward } from "@react-icons/all-files/fa/FaAward"
 import { GoMail } from "@react-icons/all-files/go/GoMail"
 import { MdContactMail } from "@react-icons/all-files/md/MdContactMail"
+import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook"
+import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
+import { FaTelegram } from "@react-icons/all-files/fa/FaTelegram"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 
 const ResponsiveIcons = {
     // light-dark
-    "moon": <FaMoon className="icons" />,
-    "sun": <FaSun className="icons" />,
-
-    // sidebar
-    "home": <FaHome className="icons" />,
-    "skills": <FaCode className="icons" />,
-    "projects": <GiFilmProjector className="icons" />,
-    "education": <MdSchool className="icons" />,
-    "experiences": <MdWork className="icons" />,
-    "contact": <MdContactMail className="icons" />,
-    "certificates": <FaAward className="icons" />,
+    "moon": { name: "moon", icon: <FaMoon /> },
+    "sun": { name: "sun", icon: <FaSun /> },
 
     // navbar
-    "linkedin": <FaLinkedinIn className="icons" />,
-    "github": <FaGithub className="icons" />,
+    "linkedin": <FaLinkedinIn />,
+    "github": <FaGithub />,
+
+    // social
+    "fb": { name: "facebook", icon: <FaFacebook size="2em" /> },
+    "ig": { name: "instragram", icon: <FaInstagram size="2em" /> },
+    "tg": { name: "telegram", icon: <FaTelegram size="2em" /> },
+    "twtr": { name: "twitter", icon: <FaTwitter size="2em" /> },
+
+    // sidebar: button icons
+    "home": <FaHome />,
+    "skills": <FaCode />,
+    "projects": <GiFilmProjector />,
+    "education": <MdSchool />,
+    "experiences": <MdWork />,
+    "contact": <MdContactMail />,
+    "certificates": <FaAward />,
+
+    // other button icons
+    "send": { name: "SEND", icon: <FaPaperPlane /> },
+    "phone": { name: "phone", icon: PhoneIcon },
 
     // languages
     "html": <FaHtml5 className="icons" />,
@@ -125,6 +143,7 @@ const ResponsiveIcons = {
     "ubuntu": <FaUbuntu className="icons" />,
     "linuxMint": <SiLinuxmint className="icons" />,
     "zorinOS": <SiZorin className="icons" />,
+    "terminal": <CgTerminal className="icons" />,
 
     // project mgmt / apps
     "latex": <SiLatex className="icons" />,
