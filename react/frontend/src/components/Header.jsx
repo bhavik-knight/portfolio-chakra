@@ -59,13 +59,13 @@ function Header({ colorMode, changeColorMode, title }) {
 
     const sunIcon = getNavbarIconButton(
         "sun",
-        ResponsiveIcons["sun"],
+        ResponsiveIcons["sun"]["icon"],
         changeColorMode,
     )
 
     const moonIcon = getNavbarIconButton(
         "moon",
-        ResponsiveIcons["moon"],
+        ResponsiveIcons["moon"]["icon"],
         changeColorMode
     )
 
