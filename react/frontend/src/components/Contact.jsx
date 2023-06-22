@@ -98,7 +98,7 @@ function Contact() {
     }
 
     return (
-        <Stack p={2} gap={2} width="100%">
+        <Stack p={2} width="100%">
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader>
                     <Heading as={Center}>Contact Me</Heading>
@@ -116,85 +116,90 @@ function Contact() {
                             w={{ base: "100%", lg: "60%" }}
                             px={{ base: 2, lg: "2em" }}
                             border="1px solid darkgray"
-                            // borderColor={useColorModeValue("lightgray", "darkgray")}
                             borderRadius="1em"
+                            as={Center}
                         >
-                            <Formik {...formik}>
-                                <Form onSubmit={handleSubmit}>
-                                    {/* name */}
-                                    {
-                                        createFormField({
-                                            label: "name",
-                                            type: "text",
-                                            fieldType: Input,
-                                            placeholder: "Jane Doe",
-                                            required: true,
-                                        })
-                                    }
+                            <Box h="fit-content" w="100%">
 
-                                    {/* phone */}
-                                    {
-                                        createFormField({
-                                            label: "phone",
-                                            type: "text",
-                                            fieldType: Input,
-                                            placeholder: "(xxx)-xxx-xxxx",
-                                            required: false,
-                                        })
-                                    }
+                                <Formik {...formik}>
+                                    <Form onSubmit={handleSubmit}>
+                                        {/* name */}
+                                        {
+                                            createFormField({
+                                                label: "name",
+                                                type: "text",
+                                                fieldType: Input,
+                                                placeholder: "Jane Doe",
+                                                required: true,
+                                            })
+                                        }
 
-                                    {/* email */}
-                                    {
-                                        createFormField({
-                                            label: "email",
-                                            type: "email",
-                                            fieldType: Input,
-                                            placeholder: "jane.doe@example.com",
-                                            required: true,
-                                        })
-                                    }
+                                        {/* phone */}
+                                        {
+                                            createFormField({
+                                                label: "phone",
+                                                type: "text",
+                                                fieldType: Input,
+                                                placeholder: "(xxx)-xxx-xxxx",
+                                                required: false,
+                                            })
+                                        }
 
-                                    {/* subject */}
-                                    {
-                                        createFormField({
-                                            label: "subject",
-                                            type: "text",
-                                            fieldType: Input,
-                                            placeholder: "Review of Portfolio",
-                                            required: true,
-                                        })
-                                    }
+                                        {/* email */}
+                                        {
+                                            createFormField({
+                                                label: "email",
+                                                type: "email",
+                                                fieldType: Input,
+                                                placeholder: "jane.doe@example.com",
+                                                required: true,
+                                            })
+                                        }
 
-                                    {/* message */}
-                                    {
-                                        createFormField({
-                                            label: "message",
-                                            type: "text",
-                                            fieldType: Textarea,
-                                            placeholder: "Comments ...",
-                                            required: true,
-                                        })
-                                    }
+                                        {/* subject */}
+                                        {
+                                            createFormField({
+                                                label: "subject",
+                                                type: "text",
+                                                fieldType: Input,
+                                                placeholder: "Review of Portfolio",
+                                                required: true,
+                                            })
+                                        }
 
-                                    {/* submit button */}
-                                    <Box {...formDataStyles}>
-                                        <Button
-                                            w="100%"
-                                            type="submit"
-                                            variant="outline"
-                                            leftIcon={ResponsiveIcons["send"]["icon"]}
-                                        >
-                                            {ResponsiveIcons["send"]["name"]}
-                                        </Button>
-                                    </Box>
-                                </Form>
-                            </Formik>
+                                        {/* message */}
+                                        {
+                                            createFormField({
+                                                label: "message",
+                                                type: "text",
+                                                fieldType: Textarea,
+                                                placeholder: "Comments ...",
+                                                required: true,
+                                            })
+                                        }
+
+                                        {/* submit button */}
+                                        <Box {...formDataStyles}>
+                                            <Button
+                                                w="100%"
+                                                type="submit"
+                                                variant="outline"
+                                                leftIcon={ResponsiveIcons["send"]["icon"]}
+                                            >
+                                                {ResponsiveIcons["send"]["name"]}
+                                            </Button>
+                                        </Box>
+                                    </Form >
+                                </Formik >
+
+                            </Box>
                         </Box>
 
                         <Box
                             as={Center}
                             w={{ base: "100%", lg: "40%" }}
                             fontSize={{ base: "0.8em", lg: "1em" }}
+                            border="1px solid darkgray"
                             borderRadius="1em"
                             p="2em"
                         >
