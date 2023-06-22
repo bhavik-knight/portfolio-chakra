@@ -161,7 +161,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
                     size={{ base: "sm", lg: "md" }}
                     width="fit-content"
                 >
-                    first
+                    First
                 </Button>
 
                 {/* dots or numbered pagination */}
@@ -176,11 +176,11 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
                 </ButtonGroup >
 
                 <Button
-                    onClick={() => handleBtnClick(0)}
+                    onClick={() => handleBtnClick(length - 1)}
                     size={{ base: "sm", lg: "md" }}
                     width="fit-content"
                 >
-                    last
+                    Last
                 </Button>
             </Flex>
         </Box >
