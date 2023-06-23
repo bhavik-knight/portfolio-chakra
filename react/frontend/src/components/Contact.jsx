@@ -303,7 +303,7 @@ export { Contact }
 
 
 
-
+// helper components
 function CreateTextField({ label, required, ...props }) {
     const [field, meta] = useField(props)
     return (
@@ -332,7 +332,7 @@ function CreateTextareaField({ label, required, ...props }) {
         <FormControl isRequired={required} isInvalid={meta.touched && meta.error}>
             <Stack {...formDataStyles}>
                 <FormLabel htmlFor={props.name} mb={0}>{label}</FormLabel>
-                <Textarea {...field} {...props} _placeholder={{ opacity: 1 }} />
+                <Textarea {...field} {...props} _placeholder={{ opacity: 1 }} size={{ base: "md", lg: "lg" }} />
                 <FormErrorMessage>{meta.error}</FormErrorMessage>
             </Stack>
         </FormControl>
