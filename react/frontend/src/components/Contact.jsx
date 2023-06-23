@@ -19,12 +19,14 @@ const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
 const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
+
 // some styles for the form
 const formDataStyles = {
     spacing: 0,
     my: 2,
     py: 2,
 }
+
 
 // box styles for form and QR code
 const boxStyles = {
@@ -35,11 +37,13 @@ const boxStyles = {
     as: Center
 }
 
+
 // social icon button size
 const socialBtnStyles = {
     isRound: true,
     _hover: { boxShadow: "1px 1px 4px" }
 }
+
 
 // initial fields planned for the form
 const formInitialValues = {
@@ -49,6 +53,7 @@ const formInitialValues = {
     subject: "",
     message: "",
 }
+
 
 // validation the form input data
 const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
@@ -71,6 +76,7 @@ const formValidationSchema = yup.object({
         .string()
         .required("Please enter your message."),
 })
+
 
 // react component
 function Contact() {
@@ -203,7 +209,9 @@ function Contact() {
                                             />
 
                                             {/* submit button */}
-                                            <Button type="submit" w="100%" isDisabled={isSubmitting}>SEND</Button>
+                                            <Button type="submit" w="100%" isDisabled={isSubmitting}>
+                                                {ResponsiveIcons["send"]["name"]}
+                                            </Button>
                                         </Form>
 
                                     )}
@@ -235,10 +243,15 @@ function Contact() {
                                     <Image src="logos/BhavikQR.png" alt="qr-code" borderRadius="1em" />
                                 </Box>
 
-                                <Center >
+                                <Center>
                                     {/* ref: https://stackoverflow.com/questions/63782544/react-open-mailto-e-mail-client-onclick-with-body-from-textarea */}
                                     <Link to="#" onClick={handleEmailClick}>
-                                        bhavik.bhagat.jobs@gmail.com
+                                        <Flex alignItems="center" gap={1}>
+                                            <Icon as={ResponsiveIcons["email"]["icon"]} />
+                                            <Text>
+                                                bhavik.bhagat.jobs@gmail.com
+                                            </Text>
+                                        </Flex>
                                     </Link>
                                 </Center>
 
@@ -292,17 +305,6 @@ function Contact() {
 }
 
 
-export { Contact }
-
-
-// reference: formik library for the form: https://formik.org/docs/tutorial
-// reference: yup for validation: https://github.com/jquense/yup
-// reference: email-service without server: email-js library: https://www.emailjs.com/docs/examples/reactjs/
-// reference: send email help video: https://www.youtube.com/watch?v=bMq2riFCF90
-
-
-
-
 // helper components
 function CreateTextField({ label, required, ...props }) {
     const [field, meta] = useField(props)
@@ -326,6 +328,7 @@ function CreateTextField({ label, required, ...props }) {
     )
 }
 
+
 function CreateTextareaField({ label, required, ...props }) {
     const [field, meta] = useField(props)
     return (
@@ -338,3 +341,13 @@ function CreateTextareaField({ label, required, ...props }) {
         </FormControl>
     )
 }
+
+
+// export only required react component
+export { Contact }
+
+
+// reference: formik library for the form: https://formik.org/docs/tutorial
+// reference: yup for validation: https://github.com/jquense/yup
+// reference: email-service without server: email-js library: https://www.emailjs.com/docs/examples/reactjs/
+// reference: send email help video: https://www.youtube.com/watch?v=bMq2riFCF90

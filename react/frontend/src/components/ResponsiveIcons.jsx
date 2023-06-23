@@ -99,6 +99,7 @@ const ResponsiveIcons = {
     // other button icons
     "send": { name: "SEND", icon: <FaPaperPlane /> },
     "phone": { name: "phone", icon: PhoneIcon },
+    "email": { name: "email", icon: GoMail },
 
     // languages
     "html": <FaHtml5 className="icons" />,

@@ -1,10 +1,10 @@
+import { experiences, volunteer } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, Spacer } from "@chakra-ui/react"
 import { Stack, Flex, Divider } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
-import { experiences, volunteer } from "../data/portfolio_db.json"
 import { ExperienceCard } from "./ExperienceCard"
 
 function Experiences() {

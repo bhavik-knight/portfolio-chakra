@@ -1208,81 +1208,103 @@
     "skills": [
         {
             "id": 0,
-            "languages": [
-                "Python",
-                "JavaScript",
-                "C",
-                "C++",
-                "SQL",
-                "Java",
-                "HTML",
-                "CSS",
-                "PHP",
-                "R",
-                "Kotlin"
-            ],
-            "frameworks": [
-                "ReactJS",
-                "ChakraUI",
-                "MaterialUI",
-                "Bootstrap",
-                "jQuery",
-                "Django",
-                "Flask",
-                "TensorFlow",
-                "Keras",
-                "Scikit-Learn",
-                "NumPy",
-                "Pandas",
-                "NLTK",
-                "BeautifulSoup",
-                "Matplotlib",
-                "Plotly",
-                "Seaborn",
-                "PySwarms",
-                "PyGad",
-                "PyGame"
-            ],
-            "technologies": [
-                "Git",
-                "Docker",
-                "Vim",
-                "WSL",
-                "GitHub",
-                "Bitbucket",
-                "GitLab"
-            ],
-            "os": [
-                "Windows",
-                "Linux",
-                "Andriod"
-            ],
-            "management": [
-                "Agile",
-                "Waterfall",
-                "Scrum",
-                "Jira",
-                "Confluence",
-                "Trello"
-            ],
-            "apps": [
-                "TeamViewer",
-                "Google Workspace",
-                "Office365",
-                "Advanced Excel",
-                "VMWare",
-                "VirtualBox",
-                "Zendesk",
-                "AWS - EC2",
-                "AWS - RDS",
-                "AWS - S3",
-                "GCP - GCE",
-                "GCP - Firestore",
-                "GCP - Firebase",
-                "Apache",
-                "MySQL",
-                "Postgre",
-                "SQLite"
+            "name": "languages",
+            "data": [
+                "python",
+                "javaScript",
+                "c",
+                "c++",
+                "sql",
+                "java",
+                "html",
+                "css",
+                "php",
+                "r",
+                "kotlin"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "frameworks",
+            "data": [
+                "reactjs",
+                "chakraui",
+                "materialui",
+                "bootstrap",
+                "jquery",
+                "django",
+                "flask",
+                "tensorFlow",
+                "keras",
+                "sklearn",
+                "mumpy",
+                "pandas",
+                "nltk",
+                "beautifulsoup",
+                "matplotlib",
+                "plotly",
+                "seaborn",
+                "pyswarms",
+                "pygad",
+                "pygame"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "technologies",
+            "data": [
+                "git",
+                "docker",
+                "vim",
+                "wsl",
+                "github",
+                "bitbucket",
+                "gitLab",
+                "dockerhub"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "os",
+            "data": [
+                "windows",
+                "linux",
+                "andriod"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "management",
+            "data": [
+                "agile",
+                "waterfall",
+                "scrum",
+                "jira",
+                "confluence",
+                "trello"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "apps",
+            "data": [
+                "teamviewer",
+                "googleworkspace",
+                "office365",
+                "advancedexcel",
+                "vmware",
+                "virtualbox",
+                "zendesk",
+                "awsec2",
+                "awsrds",
+                "awss3",
+                "gcpgce",
+                "gcpfirestore",
+                "gcpfirebase",
+                "apache",
+                "mysql",
+                "postgresql",
+                "sqlite"
             ]
         }
     ]

@@ -1,5 +1,5 @@
-import "./Projects.css"
 import { projects } from "../data/portfolio_db.json"
+import "./Projects.css"
 import { useState } from "react"
 import { Divider, UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Heading, Text } from "@chakra-ui/react"

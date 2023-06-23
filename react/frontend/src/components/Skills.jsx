@@ -1,3 +1,4 @@
+import { skills } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
 import { Flex, Center, Container } from "@chakra-ui/react"
@@ -6,10 +7,28 @@ import { Button, Tag } from "@chakra-ui/react"
 import { Stack, VStack, HStack } from "@chakra-ui/react"
 import { Divider, Spacer } from "@chakra-ui/react"
 import { List, ListItem } from "@chakra-ui/react"
-import { skills } from "../data/portfolio_db.json"
 import { ProgrammingParadigms } from "./ProgrammingParadigms"
+import { useState, useEffect } from "react"
 
 function Skills() {
+    const [languages, setLanguages] = useState([])
+    const [frameworks, setFrameworks] = useState([])
+    const [technologies, setTechnologies] = useState([])
+    const [os, setOs] = useState([])
+    const [management, setManagement] = useState([])
+    const [apps, setApps] = useState([])
+
+    useEffect(() => {
+        skills.map(skill => {
+            skill.name === "languages" && setLanguages(skill.data)
+            skill.name === "frameworks" && setFrameworks(skill.data)
+            skill.name === "technologies" && setTechnologies(skill.data)
+            skill.name === "os" && setOs(skill.data)
+            skill.name === "management" && setManagement(skill.data)
+            skill.name === "apps" && setApps(skill.data)
+        })
+    }, [languages, frameworks, technologies, os, management, apps])
+
 
     return (
         <Stack p={2} gap={2}>
@@ -54,11 +73,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].languages.map(l => {
-                            return (
-                                <Tag key={nanoid()}>{l}</Tag>
-                            )
-                        })
+                        languages.map(l => (<Tag key={nanoid()}>{l}</Tag>))
                     }
                 </CardBody>
             </Card>
@@ -70,7 +85,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].frameworks.map(fw => {
+                        frameworks.map(fw => {
                             return (
                                 <Tag key={nanoid()}>{fw}</Tag>
                             )
@@ -86,7 +101,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].technologies.map(tech => {
+                        technologies.map(tech => {
                             return (
                                 <Tag key={nanoid()}>{tech}</Tag>
                             )
@@ -94,7 +109,7 @@ function Skills() {
                     }
 
                     {
-                        skills[0].os.map(o => {
+                        os.map(o => {
                             return (
                                 <Tag key={nanoid()}>{o}</Tag>
                             )
@@ -110,7 +125,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].apps.map(app => {
+                        apps.map(app => {
                             return (
                                 <Tag key={nanoid()}>{app}</Tag>
                             )
@@ -126,7 +141,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].management.map(mgmt => {
+                        management.map(mgmt => {
                             return (
                                 <Tag key={nanoid()}>{mgmt}</Tag>
                             )
