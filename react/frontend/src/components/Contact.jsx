@@ -9,16 +9,25 @@ import { ButtonGroup, Button, IconButton, Icon } from "@chakra-ui/react"
 
 // form related import
 import * as yup from "yup"
-import { Formik, Form, Field, useFormik } from "formik"
+import { Formik, Form, Field, useFormik, useField } from "formik"
 import { FormLabel, FormControl, Input, Textarea, FormErrorMessage } from "@chakra-ui/react"
-
+import emailjs from "@emailjs/browser"
 
 
 // some styles for the form
 const formDataStyles = {
-    p: 2,
     spacing: 0,
-    my: 2
+    my: 2,
+    py: 2,
+}
+
+// box styles for form and QR code
+const boxStyles = {
+    border: "1px solid darkgray",
+    borderRadius: "1em",
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    p: { base: 2, md: "2em", lg: "2em" },
+    as: Center
 }
 
 // social icon button size
@@ -27,12 +36,21 @@ const socialBtnStyles = {
     _hover: { boxShadow: "1px 1px 4px" }
 }
 
+// initial fields planned for the form
+const formInitialValues = {
+    name: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+}
+
 // validation the form input data
 const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 const formValidationSchema = yup.object({
     name: yup
         .string()
-        .max(64, "Name is too long! Max length: 64")
+        .max(10, "Name is too long! Max length: 64")
         .required("Please tell me your name."),
     phone: yup
         .string(),
@@ -49,48 +67,13 @@ const formValidationSchema = yup.object({
         .required("Please enter your message."),
 })
 
-// component
+// react component
 function Contact() {
-    // formik with useFormik hook
-    const formik = useFormik({
-        initialValues: {
-            name: "",
-            phone: "",
-            email: "",
-            subject: "",
-            message: "",
-        },
 
-        validationSchema: formValidationSchema
-    })
+    function handleFormSubmit(values) {
+        console.log(`handle-form-submit: ${JSON.stringify(values, null, 2)}`)
 
-    function handleSubmit(e) {
-        e.preventDefault()
-        console.log(`errors: ${JSON.stringify(formik.errors)}`)
-        console.log(`touched: ${JSON.stringify(formik.touched)}`)
-        console.log(`handle submit: ${JSON.stringify(formik.values)}`)
-    }
-
-    function createFormField({ label, type, fieldType, required, placeholder }) {
-        return (
-            <FormControl isRequired={required} isInvalid={formik.touched[label] && formik.errors[label]}>
-                <Stack {...formDataStyles}>
-                    <FormLabel htmlFor={label}>{label && label[0].toUpperCase() + label.slice(1)}</FormLabel>
-                    <Field
-                        as={fieldType}
-                        id={label}
-                        name={label}
-                        type={type}
-                        value={formik.values[label]}
-                        placeholder={placeholder}
-                        _placeholder={{ opacity: 1 }}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                    />
-                    <FormErrorMessage>{formik.errors[label]}</FormErrorMessage>
-                </Stack>
-            </FormControl >
-        )
+        // email-js to send the email
     }
 
     function handleEmailClick(e) {
@@ -112,153 +95,142 @@ function Contact() {
                         direction={{ base: "column", lg: "row" }}
                         p={{ base: 0, lg: 2 }}
                         mx="auto"
+                        gap={0}
                     >
-                        <Box
-                            w={{ base: "100%", lg: "60%" }}
-                            px={{ base: 2, lg: "2em" }}
-                            border="1px solid darkgray"
-                            borderRadius="1em"
-                            as={Center}
-                        >
-                            <Box h="fit-content" w="100%">
+                        <Box w={{ base: "100%", lg: "60%" }} {...boxStyles}>
+                            <Box w="100%">
 
-                                <Formik {...formik}>
-                                    <Form onSubmit={handleSubmit}>
-                                        {/* name */}
-                                        {
-                                            createFormField({
-                                                label: "name",
-                                                type: "text",
-                                                fieldType: Input,
-                                                placeholder: "Jane Doe",
-                                                required: true,
-                                            })
-                                        }
 
-                                        {/* phone */}
-                                        {
-                                            createFormField({
-                                                label: "phone",
-                                                type: "text",
-                                                fieldType: Input,
-                                                placeholder: "(xxx)-xxx-xxxx",
-                                                required: false,
-                                            })
-                                        }
+                                <Formik
+                                    initialValues={formInitialValues}
+                                    validationSchema={formValidationSchema}
+                                    onSubmit={handleFormSubmit}
+                                >
+                                    {({ isSubmitting }) => (
 
-                                        {/* email */}
-                                        {
-                                            createFormField({
-                                                label: "email",
-                                                type: "email",
-                                                fieldType: Input,
-                                                placeholder: "jane.doe@example.com",
-                                                required: true,
-                                            })
-                                        }
+                                        <Form>
+                                            {/* name */}
+                                            <CreateTextField
+                                                type="text"
+                                                label="Name"
+                                                id="name"
+                                                name="name"
+                                                required={true}
+                                                placeholder="Jane Doe"
+                                            />
 
-                                        {/* subject */}
-                                        {
-                                            createFormField({
-                                                label: "subject",
-                                                type: "text",
-                                                fieldType: Input,
-                                                placeholder: "Review of Portfolio",
-                                                required: true,
-                                            })
-                                        }
+                                            {/* phone number */}
+                                            <CreateTextField
+                                                type="text"
+                                                label="Phone No."
+                                                id="phone"
+                                                name="phone"
+                                                required={false}
+                                                placeholder="(xxx)-xxx-xxxx"
+                                            />
 
-                                        {/* message */}
-                                        {
-                                            createFormField({
-                                                label: "message",
-                                                type: "text",
-                                                fieldType: Textarea,
-                                                placeholder: "Comments ...",
-                                                required: true,
-                                            })
-                                        }
+                                            {/* email */}
+                                            <CreateTextField
+                                                type="email"
+                                                label="Email ID"
+                                                id="email"
+                                                name="email"
+                                                required={true}
+                                                placeholder="jane.doe@example.com"
+                                            />
 
-                                        {/* submit button */}
-                                        <Box {...formDataStyles}>
-                                            <Button
-                                                w="100%"
-                                                type="submit"
-                                                variant="outline"
-                                                leftIcon={ResponsiveIcons["send"]["icon"]}
-                                            >
-                                                {ResponsiveIcons["send"]["name"]}
-                                            </Button>
-                                        </Box>
-                                    </Form >
-                                </Formik >
+                                            {/* subject */}
+                                            <CreateTextField
+                                                type="text"
+                                                label="Subject"
+                                                id="subject"
+                                                name="subject"
+                                                required={true}
+                                                placeholder="Review of Portfolio"
+                                            />
+
+                                            {/* message */}
+                                            <CreateTextareaField
+                                                type="text"
+                                                label="Message"
+                                                id="message"
+                                                name="message"
+                                                required={true}
+                                                placeholder="Comments ..."
+                                            />
+
+                                            {/* submit button */}
+                                            <Button type="submit" w="100%" isDisabled={isSubmitting}>SEND</Button>
+                                        </Form>
+
+                                    )}
+                                </Formik>
+
+
 
                             </Box>
                         </Box>
 
-                        <Box
-                            as={Center}
-                            w={{ base: "100%", lg: "40%" }}
-                            fontSize={{ base: "0.8em", lg: "1em" }}
-                            border="1px solid darkgray"
-                            borderRadius="1em"
-                            p="2em"
-                        >
-                            <VStack>
-                                <Stack
-                                    direction="row"
+                        <Box w={{ base: "100%", lg: "40%" }} {...boxStyles}>
+                            <VStack spacing={2} w="100%">
+                                <Flex
+                                    wrap="wrap"
                                     justifyContent="space-between"
-                                    w="100%"
-                                    px={2}
+                                    boxSize={{ base: "100%", lg: "80%" }}
+                                    mx="auto"
                                 >
                                     <Text>Bhavik Bhagat</Text>
-                                    <Spacer />
                                     <Flex alignItems="center">
                                         <Icon as={ResponsiveIcons["phone"]["icon"]} />&nbsp;
                                         <Text>
                                             (902)-338-0682
                                         </Text>
                                     </Flex>
-                                </Stack>
+                                </Flex>
 
-                                <Image src="logos/BhavikQR.png" alt="qr-code" borderRadius="1em" />
+                                <Box boxSize={{ base: "100%", lg: "80%" }} mx="auto">
+                                    <Image src="logos/BhavikQR.png" alt="qr-code" borderRadius="1em" />
+                                </Box>
 
-                                <Center>
+                                <Center >
                                     {/* ref: https://stackoverflow.com/questions/63782544/react-open-mailto-e-mail-client-onclick-with-body-from-textarea */}
                                     <Link to="#" onClick={handleEmailClick}>
                                         bhavik.bhagat.jobs@gmail.com
                                     </Link>
                                 </Center>
 
-                                <ButtonGroup
-                                    isAttached
-                                    variant="outline"
-                                    size={{ base: "md", lg: "lg" }}
-                                >
-                                    <IconButton
-                                        {...socialBtnStyles}
-                                        icon={ResponsiveIcons["fb"]["icon"]}
-                                        onClick={() => open("https://facebook.com/", "_blank")}
-                                    />
+                                <Center >
+                                    <ButtonGroup
+                                        isAttached
+                                        variant="outline"
+                                        size={{ base: "sm", md: "md" }}
+                                    >
+                                        <IconButton
+                                            {...socialBtnStyles}
+                                            icon={ResponsiveIcons["fb"]["icon"]}
+                                            onClick={() => open("https://facebook.com/", "_blank")}
+                                        />
 
-                                    <IconButton
-                                        {...socialBtnStyles}
-                                        icon={ResponsiveIcons["ig"]["icon"]}
-                                        onClick={() => open("https://instagram.com/", "_blank")}
-                                    />
+                                        <IconButton
+                                            {...socialBtnStyles}
+                                            icon={ResponsiveIcons["ig"]["icon"]}
+                                            onClick={() => open("https://instagram.com/", "_blank")}
+                                        />
 
-                                    <IconButton
-                                        {...socialBtnStyles}
-                                        icon={ResponsiveIcons["tg"]["icon"]}
-                                        onClick={() => open("https://telegram.org/", "_blank")}
-                                    />
+                                        <IconButton
+                                            {...socialBtnStyles}
+                                            icon={ResponsiveIcons["tg"]["icon"]}
+                                            onClick={() => open("https://telegram.org/", "_blank")}
+                                        />
 
-                                    <IconButton
-                                        {...socialBtnStyles}
-                                        icon={ResponsiveIcons["twtr"]["icon"]}
-                                        onClick={() => open("https://twitter.com/", "_blank")}
-                                    />
-                                </ButtonGroup>
+                                        <IconButton
+                                            {...socialBtnStyles}
+                                            icon={ResponsiveIcons["twtr"]["icon"]}
+                                            onClick={() => open("https://twitter.com/", "_blank")}
+                                        />
+                                    </ButtonGroup>
+                                </Center>
+
                             </VStack>
                         </Box>
                     </Stack>
@@ -285,3 +257,42 @@ export { Contact }
 // reference: yup for validation: https://github.com/jquense/yup
 // reference: email-service without server: email-js library: https://www.emailjs.com/docs/examples/reactjs/
 // reference: send email help video: https://www.youtube.com/watch?v=bMq2riFCF90
+
+
+
+
+
+function CreateTextField({ label, required, ...props }) {
+    const [field, meta] = useField(props)
+    return (
+        <FormControl isRequired={required} isInvalid={meta.touched && meta.error}>
+            <Stack {...formDataStyles}>
+                <FormLabel
+                    htmlFor={props.name}
+                    mb={0}
+                >
+                    {label}
+                </FormLabel>
+                <Input
+                    {...field}
+                    {...props}
+                    _placeholder={{ opacity: 1 }}
+                />
+                <FormErrorMessage>{meta.error}</FormErrorMessage>
+            </Stack>
+        </FormControl>
+    )
+}
+
+function CreateTextareaField({ label, required, ...props }) {
+    const [field, meta] = useField(props)
+    return (
+        <FormControl isRequired={required} isInvalid={meta.touched && meta.error}>
+            <Stack {...formDataStyles}>
+                <FormLabel htmlFor={props.name} mb={0}>{label}</FormLabel>
+                <Textarea {...field} {...props} _placeholder={{ opacity: 1 }} />
+                <FormErrorMessage>{meta.error}</FormErrorMessage>
+            </Stack>
+        </FormControl>
+    )
+}
