@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react"
-import { useColorModeValue } from "@chakra-ui/react"
+import { useToast } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { Divider, Spacer, Text, Heading, Image, Link } from "@chakra-ui/react"
 import { Wrap, Stack, HStack, VStack } from "@chakra-ui/react"
@@ -13,6 +13,11 @@ import { Formik, Form, Field, useFormik, useField } from "formik"
 import { FormLabel, FormControl, Input, Textarea, FormErrorMessage } from "@chakra-ui/react"
 import emailjs from "@emailjs/browser"
 
+
+// configure keys needed for email-js stored in env-variable
+const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 // some styles for the form
 const formDataStyles = {
@@ -50,7 +55,7 @@ const emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
 const formValidationSchema = yup.object({
     name: yup
         .string()
-        .max(10, "Name is too long! Max length: 64")
+        .max(64, "Name is too long! Max length: 64")
         .required("Please tell me your name."),
     phone: yup
         .string(),
@@ -69,11 +74,49 @@ const formValidationSchema = yup.object({
 
 // react component
 function Contact() {
+    const emailToast = useToast()
 
-    function handleFormSubmit(values) {
-        console.log(`handle-form-submit: ${JSON.stringify(values, null, 2)}`)
+    async function sendEmail(data) {
+        // email-js to send the email using .send method passing only required field in the object instead of whole form
+        try {
+            // let emailResponse = await fetch("https://httpstat.us/404")
+            let emailResponse = await emailjs.send(serviceId, templateId, data, publicKey)
+            // console.log(`send email response: ${JSON.stringify(emailResponse)}`)
+            if (emailResponse.status != 200) {
+                throw new Error(emailResponse.status)
+            }
+            return emailResponse
+        } catch (error) {
+            throw error
+        }
+    }
 
-        // email-js to send the email
+    function handleSubmit(values, { setSubmitting }) {
+        // console.log(`handle-form-submit: ${JSON.stringify(values, null, 2)}`);
+        // all data is ready at this point; call the method to send the email; since it is async method, it will return a promise
+        (async function () {
+            try {
+                let result = await sendEmail(values)
+                emailToast({
+                    title: "The email is sent successfully.",
+                    description: `Response: ${result.status}`,
+                    status: "success",
+                    isClosable: true,
+                    duration: 10000
+                })
+            } catch (error) {
+                emailToast({
+                    title: "Failed to send the email.",
+                    description: `${error}`,
+                    status: "error",
+                    isClosable: true,
+                    duration: 10000
+                })
+            } finally {
+                setSubmitting(false)
+            }
+        }
+        )()
     }
 
     function handleEmailClick(e) {
@@ -91,23 +134,23 @@ function Contact() {
                 <Divider mx="auto" width="95%" />
 
                 <CardBody>
-                    <Stack
+                    <Flex
                         direction={{ base: "column", lg: "row" }}
+                        flexWrap="wrap"
                         p={{ base: 0, lg: 2 }}
                         mx="auto"
-                        gap={0}
+                        justifyContent={{ lg: "space-evenly" }}
+                        gap={2}
                     >
-                        <Box w={{ base: "100%", lg: "60%" }} {...boxStyles}>
+                        <Box w={{ base: "100%", lg: "55%" }} {...boxStyles}>
                             <Box w="100%">
-
 
                                 <Formik
                                     initialValues={formInitialValues}
                                     validationSchema={formValidationSchema}
-                                    onSubmit={handleFormSubmit}
+                                    onSubmit={handleSubmit}
                                 >
                                     {({ isSubmitting }) => (
-
                                         <Form>
                                             {/* name */}
                                             <CreateTextField
@@ -233,8 +276,7 @@ function Contact() {
 
                             </VStack>
                         </Box>
-                    </Stack>
-
+                    </Flex>
                 </CardBody>
 
                 <Divider mx="auto" width="95%" />
