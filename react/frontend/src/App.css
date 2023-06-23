@@ -27,15 +27,11 @@
     height: fit-content;
 }
 
-.sidenav {
+/* .sidenav {
     margin-top: 60px;
     left: 0;
     top: 60px;
-}
-
-.sidenav * {
-    text-transform: capitalize;
-}
+} */
 
 .content {
     /* border: 4px solid black; */

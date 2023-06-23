@@ -3,8 +3,12 @@
 trying to leverage chakra-ui to make the portfolio
 
 
-reference:
+## Reference:
 - ReactJS, ChakraUI [net-ninja youtube channel](https://www.youtube.com/watch?v=jLd059lbJkw&list=PL4cUxeGkcC9hcnIeryurNMMcGBHp7AYlP&index=9)
+- useState vs useRef: https://blog.logrocket.com/usestate-vs-useref/
+- qr-code generator: https://qr.io/
+
+## Images Reference:
 - A* project [image](https://github.com/vittin/A-Star)
 - Multi-class classification [image](https://www.kaggle.com/datasets/puneet6060/intel-image-classification)
 - MNist [image](https://en.wikipedia.org/wiki/MNIST_database)

@@ -19,10 +19,11 @@ import { Button, ButtonGroup, Tooltip } from "@chakra-ui/react"
 import { Heading, Text, Divider, Spacer, Img } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Image, Tag } from "@chakra-ui/react"
-import { ResponsiveIcons } from "./ResponsiveIcons"
 import { useState, useEffect, useCallback } from "react"
 import { useMediaQuery } from "@chakra-ui/react"
 import { RenderCarousel } from "./RenderCarousel"
+import { ResponsiveIcons } from "./ResponsiveIcons"
+import { ExternalLinkIcon, CloseIcon } from "@chakra-ui/icons"
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
     const [cardWidth, setCardWidth] = useState(992)
@@ -80,13 +81,32 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     <Spacer />
                     <ButtonGroup gap={2}>
                         {
-                            project.source != null && <Button className="project-detail-btns" onClick={() => window.open(project.source, "_blank")}>source</Button>
+                            project.source != null &&
+                            <Button
+                                // leftIcon={ResponsiveIcons.terminal}
+                                className="project-detail-btns"
+                                onClick={() => window.open(project.source, "_blank")}
+                            >
+                                source
+                            </Button>
                         }
                         {
                             project.uri !== null &&
-                            <Button className="project-detail-btns" onClick={() => window.open(project.uri, "_blank")}>link</Button>
+                            <Button
+                                // rightIcon={<ExternalLinkIcon />}
+                                className="project-detail-btns"
+                                onClick={() => window.open(project.uri, "_blank")}
+                            >
+                                link
+                            </Button>
                         }
-                        <Button className="project-detail-btns" onClick={onClose}>Close</Button>
+                        <Button
+                            // rightIcon={<CloseIcon />}
+                            className="project-detail-btns"
+                            onClick={onClose}
+                        >
+                            Close
+                        </Button>
                     </ButtonGroup>
                 </ModalHeader>
 

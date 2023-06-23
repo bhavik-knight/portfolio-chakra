@@ -19,26 +19,32 @@ function Sidenav({ pages, activePage, selectPage }) {
             direction={{ base: "row", lg: "column" }}
             pt={{ base: 0, lg: 2 }}
             mt="60px"
-            position="sticky"
+            px={0}
+            mx={0}
             left={0}
+            position={{ base: "sticky", lg: "sticky" }}
         >
             {
                 Object.keys(pages).map((page) => {
                     return (
                         <Tooltip
                             hasArrow
-                            placement="right"
+                            placement="auto"
                             key={nanoid()}
                             label={page}
                             aria-label={page}
                             textTransform="capitalize"
                         >
                             {/* <ButtonGroup> */}
-                            <ButtonGroup size={{ base: "md", md: "lg", lg: "md" }}>
+                            <ButtonGroup
+                                // bg="red"
+                                isAttached
+                                vairant="outline"
+                                size={{ base: "md", md: "lg", lg: "md" }}
+                            >
                                 {
                                     isLarge ?
                                         <Button
-                                            variant="ghost"
                                             onClick={(event) => selectPage(event)}
                                             isActive={page === activePage}
                                             name={page}
@@ -46,23 +52,22 @@ function Sidenav({ pages, activePage, selectPage }) {
                                             borderRadius="10px"
                                             width="100%"
                                             justifyContent="flex-start"
-                                            px={2}
+                                            textTransform="capitalize"
+                                            px={0}
+                                            m={0}
                                         >
-                                            <Text textTransform="capitalize">
-                                                {page}
-                                            </Text>
+                                            {page}
                                         </Button>
                                         :
                                         <IconButton
-                                            variant="ghost"
                                             onClick={event => selectPage(event)}
                                             isActive={page === activePage}
                                             name={page}
                                             icon={pages[page].icon}
+                                            p={0}
                                         />
                                 }
                             </ButtonGroup>
-                            {/* </ButtonGroup> */}
                         </Tooltip >
                     )
                 })
