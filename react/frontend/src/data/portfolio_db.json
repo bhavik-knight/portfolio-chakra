@@ -121,7 +121,7 @@
             "uri": "http://bhavikbhagat.netlify.app",
             "displayImg": "projects/portfolio/1_landing_page.png",
             "technologies": [
-                "reactjs",
+                "react",
                 "javascript",
                 "chakraui",
                 "html",
@@ -130,7 +130,7 @@
                 "docker",
                 "netlify",
                 "firebase",
-                "firestore"
+                "gcp"
             ],
             "details": [
                 "Leveraged vite tool to create the app for the faster build time for ReactJS app",
@@ -164,8 +164,8 @@
                 "sql",
                 "python",
                 "oracle",
-                "ERD",
-                "3NF",
+                "erd+",
+                "3nf",
                 "windows",
                 "slack"
             ],
@@ -214,9 +214,6 @@
                 "r",
                 "rstudio",
                 "ggplot",
-                "reshape",
-                "dplyr",
-                "modelr",
                 "rmarkdown",
                 "tidyverse",
                 "windows",
@@ -267,7 +264,7 @@
             "technologies": [
                 "python",
                 "nltk",
-                "scikit-learn",
+                "sklearn",
                 "wordcloud",
                 "regex",
                 "textblob",
@@ -373,9 +370,8 @@
             "displayImg": "./projects/multiclass_classification/0_dataset.png",
             "technologies": [
                 "python",
-                "deep learning",
                 "keras",
-                "tensforflow",
+                "tensorflow",
                 "scikit-learn",
                 "numpy",
                 "pandas",
@@ -418,8 +414,8 @@
             "displayImg": "./projects/mnist_deep_learning/0_mnist_data.png",
             "technologies": [
                 "python",
-                "keral",
-                "tensforflow",
+                "keras",
+                "tensorflow",
                 "matplotlib",
                 "numpy",
                 "pandas"
@@ -557,7 +553,8 @@
                 "python",
                 "pygame",
                 "windows",
-                "wsl"
+                "wsl",
+                "youtube"
             ],
             "details": [
                 "Demonstrated the use of Pygame library by reading and understanding the documenatation to deliver the working game",
@@ -1227,14 +1224,14 @@
             "id": 1,
             "name": "frameworks",
             "data": [
-                "reactjs",
+                "react",
                 "chakraui",
                 "materialui",
                 "bootstrap",
                 "jquery",
                 "django",
                 "flask",
-                "tensorFlow",
+                "tensorflow",
                 "keras",
                 "sklearn",
                 "mumpy",
@@ -1259,7 +1256,7 @@
                 "wsl",
                 "github",
                 "bitbucket",
-                "gitLab",
+                "gitlab",
                 "dockerhub"
             ]
         },
@@ -1303,7 +1300,7 @@
                 "gcpfirebase",
                 "apache",
                 "mysql",
-                "postgresql",
+                "postgre",
                 "sqlite"
             ]
         }

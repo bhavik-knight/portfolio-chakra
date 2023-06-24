@@ -2,7 +2,7 @@
     font-size: 16px;
 }
 
-@media only screen and (min-device-width:480px) and (max-device-width: 768px) {
+@media only screen and (min-device-width:480px) and (max-device-width: 992px) {
     .icons {
         font-size: 20px
     }
