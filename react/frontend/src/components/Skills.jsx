@@ -31,9 +31,9 @@ function Skills() {
 
 
     return (
-        <Stack p={2} gap={2}>
+        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
             {/* introduction */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2}>
                     Skills
                 </CardHeader>
@@ -67,7 +67,7 @@ function Skills() {
             </Card>
 
             {/* programming languages */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Programming Languages
                 </CardHeader>
@@ -79,7 +79,7 @@ function Skills() {
             </Card>
 
             {/* frameworks/libraries */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Frameworks | Libraries
                 </CardHeader>
@@ -95,7 +95,7 @@ function Skills() {
             </Card>
 
             {/* Technologies & OS */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Technologies | Operating Systems
                 </CardHeader>
@@ -119,7 +119,7 @@ function Skills() {
             </Card>
 
             {/* applications */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Applications | Database | Cloud
                 </CardHeader>
@@ -135,7 +135,7 @@ function Skills() {
             </Card>
 
             {/* project management */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Project Management
                 </CardHeader>

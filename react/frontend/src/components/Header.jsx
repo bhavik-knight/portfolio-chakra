@@ -2,7 +2,7 @@ import "./Header.css"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { useState, useRef, useEffect } from "react"
 import { useColorModeValue, useMediaQuery } from "@chakra-ui/react"
-import { Heading, Spacer, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
+import { Heading, Spacer, Center, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
 import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
 
 
@@ -19,7 +19,7 @@ function getNavbarIconButton(btnName, btnIcon, handleClick) {
                 variant="ghost"
                 fontSize={{ base: "md", lg: "2xl" }}
                 borderRadius="4px"
-                _hover={{ border: "1px solid" }}
+                _hover={{ boxShadow: "1px 1px 8px" }}
                 name={btnName}
                 icon={btnIcon}
                 onClick={event => handleClick(event)}
@@ -40,7 +40,7 @@ function Header({ colorMode, changeColorMode, title }) {
     useEffect(() => {
         navbarBg ?
             setBgColor("transparent") :
-            colorMode === "dark" ? setBgColor("black") : setBgColor("gray")
+            colorMode === "dark" ? setBgColor("black") : setBgColor("gray.400")
     }, [verticalScroll, colorMode])
 
     useEffect(() => {
@@ -58,34 +58,40 @@ function Header({ colorMode, changeColorMode, title }) {
     }, [verticalScroll])
 
     const sunIcon = getNavbarIconButton(
-        "sun",
+        ResponsiveIcons["sun"]["name"],
         ResponsiveIcons["sun"]["icon"],
         changeColorMode,
     )
 
     const moonIcon = getNavbarIconButton(
-        "moon",
+        ResponsiveIcons["moon"]["name"],
         ResponsiveIcons["moon"]["icon"],
         changeColorMode
     )
 
     const linkedinIcon = getNavbarIconButton(
-        "linkedin",
-        ResponsiveIcons["linkedin"],
+        ResponsiveIcons["linkedin"]["name"],
+        ResponsiveIcons["linkedin"]["icon"],
         () => open("https://linkedin.com/in/bhavikbhagat", "_blank")
     )
 
     const gitHubIcon = getNavbarIconButton(
-        "github",
-        ResponsiveIcons["github"],
+        ResponsiveIcons["github"]["name"],
+        ResponsiveIcons["github"]["icon"],
         () => open("https://github.com/bhavik-knight", "_blank")
     )
 
     return (
-        <Flex as="nav"
-            className="navbar header"
+        <Flex
+            as="nav"
             px={4}
+            top={0} left={0} right={0}
+            h={{ base: "50px", md: "50px", lg: "60px" }}
+            alignItems="center"
+            position="fixed"
+            justify="space-between"
             bg={bgColor}
+            zIndex={10}
             boxShadow={navbarBg && "0px 0px 16px 0px"}
         >
             <Heading

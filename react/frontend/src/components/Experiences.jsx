@@ -9,7 +9,7 @@ import { ExperienceCard } from "./ExperienceCard"
 
 function Experiences() {
     return (
-        <Stack width="100%" gap={2} p={2}>
+        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     Experiences

@@ -3,7 +3,7 @@ import { useMediaQuery } from "@chakra-ui/react"
 import { useState, useEffect } from "react"
 
 // skills - technologies
-import { PhoneIcon } from "@chakra-ui/icons"
+import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt"
 import { SiLinuxmint } from "@react-icons/all-files/si/SiLinuxmint"
 import { SiZorin } from "@react-icons/all-files/si/SiZorin"
 import { FaConfluence } from "@react-icons/all-files/fa/FaConfluence"
@@ -53,6 +53,7 @@ import { FcLinux } from "@react-icons/all-files/fc/FcLinux"
 import { FaCode } from "@react-icons/all-files/fa/FaCode"
 import { CgTerminal } from "@react-icons/all-files/cg/CgTerminal"
 import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane"
+import { BiMailSend } from "@react-icons/all-files/bi/BiMailSend"
 
 
 // top navbar
@@ -78,28 +79,28 @@ const ResponsiveIcons = {
     "sun": { name: "sun", icon: <FaSun /> },
 
     // navbar
-    "linkedin": <FaLinkedinIn />,
-    "github": <FaGithub />,
+    "linkedin": { name: "LinkedIn", icon: <FaLinkedinIn className="icons" /> },
+    "github": { name: "GitHub", icon: <FaGithub className="icons" /> },
 
     // social
-    "fb": { name: "facebook", icon: <FaFacebook size="2em" /> },
-    "ig": { name: "instragram", icon: <FaInstagram size="2em" /> },
-    "tg": { name: "telegram", icon: <FaTelegram size="2em" /> },
-    "twtr": { name: "twitter", icon: <FaTwitter size="2em" /> },
+    "facebook": { name: "Facebook", icon: <FaFacebook className="icons" /> },
+    "instagram": { name: "Instragram", icon: <FaInstagram className="icons" /> },
+    "telegram": { name: "Telegram", icon: <FaTelegram className="icons" /> },
+    "twitter": { name: "Twitter", icon: <FaTwitter className="icons" /> },
 
     // sidebar: button icons
-    "home": <FaHome />,
-    "skills": <FaCode />,
-    "projects": <GiFilmProjector />,
-    "education": <MdSchool />,
-    "experiences": <MdWork />,
-    "contact": <MdContactMail />,
-    "certificates": <FaAward />,
+    "home": { name: "Home", icon: <FaHome className="icons" /> },
+    "skills": { name: "Skills", icon: <FaCode className="icons" /> },
+    "projects": { name: "Projects", icon: <GiFilmProjector className="icons" /> },
+    "education": { name: "Education", icon: <MdSchool className="icons" /> },
+    "experiences": { name: "Experiences", icon: <MdWork className="icons" /> },
+    "contact": { name: "Contact", icon: <MdContactMail className="icons" /> },
+    "certificates": { name: "Certificates", icon: <FaAward className="icons" /> },
 
     // other button icons
-    "send": { name: "SEND", icon: <FaPaperPlane /> },
-    "phone": { name: "phone", icon: PhoneIcon },
-    "email": { name: "email", icon: GoMail },
+    "send": { name: "SEND", icon: <BiMailSend className="icons" /> },
+    "phone": { name: "Phone", icon: <FaPhoneAlt className="icons" /> },
+    "email": { name: "Email ID", icon: <GoMail className="icon" /> },
 
     // languages
     "html": <FaHtml5 className="icons" />,

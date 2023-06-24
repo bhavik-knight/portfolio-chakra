@@ -1,7 +1,55 @@
 import { useState, useEffect } from "react"
 import { Button, ButtonGroup, IconButton, Icon, Tooltip } from "@chakra-ui/react"
-import { WrapItem, Text, Divider, Stack, Wrap, List, ListItem, Flex, useMediaQuery } from "@chakra-ui/react"
+import { WrapItem, Text, Divider, Wrap, List, ListItem, Flex, useMediaQuery, useColorModeValue } from "@chakra-ui/react"
+import { Stack, HStack, VStack } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
+import { ResponsiveIcons } from "./ResponsiveIcons"
+
+
+const btnStyles = {
+    variant: { base: "outline", lg: "ghost" },
+    _hover: { boxShadow: "1px 1px 16px" },
+    p: 4
+}
+
+
+function CreateButton({ isLarge, page, activePage, selectPage }) {
+    return (
+        <Tooltip
+            hasArrow
+            placement="auto"
+            label={page}
+            aria-label={page}
+            textTransform="capitalize"
+        >
+            {isLarge ?
+                <Button
+                    {...btnStyles}
+                    aria-label={page}
+                    onClick={(event) => selectPage(event)}
+                    isActive={page === activePage}
+                    name={page}
+                    leftIcon={ResponsiveIcons[page].icon}
+                    justifyContent="flex-start"
+                    textTransform="capitalize"
+                >
+                    {page}
+                </Button>
+
+                :
+                <IconButton
+                    {...btnStyles}
+                    aria-label={page}
+                    onClick={event => selectPage(event)}
+                    isActive={page === activePage}
+                    name={page}
+                    icon={ResponsiveIcons[page].icon}
+                />
+            }
+        </Tooltip>
+    )
+}
+
 
 function Sidenav({ pages, activePage, selectPage }) {
 
@@ -10,68 +58,33 @@ function Sidenav({ pages, activePage, selectPage }) {
 
     return (
         <Stack
-            // bg="lightgreen"
-            className="sidenav"
-            as="aside"
-            width={{ base: "100%", lg: "fit-content" }}
-            height={{ base: "fit-content" }}
-            justifyContent={{ base: "center", lg: "flex-start" }}
-            direction={{ base: "row", lg: "column" }}
-            pt={{ base: 0, lg: 2 }}
-            mt="60px"
-            px={0}
-            mx={0}
+            as={ButtonGroup}
+            isAttached
+            py={{ base: 2, lg: 4 }} mx={0}
+            spacing={0}
             left={0}
-            position={{ base: "sticky", lg: "sticky" }}
+            w={{ base: "100%", lg: "fit-content" }}
+            h="fit-content"
+            justify={{ base: "center", lg: "flex-start" }}
+            direction={{ base: "row", lg: "column" }}
+            position={{ base: "fixed", lg: "sticky" }}
+            top={{ base: "50px", md: "50px", lg: "60px" }}
+            bg={{ base: useColorModeValue("gray.100", "gray.800"), lg: "transparent" }}
+            boxShadow={{ base: "1px 1px 8px", lg: "none" }}
         >
+
             {
-                Object.keys(pages).map((page) => {
-                    return (
-                        <Tooltip
-                            hasArrow
-                            placement="auto"
-                            key={nanoid()}
-                            label={page}
-                            aria-label={page}
-                            textTransform="capitalize"
-                        >
-                            {/* <ButtonGroup> */}
-                            <ButtonGroup
-                                // bg="red"
-                                isAttached
-                                vairant="outline"
-                                size={{ base: "md", md: "lg", lg: "md" }}
-                            >
-                                {
-                                    isLarge ?
-                                        <Button
-                                            onClick={(event) => selectPage(event)}
-                                            isActive={page === activePage}
-                                            name={page}
-                                            leftIcon={pages[page].icon}
-                                            borderRadius="10px"
-                                            width="100%"
-                                            justifyContent="flex-start"
-                                            textTransform="capitalize"
-                                            px={0}
-                                            m={0}
-                                        >
-                                            {page}
-                                        </Button>
-                                        :
-                                        <IconButton
-                                            onClick={event => selectPage(event)}
-                                            isActive={page === activePage}
-                                            name={page}
-                                            icon={pages[page].icon}
-                                            p={0}
-                                        />
-                                }
-                            </ButtonGroup>
-                        </Tooltip >
-                    )
-                })
+                Object.keys(pages).map((page) => (
+                    <CreateButton
+                        key={nanoid()}
+                        activePage={activePage}
+                        selectPage={selectPage}
+                        page={page}
+                        isLarge={isLarge}
+                    />
+                ))
             }
+
         </Stack>
     )
 }
@@ -94,3 +107,23 @@ export { Sidenav }
 //         </Text>
 //     }
 // </Button>
+
+
+
+                        // <Tooltip
+                        //     hasArrow
+                        //     placement="auto"
+                        //     key={nanoid()}
+                        //     label={page}
+                        //     aria-label={page}
+                        //     textTransform="capitalize"
+                        // >
+                        //     <IconButton
+                        //         {...btnStyles}
+                        //         aria-label={page}
+                        //         onClick={event => selectPage(event)}
+                        //         isActive={page === activePage}
+                        //         name={page}
+                        //         icon={ResponsiveIcons[page].icon}
+                        //     />
+                        // </Tooltip >
