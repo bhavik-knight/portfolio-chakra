@@ -17,8 +17,8 @@ function ProjectCard({ project }) {
         <Card
             key={nanoid()}
             className="projectCard"
-            boxSize={{ base: "100%", md: "50%", xl: "30%" }}
-            m={2} p={2} gap={1}
+            boxSize={{ base: "100%", md: "40%", xl: "30%" }}
+            m={{ base: 0, lg: 2 }} p={2}
             border="2px solid"
             borderColor={useColorModeValue("gray.200", "gray.600")}
             _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
@@ -30,14 +30,11 @@ function ProjectCard({ project }) {
                 </Flex>
 
                 <Divider />
-                <CardHeader
-                    py={0}
-                    textDecoration="underline"
-                    fontSize={{ base: "1em", md: "1.1em", lg: "1.2em" }}>
+                <CardHeader py={0} textDecoration="underline" fontSize={{ base: "1em", md: "1.1em", lg: "1.2em" }}>
                     {project.title}
                 </CardHeader>
 
-                <CardBody py={0} px={4} textAlign="justify">
+                <CardBody py={0} px={{ base: 2, lg: 4 }} textAlign="justify" fontSize={{ base: "0.9em", md: "0.95em", lg: "1em" }}>
                     {project.description}
                 </CardBody>
 

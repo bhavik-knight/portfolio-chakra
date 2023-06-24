@@ -51,7 +51,7 @@ function Projects() {
                     onChange={(index) => setTabIndex(index)}
                 >
                     {/* tab titles */}
-                    <TabList className="tabLabel">
+                    <TabList className="tabLabel" width={{ base: "100%", lg: "90%" }} mx="auto" fontSize={{ base: "0.9em", md: "0.95em", lg: "1em" }}>
                         <Tab _selected={{ bg: "red", color: "black" }} _hover={{ border: `1px solid red` }}>Web Dev</Tab>
                         <Tab _selected={{ bg: "green", color: "white" }} _hover={{ border: `1px solid green` }}>Data</Tab>
                         <Tab _selected={{ bg: "blue", color: "white" }} _hover={{ border: `1px solid blue` }}>ML/AI</Tab>
@@ -62,7 +62,7 @@ function Projects() {
                     <TabPanels>
                         {
                             projectTypes.map(type =>
-                                <TabPanel as={Flex} key={nanoid()} justifyContent="space-evenly" flexWrap="wrap" px={2}>
+                                <TabPanel as={Flex} key={nanoid()} justifyContent="space-evenly" flexWrap="wrap" px={0}>
                                     {
                                         projects
                                             .filter(p => p.type === type)
