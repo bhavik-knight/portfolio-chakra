@@ -7,9 +7,14 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 import { BiRadioCircle } from "@react-icons/all-files/bi/BiRadioCircle"
 import { VscCircleFilled } from "@react-icons/all-files/vsc/VscCircleFilled"
+import { useMediaQuery } from "@chakra-ui/react"
+import { first } from "lodash"
 
 
 function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
+
+    const [isMobile] = useMediaQuery("(max-width:992px)")
+
     // total number of items to be rendered
     const length = items.length
 
@@ -70,15 +75,14 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
         // to get the numbered pagination or dots
         let btns = null
 
-        btnType == "dots" ?
+        btnType === "dots" ?
             btns = getButtons(current).map((b, index) => {
                 return (
                     <IconButton
                         key={nanoid()}
                         onClick={() => handleBtnClick(b)}
                         variant="ghost"
-                        _hover={{ boxShadow: "1px 1px 4px 1px" }}
-                        _size={{ base: "xs", lg: "xl" }}
+                        _hover={{ boxShadow: "1px 1px 4px" }}
                         icon={current === b ? <VscCircleFilled /> : <BiRadioCircle />}
                     />
                 )
@@ -87,11 +91,12 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
                 return (
                     <Button
                         key={nanoid()}
+                        p={0}
+                        size={{ base: "xs", md: "sm", lg: "md" }}
                         onClick={() => handleBtnClick(b)}
                         isActive={b === current}
                         variant="outline"
                         _hover={{ boxShadow: "1px 1px 4px" }}
-                        _size={{ base: "xs", lg: "md" }}
                     >
                         {b + 1}
                     </Button>
@@ -101,30 +106,40 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
         return btns
     }
 
+    const firstLastBtnStyles = {
+        variant: "outline",
+        size: { base: "xs", md: "sm", lg: "md" },
+        w: "fit-content",
+        _hover: { boxShadow: "1px 1px 4px" }
+    }
+
     return (
-        <Box mx="auto" p={4}>
+        <Box mx="auto" py={2} px={{ base: 0, lg: 2 }}>
             {/* top text */}
-            <Center as={Text} size={{ base: "sm", lg: "md" }}>
-                {current + 1} of {length}
-            </Center>
+            <HStack
+                as={Center}
+                justify="space-between" mx="auto"
+                w={{ base: "100%", lg: "90%" }}
+                px={{ base: 0, lg: 2 }}
+            >
+                <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(0)}>First</Button>
+                <Center as={Text} size={{ base: "sm", lg: "md" }}>{current + 1} of {length}</Center>
+                <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(length - 1)}>Last</Button>
+            </HStack>
 
             {/* moddle carousel card area */}
-            <HStack mx="auto">
-                {/* left arrow button */}
-                <IconButton
-                    isRound
-                    icon={<ArrowBackIcon />}
-                    aria-label="previous-button"
-                    onClick={handlePrevClick}
-                    _hover={{ boxShadow: "1px 1px 4px" }}
-                    _size={{ base: "xs", lg: "md" }}
-                    variant="outline"
-                />
-
+            <Box mx="auto" w="100%"
+            // bg="yellow"
+            >
                 {/* carousel part */}
                 <Card
                     overflow="hidden"
-                    w={cardWidth}
+                    className="wrapper-card"
+                    h={cardHeight}
+                    w={{ base: "100%", lg: cardWidth }}
+                    px={0}
+                    mx="auto"
+                    py="auto"
                     border="1px solid"
                     borderRadius="1em"
                 >
@@ -137,17 +152,8 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
 
                     </Flex>
                 </Card>
-                {/* right arrow button */}
-                <IconButton
-                    isRound
-                    icon={<ArrowForwardIcon />}
-                    aria-label="next-button"
-                    onClick={handleNextClick}
-                    _hover={{ boxShadow: "1px 1px 4px" }}
-                    _size={{ base: "xs", lg: "md" }}
-                    variant="outline"
-                />
-            </HStack >
+
+            </Box >
 
             {/* pagination area */}
             <Flex
@@ -156,32 +162,40 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
                 direction="row"
                 alignItems="center"
             >
-                <Button
-                    onClick={() => handleBtnClick(0)}
-                    size={{ base: "sm", lg: "md" }}
-                    width="fit-content"
-                >
-                    First
-                </Button>
+
+                {/* left arrow button */}
+                <IconButton
+                    isRound
+                    icon={<ArrowBackIcon />}
+                    aria-label="previous-button"
+                    onClick={handlePrevClick}
+                    _hover={{ boxShadow: "1px 1px 4px" }}
+                    size={{ base: "xs", lg: "md" }}
+                    variant="outline"
+                />
 
                 {/* dots or numbered pagination */}
                 <ButtonGroup
                     as={Center}
                     mx="auto"
-                    my={2}
+                    p={0}
                     isAttached
-                    _size={{ base: "xs", lg: "md" }}
+                    _size={{ base: "xs", md: "sm", lg: "md" }}
                 >
                     {paginationButtons(btnType)}
                 </ButtonGroup >
 
-                <Button
-                    onClick={() => handleBtnClick(length - 1)}
-                    size={{ base: "sm", lg: "md" }}
-                    width="fit-content"
-                >
-                    Last
-                </Button>
+                {/* right arrow button */}
+                <IconButton
+                    isRound
+                    icon={<ArrowForwardIcon />}
+                    aria-label="next-button"
+                    onClick={handleNextClick}
+                    _hover={{ boxShadow: "1px 1px 4px" }}
+                    size={{ base: "xs", lg: "md" }}
+                    variant="outline"
+                />
+
             </Flex>
         </Box >
     )

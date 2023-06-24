@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useEffect } from "react"
+import { Stack, HStack, VStack, StackDivider } from "@chakra-ui/react"
 import { Box, Flex, Wrap, WrapItem, Menu, Grid, GridItem, ButtonGroup, useBoolean, useColorMode } from "@chakra-ui/react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
@@ -11,6 +12,7 @@ import { Certificates } from "./components/Certificates"
 import { Experiences } from "./components/Experiences"
 import { Home } from "./components/Home"
 import { Contact } from "./components/Contact"
+import { ContactForm } from "./components/ContactForm"
 import { ResponsiveIcons } from "./components/ResponsiveIcons"
 
 
@@ -25,37 +27,36 @@ function App() {
     // pages in the portfolio
     const pages = {
         "home": {
-            "icon": ResponsiveIcons.home,
+            "icon": ResponsiveIcons.home.icon,
             "page": <Home />,
         },
 
         "skills": {
-            "icon": ResponsiveIcons.skills,
+            "icon": ResponsiveIcons.skills.icon,
             "page": <Skills />,
         },
 
         "projects": {
-            "icon": ResponsiveIcons.projects,
+            "icon": ResponsiveIcons.projects.icon,
             "page": <Projects />,
         },
 
         "education": {
-            "icon": ResponsiveIcons.education,
+            "icon": ResponsiveIcons.education.icon,
             "page": <Education />,
         },
 
         "experiences": {
-            "icon": ResponsiveIcons.experiences,
+            "icon": ResponsiveIcons.experiences.icon,
             "page": <Experiences />,
         },
 
         "contact": {
-            "icon": ResponsiveIcons.contact,
+            "icon": ResponsiveIcons.contact.icon,
             "page": <Contact />
-        }
-
+        },
         // "certificates": {
-        //     "icon": ResponsiveIcons.certificates,
+        //     "icon": ResponsiveIcons.certificates.icon,
         //     "page": <Certificates />
         // }
     }
@@ -75,39 +76,56 @@ function App() {
 
     // this is the function that will render the DOM
     return (
-        <Flex className="container" flexDirection="column" flexWrap="wrap">
-            <Header
-                colorMode={colorMode}
-                changeColorMode={() => toggleColorMode()}
-                title={currentPage}
-            />
-            {/* middle part */}
-            <Flex
-                flexdirection={{ base: "column", lg: "row" }}
-                flexWrap={{ base: "wrap", lg: "nowrap" }}
-            >
-                <Sidenav
-                    pages={pages}
-                    activePage={currentPage}
-                    selectPage={handleSelectPage}
+        <Flex
+            flexDirection="column"
+            flexWrap="wrap"
+            w="100vw"
+            spacing={0}
+        >
+            <Flex>
+                <Header
+                    colorMode={colorMode}
+                    changeColorMode={() => toggleColorMode()}
+                    title={currentPage}
                 />
-
-                <Flex
-                    minH="100vh"
-                    className="content"
-                    as="main"
-                    px={{ base: 0, lg: "4px" }}
-                    width={{ base: "100%", lg: "85%" }}
-                    mx="auto"
-                    justify="center"
-                >
-                    {pages[currentPage].page}
-                </Flex>
             </Flex>
 
-            {/*  footer */}
-            <Footer />
-        </Flex >
+            <Stack
+                mt={{ base: "50px", md: "50px", lg: "60px" }}
+                minH={{ base: "fit-content", lg: "100vh" }}
+                direction={{ base: "column", lg: "row" }}
+                flexWrap={{ base: "wrap", lg: "nowrap" }}
+            >
+                {/* sidenav */}
+                <Flex
+                    // h={{ base: "fit-content", lg: "100vh" }}
+                    minW={{ base: "100%", lg: "fit-content" }} zIndex={5}>
+
+                    <Sidenav
+                        pages={pages}
+                        activePage={currentPage}
+                        selectPage={handleSelectPage}
+                    />
+                </Flex>
+
+                <StackDivider
+                    mt={{ base: "50px", md: "50px", lg: "60px" }}
+                    borderColor="white" border="1px dotted"
+                />
+
+                {/* pages */}
+                <Flex w="100%" py={2}>
+                    <Flex as="main" w="95%" mt={{ base: "50px", md: "50px", lg: 0 }} mx="auto">
+                        {pages[currentPage].page}
+                    </Flex>
+                </Flex>
+
+            </Stack>
+
+            <Flex>
+                <Footer />
+            </Flex>
+        </Flex>
     )
 }
 
@@ -116,3 +134,56 @@ export { App }
 
 // reference: transition of ball - can be use to track cursor
 // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+
+
+{/*
+
+        <Flex className="container" flexDirection="column" flexWrap="wrap">
+            <Header
+                colorMode={colorMode}
+                changeColorMode={() => toggleColorMode()}
+                title={currentPage}
+            />
+            // middle part
+<Flex
+    flexDirection={{ base: "column", lg: "row" }}
+    flexWrap={{ base: "wrap", lg: "nowrap" }}
+    mt={{ base: "50px", lg: "60px" }}
+>
+    <Flex
+        bg="green"
+        as="aside"
+        minW={{ base: "100%", lg: "13%" }}
+        mx="auto"
+        left={0} right={0}
+        top={{ base: "80px", lg: 0 }}
+        py={{ base: 0, lg: 2 }}
+        justify={{ base: "center", lg: "flex-start" }}
+    >
+        <Sidenav
+            pages={pages}
+            activePage={currentPage}
+            selectPage={handleSelectPage}
+        />
+    </Flex>
+
+    <Flex
+        bg="red"
+        minH="100vh"
+        className="content"
+        as="main"
+        px={{ base: 0, lg: "4px" }}
+        w={{ base: "100%", lg: "85%" }}
+        mx="auto"
+        mt={{ base: "70px", lg: 0 }}
+        py={{ base: 0, lg: 2 }}
+        justify="center"
+    >
+        // {pages[currentPage].page}
+    </Flex >
+</Flex >
+
+    //  footer
+    <Footer />
+        </Flex >
+*/}

@@ -1,3 +1,4 @@
+import { skills } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
 import { Flex, Center, Container } from "@chakra-ui/react"
@@ -6,15 +7,33 @@ import { Button, Tag } from "@chakra-ui/react"
 import { Stack, VStack, HStack } from "@chakra-ui/react"
 import { Divider, Spacer } from "@chakra-ui/react"
 import { List, ListItem } from "@chakra-ui/react"
-import { skills } from "../data/portfolio_db.json"
 import { ProgrammingParadigms } from "./ProgrammingParadigms"
+import { useState, useEffect } from "react"
 
 function Skills() {
+    const [languages, setLanguages] = useState([])
+    const [frameworks, setFrameworks] = useState([])
+    const [technologies, setTechnologies] = useState([])
+    const [os, setOs] = useState([])
+    const [management, setManagement] = useState([])
+    const [apps, setApps] = useState([])
+
+    useEffect(() => {
+        skills.map(skill => {
+            skill.name === "languages" && setLanguages(skill.data)
+            skill.name === "frameworks" && setFrameworks(skill.data)
+            skill.name === "technologies" && setTechnologies(skill.data)
+            skill.name === "os" && setOs(skill.data)
+            skill.name === "management" && setManagement(skill.data)
+            skill.name === "apps" && setApps(skill.data)
+        })
+    }, [languages, frameworks, technologies, os, management, apps])
+
 
     return (
-        <Stack p={2} gap={2}>
+        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
             {/* introduction */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2}>
                     Skills
                 </CardHeader>
@@ -48,29 +67,25 @@ function Skills() {
             </Card>
 
             {/* programming languages */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Programming Languages
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].languages.map(l => {
-                            return (
-                                <Tag key={nanoid()}>{l}</Tag>
-                            )
-                        })
+                        languages.map(l => (<Tag key={nanoid()}>{l}</Tag>))
                     }
                 </CardBody>
             </Card>
 
             {/* frameworks/libraries */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Frameworks | Libraries
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].frameworks.map(fw => {
+                        frameworks.map(fw => {
                             return (
                                 <Tag key={nanoid()}>{fw}</Tag>
                             )
@@ -80,13 +95,13 @@ function Skills() {
             </Card>
 
             {/* Technologies & OS */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Technologies | Operating Systems
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].technologies.map(tech => {
+                        technologies.map(tech => {
                             return (
                                 <Tag key={nanoid()}>{tech}</Tag>
                             )
@@ -94,7 +109,7 @@ function Skills() {
                     }
 
                     {
-                        skills[0].os.map(o => {
+                        os.map(o => {
                             return (
                                 <Tag key={nanoid()}>{o}</Tag>
                             )
@@ -104,13 +119,13 @@ function Skills() {
             </Card>
 
             {/* applications */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Applications | Database | Cloud
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].apps.map(app => {
+                        apps.map(app => {
                             return (
                                 <Tag key={nanoid()}>{app}</Tag>
                             )
@@ -120,13 +135,13 @@ function Skills() {
             </Card>
 
             {/* project management */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
                     Project Management
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        skills[0].management.map(mgmt => {
+                        management.map(mgmt => {
                             return (
                                 <Tag key={nanoid()}>{mgmt}</Tag>
                             )

@@ -6,11 +6,8 @@ import { Tooltip, Button, Badge } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { icons } from "./Icons"
 import { ProjectDetailsModal } from "./ProjectDetailsModal"
+import { ResponsiveIcons } from "./ResponsiveIcons"
 
-const footerButtonStyle = {
-    width: "80px",
-    variant: "solid"
-}
 
 function ProjectCard({ project }) {
 
@@ -27,23 +24,21 @@ function ProjectCard({ project }) {
             _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
             }
         >
-            <Stack justifyContent="center">
-                <Flex as={Center}>
-                    <Img src={project.displayImg} className="projectDisplayImg" />
+            <Stack as={Center}>
+                <Flex>
+                    <Img src={project.displayImg} alt="project display image" />
                 </Flex>
 
                 <Divider />
-                <CardHeader as={Center} px={2} py={0} mx="auto">
-                    <Heading textDecoration="underline" fontSize={{ base: "md", lg: "xl" }}>
-                        {project.title}
-                    </Heading>
-
+                <CardHeader
+                    py={0}
+                    textDecoration="underline"
+                    fontSize={{ base: "1em", md: "1.1em", lg: "1.2em" }}>
+                    {project.title}
                 </CardHeader>
 
-                <CardBody p={0}>
-                    <Text px={4} className="projectDetails" textAlign="justify">
-                        {project.description}
-                    </Text>
+                <CardBody py={0} px={4} textAlign="justify">
+                    {project.description}
                 </CardBody>
 
                 <Divider width="95%" px={2} mx="auto" my={2} />
@@ -52,9 +47,9 @@ function ProjectCard({ project }) {
                     <Wrap>
                         {/* <Button sx={footerButtonStyle} bg="orange" color="black" >Github</Button> */}
                         <Button
-                            sx={footerButtonStyle}
-                            bg={useColorModeValue("black", "white")}
-                            color={useColorModeValue("cyan", "blue")}
+                            variant="outline"
+                            leftIcon={ResponsiveIcons.details.icon}
+                            size={{ base: "sm", lg: "md" }}
                             onClick={onOpen}
                             _hover={{
                                 color: `${useColorModeValue("blue", "cyan")}`,

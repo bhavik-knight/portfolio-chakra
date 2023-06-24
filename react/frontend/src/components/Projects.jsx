@@ -1,5 +1,5 @@
-import "./Projects.css"
 import { projects } from "../data/portfolio_db.json"
+import "./Projects.css"
 import { useState } from "react"
 import { Divider, UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Heading, Text } from "@chakra-ui/react"
@@ -17,9 +17,9 @@ function Projects() {
     const [tabIndex, setTabIndex] = useState(0)
 
     return (
-        <Stack p={2} width="100%" >
+        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
             {/* some text */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={0} py={1}>
                     Projects
                 </CardHeader>

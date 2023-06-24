@@ -5,43 +5,44 @@ import { Stack, Container, Flex, Center } from "@chakra-ui/react"
 import { Divider, Spacer, Button } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 
-function Home() {
 
-    function getHomeSkillsCard(skillName, details, color) {
-        return (
-            <Card
-                as={Center}
-                borderBottom={`1px solid ${color}`}
-                _hover={{ boxShadow: `2px 2px 16px ${color}` }}
-                width={{ base: "100%", md: "80%", xl: "40%" }}
-                height={{ base: "100px", md: "200px" }}
-                className="homeSkills"
-            >
-                <Text as="strong" className="homeSkillName">{skillName}</Text>
-                <CardBody className="homeSkillDetails" textAlign="justify">
-                    <Text noOfLines={[2, 4, 8]}> {details} </Text>
-                </CardBody>
-            </Card>
-        )
-    }
+const textFontSize = {
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" }
+}
 
+function getHomeSkillsCard(skillName, details, color) {
     return (
-        <Stack
-            p={2}
-            gap={2}
-            width="100%"
+        <Card
+            as={Center}
+            borderRight={`1px solid ${color}`}
+            borderBottom={`1px solid ${color}`}
+            _hover={{ boxShadow: `4px 4px 16px ${color}` }}
+            width={{ base: "100%", md: "80%", xl: "40%" }}
+            height={{ base: "100px", md: "200px" }}
+            className="homeSkills"
         >
-            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
+            <Text as="strong" className="homeSkillName">{skillName}</Text>
+            <CardBody className="homeSkillDetails" textAlign="justify">
+                <Text noOfLines={[4, 4, 8]}> {details} </Text>
+            </CardBody>
+        </Card>
+    )
+}
+
+function Home() {
+    return (
+        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+            <Card as="section" p={{ base: 1, lg: 4 }} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <Text
                     px={8}
-                    fontSize={{ base: "md", md: "lg", lg: "4xl" }}
+                    fontSize={{ base: "1.5em", md: "1.75em", lg: "2em" }}
                 >
                     Hello, world!<br /> I am Bhavik Bhagat.
                 </Text>
 
                 <Divider mx="auto" width="95%" my={1} />
 
-                <Stack px={8} py={1} textAlign="justify">
+                <Stack px={8} py={2} textAlign="justify" {...textFontSize} spacing={2}>
                     <Text>
                         I am an aspiring full-stack developer, actively looking for my first break into the tech industry.
 
@@ -72,6 +73,7 @@ function Home() {
                     >
                         <Image src="./logos/bhavik_sticker.png" objectFit="contain" alt="bhavik sticker" />
                     </Flex>
+
                     <Stack
                         width={{ base: "100%", xl: "60%" }}
                         flexDirection={{ base: "column", xl: "row" }}
@@ -79,6 +81,7 @@ function Home() {
                         alignItems="center"
                         wrap="wrap"
                         p={0}
+                        fontSize={{ base: "0.9em", md: "0.95em", lg: "1em" }}
                     >
                         {
                             getHomeSkillsCard(
@@ -111,9 +114,7 @@ function Home() {
                         }
                     </Stack>
                 </Stack>
-
             </Card >
-
         </Stack >
     )
 }

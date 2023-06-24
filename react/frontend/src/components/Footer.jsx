@@ -4,13 +4,11 @@ function Footer(props) {
     const year = new Date().getFullYear();
     return (
         <Flex
-            mt={2}
-            className="navbar"
-            h={{ base: "50px", md: "60px" }}
+            w="100%"
+            h={{ base: "50px", md: "50px", lg: "60px" }}
+            left={0} right={0} bottom={0}
             boxShadow="0 0 16px 0"
             justifyContent="center"
-            // position="abosolute"
-            left="0" right="0" bottom="0"
         >
             <Text as={Center}>
                 © {year} Developed by Bhavik Bhagat
