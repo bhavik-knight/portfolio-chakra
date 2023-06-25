@@ -1208,7 +1208,7 @@
             "name": "languages",
             "data": [
                 "python",
-                "javaScript",
+                "javascript",
                 "c",
                 "c++",
                 "sql",
@@ -1234,7 +1234,7 @@
                 "tensorflow",
                 "keras",
                 "sklearn",
-                "mumpy",
+                "numpy",
                 "pandas",
                 "nltk",
                 "beautifulsoup",
@@ -1251,13 +1251,14 @@
             "name": "technologies",
             "data": [
                 "git",
-                "docker",
-                "vim",
-                "wsl",
                 "github",
                 "bitbucket",
                 "gitlab",
-                "dockerhub"
+                "docker",
+                "dockerhub",
+                "terminal",
+                "powershell",
+                "regex"
             ]
         },
         {
@@ -1265,8 +1266,11 @@
             "name": "os",
             "data": [
                 "windows",
+                "android",
                 "linux",
-                "andriod"
+                "ubuntu",
+                "linuxmint",
+                "zorinos"
             ]
         },
         {
@@ -1285,23 +1289,49 @@
             "id": 5,
             "name": "apps",
             "data": [
+                "vscode",
+                "pycharm",
+                "intellij",
+                "rstudio",
+                "vim",
+                "apache",
+                "slack",
+                "discord",
                 "teamviewer",
-                "googleworkspace",
                 "office365",
                 "advancedexcel",
                 "vmware",
                 "virtualbox",
                 "zendesk",
-                "awsec2",
-                "awsrds",
-                "awss3",
-                "gcpgce",
-                "gcpfirestore",
-                "gcpfirebase",
                 "apache",
+                "oracle",
+                "latex"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "databases",
+            "data": [
                 "mysql",
                 "postgre",
-                "sqlite"
+                "sqlite",
+                "gcpfirestore",
+                "awsrds"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "cloud",
+            "data": [
+                "aws",
+                "awsec2",
+                "awss3",
+                "gcp",
+                "gcpgce",
+                "gcpfirebase",
+                "netlify",
+                "heroku",
+                "flyio"
             ]
         }
     ]

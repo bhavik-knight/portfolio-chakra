@@ -1,14 +1,33 @@
 import { skills } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
-import { Flex, Center, Container } from "@chakra-ui/react"
+import { Box, Flex, Center, Container } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
-import { Button, Tag } from "@chakra-ui/react"
+import { Button, IconButton, Icon, Tag } from "@chakra-ui/react"
 import { Stack, VStack, HStack } from "@chakra-ui/react"
 import { Divider, Spacer } from "@chakra-ui/react"
 import { List, ListItem } from "@chakra-ui/react"
 import { ProgrammingParadigms } from "./ProgrammingParadigms"
 import { useState, useEffect } from "react"
+import { ResponsiveIcons } from "./ResponsiveIcons"
+
+
+function CreateBadge({ skill }) {
+    return (
+        <VStack
+            as={Center}
+            p={2}
+            mx="auto"
+            w={{ base: "32px", md: "64px", lg: "90px" }}
+            _hover={{ boxShadow: "1px 1px 8px" }}
+        >
+            {ResponsiveIcons[skill]?.icon}
+            <Text fontSize="sm" textAlign="center">
+                {ResponsiveIcons[skill]?.name}
+            </Text>
+        </VStack>
+    )
+}
 
 function Skills() {
     const [languages, setLanguages] = useState([])
@@ -17,6 +36,8 @@ function Skills() {
     const [os, setOs] = useState([])
     const [management, setManagement] = useState([])
     const [apps, setApps] = useState([])
+    const [databases, setDatabases] = useState([])
+    const [cloud, setCloud] = useState([])
 
     useEffect(() => {
         skills.map(skill => {
@@ -26,6 +47,8 @@ function Skills() {
             skill.name === "os" && setOs(skill.data)
             skill.name === "management" && setManagement(skill.data)
             skill.name === "apps" && setApps(skill.data)
+            skill.name === "cloud" && setCloud(skill.data)
+            skill.name === "databases" && setDatabases(skill.data)
         })
     }, [languages, frameworks, technologies, os, management, apps])
 
@@ -73,7 +96,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        languages.map(l => (<Tag key={nanoid()}>{l}</Tag>))
+                        languages.map(l => <CreateBadge key={nanoid()} skill={l} />)
                     }
                 </CardBody>
             </Card>
@@ -85,51 +108,40 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        frameworks.map(fw => {
-                            return (
-                                <Tag key={nanoid()}>{fw}</Tag>
-                            )
-                        })
+                        frameworks.map(fw => <CreateBadge key={nanoid()} skill={fw} />)
                     }
                 </CardBody>
             </Card>
 
-            {/* Technologies & OS */}
+            {/* Technologies, Cloud, DB, and Host */}
             <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
-                    Technologies | Operating Systems
+                    Technologies | Databases | Cloud | Hosting
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        technologies.map(tech => {
-                            return (
-                                <Tag key={nanoid()}>{tech}</Tag>
-                            )
-                        })
+                        technologies.map(tech => <CreateBadge key={nanoid()} skill={tech} />)
                     }
-
                     {
-                        os.map(o => {
-                            return (
-                                <Tag key={nanoid()}>{o}</Tag>
-                            )
-                        })
+                        cloud.map(c => <CreateBadge key={nanoid()} skill={c} />)
+                    }
+                    {
+                        databases.map(d => <CreateBadge key={nanoid()} skill={d} />)
                     }
                 </CardBody>
             </Card>
 
-            {/* applications */}
+            {/* applications, os */}
             <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
-                    Applications | Database | Cloud
+                    Operating Systems | Applications
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        apps.map(app => {
-                            return (
-                                <Tag key={nanoid()}>{app}</Tag>
-                            )
-                        })
+                        os.map(o => <CreateBadge key={nanoid()} skill={o} />)
+                    }
+                    {
+                        apps.map(app => <CreateBadge key={nanoid()} skill={app} />)
                     }
                 </CardBody>
             </Card>
@@ -141,11 +153,7 @@ function Skills() {
                 </CardHeader>
                 <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
                     {
-                        management.map(mgmt => {
-                            return (
-                                <Tag key={nanoid()}>{mgmt}</Tag>
-                            )
-                        })
+                        management.map(mgmt => <CreateBadge key={nanoid()} skill={mgmt} />)
                     }
                 </CardBody>
             </Card>
