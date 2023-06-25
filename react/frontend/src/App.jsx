@@ -65,12 +65,12 @@ function App() {
     const [currentPage, setCurrentPage] = useState(localStorage.getItem("currentPage") || "home")
     function handleSelectPage(event) {
         setCurrentPage(event.currentTarget.name)
-        console.log(`app - ${currentPage}`)
     }
     useEffect(() => {
         localStorage.setItem("currentPage", currentPage)
         document.title = `Bhavik | ${currentPage[0].toUpperCase() + currentPage.substring(1)}`
         window.scrollTo(0, 0)
+        // console.log(`app - ${currentPage}`)
     }, [currentPage])
 
 
