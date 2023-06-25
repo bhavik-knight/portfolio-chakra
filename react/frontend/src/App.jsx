@@ -99,7 +99,7 @@ function App() {
                 {/* sidenav */}
                 <Flex
                     // h={{ base: "fit-content", lg: "100vh" }}
-                    minW={{ base: "100%", lg: "fit-content" }} zIndex={5}>
+                    minW={{ base: "100%", lg: "fit-content" }} zIndex={5} me={10}>
 
                     <Sidenav
                         pages={pages}

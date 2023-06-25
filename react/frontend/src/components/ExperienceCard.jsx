@@ -5,33 +5,47 @@ import { Text, Heading } from "@chakra-ui/react"
 import { Flex, Divider, Stack, Spacer } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 
+
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
+
 function ExperienceCard({ job }) {
     return (
         <AccordionItem py={2}>
             <AccordionButton
                 as={Heading}
-                fontSize={{ base: "md", lg: "xl" }}
+                fontSize={{ base: "sm", md: "md", lg: "xl" }}
                 _hover={{ cursor: "pointer" }}
                 _expanded={{ boxShadow: "0px 2px 8px" }}
             >
-                <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap" justifyContent="space-between">
+                <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
                     <Text>
                         {job.title}
                     </Text>
                     <Spacer />
-                    <Text px={2}>
+                    <Text px={{ base: 0, lg: 2 }}>
                         {job.start} - {job.end}
                     </Text>
-                    <AccordionIcon />
                 </Flex>
+                <AccordionIcon />
             </AccordionButton>
 
-            <AccordionPanel p={4}>
-                <Text fontSize={{ base: "md", lg: "lg" }} px={4}>
+            <AccordionPanel
+                p={{ base: 0, lg: 4 }}
+                size={{ base: "md", lg: "lg" }}
+            >
+                <Text {...textFontStyle} mt={2}>
                     {job.company} | {job.place}
                 </Text>
+
                 <Divider mx="auto" my={1} width="95%" />
-                <Stack as={UnorderedList} ms={8}>
+
+                <Stack as={UnorderedList} {...textFontStyle}>
                     {
                         job.responsibilities.map(responsibility => {
                             return (
@@ -43,7 +57,7 @@ function ExperienceCard({ job }) {
                     }
                 </Stack>
             </AccordionPanel>
-        </AccordionItem>
+        </AccordionItem >
 
     )
 }

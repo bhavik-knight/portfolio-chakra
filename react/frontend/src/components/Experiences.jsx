@@ -7,17 +7,33 @@ import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
 import { ExperienceCard } from "./ExperienceCard"
 
+
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
+const headerFontStyle = {
+    fontSize: { base: "md", md: "lg", lg: "xl" },
+    mx: "auto",
+}
+
+
 function Experiences() {
     return (
-        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 0, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1}>
+                <CardHeader as={Heading} mx="auto" my={1} py={1}>
                     Experiences
                 </CardHeader>
-                <Divider className="divider" width="95%" mx="auto" my={1} />
+
+                <Divider width="95%" mx="auto" my={1} />
+
                 <CardBody>
-                    <Text>
-                        Currently, I am looking for Jr. Software Developer role. Open to work on cool projects with hoping to integrate the technical skills and transferable skills I gained from my diverse work-experience.
+                    <Text {...textFontStyle}>
+                        I am currently seeking a Junior Software Developer role, open to engaging in exciting projects where I can effectively utilize the technical skills and transferable skills I have acquired through my diverse work experience.
                     </Text>
                 </CardBody>
             </Card>
@@ -25,10 +41,11 @@ function Experiences() {
 
             {/* section about work */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Work Experience{experiences.length > 1 && `s`}
                 </CardHeader>
-                <CardBody>
+
+                <CardBody px={{ base: 0, lg: 4 }} py={0}>
                     <Accordion allowToggle>
                         {
                             experiences.map(e => <ExperienceCard key={nanoid()} job={e} />)
@@ -39,12 +56,11 @@ function Experiences() {
 
             {/* section about volunteer work */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Volunteer Experience{volunteer.length > 1 && `s`}
                 </CardHeader>
 
-
-                <CardBody>
+                <CardBody px={{ base: 0, lg: 4 }} py={0}>
                     <Accordion allowToggle>
                         {
                             volunteer.map(v => <ExperienceCard key={nanoid()} job={v} />)

@@ -9,6 +9,14 @@ import { ProjectDetailsModal } from "./ProjectDetailsModal"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
+
 function ProjectCard({ project }) {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -18,7 +26,8 @@ function ProjectCard({ project }) {
             key={nanoid()}
             className="projectCard"
             boxSize={{ base: "100%", md: "40%", xl: "30%" }}
-            m={{ base: 0, lg: 2 }} p={2}
+            m={{ base: 0, lg: 2 }}
+            p={2}
             border="2px solid"
             borderColor={useColorModeValue("gray.200", "gray.600")}
             _hover={{ boxShadow: "4px 4px 16px black", _dark: { boxShadow: "4px 4px 16px white" } }
@@ -34,7 +43,7 @@ function ProjectCard({ project }) {
                     {project.title}
                 </CardHeader>
 
-                <CardBody py={0} px={{ base: 2, lg: 4 }} textAlign="justify" fontSize={{ base: "0.9em", md: "0.95em", lg: "1em" }}>
+                <CardBody {...textFontStyle} py={0} px={{ base: 2, lg: 4 }}>
                     {project.description}
                 </CardBody>
 
