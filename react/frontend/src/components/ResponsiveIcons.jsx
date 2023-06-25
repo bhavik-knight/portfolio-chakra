@@ -3,26 +3,30 @@ import { useMediaQuery } from "@chakra-ui/react"
 import { Icon } from "@chakra-ui/icons"
 import { useState, useEffect } from "react"
 
-// skills - technologies
-import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt"
-import { FaConfluence } from "@react-icons/all-files/fa/FaConfluence"
-import { FaTrello } from "@react-icons/all-files/fa/FaTrello"
-import { FaJira } from "@react-icons/all-files/fa/FaJira"
+// skills
+
+// technologies
+import { VscTerminal } from "@react-icons/all-files/vsc/VscTerminal"
+import { SiGnubash } from "@react-icons/all-files/si/SiGnubash"
+import { SiPowershell } from "@react-icons/all-files/si/SiPowershell"
+import { FaGitAlt } from "@react-icons/all-files/fa/FaGitAlt"
+
+// app
+import { SiVisualstudio } from "@react-icons/all-files/si/SiVisualstudio"
+import { SiIntellijidea } from "@react-icons/all-files/si/SiIntellijidea"
 import { SiMicrosoftteams } from "@react-icons/all-files/si/SiMicrosoftteams"
-import { DiScrum } from "@react-icons/all-files/di/DiScrum"
+import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
 import { SiTeamviewer } from "@react-icons/all-files/si/SiTeamviewer"
 import { SiZendesk } from "@react-icons/all-files/si/SiZendesk"
+import { SiMicrosoftoffice } from "@react-icons/all-files/si/SiMicrosoftoffice"
+
 import { SiNetlify } from "@react-icons/all-files/si/SiNetlify"
 import { SiLatex } from "@react-icons/all-files/si/SiLatex"
 import { SiMicrosoft } from "@react-icons/all-files/si/SiMicrosoft"
 import { SiMicrosoftexcel } from "@react-icons/all-files/si/SiMicrosoftexcel"
-import { VscTerminal } from "@react-icons/all-files/vsc/VscTerminal"
-import { SiGnubash } from "@react-icons/all-files/si/SiGnubash"
-import { SiPowershell } from "@react-icons/all-files/si/SiPowershell"
 import { DiVim } from "@react-icons/all-files/di/DiVim"
 import { SiRstudio } from "@react-icons/all-files/si/SiRstudio"
 import { AiOutlineConsoleSql } from "@react-icons/all-files/ai/AiOutlineConsoleSql"
-import { FaGitAlt } from "@react-icons/all-files/fa/FaGitAlt"
 import { SiHeroku } from "@react-icons/all-files/si/SiHeroku"
 import { FaDocker } from "@react-icons/all-files/fa/FaDocker"
 import { FaMoon } from "@react-icons/all-files/fa/FaMoon"
@@ -30,17 +34,16 @@ import { FaSun } from "@react-icons/all-files/fa/FaSun"
 import { SiApache } from "@react-icons/all-files/si/SiApache"
 import { FaCode } from "@react-icons/all-files/fa/FaCode"
 import { CgTerminal } from "@react-icons/all-files/cg/CgTerminal"
-import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane"
 import { BiMailSend } from "@react-icons/all-files/bi/BiMailSend"
 import { SiSlack } from "@react-icons/all-files/si/SiSlack"
 import { SiOracle } from "@react-icons/all-files/si/SiOracle"
 import { VscRegex } from "@react-icons/all-files/vsc/VscRegex"
 import { FaYoutube } from "@react-icons/all-files/fa/FaYoutube"
 import { MdClose } from "@react-icons/all-files/md/MdClose"
-import { FaExternalLinkAlt } from "@react-icons/all-files/fa/FaExternalLinkAlt"
 import { BiLinkAlt } from "@react-icons/all-files/bi/BiLinkAlt"
-import { SiVisualstudio } from "@react-icons/all-files/si/SiVisualstudio"
 import { FcViewDetails } from "@react-icons/all-files/fc/FcViewDetails"
+import { SiBitbucket } from "@react-icons/all-files/si/SiBitbucket"
+import { FaGitlab } from "@react-icons/all-files/fa/FaGitlab"
 
 // languages
 import { FaJava } from "@react-icons/all-files/fa/FaJava"
@@ -53,6 +56,7 @@ import { FaCss3 } from "@react-icons/all-files/fa/FaCss3"
 import { FaRProject } from "@react-icons/all-files/fa/FaRProject"
 import { SiKotlin } from "@react-icons/all-files/si/SiKotlin"
 import { SiJavascript } from "@react-icons/all-files/si/SiJavascript"
+import { CgCPlusPlus } from "@react-icons/all-files/cg/CgCPlusPlus"
 
 // framework
 import { FaBootstrap } from "@react-icons/all-files/fa/FaBootstrap"
@@ -73,12 +77,14 @@ import { GrMysql } from "@react-icons/all-files/gr/GrMysql"
 import { SiAmazonaws } from "@react-icons/all-files/si/SiAmazonaws"
 import { SiFirebase } from "@react-icons/all-files/si/SiFirebase"
 import { SiGooglecloud } from "@react-icons/all-files/si/SiGooglecloud"
+import { FaFly } from "@react-icons/all-files/fa/FaFly"
 
 // os
 import { FcLinux } from "@react-icons/all-files/fc/FcLinux"
 import { FaUbuntu } from "@react-icons/all-files/fa/FaUbuntu"
 import { SiLinuxmint } from "@react-icons/all-files/si/SiLinuxmint"
 import { SiZorin } from "@react-icons/all-files/si/SiZorin"
+import { FcAndroidOs } from "@react-icons/all-files/fc/FcAndroidOs"
 
 // top navbar
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
@@ -98,6 +104,13 @@ import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaTelegram } from "@react-icons/all-files/fa/FaTelegram"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt"
+
+// project management
+import { FaConfluence } from "@react-icons/all-files/fa/FaConfluence"
+import { FaTrello } from "@react-icons/all-files/fa/FaTrello"
+import { FaJira } from "@react-icons/all-files/fa/FaJira"
+import { DiScrum } from "@react-icons/all-files/di/DiScrum"
 
 
 const ResponsiveIcons = {
@@ -139,7 +152,8 @@ const ResponsiveIcons = {
     "java": { name: "Java", icon: <FaJava className="icons" /> },
     "javascript": { name: "JavaScript", icon: <SiJavascript className="icons" /> },
     "php": { name: "PHP", icon: <SiPhp className="icons" /> },
-    "c++": { name: "C++", icon: <SiCplusplus className="icons" /> },
+    "c": { name: "C", icon: <SiCplusplus className="icons" />, fullName: "C Language" },
+    "c++": { name: "C++", icon: <CgCPlusPlus className="icons" /> },
     "sql": { name: "SQL", icon: <AiOutlineConsoleSql className="icons" /> },
     "r": { name: "R", icon: <FaRProject className="icons" /> },
     "kotlin": { name: "Kotlin", icon: <SiKotlin className="icons" /> },
@@ -170,41 +184,66 @@ const ResponsiveIcons = {
     "imageio": { name: "Imageio" },
     "pyswarms": { name: "Pyswarms" },
     "pygame": { name: "Pygame" },
+    "beautifulsoup": { name: "Beautiful Soup" },
+    "seaborn": { name: "Seaborn" },
+    "plotly": { name: "Plotly" },
 
-    // db - server - host
+    // cloud / db
     "aws": { name: "AWS", icon: <SiAmazonaws className="icons" /> },
-    "awsec2": { name: "AWS_EC2" },
-    "awsrds": { name: "AWS_RDS" },
-    "awss3": { name: "AWS_S3" },
+    "awsec2": { name: "AWS_EC2", fullName: "Amazon Elastic Cloud Compute" },
+    "awsrds": { name: "AWS_RDS", fullName: "Amazon Relational Database Service" },
+    "awss3": { name: "AWS_S3", fullName: "Amazon Simple Storage Service" },
     "gcp": { name: "GCP", icon: <SiGooglecloud className="icons" />, fullName: "Google Cloud Platform" },
-    "firebase": { name: "Firebase", icon: <SiFirebase className="icons" /> },
-    "netlify": { name: "Netlify", icon: <SiNetlify className="icons" /> },
-    "heroku": { name: "Heroku", icon: <SiHeroku className="icons" /> },
+    "gcpgce": { name: "GCP_GCE", fullName: "Google Compute Engine" },
+    "gcpfirestore": { name: "Firestore", fullName: "Google Firestore" },
+    "gcpfirebase": { name: "Firebase", icon: <SiFirebase className="icons" />, fullName: "Google Firebase" },
+    "firebase": { name: "Firebase", icon: <SiFirebase className="icons" />, fullName: "Google Firebase" },
     "postgre": { name: "PostgreSQL", icon: <SiPostgresql className="icons" /> },
     "mysql": { name: "MySQL", icon: <GrMysql className="icons" /> },
     "sqlite": { name: "SQLite", icon: <DiSqllite className="icons" /> },
+    "oracle": { name: "Oracle", icon: <SiOracle className="icons" /> },
     "apache": { name: "Apache", icon: <SiApache className="icons" /> },
+    "netlify": { name: "Netlify", icon: <SiNetlify className="icons" /> },
+    "heroku": { name: "Heroku", icon: <SiHeroku className="icons" /> },
+    "flyio": { name: "Fly.io", icon: <FaFly className="icons" /> },
 
-    // tools / os / apps/ tech
+    // tools / tech / cloud
     "git": { name: "Git", icon: <FaGitAlt className="icons" /> },
+    "bitbucket": { name: "Bitbucket", icon: <SiBitbucket className="icons" /> },
+    "gitlab": { name: "GitLab", icon: <FaGithub className="icons" /> },
     "docker": { name: "Docker", icon: <FaDocker className="icons" /> },
-    "linux": { name: "Linux", icon: <FcLinux className="icons" /> },
-    "rstudio": { name: "RStudio", icon: <SiRstudio className="icons" /> },
+    "dockerhub": { name: "DockerHub", icon: <FaDocker className="icons" /> },
     "vim": { name: "Vim", icon: <DiVim className="icons" /> },
-    "powershell": { name: "PowerShell", icon: <SiPowershell className="icons" /> },
     "bash": { name: "Bash", icon: <SiGnubash className="icons" /> },
     "vscterminal": { name: "VSC Terminal", icon: <VscTerminal className="icons" /> },
+    "terminal": { name: "Terminal", icon: <CgTerminal className="icons" /> },
+    "powershell": { name: "PowerShell", icon: <SiPowershell className="icons" /> },
+
+
+    // os
+    "android": { name: "AndroidOS", icon: <FcAndroidOs className="icons" /> },
+    "linux": { name: "Linux", icon: <FcLinux className="icons" /> },
     "windows": { name: "Windows", icon: <SiMicrosoft className="icons" /> },
     "ubuntu": { name: "Ubuntu", icon: <FaUbuntu className="icons" /> },
-    "linuxMint": { name: "Linux Mint", icon: <SiLinuxmint className="icons" /> },
-    "zorinOS": { name: "Zorin OS", icon: <SiZorin className="icons" /> },
-    "terminal": { name: "Terminal", icon: <CgTerminal className="icons" /> },
+    "linuxmint": { name: "LinuxMint", icon: <SiLinuxmint className="icons" /> },
+    "zorinos": { name: "ZorinOS", icon: <SiZorin className="icons" /> },
+
+
+    // apps
+    "pycharm": { name: "PyCharm" },
+    "vscode": { name: "VSCode", icon: <SiVisualstudio className="icons" />, fullName: "Visual Studio Code" },
+    "intellij": { name: "IntelliJ_IDEA", icon: <SiIntellijidea className="icons" /> },
+    "rstudio": { name: "RStudio", icon: <SiRstudio className="icons" /> },
     "slack": { name: "Slack", icon: <SiSlack className="icons" /> },
-    "oracle": { name: "Oracle", icon: <SiOracle className="icons" /> },
+    "discord": { name: "Discord", icon: <FaDiscord className="icons" /> },
+    "zendesk": { name: "Zendesk", icon: <SiZendesk className="icons" /> },
     "latex": { name: "LaTeX", icon: <SiLatex className="icons" /> },
     "teamviewer": { name: "TeamViewer", icon: <SiTeamviewer className="icons" /> },
-    "advancedExcel": { name: "Advanced Excel", icon: <SiMicrosoftexcel className="icons" /> },
-    "msteams": { name: "MS Teams", icon: <SiMicrosoftteams className="icons" /> },
+    "office365": { name: "Office_365", icon: <SiMicrosoftoffice className="icons" />, fullName: "Microsoft Office 365" },
+    "advancedexcel": { name: "MS_Excel", icon: <SiMicrosoftexcel className="icons" />, fullName: "Advanced Excel" },
+    "msteams": { name: "MS_Teams", icon: <SiMicrosoftteams className="icons" />, fullName: "Microsoft Teams" },
+    "vmware": { name: "VMware" },
+    "virtualbox": { name: "VirtualBox" },
     "erd+": { name: "ERD+", fullName: "Entity Relationship Diagram" },
     "3nf": { name: "3NF", fullName: "Third Normal Form" },
     "rmarkdown": { name: "R Markdown" },
@@ -215,11 +254,12 @@ const ResponsiveIcons = {
     "source": { name: "Source", icon: <SiVisualstudio className="icons" /> },
 
     // project mgmt / apps
-    "zendesk": { name: "Zendesk", icon: <SiZendesk className="icons" /> },
     "scrum": { name: "Scrum", icon: <DiScrum className="icons" /> },
     "jira": { name: "Jira", icon: <FaJira className="icons" /> },
     "trello": { name: "Trello", icon: <FaTrello className="icons" /> },
     "confluence": { name: "Confluence", icon: <FaConfluence className="icons" /> },
+    "agile": { name: "Agile" },
+    "waterfall": { name: "Waterfall" }
 }
 
 export { ResponsiveIcons }

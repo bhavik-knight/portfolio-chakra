@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from "react"
-import { useToast } from "@chakra-ui/react"
+import { useMediaQuery, useToast, useColorModeValue } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { Divider, Spacer, Text, Heading, Image, Link } from "@chakra-ui/react"
-import { Wrap, Stack, HStack, VStack } from "@chakra-ui/react"
+import { StackDivider, Stack, HStack, VStack } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Box, Flex, Container, Center } from "@chakra-ui/react"
 import { ButtonGroup, Button, IconButton, Tooltip } from "@chakra-ui/react"
@@ -12,12 +12,24 @@ import { ContactForm } from "./ContactForm"
 // box styles for form and QR code
 const boxStyles = {
     as: Center,
-    border: "1px solid darkgray",
+    border: "1px solid",
     borderRadius: "1em",
-    p: { base: 2, md: "2em", lg: "2em" },
-    mx: { base: 0, lg: 2 }
+    p: { base: 2, md: 4, lg: 8 },
 }
 
+// body text font style
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
+// card header style
+const headerFontStyle = {
+    fontSize: { base: "md", md: "lg", lg: "xl" },
+    mx: "auto",
+}
 
 // social icon button size
 const btnStyles = {
@@ -28,6 +40,8 @@ const btnStyles = {
 
 // react component
 function Contact() {
+    // for mobile screen
+    const [isMobile] = useMediaQuery("max-width: 992px")
 
     function handleEmailClick(e) {
         e.preventDefault()
@@ -35,41 +49,45 @@ function Contact() {
     }
 
     return (
-        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
-            <Card as="section" p={{ base: 0, lg: 4 }} _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" py={2}>
+        <Stack p={{ base: 0, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" my={1} py={1}>
                     Contact Me
                 </CardHeader>
 
                 <Divider mx="auto" width="95%" />
-                <CardBody textAlign="justify" px={8}>
-                    Please fill out the following form to send me your message through email.
-                </CardBody>
 
+                <CardBody textAlign="justify">
+                    <Text {...textFontStyle}>
+                        Please fill out the following form to send me your message through email.
+                    </Text>
+                </CardBody>
             </Card>
 
-            <Card as="section" p={{ base: 0, lg: 4 }} _hover={{ boxShadow: "4px 4px 16px" }}>
-                <Flex
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <Stack
                     direction={{ base: "column", lg: "row" }}
-                    flexWrap="wrap"
-                    p={{ base: 0, lg: 2 }}
-                    mx="auto"
-                    justifyContent={{ lg: "space-evenly" }}
-                    gap={2}
+                    p={{ base: 2, lg: 4 }} gap={1}
+                    justify="space-between"
                 >
-                    <Box w={{ base: "100%", lg: "55%" }} {...boxStyles}>
+                    <Box w={{ base: "100%", lg: "55%" }} {...boxStyles}
+                        borderColor={useColorModeValue("gray.200", "gray.600")}
+                    >
                         {/* form  goes here */}
                         <ContactForm />
                     </Box>
 
-                    <Box w={{ base: "100%", lg: "40%" }} {...boxStyles}>
-                        <VStack spacing={2} w="100%">
+                    <StackDivider border="1px dotted" />
+
+                    <Box w={{ base: "100%", lg: "40%" }} {...boxStyles}
+                        borderColor={useColorModeValue("gray.200", "gray.600")}
+                    >
+                        <VStack spacing={2} w="100%" m={2}>
                             <Flex
                                 wrap="wrap"
                                 justifyContent="space-between"
                                 boxSize={{ base: "100%", lg: "80%" }}
                                 mx="auto"
-                                p={1}
                             >
                                 <Text fontSize={["0.9em", "0.95em", "1em"]}>Bhavik Bhagat</Text>
                                 <Flex alignItems="center" gap={1}>
@@ -78,7 +96,11 @@ function Contact() {
                                 </Flex>
                             </Flex>
 
-                            <Box boxSize={{ base: "100%", lg: "80%" }} mx="auto">
+                            <Box
+                                mx="auto"
+                                boxSize={{ base: "100%", lg: "80%" }}
+                                display={{ base: "flex", md: "none", lg: "flex" }}
+                            >
                                 <Image src="logos/BhavikQR.png" alt="qr-code" borderRadius="1em" />
                             </Box>
 
@@ -136,16 +158,17 @@ function Contact() {
 
                         </VStack>
                     </Box>
-                </Flex>
 
-                <Divider mx="auto" width="95%" />
+                </Stack>
+
+                <Divider mx="auto" width="95%" my={1} />
 
                 <CardFooter px={8}>
                     <Text as={Center} mx="auto" fontSize={["0.9em", "0.95em", "1em"]}>
                         Thank you for visiting my website!
                     </Text>
                 </CardFooter>
-            </Card>
+            </Card >
         </Stack >
     )
 }

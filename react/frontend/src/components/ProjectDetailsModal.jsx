@@ -24,78 +24,74 @@ import { RenderCarousel } from "./RenderCarousel"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { ExternalLinkIcon, CloseIcon } from "@chakra-ui/icons"
 
-// compute only once
-function ProjectImages({ project, w, h }) {
-    console.log(`in callback: ${w}, ${h}`)
-    const data = project.projectImgs !== "" &&
-        useCallback(
-            project.projectImgs?.map(imgURL => {
-                return (
-                    <Box
-                        key={nanoid()}
-                        w={w} h={h}
-                        bgImage={`url(${imgURL})`}
-                        bgRepeat="no-repeat"
-                        bgPosition="center"
-                        bgSize="contain"
-                        bgClip="border-box"
-                    >
-                    </Box>
-                )
-            }),
-            [project]
-        )
-    return data
-}
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
-    // to check the mobile or not
-    const [isMobile] = useMediaQuery("(max-width: 992px)")
-
-    const [cardWidth, setCardWidth] = useState(isMobile ? 480 : 992)
-    const [cardHeight, setCardHeight] = useState(cardWidth * 0.5)
-
     // get dimension of the component before rendering
     // ref: https://stackoverflow.com/questions/49058890/how-to-get-a-react-components-size-height-width-before-render
     const carouselBoxRef = useRef()
+
+    // to check the mobile or not
+    const [isMobile] = useMediaQuery("(max-width: 992px)")
+
+    const getCarouselWidth = () => {
+        let screenObj = window.screen
+        let newWidth = screenObj.orientation.angle === 90 ?
+            screenObj.availWidth * 0.9 - 12 :
+            screenObj.availWidth
+        return Math.min(newWidth, 992)
+    }
+
+    // to keep track of the dimensions
+    const [cardWidth, setCardWidth] = useState(() => getCarouselWidth())
+    const [cardHeight, setCardHeight] = useState(cardWidth * 0.5)
+
     useEffect(() => {
+        // to handle what happens when screen resizes
         const handleResize = () => {
+            // if carousel box is mounted (Modal is mounted), then we can track our box's dimensions
+            // otherwise we must give the initial dimesions for our box
             if (carouselBoxRef.current) {
                 let newWidth = Math.min(carouselBoxRef.current.offsetWidth, 992)
-                let newHeight = Math.min(newWidth * 0.5, carouselBoxRef.current.offsetHeight)
+                let newHeight = Math.min(newWidth * 0.5)
                 setCardWidth(newWidth)
                 setCardHeight(newHeight)
+            } else {
+                setCardWidth(getCarouselWidth())
+                setCardHeight(cardWidth * 0.5)
             }
         }
 
-        handleResize()
+        // to handle what happen when screen orientation is changed
+        // we just want to set dimensions or our box on change of orientation; dimensions of the box are changed
+        const handleOrientation = () => { handleResize() }
 
-        const resizeOrientationHandler = () => {
-            handleResize()
-        }
+        // listen for screen resize
+        window.addEventListener("resize", handleResize)
 
-        window.addEventListener("resize", resizeOrientationHandler)
-        window.addEventListener("orientationchange", resizeOrientationHandler)
+        // listen for screen orientation change
+        window.addEventListener("orientationchange", handleOrientation)
+
+        // clean up code:
+        // 1. remove handler of resize
+        // 2. remove handle of screen orientation
         return () => {
             window.removeEventListener("resize", handleResize)
-            window.removeEventListener("orientationchange", handleResize)
+            window.removeEventListener("orientationchange", handleOrientation)
         }
 
     }, [])
 
-    const projectImages = project.projectImgs !== "" && useCallback(
+    // to store all project images at once
+    const projectImages = []
+    // use of callback to improve performance
+    useCallback(
         project.projectImgs?.map(url => {
-            console.log(`creating imgs with dim: ${cardWidth}, ${cardHeight}`)
-            return (
+            // console.log(`creating imgs with dim: ${cardWidth}, ${cardHeight}`)
+            let data = (
                 <Box
                     key={nanoid()}
                     w={`${cardWidth}px`}
                     h={`${cardHeight}px`}
-                // bgImage={`url(${url})`}
-                // bgRepeat="no-repeat"
-                // bgPosition="center"
-                // bgSize="contain"
-                // bgClip="border-box"
                 >
                     <Image
                         src={url}
@@ -106,10 +102,12 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     />
                 </Box>
             )
+            projectImages.push(data)
         }),
         [project]
     )
 
+    // some styles for the buttons: source; link; close
     const btnHoverStyle = {
         size: { base: "xs", md: "sm", lg: "md" },
         _hover: {
@@ -128,11 +126,13 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         >
             <ModalOverlay />
             <ModalContent>
+
                 <ModalHeader
                     as={Stack}
                     direction={{ base: "column", lg: "row" }}
                     alignItems="center"
-                    justifyContent={{ base: "center", lg: "space-between" }}>
+                    justifyContent={{ base: "center", lg: "space-between" }}
+                >
                     <Text fontSize={{ base: "md", lg: "lg" }}>
                         {project.title} - Details
                     </Text>

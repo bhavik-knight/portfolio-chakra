@@ -1,9 +1,18 @@
 import { nanoid } from "nanoid"
 import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
-import { Flex, Box, Stack, Spacer, Divider } from "@chakra-ui/react"
+import { Flex, Box, Spacer, Divider } from "@chakra-ui/react"
+import { Stack, HStack, VStack } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
 import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Table, Thead, Tbody, Tfoot, Th, Tr, Td, TableCaption, TableContainer } from "@chakra-ui/react"
+
+
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
 
 
 function TrainingCard({ t }) {
@@ -21,7 +30,7 @@ function TrainingCard({ t }) {
                         {t.program}
                     </Text>
                     <Spacer />
-                    <Text px={2}>
+                    <Text px={{ base: 0, lg: 2 }}>
                         {t.start} - {t.end}
                     </Text>
                 </Flex>
@@ -30,18 +39,21 @@ function TrainingCard({ t }) {
 
 
             <AccordionPanel
-                p={4}
+                p={{ base: 0, lg: 4 }}
                 size={{ base: "md", lg: "lg" }}
             >
-                <Text fontSize={{ base: "md", lg: "lg" }}>
+                <Text {...textFontStyle} mt={2}>
                     {t.institute} | {t.place}
                 </Text>
 
                 <Divider mx="auto" my={1} width="95%" />
 
-
-                <Flex overflow="hidden" mx="auto" width="80%">
-                    <Table variant="striped" colorScheme="purple">
+                <VStack spacing={2} px={0}>
+                    <Table
+                        variant="striped"
+                        colorScheme="purple"
+                        {...textFontStyle}
+                    >
                         <Thead>
                             <Tr>
                                 <Th>Domain</Th>
@@ -61,7 +73,7 @@ function TrainingCard({ t }) {
                             }
                         </Tbody>
                     </Table>
-                </Flex>
+                </VStack>
             </AccordionPanel>
         </AccordionItem >
     )

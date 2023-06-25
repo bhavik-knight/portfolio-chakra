@@ -1,39 +1,50 @@
 import { projects } from "../data/portfolio_db.json"
 import "./Projects.css"
 import { useState } from "react"
-import { Divider, UnorderedList, List, ListItem } from "@chakra-ui/react"
+import { Divider, ListIcon, List, ListItem, TagRightIcon } from "@chakra-ui/react"
 import { Heading, Text } from "@chakra-ui/react"
 import { Flex, Stack, VStack, HStack, } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Tabs, Tab, TabPanels, TabPanel, TabList, } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { ProjectCard } from "./ProjectCard"
+import { ArrowForwardIcon, ChevronRightIcon } from "@chakra-ui/icons"
+
+
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
 
 function Projects() {
-
+    // domains
     const projectTypes = ["web", "data", "ai", "game"]
 
     // to keep track of active tab
     const [tabIndex, setTabIndex] = useState(0)
 
     return (
-        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 0, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
             {/* some text */}
-            <Card as="section" p={4} _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1}>
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" my={1} py={1}>
                     Projects
                 </CardHeader>
 
-                <Divider className="divider" width="95%" mx="auto" my={1} />
+                <Divider width="95%" mx="auto" my={1} />
 
-                <CardBody as={UnorderedList}>
-                    <ListItem>
-                        Checkout the projects I have developed in differnet domains.
-                    </ListItem>
-
-                    <ListItem>
-                        While most of the projects are developed as an independenet developer; some projects are group-projects where I demonstrated adaquet skills in the core domain.
-                    </ListItem>
+                <CardBody>
+                    <Stack as={List} spacing={2} {...textFontStyle}>
+                        <ListItem>
+                            I demonstrated my analytical skills and diverse programming skills through numerous projects in the fields of Web Development, Data Analytics, Data Science, and Machine Learning.
+                        </ListItem>
+                        <ListItem>
+                            While I developed most of the projects as an independent developer, I also actively contributed to group projects, demonstrating my skills and depth of knowledge in the core domain.
+                        </ListItem>
+                    </Stack>
                 </CardBody>
             </Card>
 
@@ -51,7 +62,7 @@ function Projects() {
                     onChange={(index) => setTabIndex(index)}
                 >
                     {/* tab titles */}
-                    <TabList className="tabLabel">
+                    <TabList className="tabLabel" width={{ base: "100%", lg: "90%" }} mx="auto" fontSize={{ base: "0.9em", md: "0.95em", lg: "1em" }}>
                         <Tab _selected={{ bg: "red", color: "black" }} _hover={{ border: `1px solid red` }}>Web Dev</Tab>
                         <Tab _selected={{ bg: "green", color: "white" }} _hover={{ border: `1px solid green` }}>Data</Tab>
                         <Tab _selected={{ bg: "blue", color: "white" }} _hover={{ border: `1px solid blue` }}>ML/AI</Tab>
@@ -62,7 +73,7 @@ function Projects() {
                     <TabPanels>
                         {
                             projectTypes.map(type =>
-                                <TabPanel as={Flex} key={nanoid()} justifyContent="space-evenly" flexWrap="wrap" px={2}>
+                                <TabPanel as={Flex} key={nanoid()} justifyContent="space-evenly" flexWrap="wrap" px={0}>
                                     {
                                         projects
                                             .filter(p => p.type === type)

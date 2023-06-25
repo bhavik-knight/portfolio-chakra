@@ -2,10 +2,22 @@ import { nanoid } from "nanoid"
 import { useState, useEffect } from "react"
 import { useBoolean } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Flex, Container, Stack, Spacer, Divider, Tag } from "@chakra-ui/react"
+import { Flex, Center, Container, Spacer, Divider, Tag } from "@chakra-ui/react"
+import { Stack, HStack, VStack } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
 import { Button } from "@chakra-ui/react"
+import { ChevronDownIcon, StarIcon } from "@chakra-ui/icons"
 import { TableContainer, Table, TableCaption, Thead, Tbody, Tfoot, Th, Tr, Td } from "@chakra-ui/react"
+import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
+
+
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
 
 function EducationCard({ edu }) {
 
@@ -25,38 +37,66 @@ function EducationCard({ edu }) {
     }, [showMore])
 
     return (
-        <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-            <CardHeader as={Heading} p={4}>
-                <Stack>
-                    <Flex direction={{ base: "column", lg: "row" }} fontSize={{ base: "md", lg: "2xl" }} wrap="wrap">
-                        <Text>{edu.degree} - <em>{edu.field}</em></Text>
-                        <Spacer />
-                        <Text>{edu.start} - {edu.end}</Text>
-                    </Flex>
-                    <Flex direction={{ base: "column", lg: "row" }} fontSize={{ base: "sm", lg: "lg" }} wrap="wrap">
-                        <Text>{edu.institute} | {edu.place}</Text>
-                    </Flex>
-                </Stack>
-            </CardHeader>
+        <AccordionItem py={2}>
+            {/* heading */}
+            <AccordionButton
+                as={Heading}
+                fontSize={{ base: "sm", md: "md", lg: "xl" }}
+                _hover={{ cursor: "pointer" }}
+                _expanded={{ boxShadow: "0px 2px 8px" }}
+            >
+                <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
+                    <Text>
+                        {edu.degree} - <em>{edu.field}</em>
+                    </Text>
+                    <Spacer />
+                    <Text px={{ base: 0, lg: 2 }}>
+                        {edu.start} - {edu.end}
+                    </Text>
+                </Flex>
+                <AccordionIcon />
+            </AccordionButton>
 
-            <Divider mx="auto" my={0} width="95%" />
 
-            {/* display the highlighted courses if available and grades - only in large screen */}
-            <CardBody display={edu.courses === null ? "none" : "flex"}>
-                <Flex mx="auto" width="80%">
-                    <Table variant="striped" colorScheme="purple">
-                        <TableCaption placement="top">
-                            <Stack direction={{ base: "column", lg: "row" }} justifyContent="space-between">
-                                <Text fontSize={{ base: "md", lg: "2xl" }}>Courses</Text>
-                                <Button variant="solid" colorScheme="purple" onClick={setShowMore.toggle}>{showMore ? `Show Favorites` : `Show More`}</Button>
-                            </Stack>
+            <AccordionPanel
+                px={{ base: 0, lg: 4 }}
+                size={{ base: "md", lg: "lg" }}
+            >
+
+                <Text {...textFontStyle} mt={2}>
+                    {edu.institute} | {edu.place}
+                </Text>
+
+                {/* display the highlighted courses if available and grades - only in large screen */}
+                <VStack spacing={{ base: 1, lg: 2 }} px={{ base: 2, lg: 4 }}>
+                    <Table
+                        variant="striped"
+                        colorScheme="purple"
+                        {...textFontStyle}
+                        display={edu.courses === null && "none"}
+                    >
+                        <TableCaption placement="top" px={0}>
+                            <HStack justifyContent="space-between" px={2} >
+                                <Text>Courses</Text>
+                                <Button
+                                    size={{ base: "xs", md: "sm", lg: "md" }}
+                                    variant="solid"
+                                    colorScheme="purple"
+                                    onClick={setShowMore.toggle}
+                                    rightIcon={showMore ? <StarIcon /> : <ChevronDownIcon />}
+                                >
+                                    {
+                                        showMore ? `Favorites` : `More`
+                                    }
+                                </Button>
+                            </HStack>
                         </TableCaption>
 
                         <Thead>
                             <Tr>
-                                <Th width="15%">Course ID</Th>
-                                <Th width="65%">Course Name</Th>
-                                <Th width="20%" textAlign="right">Grade / {edu.maxGPA}</Th>
+                                <Th width="10%">Course ID</Th>
+                                <Th width="80%">Course Name</Th>
+                                <Th width="10%" textAlign="right">Grade / {edu.maxGPA}</Th>
                             </Tr>
                         </Thead>
                         <Tbody>
@@ -64,9 +104,9 @@ function EducationCard({ edu }) {
                                 courseData && courseData.map(c => {
                                     return (
                                         <Tr key={nanoid()}>
-                                            <Td width="15%">{c.cid}</Td>
-                                            <Td width="65%">{c.name}</Td>
-                                            <Td width="20%" textAlign="right">{c.grade}</Td>
+                                            <Td width="10%">{c.cid}</Td>
+                                            <Td width="80%">{c.name}</Td>
+                                            <Td width="10%" textAlign="right">{c.grade}</Td>
                                         </Tr>
                                     )
                                 })
@@ -82,19 +122,17 @@ function EducationCard({ edu }) {
                         </Tfoot>
 
                     </Table>
-                </Flex>
-            </CardBody>
 
-            {/* highlight important-interesting courses */}
-            <CardFooter>
-                <Flex wrap="wrap" gap={2}>
-                    {
-                        edu.highlights.map(h => <Tag key={nanoid()}>{h}</Tag>)
-                    }
-                </Flex>
-            </CardFooter>
-        </Card>
+                    {/* highlight important-interesting courses */}
+                    <Flex wrap="wrap" gap={2}>
+                        {
+                            edu.highlights.map(h => <Tag key={nanoid()}>{h}</Tag>)
+                        }
+                    </Flex>
+                </VStack>
 
+            </AccordionPanel>
+        </AccordionItem >
     )
 }
 
