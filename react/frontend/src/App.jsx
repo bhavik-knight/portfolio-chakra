@@ -78,10 +78,9 @@ function App() {
     return (
         <Flex
             direction="column"
-            wrap="wrap"
-            w="100vw"
             m={0} p={0} gap={0} spacing={0}
             position="relative"
+            wrap="wrap"
         >
             <Header
                 colorMode={colorMode}
@@ -101,6 +100,7 @@ function App() {
                 {/* sidenav */}
                 <Flex
                     // h={{ base: "fit-content", lg: "100vh" }}
+                    position="relative"
                     minW={{ base: "100%", lg: "fit-content" }} zIndex={5} me={10}>
 
                     <Sidenav

@@ -24,12 +24,11 @@ function Sidenav({ pages, activePage, selectPage }) {
             isAttached
             py={{ base: 2, lg: 4 }} mx={0}
             spacing={0}
-            left={0}
             w={{ base: "100vw", lg: "fit-content" }}
             h="fit-content"
+            position="sticky"
             justify={{ base: "center", lg: "flex-start" }}
             direction={{ base: "row", lg: "column" }}
-            position={{ base: "fixed", lg: "sticky" }}
             top={{ base: "50px", md: "50px", lg: "60px" }}
             bg={{ base: useColorModeValue("gray.100", "gray.800"), lg: "transparent" }}
             boxShadow={{ base: "1px 1px 8px", lg: "none" }}
