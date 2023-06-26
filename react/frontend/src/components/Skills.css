@@ -1,0 +1,12 @@
+.skillBadge:hover {
+    animation: rotateSkillBadge 5s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes rotateSkillBadge {
+
+    25%,
+    75% {
+        transform: rotateY(360deg)
+    }
+}

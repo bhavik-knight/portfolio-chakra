@@ -2,36 +2,27 @@ import "./Header.css"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { useState, useRef, useEffect } from "react"
 import { useColorModeValue, useMediaQuery } from "@chakra-ui/react"
-import { Heading, Spacer, Center, Menu, Box, Flex, Image, Text, Container } from "@chakra-ui/react"
+import { Heading, Spacer, Menu, Flex, Image, Text } from "@chakra-ui/react"
 import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
+import { Container, Center, Box, Stack } from "@chakra-ui/react"
 
 
-// ref: https://dev.to/davidemaye/how-to-set-up-font-awesome-in-react-5a8d
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faLinkedinIn, faGithubSquare } from "@fortawesome/free-brands-svg-ResponsiveIcons"
 
-// to create icons for navbar with consistent style
-function getNavbarIconButton(btnName, btnIcon, handleClick) {
-
-    return (
-        <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName} textTransform="capitalize">
-            <IconButton
-                variant="ghost"
-                fontSize={{ base: "md", lg: "2xl" }}
-                borderRadius="4px"
-                _hover={{ boxShadow: "1px 1px 8px" }}
-                name={btnName}
-                icon={btnIcon}
-                onClick={event => handleClick(event)}
-            />
-        </Tooltip>
-    )
-}
-
-
-function Header({ colorMode, changeColorMode, title }) {
+function Header({ colorMode, changeColorMode, title, selectPage }) {
     // check for the media query
-    const [isLarge] = useMediaQuery("(min-width: 992px)")
+    const [isMobile] = useMediaQuery("(max-width: 992px)")
+
+    // logo style on mobile hide other letters
+    const logoStyle = {
+        // bg: "red",
+        // border: "1px solid",
+        my: "auto",
+        display: isMobile ? "none" : "flex",
+        fontSize: "36px",
+        boxSize: "40px",
+        alignItems: "bottom"
+    }
+
 
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
@@ -84,7 +75,7 @@ function Header({ colorMode, changeColorMode, title }) {
     return (
         <Flex
             as="nav"
-            px={4}
+            px={2}
             top={0} left={0} right={0}
             h={{ base: "50px", md: "50px", lg: "60px" }}
             alignItems="center"
@@ -94,13 +85,26 @@ function Header({ colorMode, changeColorMode, title }) {
             zIndex={10}
             boxShadow={navbarBg && "0px 0px 16px 0px"}
         >
-            <Heading
+            <Text
+                as={Flex}
                 className="logo"
-                width={{ base: "30%", lg: "15%" }}
+                fontSize={{ base: "28px", lg: "36px" }}
+                onClick={() => selectPage("home")}
+                my="auto"
+                px={2}
+                alignItems="center"
+                _hover={{ ariaLabel: "HomeButton" }}
             >
-                B{isLarge && "havik"}
-            </Heading>
-            <Spacer />
+
+                {/* B{!isMobile && "havik"} */}
+                <span className="logoText" sx={{ style: "--l:1" }} >B</span>
+                <span className="logoText" sx={{ style: "--l:2" }} >h</span>
+                <span className="logoText" sx={{ style: "--l:3" }} >a</span>
+                <span className="logoText" sx={{ style: "--l:4" }} >v</span>
+                <span className="logoText" sx={{ style: "--l:5" }} >i</span>
+                <span className="logoText" sx={{ style: "--l:6" }} >k</span>
+            </Text>
+
             {/* <Container bg="transparent">
                 <Text
                     display={{ base: "none", md: "block" }}
@@ -108,12 +112,36 @@ function Header({ colorMode, changeColorMode, title }) {
                     textAlign="center"> {title === "home" ? "Bhavik's Portfolio" : title}
                 </Text>
             </Container> */}
-            <ButtonGroup spacing={1}>
+            <ButtonGroup isAttached>
                 {colorMode === "dark" ? sunIcon : moonIcon}
                 {linkedinIcon}
                 {gitHubIcon}
             </ButtonGroup>
         </Flex >
+    )
+}
+
+
+// ref: https://dev.to/davidemaye/how-to-set-up-font-awesome-in-react-5a8d
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faLinkedinIn, faGithubSquare } from "@fortawesome/free-brands-svg-ResponsiveIcons"
+
+// to create icons for navbar with consistent style
+function getNavbarIconButton(btnName, btnIcon, handleClick) {
+
+    return (
+        <Tooltip hasArrow placement="bottom" label={btnName} araiLabel={btnName} textTransform="capitalize">
+            <IconButton
+                variant="ghost"
+                className="btnIcon"
+                fontSize={{ base: "md", lg: "2xl" }}
+                borderRadius="4px"
+                _hover={{ boxShadow: "1px 1px 8px" }}
+                name={btnName}
+                icon={btnIcon}
+                onClick={event => handleClick(event)}
+            />
+        </Tooltip>
     )
 }
 

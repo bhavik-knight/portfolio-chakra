@@ -1,10 +1,11 @@
 import "./Home.css"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Heading, Text, Image, AspectRatio } from "@chakra-ui/react"
-import { Stack, StackDivider, Container, Flex, Center } from "@chakra-ui/react"
+import { Stack, VStack, StackDivider, Container, Flex, Center } from "@chakra-ui/react"
 import { Divider, Spacer, Button } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 import { useMediaQuery } from "@chakra-ui/react"
+import { AboutMe } from "./AboutMe"
 
 
 const textFontStyle = {
@@ -36,16 +37,46 @@ function Home() {
                         px={{ base: 0, lg: 8 }}
                         justify="space-between"
                     >
-                        <Text fontSize={{ base: "1.5em", md: "1.75em", lg: "2em" }}>
-                            Hello, world!<br />I am Bhavik Bhagat.
-                        </Text>
+                        <VStack spacing={0} p={0} m={0}>
+                            <Text className="hello" fontSize={{ base: "1.2em", md: "1.3em", lg: "1.5em" }}>
+                                Hello, world!
+                            </Text>
+                            <Text className="hello" fontSize={{ base: "1.2em", md: "1.3em", lg: "1.5em" }}>
+                                I am Bhavik.
+                            </Text>
+                        </VStack>
 
                         {isMobile && <StackDivider border="1px dotted" />}
 
-                        <Text fontSize={{ base: "1.05em", md: "1.5em", lg: "2em" }}>
-                            {!isMobile && <br />}
-                            Welcome to my portfolio website!
-                        </Text>
+                        <VStack>
+                            {!isMobile && <Spacer />}
+                            <Text as={Flex} fontSize={{ base: "1.2em", md: "1.3em", lg: "1.5em" }}
+                            >
+                                <span className="logoText">W</span>
+                                <span className="logoText">e</span>
+                                <span className="logoText">l</span>
+                                <span className="logoText">c</span>
+                                <span className="logoText">o</span>
+                                <span className="logoText">m</span>
+                                <span className="logoText">e</span>&nbsp;
+                                <span className="logoText">t</span>
+                                <span className="logoText">o</span>&nbsp;
+                                <span className="logoText">m</span>
+                                <span className="logoText">y</span>&nbsp;
+                                <span className="logoText">P</span>
+                                <span className="logoText">o</span>
+                                <span className="logoText">r</span>
+                                <span className="logoText">t</span>
+                                <span className="logoText">f</span>
+                                <span className="logoText">o</span>
+                                <span className="logoText">l</span>
+                                <span className="logoText">i</span>
+                                <span className="logoText">o</span>&nbsp;
+                                <span className="logoText">😇</span>
+
+                                {/* Welcome to my Portfolio Website */}
+                            </Text>
+                        </VStack>
                     </Stack>
                 </CardHeader>
 
@@ -80,7 +111,7 @@ function Home() {
                         as={Container}
                         mx="auto"
                     >
-                        <Image src="./logos/bhavik_sticker.png" objectFit="contain" alt="bhavik sticker" />
+                        <Image className="sticker" src="./logos/bhavik_sticker.png" objectFit="contain" alt="bhavik sticker" />
                     </Flex>
 
                     <Stack
@@ -124,36 +155,7 @@ function Home() {
                 </Stack>
             </Card >
 
-            {/* about me */}
-            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}
-            // display={{ base: "none", md: "flex" }}
-            >
-                <CardHeader as={Heading} {...headerFontStyle}>
-                    About Me
-                </CardHeader>
-
-                <Divider width="95%" mx="auto" my={1} />
-
-                <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
-                    <Stack as={List} spacing={2} {...textFontStyle}>
-                        <ListItem>
-                            I am a Pythonist, passionate about Artificial Intelligence having a thorough foundation in Mathematics.
-                        </ListItem>
-                        <ListItem>
-                            Becoming a Software Engineer had always been my childhood dream, even though my undergraduate education was in a different field. It was during the second semester of my Bachelor's degree in Mechanical Engineering that I discovered my love for programming and developed a deep passion for Computer Science. This revelation occurred when I took a course on Computer Programming using C-language.
-                        </ListItem>
-                        <ListItem>
-                            After successfully completing my Bachelor's degree in Mechanical Engineering, I began working as an ad-hoc lecturer at the College. However, my passion for Computer Science continued to thrive, and I embarked on a journey to build a career that would align with my long-standing dream.
-                        </ListItem>
-                        <ListItem>
-                            In 2015, I embarked on an unconventional journey into the realm of Computer Science, making a pivotal decision to redirect my career trajectory and pursue my long-held aspirations. I am deeply indebted to Dr. David J. Malan, a professor at Harvard, whose passionate teaching of the CS50 course ignited a profound transformation in my life.
-                        </ListItem>
-                        <ListItem>
-                            During my tenure as a full-time technician, I dedicated myself to earning numerous online certifications from renowned institutions such as Harvard, MIT, and Microsoft through platforms like Edx, Coursera, and MIT-OCW. These certifications, focusing on the fundamentals of programming, enabled me to lay a solid groundwork in the field and propel my career aspirations forward.
-                        </ListItem>
-                    </Stack>
-                </CardBody>
-            </Card>
+            <AboutMe />
         </Stack >
     )
 }

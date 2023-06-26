@@ -21,3 +21,35 @@
 .homeSkills:hover>.homeSkillDetails {
     opacity: 1;
 }
+
+.hello {
+    animation: rotateHorizontally 5s infinite;
+    animation-delay: 3s;
+}
+
+@keyframes rotateHorizontally {
+
+    0%,
+    75% {
+        transform: rotateX(360deg)
+    }
+}
+
+
+.sticker {
+    animation: rotateSticker 10s infinite;
+    animation-delay: 1s;
+}
+
+
+@keyframes rotateSticker {
+
+    25% {
+        transform: rotateY(180deg)
+    }
+
+    50% {
+        transform: rotateX(360deg)
+    }
+
+}

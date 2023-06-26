@@ -82,11 +82,12 @@ function App() {
             w="100vw"
             spacing={0}
         >
-            <Flex>
+            <Flex m={0} p={0} w="100vw">
                 <Header
                     colorMode={colorMode}
                     changeColorMode={() => toggleColorMode()}
                     title={currentPage}
+                    selectPage={setCurrentPage}
                 />
             </Flex>
 
@@ -95,6 +96,7 @@ function App() {
                 minH={{ base: "fit-content", lg: "100vh" }}
                 direction={{ base: "column", lg: "row" }}
                 flexWrap={{ base: "wrap", lg: "nowrap" }}
+                w="100vw"
             >
                 {/* sidenav */}
                 <Flex
@@ -122,7 +124,7 @@ function App() {
 
             </Stack>
 
-            <Flex>
+            <Flex m={0} p={0} w="100vw">
                 <Footer />
             </Flex>
         </Flex>
