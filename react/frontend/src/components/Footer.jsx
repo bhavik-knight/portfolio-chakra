@@ -11,9 +11,9 @@ function Footer(props) {
     const year = new Date().getFullYear();
     return (
         <Flex
-            // bg="green"
-            w="100%"
-            position="sticky"
+            className="footer"
+            w="100vw"
+            position="relative"
             h={{ base: "50px", md: "50px", lg: "60px" }}
             left={0} right={0} bottom={0}
             boxShadow="0 0 16px 0"

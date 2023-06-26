@@ -81,15 +81,14 @@ function App() {
             wrap="wrap"
             w="100vw"
             m={0} p={0} gap={0} spacing={0}
+            position="relative"
         >
-            <Flex>
-                <Header
-                    colorMode={colorMode}
-                    changeColorMode={() => toggleColorMode()}
-                    title={currentPage}
-                    selectPage={setCurrentPage}
-                />
-            </Flex>
+            <Header
+                colorMode={colorMode}
+                changeColorMode={() => toggleColorMode()}
+                title={currentPage}
+                selectPage={setCurrentPage}
+            />
 
             <Stack
                 mt={{ base: "50px", md: "50px", lg: "60px" }}
@@ -125,9 +124,7 @@ function App() {
 
             </Stack>
 
-            <Flex>
-                <Footer />
-            </Flex>
+            <Footer />
         </Flex>
     )
 }
