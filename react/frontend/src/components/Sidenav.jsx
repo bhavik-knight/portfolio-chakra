@@ -32,6 +32,7 @@ function Sidenav({ pages, activePage, selectPage }) {
             top={{ base: "50px", md: "50px", lg: "60px" }}
             bg={{ base: useColorModeValue("gray.100", "gray.800"), lg: "transparent" }}
             boxShadow={{ base: "1px 1px 8px", lg: "none" }}
+            zIndex={5}
         >
 
             {

@@ -7,20 +7,9 @@
     position: relative;
 }
 
-/* .logoText:hover {
-    transform: scale(1.1)
-} */
 
-/* .logo .logoText {
-    position: relative;
-    animation: flip 2s infinite;
-    animation-delay: calc(2s * var(--l))
-}
-
-@keyframes flip {
-
-    0%,
-    80% {
-        transform: rotateY(360deg)
+@media only screen and (max-width: 992px) {
+    .hidden {
+        display: none;
     }
-} */
+}

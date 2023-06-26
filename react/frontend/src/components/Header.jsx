@@ -7,22 +7,9 @@ import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react
 import { Container, Center, Box, Stack } from "@chakra-ui/react"
 
 
-
 function Header({ colorMode, changeColorMode, title, selectPage }) {
     // check for the media query
     const [isMobile] = useMediaQuery("(max-width: 992px)")
-
-    // logo style on mobile hide other letters
-    const logoStyle = {
-        // bg: "red",
-        // border: "1px solid",
-        my: "auto",
-        display: isMobile ? "none" : "flex",
-        fontSize: "36px",
-        boxSize: "40px",
-        alignItems: "bottom"
-    }
-
 
     // check the vertical scroll to style navbar between transparent and solid background
     const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
@@ -75,12 +62,12 @@ function Header({ colorMode, changeColorMode, title, selectPage }) {
     return (
         <Flex
             as="nav"
-            px={{ base: 2, lg: 4 }}
+            position="fixed"
             top={0} left={0} right={0}
-            w="100vw"
+            my={0}
+            px={{ base: 2, lg: 4 }}
             h={{ base: "50px", md: "50px", lg: "60px" }}
             alignItems="center"
-            position="fixed"
             justify="space-between"
             bg={bgColor}
             zIndex={10}
@@ -98,12 +85,12 @@ function Header({ colorMode, changeColorMode, title, selectPage }) {
             >
 
                 {/* B{!isMobile && "havik"} */}
-                <span className="logoText" sx={{ style: "--l:1" }} >B</span>
-                <span className="logoText" sx={{ style: "--l:2" }} >h</span>
-                <span className="logoText" sx={{ style: "--l:3" }} >a</span>
-                <span className="logoText" sx={{ style: "--l:4" }} >v</span>
-                <span className="logoText" sx={{ style: "--l:5" }} >i</span>
-                <span className="logoText" sx={{ style: "--l:6" }} >k</span>
+                <span className="logoText" sx={{ style: "--l:1" }}>B</span>
+                <span className="logoText hidden" sx={{ style: "--l:2" }}>h</span>
+                <span className="logoText hidden" sx={{ style: "--l:3" }}>a</span>
+                <span className="logoText hidden" sx={{ style: "--l:4" }}>v</span>
+                <span className="logoText hidden" sx={{ style: "--l:5" }}>i</span>
+                <span className="logoText hidden" sx={{ style: "--l:6" }}>k</span>
             </Text>
 
             {/* <Container bg="transparent">

@@ -1,6 +1,6 @@
 import './App.css'
 import { useState, useEffect } from "react"
-import { Stack, HStack, VStack, StackDivider } from "@chakra-ui/react"
+import { Stack, HStack, VStack, StackDivider, useMediaQuery } from "@chakra-ui/react"
 import { Box, Flex, Wrap, WrapItem, Menu, Grid, GridItem, ButtonGroup, useBoolean, useColorMode } from "@chakra-ui/react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
@@ -17,6 +17,8 @@ import { ResponsiveIcons } from "./components/ResponsiveIcons"
 
 
 function App() {
+    // check for mobile or not
+    const [isMobile] = useMediaQuery("(max-width: 992px)")
 
     // color mode toggle; check the local storage on each color mode change
     const { colorMode, toggleColorMode } = useColorMode()
@@ -89,43 +91,30 @@ function App() {
                 selectPage={setCurrentPage}
             />
 
-            <Stack
-                mt={{ base: "50px", md: "50px", lg: "60px" }}
-                minH={{ base: "fit-content", lg: "100vh" }}
-                direction={{ base: "column", lg: "row" }}
-                flexWrap={{ base: "wrap", lg: "nowrap" }}
-                m={0} p={0} gap={0} spacing={0}
-                w="100vw"
-            >
-                {/* sidenav */}
-                <Flex
-                    // h={{ base: "fit-content", lg: "100vh" }}
-                    position="relative"
-                    minW={{ base: "100%", lg: "fit-content" }} zIndex={5} me={10}>
-
-                    <Sidenav
-                        pages={pages}
-                        activePage={currentPage}
-                        selectPage={handleSelectPage}
-                    />
-                </Flex>
-
-                <StackDivider
-                    mt={{ base: "50px", md: "50px", lg: "60px" }}
-                    borderColor="white" border="1px dotted"
+            {
+                isMobile && <Sidenav
+                    pages={pages}
+                    activePage={currentPage}
+                    selectPage={handleSelectPage}
                 />
+            }
+            {
+                !isMobile &&
+                <StackDivider borderColor="white" border="1px dotted" />
+            }
 
-                {/* pages */}
-                <Flex w="100%" py={2}>
-                    <Flex as="main" w="95%" mt={{ base: "50px", md: "50px", lg: 0 }} mx="auto">
-                        {pages[currentPage].page}
-                    </Flex>
-                </Flex>
+            {/* pages */}
+            <Flex
+                as="main"
+                w={{ base: "100%", lg: "95%" }}
+                mt={{ base: "50px", md: "50px", lg: "60px" }}
+                mx="auto" py={2}
+            >
+                {pages[currentPage].page}
+            </Flex>
 
-            </Stack>
-
-            <Footer />
-        </Flex>
+            < Footer />
+        </Flex >
     )
 }
 
