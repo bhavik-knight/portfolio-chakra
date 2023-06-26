@@ -1,12 +1,7 @@
-/* .container-bg-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-} */
+.logoText:hover {
+    transform: scale(1.25)
+}
 
-/* .divider {
-    width: 90%;
-    margin-inline: auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
-} */
+.btnIcon:hover {
+    transform: scale(1.1)
+}

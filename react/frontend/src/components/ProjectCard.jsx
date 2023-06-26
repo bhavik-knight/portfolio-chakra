@@ -35,7 +35,7 @@ function ProjectCard({ project }) {
         >
             <Stack as={Center}>
                 <Flex>
-                    <Img src={project.displayImg} alt="project display image" />
+                    <Img src={project.displayImg} alt="project display image" className="projectDisplayImg" />
                 </Flex>
 
                 <Divider />

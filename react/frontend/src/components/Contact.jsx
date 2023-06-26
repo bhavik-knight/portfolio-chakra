@@ -33,8 +33,11 @@ const headerFontStyle = {
 
 // social icon button size
 const btnStyles = {
+    className: "btnIcon",
     isRound: true,
-    _hover: { boxShadow: "1px 1px 4px" },
+    _hover: {
+        boxShadow: "1px 1px 4px",
+    },
 }
 
 
@@ -89,7 +92,20 @@ function Contact() {
                                 boxSize={{ base: "100%", lg: "80%" }}
                                 mx="auto"
                             >
-                                <Text fontSize={["0.9em", "0.95em", "1em"]}>Bhavik Bhagat</Text>
+                                <Text as={Flex} fontSize={["0.9em", "0.95em", "1em"]}>
+                                    <span className="logoText">B</span>
+                                    <span className="logoText">h</span>
+                                    <span className="logoText">a</span>
+                                    <span className="logoText">v</span>
+                                    <span className="logoText">i</span>
+                                    <span className="logoText">k</span>&nbsp;
+                                    <span className="logoText">B</span>
+                                    <span className="logoText">h</span>
+                                    <span className="logoText">a</span>
+                                    <span className="logoText">g</span>
+                                    <span className="logoText">a</span>
+                                    <span className="logoText">t</span>
+                                </Text>
                                 <Flex alignItems="center" gap={1}>
                                     {ResponsiveIcons["phone"]["icon"]}
                                     <Text fontSize={["0.9em", "0.95em", "1em"]}>(902)-338-06821</Text>

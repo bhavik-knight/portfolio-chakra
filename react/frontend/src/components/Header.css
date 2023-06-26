@@ -1,13 +1,26 @@
 .logo {
     background-color: transparent;
-    height: 52px;
-    padding: 4px;
+    font-size: 40px;
+    height: fit-content;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
 }
 
-.navbar button {
-    margin-inline: 4px;
+/* .logoText:hover {
+    transform: scale(1.1)
+} */
+
+/* .logo .logoText {
+    position: relative;
+    animation: flip 2s infinite;
+    animation-delay: calc(2s * var(--l))
 }
 
-.navbar p {
-    text-transform: capitalize;
-}
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+} */

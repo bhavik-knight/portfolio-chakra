@@ -8,7 +8,7 @@ import { ResponsiveIcons } from "./ResponsiveIcons"
 
 const btnStyles = {
     variant: { base: "outline", lg: "ghost" },
-    _hover: { boxShadow: "1px 1px 16px" },
+    _hover: { boxShadow: "1px 1px 8px" },
     p: 4
 }
 
@@ -39,6 +39,7 @@ function CreateButton({ isLarge, page, activePage, selectPage }) {
                 :
                 <IconButton
                     {...btnStyles}
+                    className="btnIcon"
                     aria-label={page}
                     onClick={event => selectPage(event)}
                     isActive={page === activePage}

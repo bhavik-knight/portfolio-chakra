@@ -1,3 +1,4 @@
+import "./Skills.css"
 import { skills } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
@@ -195,6 +196,7 @@ function Skills() {
 function CreateBadge({ skill }) {
     return (
         <VStack
+            className="skillBadge"
             as={Center}
             p={2}
             mx="auto"
