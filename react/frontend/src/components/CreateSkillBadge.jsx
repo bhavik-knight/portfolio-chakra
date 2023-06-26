@@ -4,15 +4,13 @@ import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
 function CreateSkillBadge({ skill }) {
-    let skillName =
-        ResponsiveIcons[skill]?.fullName ||
-        ResponsiveIcons[skill]?.name ||
-        skill
+    let skillName = ResponsiveIcons[skill]?.name || skill
+    let skillFullName = ResponsiveIcons[skill]?.fullName || skillName
 
     return (
         <Tooltip
-            label={skillName}
-            aria-label={skillName}
+            label={skillFullName}
+            aria-label={skillFullName}
             hasArrow
         >
 
