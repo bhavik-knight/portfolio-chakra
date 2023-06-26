@@ -77,12 +77,13 @@ function App() {
     // this is the function that will render the DOM
     return (
         <Flex
-            flexDirection="column"
-            flexWrap="wrap"
+            direction="column"
+            wrap="wrap"
             w="100vw"
             spacing={0}
+            m={0} p={0} gap={0}
         >
-            <Flex m={0} p={0} w="100vw">
+            <Flex>
                 <Header
                     colorMode={colorMode}
                     changeColorMode={() => toggleColorMode()}

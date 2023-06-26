@@ -75,8 +75,9 @@ function Header({ colorMode, changeColorMode, title, selectPage }) {
     return (
         <Flex
             as="nav"
-            px={2}
+            px={{ base: 2, lg: 4 }}
             top={0} left={0} right={0}
+            w="100vw"
             h={{ base: "50px", md: "50px", lg: "60px" }}
             alignItems="center"
             position="fixed"
@@ -112,6 +113,7 @@ function Header({ colorMode, changeColorMode, title, selectPage }) {
                     textAlign="center"> {title === "home" ? "Bhavik's Portfolio" : title}
                 </Text>
             </Container> */}
+
             <ButtonGroup isAttached>
                 {colorMode === "dark" ? sunIcon : moonIcon}
                 {linkedinIcon}

@@ -23,6 +23,7 @@ import { useMediaQuery } from "@chakra-ui/react"
 import { RenderCarousel } from "./RenderCarousel"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { ExternalLinkIcon, CloseIcon } from "@chakra-ui/icons"
+import { CreateSkillBadge } from "./CreateSkillBadge"
 
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
@@ -33,12 +34,29 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     // to check the mobile or not
     const [isMobile] = useMediaQuery("(max-width: 992px)")
 
-    const getCarouselWidth = () => {
+    function getCarouselWidth() {
         let screenObj = window.screen
+
+        // orientation angle 90 means - horizontal / landscape mode
         let newWidth = screenObj.orientation.angle === 90 ?
-            screenObj.availWidth * 0.9 - 12 :
+            screenObj.availWidth * 0.8 - 12 :
             screenObj.availWidth
         return Math.min(newWidth, 992)
+    }
+
+    function getCardHeight(width) {
+        let screenObj = window.screen
+
+        // if phone is held horizontally / landscape mode - width can be more than 2x to height
+        // in otherwords aspect ratio can be bigger than 2:1 depending on phone
+        // that is why set height accordingly by taking 80% of height available without padding; margin
+        // if phone is help vertically / portait mode - height is far more than width
+        // in such cases we can take height hakf of the width
+        let newHeight = screenObj.orientation.angle === 90 ?
+            screenObj.availHeight * 0.8 - 12 :
+            width * 0.5
+
+        return Math.max(newHeight, 200)
     }
 
     // to keep track of the dimensions
@@ -52,12 +70,12 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
             // otherwise we must give the initial dimesions for our box
             if (carouselBoxRef.current) {
                 let newWidth = Math.min(carouselBoxRef.current.offsetWidth, 992)
-                let newHeight = Math.min(newWidth * 0.5)
+                let newHeight = getCardHeight(newWidth)
                 setCardWidth(newWidth)
                 setCardHeight(newHeight)
             } else {
                 setCardWidth(getCarouselWidth())
-                setCardHeight(cardWidth * 0.5)
+                setCardHeight(getCardHeight(cardWidth))
             }
         }
 
@@ -213,33 +231,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     justifyContent="space-evenly" spacing={1} flexWrap="wrap"
                 >
                     {
-                        project.technologies.map(tech => {
-                            const techName = `${ResponsiveIcons[tech]?.name || tech}`
-                            const techFullName = `${ResponsiveIcons[tech]?.fullName || ResponsiveIcons[tech]?.name || tech}`
-                            return (
-                                <Tooltip
-                                    key={nanoid()}
-                                    label={techFullName || techName}
-                                    aria-label={techFullName || techName}
-                                    hasArrow
-                                >
-                                    <Stack
-                                        className="projectTech"
-                                        as={Center}
-                                        width={{ base: "32px", md: "64px", lg: "100px" }}
-                                        p={2}
-                                        mx="auto"
-                                    >
-                                        {ResponsiveIcons[tech]?.icon}
-                                        <Text
-                                            className="projectTechName"
-                                        >
-                                            {ResponsiveIcons[tech]?.name || tech}
-                                        </Text>
-                                    </Stack>
-                                </Tooltip>
-                            )
-                        })
+                        project.technologies.map(tech => <CreateSkillBadge key={nanoid()} skill={tech} />)
                     }
                 </ModalFooter>
             </ModalContent>

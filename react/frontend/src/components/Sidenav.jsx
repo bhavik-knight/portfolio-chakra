@@ -13,49 +13,10 @@ const btnStyles = {
 }
 
 
-function CreateButton({ isLarge, page, activePage, selectPage }) {
-    return (
-        <Tooltip
-            hasArrow
-            placement="auto"
-            label={page}
-            aria-label={page}
-            textTransform="capitalize"
-        >
-            {isLarge ?
-                <Button
-                    {...btnStyles}
-                    aria-label={page}
-                    onClick={(event) => selectPage(event)}
-                    isActive={page === activePage}
-                    name={page}
-                    leftIcon={ResponsiveIcons[page].icon}
-                    justifyContent="flex-start"
-                    textTransform="capitalize"
-                >
-                    {page}
-                </Button>
-
-                :
-                <IconButton
-                    {...btnStyles}
-                    className="btnIcon"
-                    aria-label={page}
-                    onClick={event => selectPage(event)}
-                    isActive={page === activePage}
-                    name={page}
-                    icon={ResponsiveIcons[page].icon}
-                />
-            }
-        </Tooltip>
-    )
-}
-
-
 function Sidenav({ pages, activePage, selectPage }) {
 
     // to check the screen is large or not to display icons on sidenav buttons
-    const [isLarge] = useMediaQuery("(min-width: 992px)")
+    const [isMobile] = useMediaQuery("(max-width: 992px)")
 
     return (
         <Stack
@@ -64,7 +25,7 @@ function Sidenav({ pages, activePage, selectPage }) {
             py={{ base: 2, lg: 4 }} mx={0}
             spacing={0}
             left={0}
-            w={{ base: "100%", lg: "fit-content" }}
+            w={{ base: "100vw", lg: "fit-content" }}
             h="fit-content"
             justify={{ base: "center", lg: "flex-start" }}
             direction={{ base: "row", lg: "column" }}
@@ -81,7 +42,7 @@ function Sidenav({ pages, activePage, selectPage }) {
                         activePage={activePage}
                         selectPage={selectPage}
                         page={page}
-                        isLarge={isLarge}
+                        isMobile={isMobile}
                     />
                 ))
             }
@@ -90,41 +51,44 @@ function Sidenav({ pages, activePage, selectPage }) {
     )
 }
 
+
+function CreateButton({ isMobile, page, activePage, selectPage }) {
+    return (
+        <Tooltip
+            hasArrow
+            placement="auto"
+            label={page}
+            aria-label={page}
+            textTransform="capitalize"
+        >
+            {
+                isMobile ?
+                    <IconButton
+                        {...btnStyles}
+                        className="btnIcon"
+                        aria-label={page}
+                        onClick={event => selectPage(event)}
+                        isActive={page === activePage}
+                        name={page}
+                        icon={ResponsiveIcons[page].icon}
+                    />
+                    :
+                    <Button
+                        {...btnStyles}
+                        aria-label={page}
+                        onClick={(event) => selectPage(event)}
+                        isActive={page === activePage}
+                        name={page}
+                        leftIcon={ResponsiveIcons[page].icon}
+                        justifyContent="flex-start"
+                        textTransform="capitalize"
+                    >
+                        {page}
+                    </Button>
+            }
+        </Tooltip>
+    )
+}
+
+
 export { Sidenav }
-
-// <Button
-//     className="sidenavButton"
-//     variant="ghost"
-//     onClick={(event) => selectPage(event)}
-//     isActive={page === activePage}
-//     name={page}
-//     leftIcon={pages[page].icon}
-//     size={{ base: "sm", lg: "md" }}
-// >
-//     {
-//         isLarge &&
-//         <Text className="sidenavButtonText">
-//             {page}
-//         </Text>
-//     }
-// </Button>
-
-
-
-                        // <Tooltip
-                        //     hasArrow
-                        //     placement="auto"
-                        //     key={nanoid()}
-                        //     label={page}
-                        //     aria-label={page}
-                        //     textTransform="capitalize"
-                        // >
-                        //     <IconButton
-                        //         {...btnStyles}
-                        //         aria-label={page}
-                        //         onClick={event => selectPage(event)}
-                        //         isActive={page === activePage}
-                        //         name={page}
-                        //         icon={ResponsiveIcons[page].icon}
-                        //     />
-                        // </Tooltip >
