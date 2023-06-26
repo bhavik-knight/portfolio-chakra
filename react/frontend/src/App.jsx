@@ -80,8 +80,7 @@ function App() {
             direction="column"
             wrap="wrap"
             w="100vw"
-            spacing={0}
-            m={0} p={0} gap={0}
+            m={0} p={0} gap={0} spacing={0}
         >
             <Flex>
                 <Header
@@ -97,6 +96,7 @@ function App() {
                 minH={{ base: "fit-content", lg: "100vh" }}
                 direction={{ base: "column", lg: "row" }}
                 flexWrap={{ base: "wrap", lg: "nowrap" }}
+                m={0} p={0} gap={0} spacing={0}
                 w="100vw"
             >
                 {/* sidenav */}
@@ -125,7 +125,7 @@ function App() {
 
             </Stack>
 
-            <Flex m={0} p={0} w="100vw">
+            <Flex>
                 <Footer />
             </Flex>
         </Flex>
