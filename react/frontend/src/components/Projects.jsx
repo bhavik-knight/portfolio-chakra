@@ -27,7 +27,7 @@ function Projects() {
     const [tabIndex, setTabIndex] = useState(0)
 
     return (
-        <Stack p={{ base: 0, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
             {/* some text */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={1} py={1}>
@@ -54,8 +54,8 @@ function Projects() {
                 <Tabs
                     isFitted
                     isLazy
-                    pt={2}
-                    px={2}
+                    p={2}
+                    my={2}
                     variant="enclosed"
                     size={{ base: "base", lg: "md" }}
                     orientation={{ base: "vertical", lg: "horizontal" }}

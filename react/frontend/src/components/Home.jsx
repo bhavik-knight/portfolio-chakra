@@ -26,7 +26,7 @@ function Home() {
     const [isMobile] = useMediaQuery("(max-width: 992px)")
 
     return (
-        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 1, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
 
             {/* summary */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>

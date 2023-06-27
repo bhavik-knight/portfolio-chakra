@@ -27,7 +27,7 @@ const headerFontStyle = {
 
 function Education() {
     return (
-        <Stack p={{ base: 0, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
 
             {/* education */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
@@ -125,7 +125,10 @@ function Education() {
                                         </Flex>
                                         <Divider className="divider" mx="auto" my={2} width="90%" />
 
-                                        <CertificateCardCarousel details={certObj.certificateDetails} />
+                                        <CertificateCard
+                                            certObj={certObj}
+                                            details={certObj.certificateDetails}
+                                        />
                                     </AccordionPanel>
                                 </AccordionItem>
                             )
