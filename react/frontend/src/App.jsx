@@ -1,6 +1,6 @@
 import './App.css'
-import { useState, useEffect } from "react"
-import { Stack, HStack, VStack, StackDivider, useMediaQuery } from "@chakra-ui/react"
+import { useState, useEffect, useRef, forwardRef } from "react"
+import { Stack, HStack, VStack, StackDivider, useMediaQuery, useColorModeValue } from "@chakra-ui/react"
 import { Box, Flex, Wrap, WrapItem, Menu, Grid, GridItem, ButtonGroup, useBoolean, useColorMode } from "@chakra-ui/react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
@@ -19,12 +19,57 @@ import { ResponsiveIcons } from "./components/ResponsiveIcons"
 function App() {
     // check for mobile or not
     const [isMobile] = useMediaQuery("(max-width: 992px)")
+    const [isLandScape, setIsLandScape] = useState(window.screen.orientation.angle === 90)
+    const [sidenavHeader, setSidenavHeader] = useState(
+        isMobile && isLandScape
+    )
+
+    useEffect(() => {
+        function handleOrientationChange() {
+            setIsLandScape(prevIsLandScape => !prevIsLandScape)
+            setSidenavHeader(sidenavHeader => !sidenavHeader)
+        }
+
+        handleOrientationChange()
+
+        window.addEventListener("orientationchange", handleOrientationChange)
+        return () => window.removeEventListener("orientationchange", handleOrientationChange)
+    }, [])
+
 
     // color mode toggle; check the local storage on each color mode change
     const { colorMode, toggleColorMode } = useColorMode()
     useEffect(() => {
         // console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
     }, [colorMode])
+
+
+    // check the vertical scroll to style navbar between transparent and solid background
+    const [downScroll, setDownScroll] = useState(window.scrollY)
+    const [bgColor, setBgColor] = useState()
+    useEffect(() => {
+        // navbarBg ?
+        // setBgColor("transparent") :
+        // colorMode === "dark" ? setBgColor("black") : setBgColor("gray.400")
+    }, [])
+
+    useEffect(() => {
+        // check and handle the vertical scroll value constantly
+        function handleScroll() {
+            setDownScroll(window.scrollY === 0)
+            downScroll ?
+                setBgColor("transparent") :
+                colorMode === "dark" ? setBgColor("black") : setBgColor("gray.500")
+            console.log(`nbg ${downScroll}`)
+        }
+
+        // add event listener to check for vertical scroll
+        window.addEventListener("scroll", handleScroll)
+
+        handleScroll()
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [downScroll])
+
 
     // pages in the portfolio
     const pages = {
@@ -79,7 +124,6 @@ function App() {
     // this is the function that will render the DOM
     return (
         <Flex
-            direction="column"
             m={0} p={0} gap={0} spacing={0}
             position="relative"
             wrap="wrap"
@@ -89,24 +133,31 @@ function App() {
                 changeColorMode={() => toggleColorMode()}
                 title={currentPage}
                 selectPage={setCurrentPage}
+                pages={pages}
+                activePage={currentPage}
+                isLandScape={isLandScape}
+                sidenavHeader={sidenavHeader}
+                currentPage={currentPage}
+                handleSelectPage={handleSelectPage}
+                isScrolled={downScroll}
+                bgColor={bgColor}
             />
 
             {
-                isMobile && <Sidenav
+                // !navbarBg &&
+                <Sidenav
                     pages={pages}
                     activePage={currentPage}
                     selectPage={handleSelectPage}
+                    w={{ base: "100%", lg: "20%" }}
+                    px={{ base: 0, lg: 4 }}
                 />
             }
-            {
-                !isMobile &&
-                <StackDivider borderColor="white" border="1px dotted" />
-            }
 
-            {/* pages */}
             <Flex
                 as="main"
-                w={{ base: "100%", lg: "95%" }}
+                w={{ base: "100%" }}
+                maxW={{ lg: "80%" }}
                 mt={{ base: "50px", md: "50px", lg: "60px" }}
                 mx="auto" py={2}
             >

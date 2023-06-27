@@ -53,7 +53,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         // in such cases we can take height hakf of the width
         let newHeight =
             // width * 0.5
-            screenObj.orientation.angle === 90 ? screenObj.availHeight * 0.8 - 12 : width * 0.5
+            screenObj.orientation.angle === 90 ? screenObj.availHeight * 0.8 - 12 : width * 0.6
 
         return Math.max(newHeight, 200)
     }
@@ -133,7 +133,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
 
                 <ModalHeader
                     as={Stack}
-                    direction={{ base: "column", lg: "row" }}
+                    direction={{ base: "column", md: "row" }}
                     alignItems="center"
                     justifyContent={{ base: "center", lg: "space-between" }}
                 >

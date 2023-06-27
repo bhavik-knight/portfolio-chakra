@@ -5,35 +5,13 @@ import { useColorModeValue, useMediaQuery } from "@chakra-ui/react"
 import { Heading, Spacer, Menu, Flex, Image, Text } from "@chakra-ui/react"
 import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
 import { Container, Center, Box, Stack } from "@chakra-ui/react"
+import { Sidenav } from "./Sidenav"
+import { isString } from "formik"
 
 
-function Header({ colorMode, changeColorMode, title, selectPage }) {
+function Header({ colorMode, changeColorMode, title, selectPage, bgColor, isScrolled }) {
     // check for the media query
     const [isMobile] = useMediaQuery("(max-width: 992px)")
-
-    // check the vertical scroll to style navbar between transparent and solid background
-    const [verticalScroll, setVerticalScroll] = useState(window.scrollY)
-    let navbarBg = (verticalScroll === 0)
-    const [bgColor, setBgColor] = useState()
-    useEffect(() => {
-        navbarBg ?
-            setBgColor("transparent") :
-            colorMode === "dark" ? setBgColor("black") : setBgColor("gray.400")
-    }, [verticalScroll, colorMode])
-
-    useEffect(() => {
-        // check and handle the vertical scroll value constantly
-        function handleScroll() {
-            setVerticalScroll(window.scrollY)
-            // console.log(`nbg ${navbarBg}`)
-        }
-
-        // add event listener to check for vertical scroll
-        window.addEventListener("scroll", handleScroll)
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        }
-    }, [verticalScroll])
 
     const sunIcon = getNavbarIconButton(
         ResponsiveIcons["sun"]["name"],
@@ -71,7 +49,7 @@ function Header({ colorMode, changeColorMode, title, selectPage }) {
             justify="space-between"
             bg={bgColor}
             zIndex={10}
-            boxShadow={navbarBg && "0px 0px 16px 0px"}
+            boxShadow={isScrolled && "0px 0px 16px 0px"}
         >
             <Text
                 as={Flex}

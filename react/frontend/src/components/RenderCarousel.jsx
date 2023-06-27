@@ -79,6 +79,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
             btns = getButtons(current).map((b, index) => {
                 return (
                     <IconButton
+                        className="btnIcon"
                         key={nanoid()}
                         onClick={() => handleBtnClick(b)}
                         variant="ghost"
@@ -90,6 +91,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
             btns = getButtons(current).map((b, index) => {
                 return (
                     <Button
+                        className="btnIcon"
                         key={nanoid()}
                         p={0}
                         size={{ base: "xs", md: "sm", lg: "md" }}

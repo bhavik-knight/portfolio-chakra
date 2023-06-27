@@ -7,9 +7,9 @@ import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
 const btnStyles = {
-    variant: { base: "outline", lg: "ghost" },
+    variant: "ghost",
     _hover: { boxShadow: "1px 1px 8px" },
-    p: 4
+    p: { base: 0, md: 2, lg: 4 }
 }
 
 
@@ -21,8 +21,9 @@ function Sidenav({ pages, activePage, selectPage }) {
     return (
         <Stack
             as={ButtonGroup}
-            isAttached
-            py={{ base: 2, lg: 4 }} mx={0}
+            isAttached={isMobile}
+            py={{ base: 0, md: 2, lg: 4 }}
+            m={0}
             spacing={0}
             w={{ base: "100vw", lg: "fit-content" }}
             h="fit-content"
@@ -75,6 +76,7 @@ function CreateButton({ isMobile, page, activePage, selectPage }) {
                     :
                     <Button
                         {...btnStyles}
+                        borderRadius="1em"
                         aria-label={page}
                         onClick={(event) => selectPage(event)}
                         isActive={page === activePage}
