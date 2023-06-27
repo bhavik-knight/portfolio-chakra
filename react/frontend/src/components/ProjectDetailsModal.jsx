@@ -23,6 +23,7 @@ import { useMediaQuery } from "@chakra-ui/react"
 import { RenderCarousel } from "./RenderCarousel"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { ExternalLinkIcon, CloseIcon } from "@chakra-ui/icons"
+import { CreateSkillBadge } from "./CreateSkillBadge"
 
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
@@ -33,17 +34,37 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     // to check the mobile or not
     const [isMobile] = useMediaQuery("(max-width: 992px)")
 
-    const getCarouselWidth = () => {
+    function getCardWidth() {
         let screenObj = window.screen
-        let newWidth = screenObj.orientation.angle === 90 ?
-            screenObj.availWidth * 0.9 - 12 :
-            screenObj.availWidth
-        return Math.min(newWidth, 992)
+
+        // orientation angle 90 means - horizontal / landscape mode
+        let newWidth = screenObj.availWidth
+        // screenObj.orientation.angle === 90 ? screenObj.availWidth * 0.8 - 12 : screenObj.availWidth
+        return Math.min(newWidth, 980)
+    }
+
+    function getCardHeight(width) {
+        let screenObj = window.screen
+
+        // if phone is held horizontally / landscape mode - width can be more than 2x to height
+        // in otherwords aspect ratio can be bigger than 2:1 depending on phone
+        // that is why set height accordingly by taking 80% of height available without padding; margin
+        // if phone is help vertically / portait mode - height is far more than width
+        // in such cases we can take height hakf of the width
+        let newHeight = screenObj.orientation.angle === 90 ? screenObj.availHeight * 0.8 - 12 : width * 0.6
+        return Math.max(newHeight, 200)
     }
 
     // to keep track of the dimensions
-    const [cardWidth, setCardWidth] = useState(() => getCarouselWidth())
-    const [cardHeight, setCardHeight] = useState(cardWidth * 0.5)
+    const [cardWidth, setCardWidth] = useState(() => getCardWidth())
+    const [cardHeight, setCardHeight] = useState(() => getCardHeight(getCardWidth()))
+
+    // to store all project images at once
+    const [projectImages, setProjectImages] = useState(
+        () => getProjectImages({ project, cardWidth, cardHeight })
+    )
+
+
 
     useEffect(() => {
         // to handle what happens when screen resizes
@@ -51,19 +72,23 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
             // if carousel box is mounted (Modal is mounted), then we can track our box's dimensions
             // otherwise we must give the initial dimesions for our box
             if (carouselBoxRef.current) {
-                let newWidth = Math.min(carouselBoxRef.current.offsetWidth, 992)
-                let newHeight = Math.min(newWidth * 0.5)
+                let newWidth = Math.min(carouselBoxRef.current.offsetWidth, 980)
+                let newHeight = getCardHeight(newWidth)
                 setCardWidth(newWidth)
                 setCardHeight(newHeight)
             } else {
-                setCardWidth(getCarouselWidth())
-                setCardHeight(cardWidth * 0.5)
+                setCardWidth(getCardWidth())
+                setCardHeight(getCardHeight(getCardWidth()))
             }
+
+            setProjectImages(getProjectImages({ project, cardWidth, cardHeight }))
         }
 
         // to handle what happen when screen orientation is changed
         // we just want to set dimensions or our box on change of orientation; dimensions of the box are changed
-        const handleOrientation = () => { handleResize() }
+        const handleOrientation = () => {
+            handleResize()
+        }
 
         // listen for screen resize
         window.addEventListener("resize", handleResize)
@@ -75,37 +100,12 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         // 1. remove handler of resize
         // 2. remove handle of screen orientation
         return () => {
+            // console.log(`before return from effect hook: ${cardWidth}, ${cardHeight}`)
             window.removeEventListener("resize", handleResize)
             window.removeEventListener("orientationchange", handleOrientation)
         }
 
-    }, [])
-
-    // to store all project images at once
-    const projectImages = []
-    // use of callback to improve performance
-    useCallback(
-        project.projectImgs?.map(url => {
-            // console.log(`creating imgs with dim: ${cardWidth}, ${cardHeight}`)
-            let data = (
-                <Box
-                    key={nanoid()}
-                    w={`${cardWidth}px`}
-                    h={`${cardHeight}px`}
-                >
-                    <Image
-                        src={url}
-                        w={cardWidth}
-                        h={cardHeight}
-                        objectFit="contain"
-                        objectPosition="top"
-                    />
-                </Box>
-            )
-            projectImages.push(data)
-        }),
-        [project]
-    )
+    }, [cardWidth, cardHeight])
 
     // some styles for the buttons: source; link; close
     const btnHoverStyle = {
@@ -118,18 +118,19 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     }
 
     return (
-        <Modal onClose={onClose}
+        <Modal
+            onClose={onClose}
             isOpen={isOpen}
-            isCentered
-            size={{ base: "2xl", md: "4xl", lg: "6xl" }}
-            m={0} p={0}
+            size={{ base: "md", md: "full", lg: "6xl" }}
         >
             <ModalOverlay />
-            <ModalContent>
+            <ModalContent
+                my={{ base: 2, md: 2, lg: "auto" }}
+            >
 
                 <ModalHeader
                     as={Stack}
-                    direction={{ base: "column", lg: "row" }}
+                    direction={{ base: "column", md: "row" }}
                     alignItems="center"
                     justifyContent={{ base: "center", lg: "space-between" }}
                 >
@@ -211,40 +212,41 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                     mx="auto"
                     as={Flex}
                     justifyContent="space-evenly" spacing={1} flexWrap="wrap"
+                    px={{ base: 0 }}
                 >
                     {
-                        project.technologies.map(tech => {
-                            const techName = `${ResponsiveIcons[tech]?.name || tech}`
-                            const techFullName = `${ResponsiveIcons[tech]?.fullName || ResponsiveIcons[tech]?.name || tech}`
-                            return (
-                                <Tooltip
-                                    key={nanoid()}
-                                    label={techFullName || techName}
-                                    aria-label={techFullName || techName}
-                                    hasArrow
-                                >
-                                    <Stack
-                                        className="projectTech"
-                                        as={Center}
-                                        width={{ base: "32px", md: "64px", lg: "100px" }}
-                                        p={2}
-                                        mx="auto"
-                                    >
-                                        {ResponsiveIcons[tech]?.icon}
-                                        <Text
-                                            className="projectTechName"
-                                        >
-                                            {ResponsiveIcons[tech]?.name || tech}
-                                        </Text>
-                                    </Stack>
-                                </Tooltip>
-                            )
-                        })
+                        project.technologies.map(tech => <CreateSkillBadge key={nanoid()} skill={tech} />)
                     }
                 </ModalFooter>
             </ModalContent>
         </Modal >
     )
+}
+
+
+function getProjectImages({ project, cardWidth, cardHeight }) {
+    let dataList = []
+    project.projectImgs?.map(url => {
+        // console.log(`creating imgs with dim: ${cardWidth}, ${cardHeight}`)
+        let data = (
+            <Box
+                key={nanoid()}
+                w={cardWidth}
+                h={cardHeight}
+            >
+                <Image
+                    src={url}
+                    w={cardWidth}
+                    h={cardHeight}
+                    objectFit="contain"
+                    objectPosition="top"
+                />
+            </Box>
+        )
+        dataList.push(data)
+    })
+
+    return dataList
 }
 
 export { ProjectDetailsModal };

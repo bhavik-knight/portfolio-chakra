@@ -79,6 +79,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
             btns = getButtons(current).map((b, index) => {
                 return (
                     <IconButton
+                        className="btnIcon"
                         key={nanoid()}
                         onClick={() => handleBtnClick(b)}
                         variant="ghost"
@@ -90,6 +91,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
             btns = getButtons(current).map((b, index) => {
                 return (
                     <Button
+                        className="btnIcon"
                         key={nanoid()}
                         p={0}
                         size={{ base: "xs", md: "sm", lg: "md" }}
@@ -114,6 +116,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
     }
 
     return (
+        items.length !== 0 &&
         <Box mx="auto" py={2} px={{ base: 0, lg: 2 }}>
             {/* top text */}
             <HStack
@@ -149,7 +152,6 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
                         transform={`translate(${-(current * cardWidth)}px)`}
                     >
                         {items}
-
                     </Flex>
                 </Card>
 

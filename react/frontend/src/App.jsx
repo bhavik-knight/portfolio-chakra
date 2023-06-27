@@ -1,6 +1,6 @@
 import './App.css'
-import { useState, useEffect } from "react"
-import { Stack, HStack, VStack, StackDivider } from "@chakra-ui/react"
+import { useState, useEffect, useRef, forwardRef } from "react"
+import { Stack, HStack, VStack, StackDivider, useMediaQuery, useColorModeValue } from "@chakra-ui/react"
 import { Box, Flex, Wrap, WrapItem, Menu, Grid, GridItem, ButtonGroup, useBoolean, useColorMode } from "@chakra-ui/react"
 import { Header } from "./components/Header"
 import { Footer } from "./components/Footer"
@@ -17,12 +17,53 @@ import { ResponsiveIcons } from "./components/ResponsiveIcons"
 
 
 function App() {
+    // check for mobile or not
+    const [isMobile] = useMediaQuery("(max-width: 992px)")
+    const [isLandScape, setIsLandScape] = useState(window.screen.orientation.angle === 90)
+    const [sidenavHeader, setSidenavHeader] = useState(
+        isMobile && isLandScape
+    )
+
+    useEffect(() => {
+        function handleOrientationChange() {
+            setIsLandScape(prevIsLandScape => !prevIsLandScape)
+            setSidenavHeader(sidenavHeader => !sidenavHeader)
+        }
+
+        handleOrientationChange()
+
+        window.addEventListener("orientationchange", handleOrientationChange)
+        return () => window.removeEventListener("orientationchange", handleOrientationChange)
+    }, [])
+
 
     // color mode toggle; check the local storage on each color mode change
     const { colorMode, toggleColorMode } = useColorMode()
     useEffect(() => {
         // console.log(`check the local storage: ${JSON.stringify(localStorage)}`)
     }, [colorMode])
+
+
+    // check the vertical scroll to style navbar between transparent and solid background
+    const [downScroll, setDownScroll] = useState(window.scrollY)
+    const [bgColor, setBgColor] = useState()
+    useEffect(() => {
+        // check and handle the vertical scroll value constantly
+        function handleScroll() {
+            setDownScroll(window.scrollY === 0)
+            downScroll ?
+                setBgColor("transparent") :
+                colorMode === "dark" ? setBgColor("black") : setBgColor("gray.500")
+            // console.log(`nbg ${downScroll}`)
+        }
+
+        // add event listener to check for vertical scroll
+        window.addEventListener("scroll", handleScroll)
+
+        handleScroll()
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [downScroll])
+
 
     // pages in the portfolio
     const pages = {
@@ -77,57 +118,48 @@ function App() {
     // this is the function that will render the DOM
     return (
         <Flex
-            flexDirection="column"
-            flexWrap="wrap"
-            w="100vw"
-            spacing={0}
+            m={0} p={0} gap={0} spacing={0}
+            position="relative"
+            wrap="wrap"
         >
-            <Flex m={0} p={0} w="100vw">
-                <Header
-                    colorMode={colorMode}
-                    changeColorMode={() => toggleColorMode()}
-                    title={currentPage}
-                    selectPage={setCurrentPage}
-                />
-            </Flex>
+            <Header
+                colorMode={colorMode}
+                changeColorMode={() => toggleColorMode()}
+                title={currentPage}
+                selectPage={setCurrentPage}
+                pages={pages}
+                activePage={currentPage}
+                isLandScape={isLandScape}
+                sidenavHeader={sidenavHeader}
+                currentPage={currentPage}
+                handleSelectPage={handleSelectPage}
+                isScrolled={downScroll}
+                bgColor={bgColor}
+            />
 
-            <Stack
+            {
+                // !navbarBg &&
+                <Sidenav
+                    pages={pages}
+                    activePage={currentPage}
+                    selectPage={handleSelectPage}
+                    w={{ base: "100%", lg: "20%" }}
+                    px={{ base: 0, lg: 4 }}
+                />
+            }
+
+            <Flex
+                as="main"
+                w={{ base: "100%" }}
+                maxW={{ lg: "80%" }}
                 mt={{ base: "50px", md: "50px", lg: "60px" }}
-                minH={{ base: "fit-content", lg: "100vh" }}
-                direction={{ base: "column", lg: "row" }}
-                flexWrap={{ base: "wrap", lg: "nowrap" }}
-                w="100vw"
+                mx="auto" py={2}
             >
-                {/* sidenav */}
-                <Flex
-                    // h={{ base: "fit-content", lg: "100vh" }}
-                    minW={{ base: "100%", lg: "fit-content" }} zIndex={5} me={10}>
-
-                    <Sidenav
-                        pages={pages}
-                        activePage={currentPage}
-                        selectPage={handleSelectPage}
-                    />
-                </Flex>
-
-                <StackDivider
-                    mt={{ base: "50px", md: "50px", lg: "60px" }}
-                    borderColor="white" border="1px dotted"
-                />
-
-                {/* pages */}
-                <Flex w="100%" py={2}>
-                    <Flex as="main" w="95%" mt={{ base: "50px", md: "50px", lg: 0 }} mx="auto">
-                        {pages[currentPage].page}
-                    </Flex>
-                </Flex>
-
-            </Stack>
-
-            <Flex m={0} p={0} w="100vw">
-                <Footer />
+                {pages[currentPage].page}
             </Flex>
-        </Flex>
+
+            < Footer />
+        </Flex >
     )
 }
 

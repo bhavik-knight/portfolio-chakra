@@ -1,4 +1,5 @@
 import "./Skills.css"
+import { CreateSkillBadge } from "./CreateSkillBadge"
 import { skills } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
@@ -112,7 +113,7 @@ function Skills() {
 
                 <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        languages.map(l => <CreateBadge key={nanoid()} skill={l} />)
+                        languages.map(l => <CreateSkillBadge key={nanoid()} skill={l} />)
                     }
                 </CardBody>
             </Card>
@@ -127,7 +128,7 @@ function Skills() {
 
                 <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        frameworks.map(fw => <CreateBadge key={nanoid()} skill={fw} />)
+                        frameworks.map(fw => <CreateSkillBadge key={nanoid()} skill={fw} />)
                     }
                 </CardBody>
             </Card>
@@ -142,13 +143,13 @@ function Skills() {
 
                 <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        technologies.map(tech => <CreateBadge key={nanoid()} skill={tech} />)
+                        technologies.map(tech => <CreateSkillBadge key={nanoid()} skill={tech} />)
                     }
                     {
-                        cloud.map(c => <CreateBadge key={nanoid()} skill={c} />)
+                        cloud.map(c => <CreateSkillBadge key={nanoid()} skill={c} />)
                     }
                     {
-                        databases.map(d => <CreateBadge key={nanoid()} skill={d} />)
+                        databases.map(d => <CreateSkillBadge key={nanoid()} skill={d} />)
                     }
                 </CardBody>
             </Card>
@@ -163,10 +164,10 @@ function Skills() {
 
                 <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        os.map(o => <CreateBadge key={nanoid()} skill={o} />)
+                        os.map(o => <CreateSkillBadge key={nanoid()} skill={o} />)
                     }
                     {
-                        apps.map(app => <CreateBadge key={nanoid()} skill={app} />)
+                        apps.map(app => <CreateSkillBadge key={nanoid()} skill={app} />)
                     }
                 </CardBody>
             </Card>
@@ -181,7 +182,7 @@ function Skills() {
 
                 <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        management.map(mgmt => <CreateBadge key={nanoid()} skill={mgmt} />)
+                        management.map(mgmt => <CreateSkillBadge key={nanoid()} skill={mgmt} />)
                     }
                 </CardBody>
             </Card>
@@ -192,23 +193,5 @@ function Skills() {
     )
 }
 
-
-function CreateBadge({ skill }) {
-    return (
-        <VStack
-            className="skillBadge"
-            as={Center}
-            p={2}
-            mx="auto"
-            w={{ base: "fit-content", lg: "90px" }}
-            _hover={{ boxShadow: "1px 1px 8px" }}
-        >
-            {ResponsiveIcons[skill]?.icon}
-            <Text fontSize="sm" textAlign="center">
-                {ResponsiveIcons[skill]?.name}
-            </Text>
-        </VStack>
-    )
-}
 
 export { Skills }

@@ -40,7 +40,7 @@ function Education() {
                 <CardBody>
                     <Stack as={List} spacing={2} {...textFontStyle}>
                         <ListItem>
-                            I recently graduated with a Post Baccalaureate Diploma in Artificial Intelligence from St.Francis Xavier University, where I studied some core subjects of Computer Science and enriched my knowledge and skills to build my career.
+                            I recently graduated with a Post Baccalaureate Diploma in Artificial Intelligence from St. Francis Xavier University, where I studied some core subjects of Computer Science and enriched my knowledge and skills to build my career.
                         </ListItem>
                         <ListItem>
                             The HOD of the CS department suggested that I should have been a MACS student or must give thought to completing a master's degree, acknowledging my understanding of the fundamentals and depth of the knowledge to be successful at that level.

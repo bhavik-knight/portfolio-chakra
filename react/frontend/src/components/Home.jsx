@@ -91,7 +91,7 @@ function Home() {
                             I am open to freelancing work. If you have cool project ideas, let's connect, collaborate and build some cool web apps together.
                         </ListItem>
                         <ListItem>
-                            I love technologies to stay up-to-date with the trends. I keep upskilling myself through self-learning and help of the MOOCs.
+                            I have a strong enthusiasm for staying up-to-date with the latest technologies and trends, continuously expanding my skill set through self-learning and taking advantage of MOOCs (Massive Open Online Courses).
                         </ListItem>
                         <ListItem>
                             Currently, I am learning promote-engineering to leverage chatGPT to enhance my coding experience.
