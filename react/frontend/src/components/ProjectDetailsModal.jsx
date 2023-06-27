@@ -40,7 +40,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         // orientation angle 90 means - horizontal / landscape mode
         let newWidth = screenObj.availWidth
         // screenObj.orientation.angle === 90 ? screenObj.availWidth * 0.8 - 12 : screenObj.availWidth
-        return Math.min(newWidth, 992)
+        return Math.min(newWidth, 980)
     }
 
     function getCardHeight(width) {
@@ -51,10 +51,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         // that is why set height accordingly by taking 80% of height available without padding; margin
         // if phone is help vertically / portait mode - height is far more than width
         // in such cases we can take height hakf of the width
-        let newHeight =
-            // width * 0.5
-            screenObj.orientation.angle === 90 ? screenObj.availHeight * 0.8 - 12 : width * 0.6
-
+        let newHeight = screenObj.orientation.angle === 90 ? screenObj.availHeight * 0.8 - 12 : width * 0.6
         return Math.max(newHeight, 200)
     }
 
@@ -75,7 +72,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
             // if carousel box is mounted (Modal is mounted), then we can track our box's dimensions
             // otherwise we must give the initial dimesions for our box
             if (carouselBoxRef.current) {
-                let newWidth = Math.min(carouselBoxRef.current.offsetWidth, 992)
+                let newWidth = Math.min(carouselBoxRef.current.offsetWidth, 980)
                 let newHeight = getCardHeight(newWidth)
                 setCardWidth(newWidth)
                 setCardHeight(newHeight)
@@ -103,7 +100,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         // 1. remove handler of resize
         // 2. remove handle of screen orientation
         return () => {
-            console.log(`before return from effect hook: ${cardWidth}, ${cardHeight}`)
+            // console.log(`before return from effect hook: ${cardWidth}, ${cardHeight}`)
             window.removeEventListener("resize", handleResize)
             window.removeEventListener("orientationchange", handleOrientation)
         }
@@ -230,7 +227,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
 function getProjectImages({ project, cardWidth, cardHeight }) {
     let dataList = []
     project.projectImgs?.map(url => {
-        console.log(`creating imgs with dim: ${cardWidth}, ${cardHeight}`)
+        // console.log(`creating imgs with dim: ${cardWidth}, ${cardHeight}`)
         let data = (
             <Box
                 key={nanoid()}

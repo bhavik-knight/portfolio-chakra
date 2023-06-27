@@ -39,10 +39,10 @@ function Projects() {
                 <CardBody>
                     <Stack as={List} spacing={2} {...textFontStyle}>
                         <ListItem>
-                            I demonstrated my analytical skills and diverse programming skills through numerous projects in the fields of Web Development, Data Analytics, Data Science, and Machine Learning.
+                            I demonstrated diverse programming skills through numerous projects in the fields of Web Development, Data Analytics, Data Science, and Machine Learning.
                         </ListItem>
                         <ListItem>
-                            While I developed most of the projects as an independent developer, I also actively contributed to group projects, demonstrating my skills and depth of knowledge in the core domain.
+                            While I developed most of the projects independently, I also actively contributed to group projects, demonstrating my skills and depth of knowledge in the core domain.
                         </ListItem>
                     </Stack>
                 </CardBody>

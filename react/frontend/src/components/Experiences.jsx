@@ -33,7 +33,7 @@ function Experiences() {
 
                 <CardBody>
                     <Text {...textFontStyle}>
-                        I am currently seeking a Junior Software Developer role, open to engaging in exciting projects where I can effectively utilize the technical skills and transferable skills I have acquired through my diverse work experience.
+                        I am actively looking for a Junior Software Developer position and eager to participate in exciting projects where I can leverage my technical skills and transferable expertise gained from my previous work experiences.
                     </Text>
                 </CardBody>
             </Card>

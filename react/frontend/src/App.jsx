@@ -48,19 +48,13 @@ function App() {
     const [downScroll, setDownScroll] = useState(window.scrollY)
     const [bgColor, setBgColor] = useState()
     useEffect(() => {
-        // navbarBg ?
-        // setBgColor("transparent") :
-        // colorMode === "dark" ? setBgColor("black") : setBgColor("gray.400")
-    }, [])
-
-    useEffect(() => {
         // check and handle the vertical scroll value constantly
         function handleScroll() {
             setDownScroll(window.scrollY === 0)
             downScroll ?
                 setBgColor("transparent") :
                 colorMode === "dark" ? setBgColor("black") : setBgColor("gray.500")
-            console.log(`nbg ${downScroll}`)
+            // console.log(`nbg ${downScroll}`)
         }
 
         // add event listener to check for vertical scroll
