@@ -28,9 +28,10 @@ function Sidenav({ pages, activePage, selectPage, sidenavHeader }) {
             px={{ base: 0, lg: 2 }}
             py={{ base: 0, md: 2, lg: 4 }}
             m={0}
+            mx={sidenavHeader && "auto"}
             spacing={0}
-            w={{ base: "100vw", lg: "fit-content" }}
-            h="fit-content"
+            w={sidenavHeader ? "fit-content" : { base: "100vw", lg: "fit-content" }}
+            h={sidenavHeader ? "50px" : "fit-content"}
             position="sticky"
             justify={{ base: "center", lg: "flex-start" }}
             alignItems={alignStyle}
