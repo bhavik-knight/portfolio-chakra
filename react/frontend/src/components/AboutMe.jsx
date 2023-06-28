@@ -34,14 +34,17 @@ function AboutMe() {
                     <ListItem>
                         Becoming a Software Engineer had always been my childhood dream, even though my undergraduate education was in a different field. It was during the second semester of my Bachelor's degree in Mechanical Engineering that I discovered my love for programming and developed a deep passion for Computer Science. This revelation occurred when I took a course on Computer Programming using C-language.
                     </ListItem>
-                    <ListItem>
+                    <ListItem display="none">
                         After successfully completing my Bachelor's degree in Mechanical Engineering, I began working as an ad-hoc lecturer at the College. However, my passion for Computer Science continued to thrive, and I embarked on a journey to build a career that would align with my long-standing dream.
                     </ListItem>
                     <ListItem>
-                        In 2015, I embarked on an unconventional journey into the realm of Computer Science, making a pivotal decision to redirect my career trajectory and pursue my long-held aspirations. I am deeply indebted to Dr. David J. Malan, a professor at Harvard, whose passionate teaching of the CS50 course ignited a profound transformation in my life.
+                        In 2015, I embarked on a transformative journey that led me to the field of Computer Science, marking a significant turning point in my career path as I pursued my lifelong aspirations. I owe a great debt of gratitude to Dr. David J. Malan, an esteemed professor at Harvard, whose fervent instruction of the CS50 course sparked a profound metamorphosis in my life.
                     </ListItem>
                     <ListItem>
                         During my tenure as a full-time technician, I dedicated myself to earning numerous online certifications from renowned institutions such as Harvard, MIT, and Microsoft through platforms like Edx, Coursera, and MIT-OCW. These certifications, focusing on the fundamentals of programming, enabled me to lay a solid groundwork in the field and propel my career aspirations forward.
+                    </ListItem>
+                    <ListItem>
+                        In the future, my goal is to pursue a career in Machine Learning and Artificial Intelligence. I aim to leverage my recent degree, build upon the skills I have acquired over the years, and continuously upskill myself.
                     </ListItem>
                 </Stack>
             </CardBody>
