@@ -104,6 +104,7 @@ import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook"
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram"
 import { FaTelegram } from "@react-icons/all-files/fa/FaTelegram"
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
+import { MdPhone } from "@react-icons/all-files/md/MdPhone"
 import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt"
 
 // project management
@@ -139,7 +140,7 @@ const ResponsiveIcons = {
 
     // other button icons
     "send": { name: "SEND", icon: <BiMailSend className="icons" /> },
-    "phone": { name: "Phone", icon: <FaPhoneAlt className="icons" /> },
+    "phone": { name: "Phone", icon: <MdPhone className="icons" /> },
     "email": { name: "Email ID", icon: <GoMail className="icons" /> },
     "link": { name: "Link", icon: <BiLinkAlt className="icons" /> },
     "close": { name: "Close", icon: <MdClose className="icons" /> },
