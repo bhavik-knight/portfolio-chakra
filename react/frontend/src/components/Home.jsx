@@ -26,7 +26,7 @@ function Home() {
     const [isMobile] = useMediaQuery("(max-width: 992px)")
 
     return (
-        <Stack p={{ base: 1, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 1, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
 
             {/* summary */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
@@ -116,10 +116,10 @@ function Home() {
 
                     <Stack
                         width={{ base: "100%", xl: "60%" }}
-                        flexDirection={{ base: "column", xl: "row" }}
+                        flexDirection={{ base: "column", md: "row" }}
                         justifyContent="space-around"
                         alignItems="center"
-                        wrap="wrap"
+                        flexWrap="wrap"
                         {...textFontStyle}
                         p={0}
                     >
@@ -168,7 +168,7 @@ function getHomeSkillsCard(skillName, details, color) {
             borderRight={`1px solid ${color}`}
             borderBottom={`1px solid ${color}`}
             _hover={{ boxShadow: `4px 4px 16px ${color}` }}
-            width={{ base: "100%", md: "80%", xl: "40%" }}
+            width={{ base: "100%", md: "40%" }}
             height={{ base: "100px", md: "200px" }}
             className="homeSkills"
         >

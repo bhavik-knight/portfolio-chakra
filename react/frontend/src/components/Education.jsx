@@ -1,9 +1,11 @@
 import { education, training, extracurriculars, certificates } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text } from "@chakra-ui/react"
-import { Box, Stack, HStack, Flex, Divider, Spacer } from "@chakra-ui/react"
+import { Box, Stack, VStack, HStack, Flex, Divider, Spacer } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
+import { useMediaQuery } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
 import { Accordion, AccordionItem, AccordionIcon, AccordionButton, AccordionPanel } from "@chakra-ui/react"
 import { EducationCard } from "./EducationCard"
 import { TrainingCard } from "./TrainingCard"
@@ -26,8 +28,26 @@ const headerFontStyle = {
 
 
 function Education() {
+    const isMobile = window.matchMedia("(max-width:992px)").matches
+    const getCredentialInfoStyle = (isMobile) => {
+        return isMobile ?
+            { bg: "green", color: "white", display: "flex" } :
+            { display: "none" }
+    }
+
+    const [credentialInfoStyle, setCredentialInfoStyle] = useState(getCredentialInfoStyle(isMobile))
+    useEffect(() => {
+        const handleResize = () => {
+            setCredentialInfoStyle(getCredentialInfoStyle(isMobile))
+        }
+
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [isMobile])
+
+    // console.log(`mobile: ${isMobile}, ${JSON.stringify(credentialInfoStyle)}`)
     return (
-        <Stack p={{ base: 0, lg: 2 }} spacing={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
 
             {/* education */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
@@ -87,49 +107,12 @@ function Education() {
                     Certificates
                 </CardHeader>
 
+                <Text {...textFontStyle} {...credentialInfoStyle}>Tap on the certificate to check the credentials where available.</Text>
                 <CardBody px={{ base: 0, lg: 4 }} py={0}>
                     <Accordion allowToggle>
                         {/* one accordion item - one certificate group */}
                         {
-                            certificates.map(certObj =>
-                                <AccordionItem key={nanoid()} py={2}>
-                                    <AccordionButton
-                                        as={Heading}
-                                        fontSize={{ base: "sm", md: "md", lg: "xl" }}
-                                        _hover={{ cursor: "pointer" }}
-                                        _expanded={{ boxShadow: "0px 2px 8px" }}
-                                    >
-                                        <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
-                                            <Text>
-                                                {certObj.title}
-                                            </Text>
-                                        </Flex>
-                                        <AccordionIcon />
-                                    </AccordionButton>
-                                    <AccordionPanel p={2}>
-                                        <Stack as={Flex}
-                                            pt={2}
-                                            px={4}
-                                            justifyContent="space-between"
-                                            direction={{ base: "column", md: "row" }}
-                                            flexWrap={{ base: "nowrap", md: "wrap" }}
-                                        >
-                                            <Text>{certObj.platform}</Text>
-                                            <Text>{certObj.institute}</Text>
-                                        </Stack>
-                                        <Flex
-                                            px={4}
-                                            mt={1} flexShrink="1"
-                                        >
-                                            <Text>{certObj.about}</Text>
-                                        </Flex>
-                                        <Divider className="divider" mx="auto" my={2} width="90%" />
-
-                                        <CertificateCardCarousel details={certObj.certificateDetails} />
-                                    </AccordionPanel>
-                                </AccordionItem>
-                            )
-
+                            certificates.map(c => <CertificateCard key={nanoid()} certs={c} />)
                         }
                     </Accordion>
                 </CardBody>

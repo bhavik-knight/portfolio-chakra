@@ -13,29 +13,33 @@ const btnStyles = {
 }
 
 
-function Sidenav({ pages, activePage, selectPage }) {
+function Sidenav({ pages, activePage, selectPage, sidenavHeader }) {
 
     // to check the screen is large or not to display icons on sidenav buttons
     const [isMobile] = useMediaQuery("(max-width: 992px)")
+    const topPosition = sidenavHeader ? 0 : { base: "50px", lg: "60px" }
+    const bgColor = sidenavHeader ? "transparent" : { base: useColorModeValue("gray.100", "gray.800"), lg: "transparent" }
+    const alignStyle = sidenavHeader ? "center" : "none"
 
     return (
         <Stack
             as={ButtonGroup}
             isAttached={isMobile}
+            px={{ base: 0, lg: 2 }}
             py={{ base: 0, md: 2, lg: 4 }}
             m={0}
+            mx={sidenavHeader && "auto"}
             spacing={0}
-            w={{ base: "100vw", lg: "fit-content" }}
-            h="fit-content"
+            w={sidenavHeader ? "fit-content" : { base: "100vw", lg: "fit-content" }}
+            h={sidenavHeader ? "50px" : "fit-content"}
             position="sticky"
             justify={{ base: "center", lg: "flex-start" }}
+            alignItems={alignStyle}
             direction={{ base: "row", lg: "column" }}
-            top={{ base: "50px", md: "50px", lg: "60px" }}
-            bg={{ base: useColorModeValue("gray.100", "gray.800"), lg: "transparent" }}
-            boxShadow={{ base: "1px 1px 8px", lg: "none" }}
-            zIndex={5}
+            top={topPosition}
+            bg={bgColor}
+            zIndex={sidenavHeader ? 10 : 5}
         >
-
             {
                 Object.keys(pages).map((page) => (
                     <CreateButton
@@ -47,8 +51,7 @@ function Sidenav({ pages, activePage, selectPage }) {
                     />
                 ))
             }
-
-        </Stack>
+        </Stack >
     )
 }
 

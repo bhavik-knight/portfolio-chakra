@@ -1,5 +1,5 @@
 import './App.css'
-import { useState, useEffect, useRef, forwardRef } from "react"
+import { useState, useEffect, useRef, createContext, useContext } from "react"
 import { Stack, HStack, VStack, StackDivider, useMediaQuery, useColorModeValue } from "@chakra-ui/react"
 import { Box, Flex, Wrap, WrapItem, Menu, Grid, GridItem, ButtonGroup, useBoolean, useColorMode } from "@chakra-ui/react"
 import { Header } from "./components/Header"
@@ -19,23 +19,41 @@ import { ResponsiveIcons } from "./components/ResponsiveIcons"
 function App() {
     // check for mobile or not
     const [isMobile] = useMediaQuery("(max-width: 992px)")
-    const [isLandScape, setIsLandScape] = useState(window.screen.orientation.angle === 90)
-    const [sidenavHeader, setSidenavHeader] = useState(
-        isMobile && isLandScape
+    const [isLandscape, setIsLandscape] = useState(false)
+    const [sidenavHeader, setSidenavHeader] = useState(false)
+    const [marginTopPages, setMarginTopPages] = useState(
+        { base: "50px", md: "50px", lg: "60px" }
     )
 
+    // to handle orientation change effect: for landscape mode
     useEffect(() => {
         function handleOrientationChange() {
-            setIsLandScape(prevIsLandScape => !prevIsLandScape)
-            setSidenavHeader(sidenavHeader => !sidenavHeader)
+            setIsLandscape(window.innerWidth > window.innerHeight)
         }
-
-        handleOrientationChange()
-
         window.addEventListener("orientationchange", handleOrientationChange)
+        handleOrientationChange()
         return () => window.removeEventListener("orientationchange", handleOrientationChange)
+    }, [isLandscape])
+
+    // to check is I should move sidenav to the top based on mobile device | landscape
+    useEffect(() => {
+        setSidenavHeader(isMobile && isLandscape)
+    }, [isMobile, isLandscape])
+
+    // so windows resizing can change the landscape mode; check for that as well
+    useEffect(() => {
+        function handleResize() {
+            setIsLandscape(window.innerWidth > window.innerHeight)
+        }
+        window.addEventListener("resize", handleResize)
+        handleResize()
+        return () => window.removeEventListener("resize", handleResize)
     }, [])
 
+    // when sidenav is moved to top; we must move the pages to fill that space
+    useEffect(() => {
+        setMarginTopPages(sidenavHeader ? 0 : { base: "50px", md: "50px", lg: "60px" })
+    }, [sidenavHeader])
 
     // color mode toggle; check the local storage on each color mode change
     const { colorMode, toggleColorMode } = useColorMode()
@@ -129,22 +147,21 @@ function App() {
                 selectPage={setCurrentPage}
                 pages={pages}
                 activePage={currentPage}
-                isLandScape={isLandScape}
-                sidenavHeader={sidenavHeader}
                 currentPage={currentPage}
                 handleSelectPage={handleSelectPage}
                 isScrolled={downScroll}
                 bgColor={bgColor}
+                isMobile={isMobile}
             />
 
             {
-                // !navbarBg &&
                 <Sidenav
                     pages={pages}
                     activePage={currentPage}
                     selectPage={handleSelectPage}
                     w={{ base: "100%", lg: "20%" }}
                     px={{ base: 0, lg: 4 }}
+                    sidenavHeader={sidenavHeader}
                 />
             }
 
@@ -152,7 +169,8 @@ function App() {
                 as="main"
                 w={{ base: "100%" }}
                 maxW={{ lg: "80%" }}
-                mt={{ base: "50px", md: "50px", lg: "60px" }}
+                // mt={{ base: "50px", md: "50px", lg: "60px" }}
+                mt={marginTopPages}
                 mx="auto" py={2}
             >
                 {pages[currentPage].page}

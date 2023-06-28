@@ -51,25 +51,26 @@ function Header({ colorMode, changeColorMode, title, selectPage, bgColor, isScro
             zIndex={10}
             boxShadow={isScrolled && "0px 0px 16px 0px"}
         >
-            <Text
-                as={Flex}
-                className="logo"
-                fontSize={{ base: "28px", lg: "36px" }}
-                onClick={() => selectPage("home")}
-                my="auto"
-                px={2}
-                alignItems="center"
-                _hover={{ ariaLabel: "HomeButton" }}
-            >
-
-                {/* B{!isMobile && "havik"} */}
-                <span className="logoText" sx={{ style: "--l:1" }}>B</span>
-                <span className="logoText hidden" sx={{ style: "--l:2" }}>h</span>
-                <span className="logoText hidden" sx={{ style: "--l:3" }}>a</span>
-                <span className="logoText hidden" sx={{ style: "--l:4" }}>v</span>
-                <span className="logoText hidden" sx={{ style: "--l:5" }}>i</span>
-                <span className="logoText hidden" sx={{ style: "--l:6" }}>k</span>
-            </Text>
+            <Tooltip hasArrow label="home-logo" ariaLabel="home-logo" placement="right">
+                <Text
+                    as={Flex}
+                    className="logo"
+                    fontSize={{ base: "28px", lg: "36px" }}
+                    onClick={() => selectPage("home")}
+                    my="auto"
+                    px={2}
+                    alignItems="center"
+                // _hover={{ ariaLabel: "HomeButton" }}
+                >
+                    {/* B{!isMobile && "havik"} */}
+                    <span className="logoText" sx={{ style: "--l:1" }}>B</span>
+                    <span className="logoText hidden" sx={{ style: "--l:2" }}>h</span>
+                    <span className="logoText hidden" sx={{ style: "--l:3" }}>a</span>
+                    <span className="logoText hidden" sx={{ style: "--l:4" }}>v</span>
+                    <span className="logoText hidden" sx={{ style: "--l:5" }}>i</span>
+                    <span className="logoText hidden" sx={{ style: "--l:6" }}>k</span>
+                </Text>
+            </Tooltip>
 
             {/* <Container bg="transparent">
                 <Text
