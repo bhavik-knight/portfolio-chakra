@@ -11,7 +11,7 @@ import { useMediaQuery } from "@chakra-ui/react"
 import { first } from "lodash"
 
 
-function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
+function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", timeInterval = 5 }) {
 
     const [isMobile] = useMediaQuery("(max-width:992px)")
 
@@ -62,8 +62,8 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers" }) {
             clearTimeout(timeRef.current)
         }
 
-        // auto play at 5 seconds
-        timeRef.current = setTimeout(() => handleNextClick(), 5000)
+        // auto play at `timeInterval` seconds
+        timeRef.current = setTimeout(() => handleNextClick(), timeInterval * 1000)
 
         // cleaning up the timer
         return () => clearTimeout(timeRef.current)
