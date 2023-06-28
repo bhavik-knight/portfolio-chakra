@@ -202,7 +202,7 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
             >
 
                 <Flex
-                    my={0} px={{ base: 1, lg: 4 }}
+                    my={0} px={{ base: 1, lg: 4 }} w="100%"
                     justify={{ base: "space-evenly", md: "space-between" }}
                     alignItems="center"
                 >
