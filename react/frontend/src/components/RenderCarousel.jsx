@@ -117,13 +117,12 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
 
     return (
         items.length !== 0 &&
-        <Box mx="auto" py={2} px={{ base: 0, lg: 2 }}>
+        <Box mx="auto" py={2}>
             {/* top text */}
             <HStack
                 as={Center}
                 justify="space-between" mx="auto"
                 w={{ base: "100%", lg: "90%" }}
-                px={{ base: 0, lg: 2 }}
             >
                 <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(0)}>First</Button>
                 <Center as={Text} size={{ base: "sm", lg: "md" }}>{current + 1} of {length}</Center>

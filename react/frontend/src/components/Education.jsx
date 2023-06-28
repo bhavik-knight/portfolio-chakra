@@ -45,7 +45,7 @@ function Education() {
         return () => window.removeEventListener("resize", handleResize)
     }, [isMobile])
 
-    console.log(`mobile: ${isMobile}, ${JSON.stringify(credentialInfoStyle)}`)
+    // console.log(`mobile: ${isMobile}, ${JSON.stringify(credentialInfoStyle)}`)
     return (
         <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
 

@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid"
-import { useState, useEffect, useRef, useContext, useCallback, createContext } from "react"
+import { useState, useEffect, useRef, useContext, useLayoutEffect, useCallback, createContext } from "react"
 import { useMediaQuery } from "@chakra-ui/react"
 import { AccordionItem, AccordionPanel, AccordionButton, AccordionIcon } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
@@ -40,25 +40,25 @@ function CertificateCard({ certs }) {
 
     // certificate pdf dimentions
     const [certDim, setCertDim] = useState({
-        width: { base: cardWidth, md: cardWidth * 0.7 },
-        height: { base: cardHeight, lg: cardHeight * 0.7 }
+        width: { base: cardWidth, md: cardWidth * 0.8 },
+        height: { base: cardHeight, md: cardWidth * 0.6, lg: cardHeight * 0.7 }
     })
 
     function getWidth() {
-        return Math.min(window.screen.availWidth, 980)
+        return Math.min(window.screen.availWidth, 740)
     }
 
     function getHeight(width) {
         let screenObj = window.screen
         let newHeight = screenObj.orientation.angle === 90 ?
-            screenObj.availHeight * 0.8 - 12 : width * 0.6
-        return Math.max(newHeight, 256)
+            screenObj.availHeight : width * 0.6
+        return newHeight
     }
 
     useEffect(() => {
         const handleResize = () => {
             if (certRef.current) {
-                let newWidth = Math.min(certRef.current?.offsetWidth, 980)
+                let newWidth = Math.min(certRef.current?.offsetWidth, 740)
                 let newHeight = getHeight(newWidth)
                 setCertWidth(newWidth)
                 setCertHeight(newHeight)
@@ -68,8 +68,8 @@ function CertificateCard({ certs }) {
             }
 
             setCertDim({
-                width: { base: cardWidth, md: cardWidth * 0.7 },
-                height: { base: cardHeight, lg: cardHeight * 0.7 }
+                width: { base: cardWidth, md: cardWidth * 0.8 },
+                height: { base: cardHeight, md: cardHeight * 0.6, lg: cardHeight * 0.7 }
             })
         }
 
@@ -88,19 +88,17 @@ function CertificateCard({ certs }) {
 
     // get all certs data
     const [certificateList, setCertificateList] = useState([])
-    useEffect(() => {
+    useLayoutEffect(() => {
         let details = certs.certificateDetails
         let certificates = details.map(c =>
             <CreateCertificate
                 key={nanoid()}
                 c={c}
-                certRef={certRef}
                 cardWidth={cardWidth}
                 cardHeight={cardHeight}
                 certDim={certDim}
             />
         )
-
         setCertificateList(certificates)
     }, [certs])
 
@@ -121,10 +119,10 @@ function CertificateCard({ certs }) {
                 </AccordionButton>
 
                 <AccordionPanel
-                    p={{ base: 0, lg: 4 }}
+                    px={0} py={{ base: 0, lg: 4 }}
                     size={{ base: "md", lg: "lg" }}
                 >
-                    <VStack my={2} gap={0} spacing={0}>
+                    <VStack my={0} gap={0} spacing={0}>
                         <Flex
                             p={0}
                             justifyContent="space-between"
@@ -136,19 +134,33 @@ function CertificateCard({ certs }) {
                             <Text py={0}>{certs.institute}</Text>
                         </Flex>
 
-                        <Divider mx="auto" my={1} width="95%" />
-
-                        <Text {...textFontStyle} my={0} py={0} w="100%">{certs.about}</Text>
+                        <Text {...textFontStyle} my={0} py={1} w="100%">{certs.about}</Text>
                     </VStack>
 
                     <Divider mx="auto" my={1} width="95%" />
 
-                    <RenderCarousel items={certificateList} cardWidth={cardWidth} cardHeight={cardHeight} timeInterval={10} />
+                    {
+                        isMobile ?
+                            <RenderCarousel
+                                items={certificateList}
+                                cardWidth={cardWidth}
+                                cardHeight={cardHeight}
+                                timeInterval={10}
+                            /> :
+                            <Flex px={0} mx={0}>
+                                <RenderCarousel
+                                    items={certificateList}
+                                    cardWidth={cardWidth}
+                                    cardHeight={cardHeight}
+                                    timeInterval={10}
+                                />
+                            </Flex>
+                    }
 
                 </AccordionPanel>
             </AccordionItem>
 
-        </WindowContext.Provider>
+        </WindowContext.Provider >
     )
 }
 
@@ -159,16 +171,14 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
         isMobile ?
             <Card
                 ref={certRef}
-                key={nanoid()}
                 p={0}
-                w={cardWidth * 1.2}
-                h={cardHeight * 1.2}
+                w={cardWidth}
+                h={cardHeight}
                 onClick={c.uri !== null ? () => window.open(c.uri, "_blank") : undefined}
                 cursor={c.uri !== null && "pointer"}
             >
                 <Flex
-                    as={Flex}
-                    p={0} mx="auto" my={0}
+                    p={0} my={0} mx="auto"
                     width={certDim.width}
                     height={certDim.height}
                 >
@@ -180,28 +190,29 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
 
             :
 
-            <Card
+            <VStack
                 ref={certRef}
-                key={nanoid()}
-                py={{ base: 0, lg: 4 }}
+                py={{ base: 0, lg: 2 }}
                 px={0}
-                w={cardWidth * 1.2}
-                h={cardHeight * 1.2}
+                w={cardWidth}
+                h={cardHeight}
+                overflow="scroll"
+                justify="space-between"
+                gap={0} spacing={0}
             >
 
                 <Flex
-                    w="95%"
-                    my={0} mx="auto" px={{ base: 1, lg: 4 }}
+                    my={0} px={{ base: 1, lg: 4 }}
                     justify={{ base: "space-evenly", md: "space-between" }}
                     alignItems="center"
                 >
 
-                    <Text {...headerFontStyle}>{c.certName}</Text>
+                    <Text fontSize="0.8em">{c.certName}</Text>
                     {
                         c.uri !== null &&
                         <Button
                             p={2}
-                            size={{ base: "xs", md: "sm" }}
+                            size="xs"
                             _hover={{ boxShadow: "1px 1px 4px" }}
                             vairant="outline"
                             onClick={() => window.open(c.uri, "_blank")}
@@ -210,9 +221,8 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
                         </Button>
                     }
                 </Flex>
-                <Divider mx="auto" w="95%" my={1} />
+
                 <Flex
-                    as={Flex}
                     my={{ base: 0, lg: 1 }} mx="auto"
                     p={0}
                     width={certDim.width}
@@ -222,11 +232,11 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
                         <Viewer fileUrl={c.certImg} />
                     </Worker>
                 </Flex>
-                <Divider mx="auto" w="95%" my={1} />
-                <Text {...textFontStyle} mx="auto" w="100%" >
+
+                <Text fontSize="0.8em" mx="auto" w="100%" py={0} my={0} px={4} textAlign="justify">
                     {c.learnings}
                 </Text>
-            </Card >
+            </VStack >
     )
 }
 
