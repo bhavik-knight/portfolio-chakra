@@ -31,45 +31,58 @@ const headerFontStyle = {
 const WindowContext = createContext()
 function CertificateCard({ certs }) {
 
-    const certRef = useRef()
-    const [isMobile] = useMediaQuery("(max-width: 992px)")
-
-    // card carrying all details + credentials
-    const [cardWidth, setCertWidth] = useState(() => getWidth())
-    const [cardHeight, setCertHeight] = useState(() => getHeight(getWidth()))
-
-    // certificate pdf dimentions
-    const [certDim, setCertDim] = useState({
-        width: { base: cardWidth, md: cardWidth * 0.8 },
-        height: { base: cardHeight, md: cardWidth * 0.6, lg: cardHeight * 0.7 }
-    })
-
     function getWidth() {
-        return Math.min(window.screen.availWidth, 740)
+        return Math.min(window.screen.availWidth, 744)
     }
 
     function getHeight(width) {
-        let screenObj = window.screen
-        let newHeight = screenObj.orientation.angle === 90 ?
-            screenObj.availHeight : width * 0.6
-        return newHeight
+        let newHeight = window.screen.orientation.angle === 90 ?
+            window.screen.availHeight * 0.8 - 12 : width * 0.6
+        return Math.max(newHeight, 256)
     }
+
+    // this is a clever way to trigger a component refresh/remount on accordion button click
+    // wanted to trigger this to set style of the carousel certficate according to new size
+    // even when window is not resized or rotated
+    // doing this because wanted to make sure that carousel works as intended in the landscape mobile mode
+    // which was one of the toughtest way for me to figure out to render it correctly
+    // the idea was to find the parent compoenent width, the cardWidth of the certificate
+    // and use the padding value as the difference between both width
+    // this idea works perftly and renders the certificate correctly without any glitches
+    const [random, setRandom] = useState(Math.random())
+
+    const certRef = useRef()
+    const panelRef = useRef()
+    const [isMobile] = useMediaQuery("(max-width:992px)")
+
+    // card carrying all details + credentials
+    const [cardWidth, setCardWidth] = useState(() => getWidth())
+    const [cardHeight, setCardHeight] = useState(() => getHeight(cardWidth))
+
+    // certificate pdf dimentions
+    const [certDim, setCertDim] = useState({
+        width: { base: cardWidth, lg: cardWidth * 0.8 },
+        height: { base: cardHeight, lg: cardWidth * 0.7 }
+    })
+
+    // certificate list to be displayed in carousel
+    const [certificateList, setCertificateList] = useState([])
 
     useEffect(() => {
         const handleResize = () => {
             if (certRef.current) {
-                let newWidth = Math.min(certRef.current?.offsetWidth, 740)
+                let newWidth = Math.min(certRef.current.offsetWidth, 744)
                 let newHeight = getHeight(newWidth)
-                setCertWidth(newWidth)
-                setCertHeight(newHeight)
+                setCardWidth(newWidth)
+                setCardHeight(newHeight)
             } else {
-                setCertWidth(getWidth())
-                setCertHeight(getHeight(getWidth()))
+                setCardWidth(getWidth())
+                setCardHeight(getHeight(getWidth()))
             }
 
             setCertDim({
-                width: { base: cardWidth, md: cardWidth * 0.8 },
-                height: { base: cardHeight, md: cardHeight * 0.6, lg: cardHeight * 0.7 }
+                width: { base: cardWidth, lg: cardWidth * 0.8 },
+                height: { base: cardHeight, lg: cardHeight * 0.7 }
             })
         }
 
@@ -86,21 +99,21 @@ function CertificateCard({ certs }) {
         }
     }, [cardWidth, cardHeight])
 
-    // get all certs data
-    const [certificateList, setCertificateList] = useState([])
-    useLayoutEffect(() => {
+    useEffect(() => {
         let details = certs.certificateDetails
         let certificates = details.map(c =>
             <CreateCertificate
                 key={nanoid()}
                 c={c}
+                certRef={certRef}
                 cardWidth={cardWidth}
                 cardHeight={cardHeight}
                 certDim={certDim}
             />
         )
         setCertificateList(certificates)
-    }, [certs])
+
+    }, [cardWidth, cardHeight, random])
 
 
     return (
@@ -111,6 +124,7 @@ function CertificateCard({ certs }) {
                     fontSize={{ base: "sm", md: "md", lg: "xl" }}
                     _hover={{ cursor: "pointer" }}
                     _expanded={{ boxShadow: "0px 2px 8px" }}
+                    onClick={() => setRandom(new Date())}
                 >
                     <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
                         {certs.title}
@@ -119,8 +133,9 @@ function CertificateCard({ certs }) {
                 </AccordionButton>
 
                 <AccordionPanel
-                    px={0} py={{ base: 0, lg: 4 }}
-                    size={{ base: "md", lg: "lg" }}
+                    ref={panelRef}
+                    px={0} py={{ base: 0, md: 4 }}
+                    size={{ base: "md", md: "lg" }}
                 >
                     <VStack my={0} gap={0} spacing={0}>
                         <Flex
@@ -137,25 +152,16 @@ function CertificateCard({ certs }) {
                         <Text {...textFontStyle} my={0} py={1} w="100%">{certs.about}</Text>
                     </VStack>
 
-                    <Divider mx="auto" my={1} width="95%" />
+                    <Divider mx="auto" width="95%" />
 
-                    {
-                        isMobile ?
-                            <RenderCarousel
-                                items={certificateList}
-                                cardWidth={cardWidth}
-                                cardHeight={cardHeight}
-                                timeInterval={10}
-                            /> :
-                            <Flex px={0} mx={0}>
-                                <RenderCarousel
-                                    items={certificateList}
-                                    cardWidth={cardWidth}
-                                    cardHeight={cardHeight}
-                                    timeInterval={10}
-                                />
-                            </Flex>
-                    }
+                    <Box px={{ base: 0, md: (panelRef.current?.offsetWidth - cardWidth) / 2 }}>
+                        <RenderCarousel
+                            items={certificateList}
+                            cardWidth={cardWidth}
+                            cardHeight={cardHeight}
+                            timeInterval={10}
+                        />
+                    </Box>
 
                 </AccordionPanel>
             </AccordionItem>
@@ -167,76 +173,73 @@ function CertificateCard({ certs }) {
 
 function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
     const isMobile = useContext(WindowContext)
+
     return (
-        isMobile ?
-            <Card
-                ref={certRef}
-                p={0}
-                w={cardWidth}
-                h={cardHeight}
-                onClick={c.uri !== null ? () => window.open(c.uri, "_blank") : undefined}
-                cursor={c.uri !== null && "pointer"}
-            >
-                <Flex
-                    p={0} my={0} mx="auto"
-                    width={certDim.width}
-                    height={certDim.height}
-                >
-                    <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
-                        <Viewer fileUrl={c.certImg} />
-                    </Worker>
-                </Flex>
-            </Card >
+        <Card
+            ref={certRef}
+            py={{ base: 0, lg: 2 }}
+            px={0}
+            w={cardWidth}
+            h={cardHeight}
+            overflow="scroll"
+            justify="space-between"
+            gap={0} spacing={0}
+            onClick={c.uri ? () => window.open(c.uri, "_blank") : undefined}
+        >
 
-            :
-
-            <VStack
-                ref={certRef}
-                py={{ base: 0, lg: 2 }}
-                px={0}
-                w={cardWidth}
-                h={cardHeight}
-                overflow="scroll"
+            <Flex
+                display={isMobile ? "none" : "flex"}
+                my={0} px={{ base: 1, lg: 4 }} w="100%"
                 justify="space-between"
-                gap={0} spacing={0}
+                alignItems="center"
+                {...headerFontStyle}
             >
 
-                <Flex
-                    my={0} px={{ base: 1, lg: 4 }} w="100%"
-                    justify={{ base: "space-evenly", md: "space-between" }}
-                    alignItems="center"
-                >
+                <Text>{c.certName}</Text>
+                {
+                    c.uri !== null &&
+                    <Button
+                        p={2}
+                        size="sm"
+                        _hover={{ boxShadow: "1px 1px 4px" }}
+                        vairant="outline"
+                        onClick={() => window.open(c.uri, "_blank")}
+                    >
+                        Credentials
+                    </Button>
+                }
 
-                    <Text fontSize="0.8em">{c.certName}</Text>
-                    {
-                        c.uri !== null &&
-                        <Button
-                            p={2}
-                            size="xs"
-                            _hover={{ boxShadow: "1px 1px 4px" }}
-                            vairant="outline"
-                            onClick={() => window.open(c.uri, "_blank")}
-                        >
-                            Credentials
-                        </Button>
-                    }
-                </Flex>
+            </Flex>
 
-                <Flex
-                    my={{ base: 0, lg: 1 }} mx="auto"
-                    p={0}
-                    width={certDim.width}
-                    height={certDim.height}
-                >
-                    <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
-                        <Viewer fileUrl={c.certImg} />
-                    </Worker>
-                </Flex>
+            {!isMobile && <Divider mx="auto" w="95%" my={2} />}
 
-                <Text fontSize="0.8em" mx="auto" w="100%" py={0} my={0} px={4} textAlign="justify">
-                    {c.learnings}
-                </Text>
-            </VStack >
+            <CardBody
+                as={Flex}
+                my={{ base: 0, lg: 1 }} mx="auto"
+                p={0}
+                width={certDim.width}
+                height={certDim.height}
+            >
+                <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
+                    <Viewer fileUrl={c.certImg} />
+                </Worker>
+            </CardBody>
+
+            {!isMobile && <Divider mx="auto" w="95%" my={2} />}
+
+            <CardFooter as={Text}
+                {...textFontStyle}
+                mx="auto"
+                w="100%"
+                py={0}
+                my={0}
+                px={4}
+                textAlign="justify"
+                display={isMobile && "none"}
+            >
+                {c.learnings}
+            </CardFooter>
+        </Card>
     )
 }
 
