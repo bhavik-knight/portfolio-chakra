@@ -107,7 +107,7 @@ function Education() {
                     Certificates
                 </CardHeader>
 
-                <Text {...textFontStyle} {...credentialInfoStyle}>Tap on the certificate to check the credentials where available.</Text>
+                <Text {...textFontStyle} {...credentialInfoStyle}>Tap on the certificate to check the credentials if available.</Text>
                 <CardBody px={{ base: 0, lg: 4 }} py={0}>
                     <Accordion allowToggle>
                         {/* one accordion item - one certificate group */}
