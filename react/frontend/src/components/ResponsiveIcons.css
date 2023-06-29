@@ -2,8 +2,14 @@
     font-size: 16px;
 }
 
+@media only screen and (min-device-width:480px) and (max-device-width: 992px) {
+    .icons {
+        font-size: 20px
+    }
+}
+
 @media only screen and (min-device-width: 992px) {
     .icons {
-        font-size: 32px;
+        font-size: 24px;
     }
 }

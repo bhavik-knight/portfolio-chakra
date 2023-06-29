@@ -1,9 +1,11 @@
 import { education, training, extracurriculars, certificates } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text } from "@chakra-ui/react"
-import { Stack, HStack, Flex, Divider, Spacer } from "@chakra-ui/react"
+import { Box, Stack, VStack, HStack, Flex, Divider, Spacer } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
+import { useMediaQuery } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
 import { Accordion, AccordionItem, AccordionIcon, AccordionButton, AccordionPanel } from "@chakra-ui/react"
 import { EducationCard } from "./EducationCard"
 import { TrainingCard } from "./TrainingCard"
@@ -12,42 +14,84 @@ import { CertificateCard } from "./CertificateCard"
 import { CertificateCardCarousel } from "./CertificateCardCarousel"
 
 
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
+const headerFontStyle = {
+    fontSize: { base: "md", md: "lg", lg: "xl" },
+    mx: "auto",
+}
+
+
 function Education() {
+    const isMobile = window.matchMedia("(max-width:992px)").matches
+    const getCredentialInfoStyle = (isMobile) => {
+        return isMobile ?
+            { bg: "green", color: "white", display: "flex" } :
+            { display: "none" }
+    }
+
+    const [credentialInfoStyle, setCredentialInfoStyle] = useState(getCredentialInfoStyle(isMobile))
+    useEffect(() => {
+        const handleResize = () => {
+            setCredentialInfoStyle(getCredentialInfoStyle(isMobile))
+        }
+
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [isMobile])
+
+    // console.log(`mobile: ${isMobile}, ${JSON.stringify(credentialInfoStyle)}`)
     return (
-        <Stack width="100%" gap={2} p={2}>
-            {/* journey */}
-            <Card as="section" display={{ base: "none", md: "flex" }} _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" my={0} py={1}>
-                    My journey
+        <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
+
+            {/* education */}
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} mx="auto" my={1} py={1}>
+                    Education
                 </CardHeader>
-                <Divider className="divider" width="95%" mx="auto" my={1} />
+
+                <Divider width="95%" mx="auto" my={1} />
+
                 <CardBody>
-                    <Stack as={List} gap={2} p={2} textAlign="justify">
+                    <Stack as={List} spacing={2} {...textFontStyle}>
                         <ListItem>
-                            My journey in the field of Computer Science is a non-traditional approach. I have established my love for coding and passsion for the Computer Science during 2nd semester of my Bachelor of Engineering in Mechanical when we had a course on Computer Programming using C language. My professor acknowledged my understanding of topics and programming skills saying that I could complete some of the challenges which half of the Computer Science couldn't complete during that time.
+                            I recently graduated with a Post Baccalaureate Diploma in Artificial Intelligence from St. Francis Xavier University, where I studied some core subjects of Computer Science and enriched my knowledge and skills to build my career.
                         </ListItem>
                         <ListItem>
-                            Becoming a Software Engineer was my childhood dream, but my undergraduate study was different. Even after completion of my degree and starting a job, my love for Computer Science never died, and I keep seeking a career path to follow my dream. My journey for the Computer Science started in 2015 when I decided to change my career trajectory in pursite of my dreams. I am forever grateful for Harvard's professor Dr. David Malan for teaching the CS50 course with so much passion which played a pivotal role in my life and career.
-                        </ListItem>
-                        <ListItem>
-                            I recently graduated with Post Baccalaureate Diploma in Artificial Intelligence from St. Francis Xavier Unviersity where I studied some core subjects of Computer Science and enriched my knowledge and skills to build my career. Checkout my projects and skills in various domains.
+                            The HOD of the CS department suggested that I should have been a MACS student or must give thought to completing a master's degree, acknowledging my understanding of the fundamentals and depth of the knowledge to be successful at that level.
                         </ListItem>
                     </Stack>
                 </CardBody>
+            </Card >
+
+
+            {/* Degree */}
+            <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
+                <CardHeader as={Heading} {...headerFontStyle}>
+                    Degrees
+                </CardHeader>
+                <CardBody px={{ base: 0, lg: 4 }} py={0}>
+                    <Accordion allowToggle>
+                        {
+                            education.map(e => <EducationCard key={nanoid()} edu={e} />)
+                        }
+                    </Accordion>
+                </CardBody>
             </Card>
 
-            {/* education */}
-            {
-                education.map(e => <EducationCard key={nanoid()} edu={e} />)
-            }
 
             {/* training */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Training
                 </CardHeader>
 
-                <CardBody>
+                <CardBody px={{ base: 0, lg: 4 }} py={0}>
                     <Accordion allowToggle>
                         {
                             training.map(t => <TrainingCard key={nanoid()} t={t} />)
@@ -56,55 +100,19 @@ function Education() {
                 </CardBody>
             </Card>
 
+
             {/* certificates */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Certificates
                 </CardHeader>
 
-                <CardBody>
+                <Text {...textFontStyle} {...credentialInfoStyle}>Tap on the certificate to check the credentials if available.</Text>
+                <CardBody px={{ base: 0, lg: 4 }} py={0}>
                     <Accordion allowToggle>
                         {/* one accordion item - one certificate group */}
                         {
-                            certificates.map(certObj =>
-                                <AccordionItem key={nanoid()} py={2}>
-                                    <AccordionButton
-                                        as={Heading}
-                                        fontSize={{ base: "sm", md: "md", lg: "xl" }}
-                                        _hover={{ cursor: "pointer" }}
-                                        _expanded={{ boxShadow: "0px 2px 8px" }}
-                                    >
-                                        <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
-                                            <Text>
-                                                {certObj.title}
-                                            </Text>
-                                        </Flex>
-                                        <AccordionIcon />
-                                    </AccordionButton>
-                                    <AccordionPanel p={2}>
-                                        <Stack as={Flex}
-                                            pt={2}
-                                            px={4}
-                                            justifyContent="space-between"
-                                            direction={{ base: "column", md: "row" }}
-                                            flexWrap={{ base: "nowrap", md: "wrap" }}
-                                        >
-                                            <Text>{certObj.platform}</Text>
-                                            <Text>{certObj.institute}</Text>
-                                        </Stack>
-                                        <Flex
-                                            px={4}
-                                            mt={1} flexShrink="1"
-                                        >
-                                            <Text>{certObj.about}</Text>
-                                        </Flex>
-                                        <Divider className="divider" mx="auto" my={2} width="90%" />
-
-                                        <CertificateCardCarousel details={certObj.certificateDetails} />
-                                    </AccordionPanel>
-                                </AccordionItem>
-                            )
-
+                            certificates.map(c => <CertificateCard key={nanoid()} certs={c} />)
                         }
                     </Accordion>
                 </CardBody>
@@ -113,10 +121,10 @@ function Education() {
 
             {/* extra curricular */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} fontSize={{ base: "md", lg: "2xl" }} mx="auto">
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Extracurricular Activities
                 </CardHeader>
-                <CardBody>
+                <CardBody px={{ base: 0, lg: 4 }} py={0}>
                     <Accordion allowToggle>
                         {
                             extracurriculars.map(ex => <ExtracurricularCard key={nanoid()} ex={ex} />)

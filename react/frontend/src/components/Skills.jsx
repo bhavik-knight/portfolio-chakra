@@ -1,37 +1,93 @@
+import "./Skills.css"
+import { CreateSkillBadge } from "./CreateSkillBadge"
+import { skills } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
-import { Flex, Center, Container } from "@chakra-ui/react"
+import { Box, Flex, Center, Container } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
-import { Button, Tag } from "@chakra-ui/react"
+import { Button, IconButton, Icon, Tag } from "@chakra-ui/react"
 import { Stack, VStack, HStack } from "@chakra-ui/react"
 import { Divider, Spacer } from "@chakra-ui/react"
-import { List, ListItem } from "@chakra-ui/react"
-import { skills } from "../data/portfolio_db.json"
+import { List, ListItem, ListIcon } from "@chakra-ui/react"
 import { ProgrammingParadigms } from "./ProgrammingParadigms"
+import { useState, useEffect } from "react"
+import { ResponsiveIcons } from "./ResponsiveIcons"
+import { CheckIcon } from "@chakra-ui/icons"
+
+
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
+const headerFontStyle = {
+    fontSize: { base: "md", md: "lg", lg: "xl" },
+    mx: "auto",
+}
+
 
 function Skills() {
+    const [languages, setLanguages] = useState([])
+    const [frameworks, setFrameworks] = useState([])
+    const [technologies, setTechnologies] = useState([])
+    const [os, setOs] = useState([])
+    const [management, setManagement] = useState([])
+    const [apps, setApps] = useState([])
+    const [databases, setDatabases] = useState([])
+    const [cloud, setCloud] = useState([])
+
+    useEffect(() => {
+        skills.map(skill => {
+            skill.name === "languages" && setLanguages(skill.data)
+            skill.name === "frameworks" && setFrameworks(skill.data)
+            skill.name === "technologies" && setTechnologies(skill.data)
+            skill.name === "os" && setOs(skill.data)
+            skill.name === "management" && setManagement(skill.data)
+            skill.name === "apps" && setApps(skill.data)
+            skill.name === "cloud" && setCloud(skill.data)
+            skill.name === "databases" && setDatabases(skill.data)
+        })
+    }, [languages, frameworks, technologies, os, management, apps])
+
 
     return (
-        <Stack p={2} gap={2}>
+        <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
             {/* introduction */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" py={2}>
+                <CardHeader as={Heading} mx="auto" my={1} py={1}>
                     Skills
                 </CardHeader>
-                <Divider className="divider" width="95%" mx="auto" my={1} />
+
+                <Divider width="95%" mx="auto" my={1} />
+
                 <CardBody textAlign="justify">
-                    <List ps={4}>
+                    <Stack as={List} spacing={2} {...textFontStyle}>
                         <ListItem>
-                            I am a Pythonist who is passionate about Artificial Intelligence, having a thorough foundation in Mathematics.
+                            {/* <ListIcon as={CheckIcon} /> */}
+                            In a full-stack environment, my dominant skills are in the backend development, but I can also make good UI/UX as a front-end developer.
                         </ListItem>
                         <ListItem>
-                            In a full-stack environment, my dominant skills are in the backend development, but I can also make good UI/UX as a frontend developer.
+                            {/* <ListIcon as={CheckIcon} /> */}
+                            I possess practical knowledge of AWS and GCP, including the ability to configure Infrastructure as a Service (IaaS) offerings like AWS EC2 or GCP GCE.
+
                         </ListItem>
                         <ListItem>
-                            I can setup docker containers and host the website using PaaS like Heroku, Netlify or configure IaaS like AWS - EC2.
+                            {/* <ListIcon as={CheckIcon} /> */}
+                            I am adept at establishing connections between these instances and databases hosted on AWS RDS or GCP Firestore.
                         </ListItem>
-                    </List>
+                        <ListItem>
+                            {/* <ListIcon as={CheckIcon} /> */}
+                            I am proficient in setting up Docker containers and deploying web applications using Platform as a Service (PaaS) providers such as Heroku or Netlify.
+                        </ListItem>
+                        {/* <ListItem>
+                            <ListIcon as={CheckIcon} />
+                            I have showcased my robust analytical skills and diverse programming skills through numerous projects in the fields of Data Analytics, Data Science, and Machine Learning.
+                        </ListItem> */}
+                    </Stack>
                 </CardBody>
+
                 {/* <Divider className="divider" width="95%" mx="auto" my={1} /> */}
                 <CardFooter my={0} as={Stack} display="none">
                     <Flex justifyContent={{ base: "center", lg: "space-evenly" }} direction={{ base: "column", lg: "row" }}>
@@ -49,88 +105,84 @@ function Skills() {
 
             {/* programming languages */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Programming Languages
                 </CardHeader>
-                <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
+
+                <Divider width="95%" mx="auto" my={1} />
+
+                <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        skills[0].languages.map(l => {
-                            return (
-                                <Tag key={nanoid()}>{l}</Tag>
-                            )
-                        })
+                        languages.map(l => <CreateSkillBadge key={nanoid()} skill={l} />)
                     }
                 </CardBody>
             </Card>
 
             {/* frameworks/libraries */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Frameworks | Libraries
                 </CardHeader>
-                <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
+
+                <Divider width="95%" mx="auto" my={1} />
+
+                <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        skills[0].frameworks.map(fw => {
-                            return (
-                                <Tag key={nanoid()}>{fw}</Tag>
-                            )
-                        })
+                        frameworks.map(fw => <CreateSkillBadge key={nanoid()} skill={fw} />)
                     }
                 </CardBody>
             </Card>
 
-            {/* Technologies & OS */}
+            {/* Technologies, Cloud, DB, and Host */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
-                    Technologies | Operating Systems
+                <CardHeader as={Heading} {...headerFontStyle}>
+                    Technologies | Databases | Cloud | Hosting
                 </CardHeader>
-                <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
-                    {
-                        skills[0].technologies.map(tech => {
-                            return (
-                                <Tag key={nanoid()}>{tech}</Tag>
-                            )
-                        })
-                    }
 
+                <Divider width="95%" mx="auto" my={1} />
+
+                <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        skills[0].os.map(o => {
-                            return (
-                                <Tag key={nanoid()}>{o}</Tag>
-                            )
-                        })
+                        technologies.map(tech => <CreateSkillBadge key={nanoid()} skill={tech} />)
+                    }
+                    {
+                        cloud.map(c => <CreateSkillBadge key={nanoid()} skill={c} />)
+                    }
+                    {
+                        databases.map(d => <CreateSkillBadge key={nanoid()} skill={d} />)
                     }
                 </CardBody>
             </Card>
 
-            {/* applications */}
+            {/* applications, os */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
-                    Applications | Database | Cloud
+                <CardHeader as={Heading} {...headerFontStyle}>
+                    Operating Systems | Applications
                 </CardHeader>
-                <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
+
+                <Divider width="95%" mx="auto" my={1} />
+
+                <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        skills[0].apps.map(app => {
-                            return (
-                                <Tag key={nanoid()}>{app}</Tag>
-                            )
-                        })
+                        os.map(o => <CreateSkillBadge key={nanoid()} skill={o} />)
+                    }
+                    {
+                        apps.map(app => <CreateSkillBadge key={nanoid()} skill={app} />)
                     }
                 </CardBody>
             </Card>
 
             {/* project management */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
-                <CardHeader as={Heading} mx="auto" py={2} fontSize={{ base: "md", lg: "2xl" }}>
+                <CardHeader as={Heading} {...headerFontStyle}>
                     Project Management
                 </CardHeader>
-                <CardBody as={Flex} wrap="wrap" gap={2} justifyContent="space-evenly">
+
+                <Divider width="95%" mx="auto" my={1} />
+
+                <CardBody as={Flex} wrap="wrap" justifyContent="space-evenly">
                     {
-                        skills[0].management.map(mgmt => {
-                            return (
-                                <Tag key={nanoid()}>{mgmt}</Tag>
-                            )
-                        })
+                        management.map(mgmt => <CreateSkillBadge key={nanoid()} skill={mgmt} />)
                     }
                 </CardBody>
             </Card>
@@ -140,5 +192,6 @@ function Skills() {
         </Stack >
     )
 }
+
 
 export { Skills }

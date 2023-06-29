@@ -1,8 +1,3 @@
-.project-detail-btns {
-    text-transform: capitalize;
-    width: 80px;
-}
-
 .projectTech {
     border-radius: 4px;
 }
@@ -15,9 +10,15 @@
     display: none;
 }
 
-@media only screen and (min-device-width:992px) {
+@media only screen and (min-device-width:480px) and (max-device-width:992px) {
     .project-detail-btns {
         width: 100px;
+    }
+}
+
+@media only screen and (min-device-width:992px) {
+    .project-detail-btns {
+        width: 120px;
     }
 
     .projectTechName {

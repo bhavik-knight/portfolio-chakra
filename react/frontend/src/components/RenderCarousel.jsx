@@ -7,9 +7,14 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 import { BiRadioCircle } from "@react-icons/all-files/bi/BiRadioCircle"
 import { VscCircleFilled } from "@react-icons/all-files/vsc/VscCircleFilled"
+import { useMediaQuery } from "@chakra-ui/react"
+import { first } from "lodash"
 
 
-function RenderCarousel({ items, cardWidth, cardHeight }) {
+function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", timeInterval = 5 }) {
+
+    const [isMobile] = useMediaQuery("(max-width:992px)")
+
     // total number of items to be rendered
     const length = items.length
 
@@ -32,7 +37,7 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
     }
 
     // pagination buttons
-    function showButtons(active, siblings = 2) {
+    function getButtons(active, siblings = 2) {
         const numberOfButtons = siblings * 2 + 1
 
         // if we have less data then total number of buttons; show less buttons
@@ -57,39 +62,88 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
             clearTimeout(timeRef.current)
         }
 
-        // auto play at 5 seconds
-        timeRef.current = setTimeout(() => handleNextClick(), 5000)
+        // auto play at `timeInterval` seconds
+        timeRef.current = setTimeout(() => handleNextClick(), timeInterval * 1000)
 
         // cleaning up the timer
         return () => clearTimeout(timeRef.current)
     }, [handleNextClick])
 
+
+    // pagination buttons
+    const paginationButtons = (btnType) => {
+        // to get the numbered pagination or dots
+        let btns = null
+
+        btnType === "dots" ?
+            btns = getButtons(current).map((b, index) => {
+                return (
+                    <IconButton
+                        className="btnIcon"
+                        key={nanoid()}
+                        onClick={() => handleBtnClick(b)}
+                        variant="ghost"
+                        _hover={{ boxShadow: "1px 1px 4px" }}
+                        icon={current === b ? <VscCircleFilled /> : <BiRadioCircle />}
+                    />
+                )
+            }) :
+            btns = getButtons(current).map((b, index) => {
+                return (
+                    <Button
+                        className="btnIcon"
+                        key={nanoid()}
+                        p={0}
+                        size={{ base: "xs", md: "sm", lg: "md" }}
+                        onClick={() => handleBtnClick(b)}
+                        isActive={b === current}
+                        variant="outline"
+                        _hover={{ boxShadow: "1px 1px 4px" }}
+                    >
+                        {b + 1}
+                    </Button>
+                )
+            })
+
+        return btns
+    }
+
+    const firstLastBtnStyles = {
+        variant: "outline",
+        size: { base: "xs", md: "sm", lg: "md" },
+        w: "fit-content",
+        _hover: { boxShadow: "1px 1px 4px" }
+    }
+
     return (
-        <Box mx="auto" p={4}>
+        items.length !== 0 &&
+        <Box mx="auto" py={2}>
             {/* top text */}
-            <Center as={Text} size={{ base: "sm", lg: "md" }}>
-                {current + 1} of {length}
-            </Center>
+            <HStack
+                as={Center}
+                justify="space-between" mx="auto"
+                w={{ base: "100%", lg: "90%" }}
+            >
+                <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(0)}>First</Button>
+                <Center as={Text} size={{ base: "sm", lg: "md" }}>{current + 1} of {length}</Center>
+                <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(length - 1)}>Last</Button>
+            </HStack>
 
             {/* moddle carousel card area */}
-            <HStack>
-                {/* left arrow button */}
-                <IconButton
-                    isRound
-                    icon={<ArrowBackIcon />}
-                    aria-label="previous-button"
-                    onClick={handlePrevClick}
-                    _hover={{ boxShadow: "1px 1px 4px" }}
-                    _size={{ base: "xs", lg: "md" }}
-                    variant="outline"
-                />
-
+            <Box mx="auto" w="100%"
+            // bg="yellow"
+            >
                 {/* carousel part */}
                 <Card
                     overflow="hidden"
-                    width={cardWidth}
+                    className="wrapper-card"
+                    h={cardHeight}
+                    w={{ base: "100%", lg: cardWidth }}
+                    px={0}
+                    mx="auto"
+                    py="auto"
                     border="1px solid"
-                    borderRadius="0.5em"
+                    borderRadius="1em"
                 >
                     <Flex
                         width={cardWidth * length}
@@ -97,9 +151,41 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
                         transform={`translate(${-(current * cardWidth)}px)`}
                     >
                         {items}
-
                     </Flex>
                 </Card>
+
+            </Box >
+
+            {/* pagination area */}
+            <Flex
+                mx="auto"
+                width={{ base: "100%", lg: "90%" }}
+                direction="row"
+                alignItems="center"
+            >
+
+                {/* left arrow button */}
+                <IconButton
+                    isRound
+                    icon={<ArrowBackIcon />}
+                    aria-label="previous-button"
+                    onClick={handlePrevClick}
+                    _hover={{ boxShadow: "1px 1px 4px" }}
+                    size={{ base: "xs", lg: "md" }}
+                    variant="outline"
+                />
+
+                {/* dots or numbered pagination */}
+                <ButtonGroup
+                    as={Center}
+                    mx="auto"
+                    p={0}
+                    isAttached
+                    _size={{ base: "xs", md: "sm", lg: "md" }}
+                >
+                    {paginationButtons(btnType)}
+                </ButtonGroup >
+
                 {/* right arrow button */}
                 <IconButton
                     isRound
@@ -107,30 +193,16 @@ function RenderCarousel({ items, cardWidth, cardHeight }) {
                     aria-label="next-button"
                     onClick={handleNextClick}
                     _hover={{ boxShadow: "1px 1px 4px" }}
-                    _size={{ base: "xs", lg: "md" }}
+                    size={{ base: "xs", lg: "md" }}
                     variant="outline"
                 />
-            </HStack >
 
-            {/* pagination area */}
-            <Center as={ButtonGroup} mx="auto" my={2} isAttached>
-                {
-                    showButtons(current).map((b, index) => {
-                        return (
-                            <IconButton
-                                key={nanoid()}
-                                onClick={() => handleBtnClick(b)}
-                                variant="ghost"
-                                _hover={{ boxShadow: "1px 1px 4px 1px" }}
-                                _size={{ base: "sm", lg: "xl" }}
-                                icon={current === b ? <VscCircleFilled /> : <BiRadioCircle />}
-                            />
-                        )
-                    })
-                }
-            </Center >
+            </Flex>
         </Box >
     )
 }
 
 export { RenderCarousel }
+
+{/*
+*/}

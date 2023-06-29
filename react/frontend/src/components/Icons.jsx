@@ -57,6 +57,8 @@ import { MdSchool } from "@react-icons/all-files/md/MdSchool"
 import { MdWork } from "@react-icons/all-files/md/MdWork"
 import { FaAward } from "@react-icons/all-files/fa/FaAward"
 import { FaCode } from "@react-icons/all-files/fa/FaCode"
+import { GoMail } from "@react-icons/all-files/go/GoMail"
+import { MdContactMail } from "@react-icons/all-files/md/MdContactMail"
 
 import { Container, useMediaQuery } from "@chakra-ui/react"
 
@@ -80,6 +82,7 @@ const icons = {
     "projects": <GiFilmProjector fontSize={size} />,
     "education": <MdSchool fontSize={size} />,
     "experiences": <MdWork fontSize={size} />,
+    "contact": <MdContactMail fontSize={size} />,
     "certificates": <FaAward fontSize={size} />,
     "linkedin": <FaLinkedinIn fontSize={size} />,
     "github": <FaGithub fontSize={size} />,

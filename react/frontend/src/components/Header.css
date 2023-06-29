@@ -1,13 +1,15 @@
 .logo {
     background-color: transparent;
-    height: 52px;
-    padding: 4px;
+    font-size: 40px;
+    height: fit-content;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
 }
 
-.navbar button {
-    margin-inline: 4px;
-}
 
-.navbar p {
-    text-transform: capitalize;
+@media only screen and (max-width: 992px) {
+    .hidden {
+        display: none;
+    }
 }

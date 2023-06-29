@@ -11,13 +11,21 @@ import { Worker, Viewer } from "@react-pdf-viewer/core"
 import "@react-pdf-viewer/core/lib/styles/index.css"
 
 
+const textFontStyle = {
+    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
+
+
 function CertificateCardCarousel({ details }) {
-    const [isMobile] = useMediaQuery("(max-width: 768px)")
+    const [isMobile] = useMediaQuery("(max-width: 992px)")
     const [cardWidth, setCardWidth] = useState(992)
     const [cardHeight, setCardHeight] = useState(700)
     useEffect(() => {
         setCardWidth(isMobile ? 300 : 992)
-        setCardHeight(isMobile ? 128 : 700)
+        setCardHeight(isMobile ? 128 : 500)
     }, [isMobile])
 
     // to keep track of the current carousel
@@ -79,18 +87,18 @@ function CertificateCardCarousel({ details }) {
                     mx="auto"
                     p={2}
                     width={cardWidth}
-                    height={cardHeight}
                 >
                     <CardHeader
-                        as={Stack}
+                        as={Flex}
                         mx="auto"
                         my={0}
                         width="95%"
-                        direction={{ base: "column", lg: "row" }}
+                        direction={{ base: "column", md: "row" }}
                         alignItems={{ base: "space-between", lg: "center" }}
                         justifyContent="space-between"
+                        flexWrap="wrap"
                     >
-                        <Heading fontSize={{ base: "sm", md: "xl" }}>
+                        <Heading fontSize={{ base: "sm", md: "md", lg: "xl" }}>
                             {c.certName}
                         </Heading>
                         {
@@ -110,9 +118,10 @@ function CertificateCardCarousel({ details }) {
                     </CardHeader>
 
                     <CardBody
+                        as={Flex}
                         my={0} mx="auto"
-                        width={cardWidth * 0.7}
-                        height={{ base: `${cardHeight}`, lg: `${cardHeight * 0.7}` }}
+                        width={cardWidth * 0.8}
+                        height={cardHeight * 0.5}
                     >
                         <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
                             <Viewer
@@ -127,7 +136,7 @@ function CertificateCardCarousel({ details }) {
                             {c.learnings}
                         </CardFooter>
                     }
-                </Card>
+                </Card >
             )
         }),
         [details]

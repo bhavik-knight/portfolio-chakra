@@ -1,3 +1,4 @@
+import { certificates } from "../data/portfolio_db.json"
 import "./Certificates.css"
 import { nanoid } from "nanoid"
 import { Flex, HStack, VStack, Stack, Box, Wrap, Container, Divider } from "@chakra-ui/react"
@@ -5,9 +6,9 @@ import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Accordion, AccordionIcon, AccordionButton, AccordionItem, AccordionPanel } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
-import { certificates } from "../data/portfolio_db.json"
 import { CertificateCard } from "./CertificateCard"
 import { CertificateCardCarousel } from "./CertificateCardCarousel"
+
 
 function Certificates() {
 
@@ -33,9 +34,6 @@ function Certificates() {
                     <ListItem>
                         Checkout my certificates from prestigious institutions like Harvard, MIT, Microsoft, Google, etc.
                     </ListItem>
-                    {/* <ListItem>
-                        Click on any certificates to check the credentials online
-                    </ListItem> */}
                 </CardBody>
             </Card>
 

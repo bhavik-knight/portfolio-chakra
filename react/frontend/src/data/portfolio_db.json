@@ -3,12 +3,12 @@
         {
             "id": 1,
             "title": "Halifax Canoe and Kayak",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of cloud-computing using AWS Cloud. A project for Digital Nova Scotia - Skills for Hire program.",
             "type": "web",
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
             "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "projects/hck_dns_sfha/1_landing_page.png",
             "technologies": [
                 "php",
                 "javascript",
@@ -34,10 +34,16 @@
                 "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
             ],
             "projectImgs": [
-                "./projects/hck_dns_sfha/hck_1_landing_page.png",
-                "./projects/hck_dns_sfha/hck_2_menu_dark_mode.png",
-                "./projects/hck_dns_sfha/hck_3_form_validation.png",
-                "./projects/hck_dns_sfha/hck_4_form_details.png"
+                "projects/hck_dns_sfha/1_landing_page.png",
+                "projects/hck_dns_sfha/2_menu_dark_mode.png",
+                "projects/hck_dns_sfha/3_form_validation.png",
+                "projects/hck_dns_sfha/4_form_details.png",
+                "projects/hck_dns_sfha/5_confirm_booking.png",
+                "projects/hck_dns_sfha/6_book_another.png",
+                "projects/hck_dns_sfha/7_add_adventure.png",
+                "projects/hck_dns_sfha/8_add_success.png",
+                "projects/hck_dns_sfha/9_all_adventures.png",
+                "projects/hck_dns_sfha/10_new_adventures.png"
             ]
         },
         {
@@ -48,7 +54,7 @@
             "group": true,
             "source": "https://bitbucket.org/csci-485/nish-foody/",
             "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "projects/nish_foody/1_landing_page.png",
             "technologies": [
                 "python",
                 "django",
@@ -64,7 +70,8 @@
                 "heroku",
                 "jira",
                 "confluence",
-                "windows"
+                "windows",
+                "slack"
             ],
             "details": [
                 "Developed a fully-functional website for food ordering/selling for the people of Antigonish",
@@ -74,7 +81,35 @@
                 "Adopted the Django framework serving REST API that was connected to the PostgreSQL database",
                 "Followed the Agile methodology with tools like JIRA and Confluence pages for the documentation"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/nish_foody/0_final_roles.png",
+                "projects/nish_foody/1_landing_page.png",
+                "projects/nish_foody/2_signup.png",
+                "projects/nish_foody/3_login.png",
+                "projects/nish_foody/4_profile.png",
+                "projects/nish_foody/5_menu.png",
+                "projects/nish_foody/6_menu_items.png",
+                "projects/nish_foody/7_popular_items.png",
+                "projects/nish_foody/8_cart.png",
+                "projects/nish_foody/9_add_cart.png",
+                "projects/nish_foody/9_clear_cart.png",
+                "projects/nish_foody/10_order.png",
+                "projects/nish_foody/11_order_status.png",
+                "projects/nish_foody/12_seller.png",
+                "projects/nish_foody/13_admin.png",
+                "projects/nish_foody/14_approval_seller_item.png",
+                "projects/nish_foody/15_update_seller_item.png",
+                "projects/nish_foody/16_future_work.png",
+                "projects/nish_foody/17_jira.png",
+                "projects/nish_foody/18_bitbucket.png",
+                "projects/nish_foody/19_deployment.png",
+                "projects/nish_foody/20_ci_cd.png",
+                "projects/nish_foody/21_testing.png",
+                "projects/nish_foody/22_initial_roles.png",
+                "projects/nish_foody/23_survey.png",
+                "projects/nish_foody/24_system_design.png",
+                "projects/nish_foody/25_tech_stack.png"
+            ]
         },
         {
             "id": 3,
@@ -84,62 +119,55 @@
             "group": false,
             "source": "https://github.com/bhavik-knight/portfolio-chakra",
             "uri": "http://bhavikbhagat.netlify.app",
-            "displayImg": "./projects/portfolio/p1_landing_page.png",
+            "displayImg": "projects/portfolio/1_landing_page.png",
             "technologies": [
-                "reactjs",
+                "react",
                 "javascript",
                 "chakraui",
                 "html",
                 "css",
                 "git",
                 "docker",
-                "netlify"
+                "netlify",
+                "firebase",
+                "gcp"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Leveraged vite tool to create the app for the faster build time for ReactJS app",
+                "Demonstrated expertise in component library like ChakraUI to create reusable modular components",
+                "Utilized react hooks like useState, useEffect, useRef, useCallback effectively when needed",
+                "Created database on GCP's firebase (Backend-as-a-Service) and used Storaage for files",
+                "Containerized the app using Docker, and pushed the docker image on DockerHub",
+                "Created mini-projects to experiment with features like fetching data, creating carousel, learn different hooks, dark-mode, etc.",
+                "Hosted the app on the Netlify platform which pulls latest image from the Github's master-branch"
             ],
-            "projectImgs": ""
-        },
-        {
-            "id": 4,
-            "title": "Tic-tac-toe",
-            "description": "My first mini-project in the web development area as a backend developer where I used flask microframework. I received constructive critisim on my coding style by Harvard's computer science professor Dr. David Malan in CS50's code-review stream.",
-            "type": "web",
-            "source": "https://github.com/bhavik-knight/cs50beyond/tree/master/tictactoe",
-            "uri": "https://www.youtube.com/watch?v=5aWjlEqwJs4&t=1829s",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
-            "technologies": [
-                "python",
-                "flask",
-                "html",
-                "css",
-                "git",
-                "windows"
-            ],
-            "details": [
-                "First experience of utilizing any framework for web-development. I learned about flask micro-framework by reading the official documentation.",
-                "Implemented backend using flask, used stackoverflow/goggle to solve the issues during the developement process",
-                "First time using git for version control and hosted project on the github",
-                "Received the feedback on my project from my idol Dr. David Malan; learned about various aspect i.e., the best coding practicies,  use of MVC in the web developement, etc."
-            ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/portfolio/1_landing_page.png",
+                "projects/portfolio/2_netlify.png",
+                "projects/portfolio/3_carousel.png",
+                "projects/portfolio/4_tenzies.png",
+                "projects/portfolio/5_meme_generator.png",
+                "projects/portfolio/6_firebase_database.png",
+                "projects/portfolio/7_storage.png"
+            ]
         },
         {
             "id": 5,
-            "title": "Hotel Management",
-            "description": "The relational database for Hotel Room reservation / booking that is developed in 4-phases and deployed on the StFX University's Oracle server setup by the professor.",
+            "title": "Hotel Management System",
+            "description": "The relational database for Hotel Management System for booking/reserving the room. The project was developed in 4-phases using waterfall methodology and deployed on the StFX University's Oracle server setup by the professor.",
             "type": "data",
-            "group": false,
+            "group": true,
             "source": null,
             "uri": null,
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "displayImg": "projects/hotel_mgmt/hms_group.png",
             "technologies": [
                 "sql",
+                "python",
                 "oracle",
-                "ERD",
-                "3NF"
+                "erd+",
+                "3nf",
+                "windows",
+                "slack"
             ],
             "details": [
                 "Developed the relational database as a 4-member team for the Hotel Management",
@@ -149,297 +177,479 @@
                 "Prepared meaningful Views and useful queries on the database by applying joins on the tables",
                 "Deployed the relational database on the university's Oracle Server hosted by the professor"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/hotel_mgmt/hms_group.png",
+                "projects/hotel_mgmt/0_erd.png",
+                "projects/hotel_mgmt/1_erd.png",
+                "projects/hotel_mgmt/2_create_guest.png",
+                "projects/hotel_mgmt/3_create_company.png",
+                "projects/hotel_mgmt/4_create_bookingmode_bookstatus.png",
+                "projects/hotel_mgmt/5_insert_guest_company_bookstatus.png",
+                "projects/hotel_mgmt/6_insert_bookingmode.png",
+                "projects/hotel_mgmt/7_query1.png",
+                "projects/hotel_mgmt/8_query2.png",
+                "projects/hotel_mgmt/9_query3.png",
+                "projects/hotel_mgmt/10_update1.png",
+                "projects/hotel_mgmt/11_update2.png",
+                "projects/hotel_mgmt/12_update3.png",
+                "projects/hotel_mgmt/13_view1.png",
+                "projects/hotel_mgmt/14_view2.png",
+                "projects/hotel_mgmt/15_view3.png",
+                "projects/hotel_mgmt/16_create_data1.png",
+                "projects/hotel_mgmt/17_create_data2.png",
+                "projects/hotel_mgmt/18_sqlldr.png",
+                "projects/hotel_mgmt/19_assumptions.png"
+            ]
         },
         {
             "id": 6,
             "title": "Crime Analysis",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "A comprehensive study of factors influencing crime in the USA over three decades (1980s, 1990s, 2000s). Increase in crime-rate in the recent times (like mass shooting) was the purpose behind choosing this project",
             "type": "data",
-            "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "group": true,
+            "source": "https://github.com/bhavik-knight/crime-analysis-ha",
+            "uri": "https://github.com/bhavik-knight/crime-analysis-ha/blob/master/project/report/crime_analysis_project_report.pdf",
+            "displayImg": "projects/crime_analysis/0_group.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "r",
+                "rstudio",
+                "ggplot",
+                "rmarkdown",
+                "tidyverse",
+                "windows",
+                "msteams"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Generated R-markdown report presenting our work from the data collection to our findings on the factors affecting crime-rate",
+                "Data Collection: The Analysis of the USA data obtained from the Kaggle and FBI crime data explorer",
+                "Data Wrangling: Split and merged datasets performing ETL to convert the raw data into valuable information",
+                "Visualization: Generated high-quality and meaningful plots by executing functions from the ggplot2 library",
+                "Exploratory Data Analysis: To find a correlation between Crime rate and two factors: Unemployment & Education",
+                "Modeling: To understand how different types of crime are evolving over the decades in the USA",
+                "Summurized how unemployment-rate and crime-rate evolved over the three decades",
+                "Prepared residual-plots demonstrating distribution of errors to conclude the robustness of our models"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/crime_analysis/0_group.png",
+                "projects/crime_analysis/1_datasets.png",
+                "projects/crime_analysis/2_data_wrangling1.png",
+                "projects/crime_analysis/3_pipeline.png",
+                "projects/crime_analysis/4_crime_us_dataset.png",
+                "projects/crime_analysis/5_crime_homicide_dataset.png",
+                "projects/crime_analysis/6_data_wragling2.png",
+                "projects/crime_analysis/7_data_wrangling3.png",
+                "projects/crime_analysis/8_data_normalization.png",
+                "projects/crime_analysis/9_viz_crimerate.png",
+                "projects/crime_analysis/10_viz_unemployment.png",
+                "projects/crime_analysis/11_viz_unemployment_geomap.png",
+                "projects/crime_analysis/12_viz_perpetrator_age.png",
+                "projects/crime_analysis/13_viz_highschool_dropout.png",
+                "projects/crime_analysis/14_crimerate_decades.png",
+                "projects/crime_analysis/15_modeling1.png",
+                "projects/crime_analysis/16_modeling2.png",
+                "projects/crime_analysis/17_modeling3.png",
+                "projects/crime_analysis/18_residual.png",
+                "projects/crime_analysis/19_summary.png"
+            ]
         },
         {
             "id": 7,
-            "title": "Food-Order Analysis",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Sentiment Analysis",
+            "description": "The tweets dataset having 3000+ tweets were investigated to determined if tweets are positive, negative or neutral. Demonstrated  the expertise in preprocessing the English-language sentences (tweets)",
             "type": "data",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": "https://colab.research.google.com/drive/1i29rcmjD2ZZtTYin1WWm7-AYaqjamlZ7?usp=sharing",
+            "uri": "https://github.com/bhavik-knight/sentiment-analysis-dns/blob/main/SentimentAnalysis.ipynb",
+            "displayImg": "projects/sentiment_analysis/0_sentiment_analysis.jpg",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "nltk",
+                "sklearn",
+                "wordcloud",
+                "regex",
+                "textblob",
+                "colab",
+                "matplotlib"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Removed hyperlinks, punctuations, whitespaces, hashtags, mentiones, RT, emojis, etc using RegEx and other methods",
+                "Removed stopwords using NLTK & applied lemmatization to convert cleaned tweets to meaningful words for the anaylsis purpose",
+                "Determined the polarity of cleaned tweets using TextBlob library; based on results evaluated the sentiment of each tweet",
+                "Visulized the positive, negative or neutral sentiments of over 3000 tweets using pie-chart",
+                "Determined top 10 popular words for each sentiment using scikit-learn by eliminating common words in the process",
+                "Presented the popular words for each sentiment using wordcloud"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/sentiment_analysis/1_load.png",
+                "projects/sentiment_analysis/2_hyperlinks.png",
+                "projects/sentiment_analysis/3_stopwords.png",
+                "projects/sentiment_analysis/4_mentions_hashtags.png",
+                "projects/sentiment_analysis/5_rt.png",
+                "projects/sentiment_analysis/6_emojis_whitespace.png",
+                "projects/sentiment_analysis/7_lemmatize1.png",
+                "projects/sentiment_analysis/8_lemmatize2.png",
+                "projects/sentiment_analysis/9_clean.png",
+                "projects/sentiment_analysis/10_polarity.png",
+                "projects/sentiment_analysis/11_sentiments.png",
+                "projects/sentiment_analysis/12_distribution.png",
+                "projects/sentiment_analysis/13_plot.png",
+                "projects/sentiment_analysis/14_most_common1.png",
+                "projects/sentiment_analysis/15_most_common2.png",
+                "projects/sentiment_analysis/16_most_common3.png",
+                "projects/sentiment_analysis/17_wordcloud.png",
+                "projects/sentiment_analysis/18_positive_wordcloud.png",
+                "projects/sentiment_analysis/18_top10_positive.png",
+                "projects/sentiment_analysis/19_negative_wordcloud.png",
+                "projects/sentiment_analysis/20_top10_negative.png",
+                "projects/sentiment_analysis/21_neutral_wordcloud.png",
+                "projects/sentiment_analysis/22_top10_neutral.png",
+                "projects/sentiment_analysis/23_likes.png",
+                "projects/sentiment_analysis/24_avg_likes.png",
+                "projects/sentiment_analysis/25_retweets.png",
+                "projects/sentiment_analysis/26_avg_retweets.png"
+            ]
         },
         {
             "id": 8,
-            "title": "Sentiment Analysis",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Food-Order Analysis",
+            "description": "The analysis of New York Restaurants. First experience of using google-colab platform for the analysis purpose. Transformed and visualized the data for different scenarios using Python programming language.",
             "type": "data",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": "https://colab.research.google.com/drive/1ItCiGpwr7wKJQ-v42_geB2Hit3PwNDBU?usp=sharing",
+            "uri": "https://github.com/bhavik-knight/food-order-analysis-dns/blob/main/FoodOrderAnalysis.ipynb",
+            "displayImg": "projects/food_order_analysis/0_food_order_analysis.jpg",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "pandas",
+                "numpy",
+                "scipy",
+                "matplotlib",
+                "seaborn",
+                "plotly",
+                "colab"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Checked the number of restaurants for each cuisine type & visualized the result using appropreate plot",
+                "Visualized the top 10 most popular restaurants for each cusine type and highlighted top 3 restaurants",
+                "Investigated proportation of review of the given restaurant (Shake Shack) and demonstrated the findings using appropriate plots",
+                "Determined the correlation between ratings and food preparation time using the r-value (person correlation cofficient)",
+                "Created various plots like pie-chart, bar-chart, box-plot using libraries like matplotlib, seaborn and plotly"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/food_order_analysis/1_imports.png",
+                "projects/food_order_analysis/2_describe.png",
+                "projects/food_order_analysis/3_describe2.png",
+                "projects/food_order_analysis/4_total_time.png",
+                "projects/food_order_analysis/5_restaurants_by_cuisine_type.png",
+                "projects/food_order_analysis/6_plot1.png",
+                "projects/food_order_analysis/7_viz_restaurants_by_cuisine_type.png",
+                "projects/food_order_analysis/8_viz_top5_cuisine_type_with_most_restaurants.png",
+                "projects/food_order_analysis/9_top10_most_popular.png",
+                "projects/food_order_analysis/11_viz_top10_most_popular.png",
+                "projects/food_order_analysis/12_top10_most_popular_by_cuisine_type.png",
+                "projects/food_order_analysis/13_viz2.png",
+                "projects/food_order_analysis/14_viz3.png",
+                "projects/food_order_analysis/15_viz4.png",
+                "projects/food_order_analysis/16_viz5.png",
+                "projects/food_order_analysis/17_viz6.png",
+                "projects/food_order_analysis/18_ratings_of_shake_shack.png",
+                "projects/food_order_analysis/19_viz_shake_shack.png",
+                "projects/food_order_analysis/20_correlation_rating_food_prep_time.png",
+                "projects/food_order_analysis/21_viz_correlation.png",
+                "projects/food_order_analysis/22_correlation_calculation.png"
+            ]
         },
         {
             "id": 9,
-            "title": "Multi-class Image Classification",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Multi-Class Image Classification",
+            "description": "A deep learning on the Intel Image Classification dataset accquired from Kaggle. Demontrated skills in deep learning using Convolutional Neural Network (CNN) for the dataset to achieve about 80% accuray for the multi-class (6 classes) classification on the test data.",
             "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/deep_learning_project_444",
+            "uri": null,
+            "displayImg": "./projects/multiclass_classification/0_dataset.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "keras",
+                "tensorflow",
+                "scikit-learn",
+                "numpy",
+                "pandas",
+                "matplotlib"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Proprocessed the images data acquired from Kaggle using scikit-learn, numpy, and panda according to the requirement",
+                "Utilized Keras to load data for the CNN which was based on LeNet with minor improvements to start the training",
+                "Achieved about 64% accuracy on the training data and about 31% accuracy on testing data with 1 epoch with this first model",
+                "For the next traning I added some feature maps at the dense layer before fully-connected layer to improve the model which gave me about 84% accuracy on the traning data for 5 epoches",
+                "To improve the model, experimented by converting the images to grayscale but it resulted in some erros regarding reshaping which was countered by adding rescaling layer (ideadlly solution was to do data-augmentation).",
+                "The above model after dropping some layers in between to provent overfitting improved the traning accuracy up to about 94%, and testing accuracy reached to 76% for 10 epoches",
+                "Since my GPU was not powerful enough, I didn't have capability to experiment much with large number of epoches, so what I though the best model is up to that point I trained it through 100 epoches",
+                "Added few Conv2D layers, and some batch normalization resulted in around 99% accuracy on traning data and 80% accuracy on the testing data",
+                "Experiments with different number of epoches, I concluded that increasing ephoces beyond a number doesn't necessarily improve the accuray, but performing cross validation does, and the ideal number of epoches for my model is 30",
+                "Plotted the results for different number of epoches with the model used for that particular training/testing",
+                "Craeted a table to show all the models and their perforamce to compare the models that I improved from basic LeNet to the best model I achived",
+                "Summarized my project and the thoughts techniques that can be used to improve the model in the future"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/multiclass_classification/1_all_models.png",
+                "projects/multiclass_classification/2_basic_cnn_e1.png",
+                "projects/multiclass_classification/3_basic_cnn_e1.png",
+                "projects/multiclass_classification/4_basic_cnn2_auc.png",
+                "projects/multiclass_classification/5_improved_cnn_auc.png",
+                "projects/multiclass_classification/6_best_cnn1.png",
+                "projects/multiclass_classification/7_best_cnn2.png",
+                "projects/multiclass_classification/8_best_cnn3.png",
+                "projects/multiclass_classification/9_best_cnn_auc.png"
+            ]
         },
         {
             "id": 10,
             "title": "Deep Learning on MNIST Dataset",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "The cross-discipline competition between MACS, Bacher of Computer Science and PBDAI having total of 80+ students taking Machine Learnign Course at StFX. The MNIST dataset was given to us and the task was to get the least errors on the test data for which we were not given any labels.",
             "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": null,
+            "uri": null,
+            "displayImg": "./projects/mnist_deep_learning/0_mnist_data.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "keras",
+                "tensorflow",
+                "matplotlib",
+                "numpy",
+                "pandas"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Achieved 2nd rank in the competition which was a big achievement for me; having no prior Data Science experience as I was learning that pre-requisite course in the parallel during the same term",
+                "Improved LeNet of Yann LeCun for this particular tasks by adding different layers to improve accuracy of the model",
+                "Conv2D layer to generate 32 feature maps, with 5x5 kernel, with unit stride and relu activation with bias",
+                "Normalization layers to stabilize the images, and converge faster",
+                "Pooling layer to extract the best feature of some regions to enhaced learning",
+                "Dropping few layers in-between to mitigate over-fitting by dropping connection and learn the patterns instead of memorizing",
+                "Dense layer to get fully-connected neural network layer, and Softmax layer with 10 units because this was a 10-class classification",
+                "Utilized all the layers above and using Stratified-Shffle-Split technique on the traning data to perform traning, testing and improve accuracy over 30 epochs",
+                "Generated error data from my internal training/testing, and my prediction on the test data to submit for the competition."
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/mnist_deep_learning/1_second_lowest_error.png",
+                "projects/mnist_deep_learning/2_imports.png",
+                "projects/mnist_deep_learning/3_q4_cnn.png",
+                "projects/mnist_deep_learning/4_get_mnist_data.png",
+                "projects/mnist_deep_learning/5_get_performance_stratified_shuffle_split.png",
+                "projects/mnist_deep_learning/6_traning_cnn.png",
+                "projects/mnist_deep_learning/7_generate_errors.png",
+                "projects/mnist_deep_learning/8_best_cnn_model.png"
+            ]
         },
         {
             "id": 11,
-            "title": "Evolutionary Computation - Final Project",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "title": "Image Reconstruction",
+            "description": "The evolutionary computation project that uses the genetic algorithm based on the survival of the fittest. This project demonstrate the use of the GA that is used to generate high quality solutions to optimization and research problems.",
             "type": "ai",
-            "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "group": true,
+            "source": "https://github.com/bhavik-knight/340-ec-final-project",
+            "uri": null,
+            "displayImg": "projects/image_reconstruction/0_genetic_algorithms.png",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
+                "python",
+                "pygad",
+                "gari",
+                "imageio",
+                "numpy",
+                "matplotlib",
                 "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "slack",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Demonstrated the image reconstruction using the Genetic Algorithm based on the Darwin's theory of natural selection",
+                "Given the input image, using PyGAD and other supporting library execute the GA",
+                "Create the initial population and evalute the fiteness of each chromosome",
+                "Select the fittest choromosome for the next generation, and perform recombination (crossover) which is equivalent to inherit genes from both parents",
+                "Peform the mutation that is equivalent of child having their own characteristics different from the parents",
+                "The new generation will be added to the population for the next iteration, and repeat the process until the desired criteria is achieved",
+                "The crossover generates the new child, and mutation brings the diversity in the population that is necessary to mitigatge local maxima/minima of the search space of the problem",
+                "Utilized different cross-over, and selection stratagies to achieve high quality solution in reasonable time",
+                "Documented our process and findings in the research paper format using LaTex for the project report"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/image_reconstruction/0_genetic_algorithms.png",
+                "projects/image_reconstruction/1_group.png",
+                "projects/image_reconstruction/2_algorithm.png",
+                "projects/image_reconstruction/3_target.png",
+                "projects/image_reconstruction/4_code1.png",
+                "projects/image_reconstruction/5_code2.png",
+                "projects/image_reconstruction/6_code3.png",
+                "projects/image_reconstruction/7_code4.png",
+                "projects/image_reconstruction/8_test1.png",
+                "projects/image_reconstruction/9_test2.png",
+                "projects/image_reconstruction/10_paper1.png",
+                "projects/image_reconstruction/11_paper2.png",
+                "projects/image_reconstruction/12_paper3.png",
+                "projects/image_reconstruction/13_paper4.png",
+                "projects/image_reconstruction/14_paper5.png",
+                "projects/image_reconstruction/15_paper6.png"
+            ]
         },
         {
             "id": 12,
             "title": "Particle Swarm Optimization",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "An evolutionary algorithm to sovle optimization problem that emulates the social behavior of birds looking for food. This algorithm is a special one as it doens't need a problem to be differential unlike other classical optimization techniques",
             "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/pso-ec-a3",
+            "uri": null,
+            "displayImg": "projects/pso/0_pso_shubert.gif",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "pyswarms",
+                "matplotlib",
+                "windows",
+                "latex"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Ther idea is to improve the candidate solution against the fitness function iteratively",
+                "Each particle has in the swarm (group) has a position, velocity vector and fitness value and their best position and fiteness values are recorded",
+                "By communication the particles know the global best position and global best value of the swarm",
+                "The parameters of the algorithms are number of dimensions, lower and upper bound. The hyper-parameters are number of particles, max iterations, inertia component, congition of the particle component (local), and social influence of swarm component (global)",
+                "Optimized several functions like Sphere, Beale, Booth, Levi, etc. and generated the plots of the cost  vs iteration for each and particles' movements",
+                "Created a report of my work and findings in a research paper like format using LaTeX"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/pso/1_paper1.png",
+                "projects/pso/2_paper2.png",
+                "projects/pso/3_table.png",
+                "projects/pso/4_components.png",
+                "projects/pso/5_funcitons.png",
+                "projects/pso/6_cost_iteration1.png",
+                "projects/pso/7_cost_iteration2.png",
+                "projects/pso/8_code1.png",
+                "projects/pso/9_code2.png",
+                "projects/pso/10_code3.png",
+                "projects/pso/11_code4.png",
+                "projects/pso/12_code5.png",
+                "projects/pso/13_code6.png",
+                "projects/pso/14_animation1.gif",
+                "projects/pso/15_animation2.gif",
+                "projects/pso/16_animation3.gif",
+                "projects/pso/17_anitmation4.gif",
+                "projects/pso/18_animation5.gif",
+                "projects/pso/19_animation6.gif",
+                "projects/pso/20_animation7.gif",
+                "projects/pso/21_animation8.gif"
+            ]
         },
         {
             "id": 13,
             "title": "Minesweeper",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "My version of the classic Minesweeper game to demontrate Object Oriented Programming skills in python langague using PyGame library",
             "type": "game",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/minesweeper",
+            "uri": "https://youtu.be/BzG0DbutIa8",
+            "displayImg": "projects/minesweeper/0_minesweeper.gif",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "pygame",
+                "windows",
+                "wsl",
+                "youtube"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Demonstrated the use of Pygame library by reading and understanding the documenatation to deliver the working game",
+                "Implemented the modular code using DRY principles, and effectively used defensive programming using python style guide",
+                "Recorded a project video & posted on my youtube channel explaining all features and basic explaination of the program"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/minesweeper/1_game_window.png",
+                "projects/minesweeper/2_main.png",
+                "projects/minesweeper/3_play1.png",
+                "projects/minesweeper/4_play2.png",
+                "projects/minesweeper/5_play3.png",
+                "projects/minesweeper/6_play4.png",
+                "projects/minesweeper/7_play5.png",
+                "projects/minesweeper/8_play6.png",
+                "projects/minesweeper/9_tile.png",
+                "projects/minesweeper/10_grid1.png",
+                "projects/minesweeper/11_grid2.png",
+                "projects/minesweeper/12_grid3.png",
+                "projects/minesweeper/13_grid4.png",
+                "projects/minesweeper/14_grid5.png",
+                "projects/minesweeper/15_grid6.png",
+                "projects/minesweeper/16_contants.png",
+                "projects/minesweeper/17_buttons.png",
+                "projects/minesweeper/18_mines10.png",
+                "projects/minesweeper/19_game_won.png",
+                "projects/minesweeper/20_game_lost.png",
+                "projects/minesweeper/21_flags.png"
+            ]
         },
         {
             "id": 14,
             "title": "Snake",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "My spin on classing Snake game from the old Nokia phones.",
             "type": "game",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": "https://scratch.mit.edu/projects/72395498/editor/",
+            "uri": "https://scratch.mit.edu/projects/72395498/fullscreen/",
+            "displayImg": "projects/snake/snake.gif",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "scratch",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "This was my first attempt at programming after I decided to change my career from Mechanical Engineering to Computer Science",
+                "The first mini-project submitted for the Harvard's CS50 course using the graphical langauge Scratch",
+                "Demonstrated expertise in this programming language to implement the functionality with increasing difficulty level",
+                "Learned and implemented programming concepts like variables, conditional, loops and control structure"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/snake/0_instructions_page.png",
+                "projects/snake/1_code1.png",
+                "projects/snake/2_code2.png",
+                "projects/snake/3_home_page.png",
+                "projects/snake/4_level1.png",
+                "projects/snake/5_level2.png",
+                "projects/snake/6_level3.png",
+                "projects/snake/7_level4.png",
+                "projects/snake/8_game_over.png",
+                "projects/snake/9_last_page.png"
+            ]
         },
         {
             "id": 15,
-            "title": "8 - Puzzle solver AI using A*",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of dev-ops. A project for Digital Nova Scotia - Skills for Hire program.",
-            "type": "game",
+            "title": "8 Puzzle Solver AI",
+            "description": "Implimented A* algorithm to solve the 8 Puzzle. Demonstrated expertise in the Object Oriented Programming, Data Structures and Algorithms.",
+            "type": "ai",
             "group": false,
-            "source": "https://github.com/bhavik-knight/hck_dns_sfha",
-            "uri": "http://35.182.245.62",
-            "displayImg": "./projects/hck_dns_sfha/hck_1_landing_page.png",
+            "source": "https://github.com/bhavik-knight/8Puzzle-AI",
+            "uri": null,
+            "displayImg": "/projects/puzzle_8_ai/0_Astar_progress_animation.gif",
             "technologies": [
-                "php",
-                "javascript",
-                "jquery",
-                "html",
-                "css",
-                "bootstrap",
-                "git",
-                "mysql",
-                "docker",
-                "heroku",
-                "aws"
+                "python",
+                "windows"
             ],
             "details": [
-                "task1",
-                "task2",
-                "task3"
+                "Created the grid and moved for the classic 8 Puzzle game using Object Oriented Programming",
+                "Implemented the A* algorithm to find the mininum number of moves to solve the game from the given initial configuration",
+                "Demonstrated DRY principles and Code modularity to extend the code for N-puzzle game",
+                "Modularized the game for the N-Puzzle given the size of grid N"
             ],
-            "projectImgs": ""
+            "projectImgs": [
+                "projects/puzzle_8_ai/1_astar1.png",
+                "projects/puzzle_8_ai/2_astar2.png",
+                "projects/puzzle_8_ai/3_astart3.png",
+                "projects/puzzle_8_ai/4_best_cost.png",
+                "projects/puzzle_8_ai/5_grid.png",
+                "projects/puzzle_8_ai/6_grid2.png",
+                "projects/puzzle_8_ai/7_grid3.png",
+                "projects/puzzle_8_ai/8_grid4.png",
+                "projects/puzzle_8_ai/9_grid5.png",
+                "projects/puzzle_8_ai/10_node.png",
+                "projects/puzzle_8_ai/11_config.png",
+                "projects/puzzle_8_ai/12_run.png"
+            ]
         }
     ],
     "certificates": [
@@ -453,56 +663,56 @@
                 {
                     "certId": "c1",
                     "certName": "Technical Support Fundamentals",
-                    "certImg": "./certificates/google/google_it_course_1.pdf",
+                    "certImg": "certificates/google/google_it_course_1.pdf",
                     "uri": "https://coursera.org/share/dd6acf709cba5e5942c42e890da220f0",
                     "learnings": "I learned about how to assemble a computer, basics of internet, overview of operation system and applications, problem-solving methodologies and soft-skills required in Information Technology field"
                 },
                 {
                     "certId": "c2",
                     "certName": "The Bits and Bytes of Computer Networking",
-                    "certImg": "./certificates/google/google_it_course_2.pdf",
+                    "certImg": "certificates/google/google_it_course_2.pdf",
                     "uri": "https://coursera.org/share/605e01e4cb5a3c481139666a9112b644",
                     "learnings": "In this course I learned basics of computer networking; five-layer and OSI model; standard protocols; network troubleshooting; basics of DNS and DHCP server"
                 },
                 {
                     "certId": "c3",
                     "certName": "Operating Systems and You: Becoming a Power User",
-                    "certImg": "./certificates/google/google_it_course_3.pdf",
+                    "certImg": "certificates/google/google_it_course_3.pdf",
                     "uri": "https://coursera.org/share/c1ee69aa511fa4a7f19a05d1d92995f2",
                     "learnings": "I learned about Windows and Linux OS; file systems; install, configure, and remove software; disk partitioning; set up users, groups and permissions; background processes and management; troubleshoot the common issues regarding OS"
                 },
                 {
                     "certId": "c4",
                     "certName": "System Administration and IT Infrastructure Services",
-                    "certImg": "./certificates/google/google_it_course_4.pdf",
+                    "certImg": "certificates/google/google_it_course_4.pdf",
                     "uri": "https://coursera.org/share/8d81d43f9fefaec24181cd57add956d9",
                     "learnings": "In this course I learned about chosing the best hardware and services for organizations; manage infrastructure servers; Active directory and OpenLDAP; how to backup and recover data; utilize system adminstration knowledge to plan and improve processes for IT environments"
                 },
                 {
                     "certId": "c5",
                     "certName": "IT Security: Defense against the digital dark arts",
-                    "certImg": "./certificates/google/google_it_course_5.pdf",
+                    "certImg": "certificates/google/google_it_course_5.pdf",
                     "uri": "https://coursera.org/share/0c3b147c46e28c84da792addfd4634a7",
                     "learnings": "I learned basics of Cloud Computing; everything as a service; cloud storage; security principles and basics of ips/ids/firewall"
                 },
                 {
                     "certId": "c6",
                     "certName": "Google IT Support",
-                    "certImg": "./certificates/google/google_it_professional_certificate.pdf",
+                    "certImg": "certificates/google/google_it_professional_certificate.pdf",
                     "uri": "https://coursera.org/share/50bd1600dd46d9571b0dfd4b102fbc37",
                     "learnings": "During this professional program in addition to fundamental of IT support, I learned differnet domains of IT such as Computer Networking, Operating Systems, System Administration, Computer Security, etc."
                 },
                 {
                     "certId": "c7",
                     "certName": "Googlt IT Support Credly Badge",
-                    "certImg": "./certificates/google/google_it_support_certificate_badge.pdf",
+                    "certImg": "certificates/google/google_it_support_certificate_badge.pdf",
                     "uri": "https://www.credly.com/badges/1a31d8bb-5869-4a21-bc53-df7f9c347873",
                     "learnings": "I was rewarded this badge by Credly for completing the professional certification."
                 },
                 {
                     "certId": "c8",
                     "certName": "Junior IT Analyst Program",
-                    "certImg": "./certificates/google/NPower_JITA_certificate.pdf",
+                    "certImg": "certificates/google/NPower_JITA_certificate.pdf",
                     "uri": null,
                     "learnings": "I joined NPower Canada's Junior IT Analyst program to get hands on traning in the IT field to enhance my area in the field of Computer Networking and Security to combined my work experience as a Technician. Apart from learning technical skills, I learned valuable soft skills and valuable tips about job search in the Canadian market in this field."
                 }
@@ -518,7 +728,7 @@
                 {
                     "certId": "dns_1",
                     "certName": "Proficient in Web Development",
-                    "certImg": "./certificates/dns/dns_sfha_web.pdf",
+                    "certImg": "certificates/dns/dns_sfha_web.pdf",
                     "uri": null,
                     "learnings": "Learned about web development fundamentals; back-end developement Php, NodeJS; front-end development HTML5, CSS3, Javascript (ES6), jQuery; docker; CI/CD Basics; AWS Basics"
                 }
@@ -534,14 +744,14 @@
                 {
                     "certId": "icpc_1",
                     "certName": "Honorable Certificate",
-                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_Bhavik_Bhagat_MEDAL.pdf",
+                    "certImg": "certificates/competition/2022_ICPC_Northeast_North_America_RC_Bhavik_Bhagat_MEDAL.pdf",
                     "uri": null,
                     "learnings": "We had to apply our data strucutres and alogrithm knowledge here. I learned a lot about time-management and how to work under pressure with a team brainstroming the ideas."
                 },
                 {
                     "certId": "icpc_2",
                     "certName": "Honorable Certificate",
-                    "certImg": "./certificates/competition/2022_ICPC_Northeast_North_America_RC_MEDAL_team.pdf",
+                    "certImg": "certificates/competition/2022_ICPC_Northeast_North_America_RC_MEDAL_team.pdf",
                     "uri": null,
                     "learnings": "We had a meeting before the competition where we were introdued the protocols to follow. During this compeition we learned about teamwork, and how to overcome the difficult problems by sharing the ideas to solve a problem and iteratively make the solution efficient."
                 }
@@ -557,28 +767,28 @@
                 {
                     "certId": "harvard_1",
                     "certName": "CS50's Introduction to Computer Science",
-                    "certImg": "./certificates/harvard/Harvardx_CS50x_Introduction_to_Computer_Science.pdf",
+                    "certImg": "certificates/harvard/Harvardx_CS50x_Introduction_to_Computer_Science.pdf",
                     "uri": "https://courses.edx.org/certificates/e85433344ee74aefb3578802c4fc45c7",
                     "learnings": "I learned general overview of the Computer Science field and learned building blocks like basic data strucutres, algorithm, memory management, and fundamental concepts to build my career. I learned several programming languages like scratch, c, python, html, javascript, and solved challenging assignments like recovering images, spell-checker, game of fifteen using C - langauge."
                 },
                 {
                     "certId": "harvard_2",
                     "certName": "Puzzle Day 2019",
-                    "certImg": "./certificates/harvard/Harvardx_CS50x_Puzzle_Day_2019.pdf",
+                    "certImg": "certificates/harvard/Harvardx_CS50x_Puzzle_Day_2019.pdf",
                     "uri": "https://cs50.harvard.edu/certificates/34f3a67d-6862-4c59-90bb-f2bce5efcba9",
                     "learnings": "I earned this certificate for participating in the puzzle day event in 2019. I was in the team with members from Belgium, Turkey, Ukraine, and Netherlands. We were colleagues in CS50 course and coordinated using Discord platform. We are rewarded the certificate for solving 9 out of 12 puzzles."
                 },
                 {
                     "certId": "harvard_3",
                     "certName": "Puzzle Day 2020",
-                    "certImg": "./certificates/harvard/Harvardx_CS50x_Puzzle_Day_2020.pdf",
+                    "certImg": "certificates/harvard/Harvardx_CS50x_Puzzle_Day_2020.pdf",
                     "uri": "https://cs50.harvard.edu/certificates/c6b50f16-00d9-4e1b-b37a-0a3953778ac6",
                     "learnings": "I earned this certificate 2nd year in a row for the puzzle day online event. I participated as a one-member team to challenge myself this year for the event. I was rewarded the certificate for solving 6 out of 8 puzzles."
                 },
                 {
                     "certId": "harvard_4",
                     "certName": "Data Science: R Basics",
-                    "certImg": "./certificates/harvard/Harvardx_Data_Science_R_Basics_edX.pdf",
+                    "certImg": "certificates/harvard/Harvardx_Data_Science_R_Basics_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/baa77fe96adf476d8f892c527d3e572e",
                     "learnings": "I took the Data Science course to get familiar with the basics of the field because I was fascinated by the Machine Learning concepts that I was introduced in the MIT 6002x course. This was my first course in a specialization of this field."
                 }
@@ -594,21 +804,21 @@
                 {
                     "certId": "mit_1",
                     "certName": "Introduction to Computer Science and Programming Using Python",
-                    "certImg": "./certificates/mit/MITx_6.00.1x_Certificate_edX.pdf",
+                    "certImg": "certificates/mit/MITx_6.00.1x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/23f2cbca51ae432aa9c7b2846468157a",
                     "learnings": "A deep dive in to core computer science concepts with the help of mathematics on the parts like big-oh analysis. Apart from learning technical skills, I learned time management and stress management as this was my first instructor-paced course where I had to submit assignments and complete exams by the set deadlines."
                 },
                 {
                     "certId": "mit_2",
                     "certName": "Introduction to Computational Thinking and Data Science",
-                    "certImg": "./certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
+                    "certImg": "certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/5f707d85691d4dfe9643fdcbfc53d4ee",
                     "learnings": "This course challenged me in a whole new way, and I decided to build my career in the Data Science / Machine Learning in the future. I learned about graph data structure and related algorithms, stochastic programming and statistical thinking, Monte-Carlo simulation, various plotting libraries, and introduction to Machine Learning with KNN."
                 },
                 {
                     "certId": "mit_3",
                     "certName": "Computational Thinking using Python",
-                    "certImg": "./certificates/mit/MITx_600_XSeries_edX_Credentials.pdf",
+                    "certImg": "certificates/mit/MITx_600_XSeries_edX_Credentials.pdf",
                     "uri": "https://credentials.edx.org/credentials/0b3244958d38408296d5c03d7af6026e/",
                     "learnings": "This certificate was rewarded to me for completing X series program by completing the 6001x and 6002x courses from MIT."
                 }
@@ -624,28 +834,28 @@
                 {
                     "certId": "ms_1",
                     "certName": "Learn to Program in Java",
-                    "certImg": "./certificates/microsoft/Microsoft_DEV276x_Certificate_edX.pdf",
+                    "certImg": "certificates/microsoft/Microsoft_DEV276x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/f5e302d222a84dbc89c5e775c64f7886",
                     "learnings": "I leaned about basic programming concepts like data types, variables, logic, loops, control flows, functions, etc. and got familiar with various terminologies of Java langauge."
                 },
                 {
                     "certId": "ms_2",
                     "certName": "Object Oriented Programming in Java",
-                    "certImg": "./certificates/microsoft/Microsoft_DEV277x_Certificate_edX.pdf",
+                    "certImg": "certificates/microsoft/Microsoft_DEV277x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/fcb211988bfc4c78911892cc130bc855",
                     "learnings": "In this course I learned abotu arrays, classes & objects, inheritance, polymorphism, abstract classes, and interfaces."
                 },
                 {
                     "certId": "ms_3",
                     "certName": "Algorithms and Data Structures",
-                    "certImg": "./certificates/microsoft/Microsoft_DEV285x_Certificate_edX.pdf",
+                    "certImg": "certificates/microsoft/Microsoft_DEV285x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/fe6a9f7c165d44fbbf4876403a56ceda",
                     "learnings": "During this course I learned abuot various searching and sorting algorithms like bubble sort, selection sort, merge sort, linear search, binary search, and data structures like liked list, stack, queue."
                 },
                 {
                     "certId": "ms_4",
                     "certName": "Introduction to Programming in Java",
-                    "certImg": "./certificates/microsoft/Microsoft_Professional_Certificate_edX_Credentials.pdf",
+                    "certImg": "certificates/microsoft/Microsoft_Professional_Certificate_edX_Credentials.pdf",
                     "uri": "https://credentials.edx.org/credentials/1e58f5c8e401420fb36f9e6a38b7079f",
                     "learnings": "I was rewarded this certificate for completing the series of Java coruses offered by Microsoft. During the entire program I learned how to program using Java Language and terminologies related to the programming language."
                 }
@@ -668,19 +878,6 @@
         },
         {
             "id": 2,
-            "title": "Clerk",
-            "company": "Atlantic Superstore",
-            "place": "Antigonish / Halifax, NS, Canada",
-            "start": "May 2022",
-            "end": "Oct 2022",
-            "responsibilities": [
-                "Increased Garden Center profit by 20% by upselling products and sharing information about plants, vegetables, and herbs with customers, achieving 'Department of the Week' for consistent performance improvement; also rewarded with supervisor position at times in the absense of my supervisor",
-                "Curbed losses in the Floral department by applying the skills learned in the Garden Center to arrange flowers and bouquets at the front of the store and trained the new members, often received high praise from customers by providing excellent recommendations for special occasions",
-                "Increased customer engagement in the Bulk department by rearranging the products to make them easier to find following customer needs, helping to increase sales during the festival season"
-            ]
-        },
-        {
-            "id": 3,
             "title": "Shipping Associate",
             "company": "Staples",
             "place": "Halifax, NS, Canada",
@@ -693,7 +890,7 @@
             ]
         },
         {
-            "id": 4,
+            "id": 3,
             "title": "Cashier",
             "company": "Tim Hortons",
             "place": "Antigonish, NS, Canada",
@@ -703,6 +900,19 @@
                 "Contributed to increasing revenue of the branch by maintaining a low waiting time during the peak hours at the drive-through by providing excellent customer service and operating the POS with a high accuracy",
                 "Contributed to the team helping in maintaining food and beverages quality by analyzing the patterns of demand of customers at different hours for the various products, which helped in diminishing the food-waste",
                 "Proved the work ethic by working during the various shifts as requested that benefited the crew members by having their time off as needed, which helped in maintaining the overall productivity of the team"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Clerk",
+            "company": "Atlantic Superstore",
+            "place": "Antigonish / Halifax, NS, Canada",
+            "start": "May 2021",
+            "end": "Oct 2022",
+            "responsibilities": [
+                "Increased Garden Center profit by 20% by upselling products and sharing information about plants, vegetables, and herbs with customers, achieving 'Department of the Week' for consistent performance improvement; also rewarded with supervisor position at times in the absense of my supervisor",
+                "Curbed losses in the Floral department by applying the skills learned in the Garden Center to arrange flowers and bouquets at the front of the store and trained the new members, often received high praise from customers by providing excellent recommendations for special occasions",
+                "Increased customer engagement in the Bulk department by rearranging the products to make them easier to find following customer needs, helping to increase sales during the festival season"
             ]
         },
         {
@@ -995,81 +1205,133 @@
     "skills": [
         {
             "id": 0,
-            "languages": [
-                "Python",
-                "JavaScript",
-                "C",
-                "C++",
-                "SQL",
-                "Java",
-                "HTML",
-                "CSS",
-                "PHP",
-                "R",
-                "Kotlin"
-            ],
-            "frameworks": [
-                "ReactJS",
-                "ChakraUI",
-                "MaterialUI",
-                "Bootstrap",
-                "jQuery",
-                "Django",
-                "Flask",
-                "TensorFlow",
-                "Keras",
-                "Scikit-Learn",
-                "NumPy",
-                "Pandas",
-                "NLTK",
-                "BeautifulSoup",
-                "Matplotlib",
-                "Plotly",
-                "Seaborn",
-                "PySwarm",
-                "PyGad",
-                "PyGame"
-            ],
-            "technologies": [
-                "Git",
-                "Docker",
-                "Vim",
-                "WSL",
-                "GitHub",
-                "Bitbucket",
-                "GitLab"
-            ],
-            "os": [
-                "Windows",
-                "Linux",
-                "Andriod"
-            ],
-            "management": [
-                "Agile",
-                "Waterfall",
-                "Scrum",
-                "Jira",
-                "Confluence",
-                "Trello"
-            ],
-            "apps": [
-                "TeamViewer",
-                "Google Workspace",
-                "Office365",
-                "Advanced Excel",
-                "VMWare",
-                "VirtualBox",
-                "Zendesk",
-                "AWS - EC2",
-                "AWS - RDS",
-                "AWS - S3",
-                "GCP - GCE",
-                "GCP - Firestore",
-                "GCP - Firebase",
-                "Apache",
-                "MySQL",
-                "Postgre",
-                "SQLite"
+            "name": "languages",
+            "data": [
+                "python",
+                "javascript",
+                "c",
+                "c++",
+                "sql",
+                "java",
+                "html",
+                "css",
+                "php",
+                "r",
+                "kotlin"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "frameworks",
+            "data": [
+                "react",
+                "chakraui",
+                "materialui",
+                "bootstrap",
+                "jquery",
+                "django",
+                "flask",
+                "tensorflow",
+                "keras",
+                "sklearn",
+                "numpy",
+                "pandas",
+                "nltk",
+                "beautifulsoup",
+                "matplotlib",
+                "plotly",
+                "seaborn",
+                "pyswarms",
+                "pygad",
+                "pygame"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "technologies",
+            "data": [
+                "git",
+                "github",
+                "bitbucket",
+                "gitlab",
+                "docker",
+                "dockerhub",
+                "terminal",
+                "powershell",
+                "regex"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "os",
+            "data": [
+                "windows",
+                "android",
+                "linux",
+                "ubuntu",
+                "linuxmint",
+                "zorinos"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "management",
+            "data": [
+                "agile",
+                "waterfall",
+                "scrum",
+                "jira",
+                "confluence",
+                "trello"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "apps",
+            "data": [
+                "vscode",
+                "pycharm",
+                "intellij",
+                "rstudio",
+                "vim",
+                "apache",
+                "slack",
+                "discord",
+                "teamviewer",
+                "office365",
+                "advancedexcel",
+                "vmware",
+                "virtualbox",
+                "zendesk",
+                "apache",
+                "oracle",
+                "latex"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "databases",
+            "data": [
+                "mysql",
+                "postgre",
+                "sqlite",
+                "gcpfirestore",
+                "awsrds"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "cloud",
+            "data": [
+                "aws",
+                "awsec2",
+                "awss3",
+                "gcp",
+                "gcpgce",
+                "gcpfirebase",
+                "netlify",
+                "heroku",
+                "flyio"
             ]
         }
     ]

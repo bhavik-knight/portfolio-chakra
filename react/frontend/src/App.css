@@ -1,51 +1,7 @@
-.container-bg-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
+.logoText:hover {
+    transform: scale(1.25);
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0;
-    z-index: 10;
-}
-
-.footer {
-    position: absolute;
-    /* margin-top: auto; */
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
-.navbar {
-    justify-content: space-between;
-    align-items: center;
-    height: fit-content;
-}
-
-.sidenav {
-    margin-top: 60px;
-    left: 0;
-}
-
-.sidenav * {
-    text-transform: capitalize;
-}
-
-.content {
-    /* border: 4px solid black; */
-    width: auto;
-    margin-top: 60px;
-    padding-top: 4px;
-}
-
-.divider {
-    width: 90%;
-    margin-inline: auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
+.btnIcon:hover {
+    transform: scale(1.25);
 }
