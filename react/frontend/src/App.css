@@ -1,7 +1,7 @@
 .logoText:hover {
-    transform: scale(1.25)
+    transform: scale(1.25);
 }
 
 .btnIcon:hover {
-    transform: scale(1.1)
+    transform: scale(1.25);
 }
