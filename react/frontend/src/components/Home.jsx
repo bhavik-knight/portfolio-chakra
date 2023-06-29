@@ -50,7 +50,9 @@ function Home() {
 
                         <VStack>
                             {!isMobile && <Spacer />}
-                            <Text as={Flex} fontSize={{ base: "1.2em", md: "1.3em", lg: "1.5em" }}
+                            <Text
+                                as={Flex}
+                                fontSize={{ base: "1.2em", md: "1.3em", lg: "1.5em" }}
                             >
                                 <span className="logoText">W</span>
                                 <span className="logoText">e</span>
@@ -91,7 +93,7 @@ function Home() {
                             I am open to freelancing work. If you have cool project ideas, let's connect, collaborate and build some cool web apps together.
                         </ListItem>
                         <ListItem>
-                            I have a strong enthusiasm for staying up-to-date with the latest technologies and trends, continuously expanding my skill set through self-learning and taking advantage of MOOCs (Massive Open Online Courses).
+                            I have a strong enthusiasm for staying up-to-date with the latest technologies, consistently expanding my skills through self-learning and leveraging MOOCs (Massive Open Online Courses).
                         </ListItem>
                         <ListItem>
                             Currently, I am learning promote-engineering to leverage chatGPT to enhance my coding experience.
