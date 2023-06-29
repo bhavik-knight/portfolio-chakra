@@ -61,8 +61,8 @@ function CertificateCard({ certs }) {
 
     // certificate pdf dimentions
     const [certDim, setCertDim] = useState({
-        width: { base: cardWidth, lg: cardWidth * 0.8 },
-        height: { base: cardHeight, lg: cardWidth * 0.7 }
+        width: { base: cardWidth, md: cardWidth * 0.8 },
+        height: { base: cardHeight, md: cardWidth * 0.7 }
     })
 
     // certificate list to be displayed in carousel
@@ -81,8 +81,8 @@ function CertificateCard({ certs }) {
             }
 
             setCertDim({
-                width: { base: cardWidth, lg: cardWidth * 0.8 },
-                height: { base: cardHeight, lg: cardHeight * 0.7 }
+                width: { base: cardWidth, md: cardWidth * 0.8 },
+                height: { base: cardHeight, md: cardHeight * 0.7 }
             })
         }
 
@@ -154,7 +154,7 @@ function CertificateCard({ certs }) {
 
                     <Divider mx="auto" width="95%" />
 
-                    <Box px={{ base: 0, md: (panelRef.current?.offsetWidth - cardWidth) / 2 }}>
+                    <Box px={(panelRef.current?.offsetWidth - cardWidth) / 2}>
                         <RenderCarousel
                             items={certificateList}
                             cardWidth={cardWidth}
@@ -190,7 +190,7 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
             <Flex
                 display={isMobile ? "none" : "flex"}
                 my={0} px={{ base: 1, lg: 4 }} w="100%"
-                justify="space-between"
+                justify={c.uri ? "space-between" : "center"}
                 alignItems="center"
                 {...headerFontStyle}
             >
@@ -202,7 +202,7 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
                         p={2}
                         size="sm"
                         _hover={{ boxShadow: "1px 1px 4px" }}
-                        vairant="outline"
+                        variant="outline"
                         onClick={() => window.open(c.uri, "_blank")}
                     >
                         Credentials
