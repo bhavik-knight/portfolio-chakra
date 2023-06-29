@@ -13,7 +13,7 @@ import emailjs from "@emailjs/browser"
 // configure keys needed for email-js stored in env-variable
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
 const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const publicKey = "5gUSXl2ODtTPGNFD8"
 
 
 // some styles for the form
