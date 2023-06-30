@@ -233,7 +233,7 @@ const ResponsiveIcons = {
     // apps
     "pycharm": { name: "PyCharm" },
     "vscode": { name: "VSCode", icon: <SiVisualstudio className="icons" />, fullName: "Visual Studio Code" },
-    "intellij": { name: "IntelliJ_IDEA", icon: <SiIntellijidea className="icons" /> },
+    "intellij": { name: "IntelliJ", icon: <SiIntellijidea className="icons" />, fullName: "Jetbrain's IntelliJ IDEA" },
     "rstudio": { name: "RStudio", icon: <SiRstudio className="icons" /> },
     "slack": { name: "Slack", icon: <SiSlack className="icons" /> },
     "discord": { name: "Discord", icon: <FaDiscord className="icons" /> },

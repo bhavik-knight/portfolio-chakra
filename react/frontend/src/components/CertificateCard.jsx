@@ -38,7 +38,7 @@ function CertificateCard({ certs }) {
     function getHeight(width) {
         let newHeight = window.screen.orientation.angle === 90 ?
             window.screen.availHeight * 0.8 - 12 : width * 0.6
-        return Math.max(newHeight, 256)
+        return isMobile ? Math.min(newHeight, 256) : Math.max(newHeight, 256)
     }
 
     // this is a clever way to trigger a component refresh/remount on accordion button click
@@ -134,10 +134,10 @@ function CertificateCard({ certs }) {
 
                 <AccordionPanel
                     ref={panelRef}
-                    px={0} py={{ base: 0, md: 4 }}
+                    px={{ base: 0, lg: 4 }} py={{ base: 0, lg: 4 }}
                     size={{ base: "md", md: "lg" }}
                 >
-                    <VStack my={0} gap={0} spacing={0}>
+                    <VStack my={0} gap={1} spacing={0} py={1}>
                         <Flex
                             p={0}
                             justifyContent="space-between"
@@ -149,10 +149,10 @@ function CertificateCard({ certs }) {
                             <Text py={0}>{certs.institute}</Text>
                         </Flex>
 
-                        <Text {...textFontStyle} my={0} py={1} w="100%">{certs.about}</Text>
+                        <Text {...textFontStyle} my={{ base: 0, base: 1 }} py={1} w="100%">{certs.about}</Text>
                     </VStack>
 
-                    <Divider mx="auto" width="95%" />
+                    <Divider mx="auto" width="95%" my={1} />
 
                     <Box px={(panelRef.current?.offsetWidth - cardWidth) / 2}>
                         <RenderCarousel
@@ -214,9 +214,9 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
             {!isMobile && <Divider mx="auto" w="95%" my={2} />}
 
             <CardBody
-                as={Flex}
+                as={Box}
                 my={{ base: 0, lg: 1 }} mx="auto"
-                p={0}
+                py={1} px="auto"
                 width={certDim.width}
                 height={certDim.height}
             >
@@ -239,7 +239,7 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
             >
                 {c.learnings}
             </CardFooter>
-        </Card>
+        </Card >
     )
 }
 

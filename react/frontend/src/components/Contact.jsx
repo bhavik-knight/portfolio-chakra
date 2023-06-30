@@ -62,7 +62,7 @@ function Contact() {
 
                 <CardBody textAlign="justify">
                     <Text {...textFontStyle}>
-                        Please fill out the following form to send me your message through email.
+                        Please complete the following form to send me your message via email.
                     </Text>
                 </CardBody>
             </Card>
