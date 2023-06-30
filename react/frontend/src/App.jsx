@@ -159,7 +159,7 @@ function App() {
                     pages={pages}
                     activePage={currentPage}
                     selectPage={handleSelectPage}
-                    w={{ base: "100%", lg: "20%" }}
+                    w={{ base: "100%", lg: "15%" }}
                     px={{ base: 0, lg: 4 }}
                     sidenavHeader={sidenavHeader}
                 />
