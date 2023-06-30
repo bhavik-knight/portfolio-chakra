@@ -1,7 +1,16 @@
-# portfolio-chakra
+# Portfolio
 
-trying to leverage chakra-ui to make the portfolio
+https://bhavikbhagat.netlify.app/
 
+This is my website to demonstrate my diverse skills and work experience.
+---
+- The website is developed by me using ReactJS front-end library, and hosted on Netlify platform.
+- The database is used for this is Firebase/Firestore (Backend-as-a-Service) of Google Cloud Platform.
+- Demonstrated various components of UI/UX design for the frontend during the project like forms, tabels, cards, carousel, accordions, image/file rendering and sending emails.
+- The website is tailored for the desktop enviromnent, however it is responsive for mobile, and other devices as well.
+- I developed 4 mini-projects along the way to learn ReactJS, experiment with different features like carousel, pdf-rendering, sending emails, connecting to database to fetch the data.
+- Containorized the app using docker, and image is available on the DockerHub.
+- I utilized chatGPT to improve the grammar, and sentence structure, for debugging and learning purpose to implement some features.
 
 ## Reference:
 - ReactJS, ChakraUI [net-ninja youtube channel](https://www.youtube.com/watch?v=jLd059lbJkw&list=PL4cUxeGkcC9hcnIeryurNMMcGBHp7AYlP&index=9)

@@ -41,7 +41,7 @@ function AboutMe() {
                         In 2015, I embarked on a transformative journey that led me to the field of Computer Science, marking a significant turning point in my career path as I pursued my lifelong aspirations. I owe a great debt of gratitude to Dr. David J. Malan, an esteemed professor at Harvard, whose fervent instruction of the CS50 course sparked a profound metamorphosis in my life.
                     </ListItem>
                     <ListItem>
-                        During my tenure as a full-time technician, I dedicated myself to earning numerous online certifications from renowned institutions such as Harvard, MIT, and Microsoft through platforms like Edx, Coursera, and MIT-OCW. These certifications, focusing on the fundamentals of programming, enabled me to lay a solid groundwork in the field and propel my career aspirations forward.
+                        During my tenure as a technician at Brainwaves System, I dedicated myself to study part time and earning numerous online certifications from renowned institutions such as Harvard, MIT, and Microsoft through platforms like Edx, Coursera, and MIT-OCW. These certifications, focusing on the fundamentals of programming, enabled me to lay a solid groundwork in the field and propel my career aspirations forward.
                     </ListItem>
                     <ListItem>
                         In the future, my goal is to pursue a career in Machine Learning and Artificial Intelligence. I aim to leverage my recent degree, build upon the skills I have acquired over the years, and continuously upskill myself.

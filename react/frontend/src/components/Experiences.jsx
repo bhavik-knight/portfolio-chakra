@@ -33,7 +33,7 @@ function Experiences() {
 
                 <CardBody>
                     <Text {...textFontStyle}>
-                        I am actively looking for a Junior Software Developer position and eager to participate in exciting projects where I can leverage my technical skills and transferable expertise gained from my previous work experiences.
+                        I am actively seeking an entry-level Full-Stack Developer position. I am enthusiastic about contributing to projects as part of a team and learning from experts in the field, where I can apply my technical skills gained from various projects and transferable skills acquired through my previous work experiences.
                     </Text>
                 </CardBody>
             </Card>

@@ -3,7 +3,7 @@
         {
             "id": 1,
             "title": "Halifax Canoe and Kayak",
-            "description": "Website for booking canoe and kayak adventures. Skills demonstrated in the full-stack developement and basics of cloud-computing using AWS Cloud. A project for Digital Nova Scotia - Skills for Hire program.",
+            "description": "A website for booking canoe and kayak adventures, showcasing skills in full-stack development and the basics of cloud computing using AWS Cloud. This project was undertaken as part of the Digital Nova Scotia - Skills for Hire program",
             "type": "web",
             "group": false,
             "source": "https://github.com/bhavik-knight/hck_dns_sfha",
@@ -26,12 +26,12 @@
                 "aws"
             ],
             "details": [
-                "Created the website as a project for booking the adventure for Canoe and Kayaking from the available trips",
-                "Designed the responsive UI using HTML5, CSS3, Bootstrap, JavaScript, and jQuery from the wireframe design",
-                "Developed the backend and validated the form submitted on the server side using PHP",
-                "Handled the version control using Git and GitHub for all 3-phases of the project",
-                "Launched on the AWS as Iaas, using EC2, configured LAMP Stack and RDS for the MySQL relational database",
-                "Integrated multiple Docker-container seamlessly using docker-compose, deployed the project on the DockerHub"
+                "Created the website as a project for booking adventures in canoeing and kayaking from the available trips.",
+                "Designed a responsive UI using HTML5, CSS3, Bootstrap, JavaScript, and jQuery based on wireframe designs.",
+                "Developed the backend and implemented server-side form validation using PHP.",
+                "Managed version control using Git and GitHub for all three phases of the project.",
+                "Integrated Docker containers using docker-compose and deployed the image on DockerHub.",
+                "Deployed the website on AWS as Infrastructure-as-a-Service (IaaS), utilizing EC2, configuring a LAMP Stack, and utilizing RDS for the MySQL relational database."
             ],
             "projectImgs": [
                 "projects/hck_dns_sfha/1_landing_page.png",
@@ -49,7 +49,7 @@
         {
             "id": 2,
             "title": "Nish-Foody",
-            "description": "A website for food ordering and selling. Skills demonstrated as a full-stack developer and documentarian for this final project spanning over 3 months.",
+            "description": "A website for food ordering and selling, demonstrating skills as a full-stack developer and documentarian. This final project, part of the software design course, spanned over 3 months and was completed by a team of 5 members",
             "type": "web",
             "group": true,
             "source": "https://bitbucket.org/csci-485/nish-foody/",
@@ -74,12 +74,12 @@
                 "slack"
             ],
             "details": [
-                "Developed a fully-functional website for food ordering/selling for the people of Antigonish",
-                "Worked as a full-stack developer in SDLC as a 5-member team to create the website as the final year project",
-                "Surveyed people from different backgrounds for the requirement analysis; and spearheaded the documentation",
-                "Designed the menu page using HTML5, CSS3, and Bootstrap for the UI and the cart for orders using JS/jQuery",
-                "Adopted the Django framework serving REST API that was connected to the PostgreSQL database",
-                "Followed the Agile methodology with tools like JIRA and Confluence pages for the documentation"
+                "Developed a fully-functional website for food ordering and selling specifically for the people of Antigonish.",
+                "Worked as a full-stack developer in a 5-member team throughout the Software Development Life Cycle (SDLC) to create the website as the final year project.",
+                "Conducted surveys among individuals from diverse backgrounds to perform requirement analysis, and took the lead in documentation.",
+                "Designed the menu page using HTML5, CSS3, and Bootstrap for the user interface, and implemented the cart functionality for order management using JavaScript/jQuery.",
+                "Implemented the Django framework to create a REST API that seamlessly connected with a PostgreSQL database.",
+                "Followed the Agile methodology, utilizing tools such as JIRA and Confluence pages for documentation purposes."
             ],
             "projectImgs": [
                 "projects/nish_foody/0_final_roles.png",
@@ -114,7 +114,7 @@
         {
             "id": 3,
             "title": "Portfolio Website",
-            "description": "My personal website to demonstrate my skills to the world. This project demonstrates my skill as front-end developer for which I used ReactJS and ChakraUI, and hosted on Netlify.",
+            "description": "My personal website serves as a platform to showcase my skills to the world. Highlights my proficiency as a front-end developer, utilizing ReactJS and ChakraUI",
             "type": "web",
             "group": false,
             "source": "https://github.com/bhavik-knight/portfolio-chakra",
@@ -133,13 +133,14 @@
                 "gcp"
             ],
             "details": [
-                "Leveraged vite tool to create the app for the faster build time for ReactJS app",
-                "Demonstrated expertise in component library like ChakraUI to create reusable modular components",
-                "Utilized react hooks like useState, useEffect, useRef, useCallback effectively when needed",
-                "Created database on GCP's firebase (Backend-as-a-Service) and used Storaage for files",
-                "Containerized the app using Docker, and pushed the docker image on DockerHub",
-                "Created mini-projects to experiment with features like fetching data, creating carousel, learn different hooks, dark-mode, etc.",
-                "Hosted the app on the Netlify platform which pulls latest image from the Github's master-branch"
+                "Utilized the Vite tool to create the app, enabling faster build times for the ReactJS application.",
+                "Demonstrated expertise in utilizing component libraries like ChakraUI to create reusable and modular components.",
+                "Effectively utilized React hooks such as useState, useEffect, useRef, and useContext when necessary.",
+                "Containerized the application using Docker and published the image on DockerHub.",
+                "Created a database on Google Cloud Platform's Firebase, a Backend-as-a-Service solution, and utilized Firebase Storage for handling files.",
+                "Developed mini-projects to experiment with various features such as data fetching, forms, carousel creation, learning different hooks, implementing dark mode, and more.",
+                "Hosted the application on the Netlify platform, which continuously integrates updates from the master branch of the GitHub repository",
+                "Utilized chatGPT for prompt engineering purposes, leveraging its capabilities to debug code and learn the implementation of certain features."
             ],
             "projectImgs": [
                 "projects/portfolio/1_landing_page.png",
@@ -154,7 +155,7 @@
         {
             "id": 5,
             "title": "Hotel Management System",
-            "description": "The relational database for Hotel Management System for booking/reserving the room. The project was developed in 4-phases using waterfall methodology and deployed on the StFX University's Oracle server setup by the professor.",
+            "description": "Developed over four phases using the waterfall methodology, the project focused on creating a relational database for efficient room booking and reservation management",
             "type": "data",
             "group": true,
             "source": null,
@@ -170,12 +171,12 @@
                 "slack"
             ],
             "details": [
-                "Developed the relational database as a 4-member team for the Hotel Management",
-                "Actively participated in creating the ERD diagram, designing and then normalizing the database",
-                "Performed CRUD operations maintaining the constraints placed on the 4/15 tables using SQL",
-                "Prepared some python scripts to generate and load a large amount of data automatically to the database",
-                "Prepared meaningful Views and useful queries on the database by applying joins on the tables",
-                "Deployed the relational database on the university's Oracle Server hosted by the professor"
+                "Developed the relational database as part of a 4-member team for the Hotel Management System.",
+                "Actively participated in creating the Entity-Relationship Diagram (ERD), designing the database, and normalizing it.",
+                "Performed CRUD operations while ensuring the integrity constraints were maintained across the 4 out of 15 tables using SQL.",
+                "Created Python scripts to automate the generation and loading of a large amount of data into the database.",
+                "Prepared meaningful Views and executed useful queries by applying joins on the tables.",
+                "Deployed the relational database on the university's Oracle Server, which was hosted by the professor."
             ],
             "projectImgs": [
                 "projects/hotel_mgmt/hms_group.png",
@@ -204,7 +205,7 @@
         {
             "id": 6,
             "title": "Crime Analysis",
-            "description": "A comprehensive study of factors influencing crime in the USA over three decades (1980s, 1990s, 2000s). Increase in crime-rate in the recent times (like mass shooting) was the purpose behind choosing this project",
+            "description": "A comprehensive study on the factors influencing crime in the USA across three decades: the 1980s, 1990s, and 2000s. The project's motivation stems from the recent increase in crime rates, including incidents such as mass shootings",
             "type": "data",
             "group": true,
             "source": "https://github.com/bhavik-knight/crime-analysis-ha",
@@ -220,14 +221,14 @@
                 "msteams"
             ],
             "details": [
-                "Generated R-markdown report presenting our work from the data collection to our findings on the factors affecting crime-rate",
-                "Data Collection: The Analysis of the USA data obtained from the Kaggle and FBI crime data explorer",
-                "Data Wrangling: Split and merged datasets performing ETL to convert the raw data into valuable information",
-                "Visualization: Generated high-quality and meaningful plots by executing functions from the ggplot2 library",
-                "Exploratory Data Analysis: To find a correlation between Crime rate and two factors: Unemployment & Education",
-                "Modeling: To understand how different types of crime are evolving over the decades in the USA",
-                "Summurized how unemployment-rate and crime-rate evolved over the three decades",
-                "Prepared residual-plots demonstrating distribution of errors to conclude the robustness of our models"
+                "Conducted data collection by analyzing USA data obtained from Kaggle and the FBI Crime Data Explorer.",
+                "Performed data wrangling by splitting and merging datasets, employing Extract-Transform-Load (ETL) techniques to convert raw data into valuable information.",
+                "Utilized functions from the ggplot2 library to generate high-quality and meaningful visualizations.",
+                "Conducted exploratory data analysis to identify correlations between crime rates and two factors: unemployment and education.",
+                "Utilized modeling techniques to understand how different types of crime have evolved over the decades in the USA.",
+                "Summarized the evolution of unemployment rates and crime rates over the three decades.",
+                "Prepared residual plots to demonstrate the distribution of errors and assess the robustness of our models.",
+                "Generated an R-markdown report that presents our work, starting from data collection to our findings on the factors affecting crime rates."
             ],
             "projectImgs": [
                 "projects/crime_analysis/0_group.png",
@@ -255,7 +256,7 @@
         {
             "id": 7,
             "title": "Sentiment Analysis",
-            "description": "The tweets dataset having 3000+ tweets were investigated to determined if tweets are positive, negative or neutral. Demonstrated  the expertise in preprocessing the English-language sentences (tweets)",
+            "description": "Investigated a dataset containing 3000+ tweets to determine their sentiment as positive, negative, or neutral. The project showcased expertise in preprocessing English-language sentences, specifically tweets, to prepare them for sentiment analysis",
             "type": "data",
             "group": false,
             "source": "https://colab.research.google.com/drive/1i29rcmjD2ZZtTYin1WWm7-AYaqjamlZ7?usp=sharing",
@@ -272,12 +273,12 @@
                 "matplotlib"
             ],
             "details": [
-                "Removed hyperlinks, punctuations, whitespaces, hashtags, mentiones, RT, emojis, etc using RegEx and other methods",
-                "Removed stopwords using NLTK & applied lemmatization to convert cleaned tweets to meaningful words for the anaylsis purpose",
-                "Determined the polarity of cleaned tweets using TextBlob library; based on results evaluated the sentiment of each tweet",
-                "Visulized the positive, negative or neutral sentiments of over 3000 tweets using pie-chart",
-                "Determined top 10 popular words for each sentiment using scikit-learn by eliminating common words in the process",
-                "Presented the popular words for each sentiment using wordcloud"
+                "Implemented various methods, including regular expressions, to remove hyperlinks, punctuations, whitespaces, hashtags, mentions, RT, emojis, and other unwanted elements from the tweets.",
+                "Utilized NLTK to remove stopwords and applied lemmatization to convert the cleaned tweets into meaningful words for analysis purposes.",
+                "Employed the TextBlob library to determine the polarity of the cleaned tweets and evaluated the sentiment of each tweet based on the results.",
+                "Visualized the distribution of positive, negative, and neutral sentiments among over 3000 tweets using a pie chart.",
+                "Utilized scikit-learn to determine the top 10 popular words for each sentiment by eliminating common words during the process.",
+                "Presented the popular words for each sentiment using a word cloud visualization."
             ],
             "projectImgs": [
                 "projects/sentiment_analysis/1_load.png",
@@ -312,7 +313,7 @@
         {
             "id": 8,
             "title": "Food-Order Analysis",
-            "description": "The analysis of New York Restaurants. First experience of using google-colab platform for the analysis purpose. Transformed and visualized the data for different scenarios using Python programming language.",
+            "description": "This project involved analyzing New York restaurants, serving as a first-time experience utilizing the Google Colab platform for analysis purposes. The project focused on data transformation and visualization to explore various scenarios",
             "type": "data",
             "group": false,
             "source": "https://colab.research.google.com/drive/1ItCiGpwr7wKJQ-v42_geB2Hit3PwNDBU?usp=sharing",
@@ -329,11 +330,11 @@
                 "colab"
             ],
             "details": [
-                "Checked the number of restaurants for each cuisine type & visualized the result using appropreate plot",
-                "Visualized the top 10 most popular restaurants for each cusine type and highlighted top 3 restaurants",
-                "Investigated proportation of review of the given restaurant (Shake Shack) and demonstrated the findings using appropriate plots",
-                "Determined the correlation between ratings and food preparation time using the r-value (person correlation cofficient)",
-                "Created various plots like pie-chart, bar-chart, box-plot using libraries like matplotlib, seaborn and plotly"
+                "Checked the number of restaurants for each cuisine type and visualized the results using appropriate plots.",
+                "Visualized the top 10 most popular restaurants for each cuisine type and highlighted the top 3 restaurants.",
+                "Investigated the proportion of reviews for a specific restaurant (Shake Shack) and demonstrated the findings.",
+                "Determined the correlation between ratings and food preparation time using the r-value (Pearson correlation coefficient).",
+                "Created various plots, such as pie charts, bar charts, and box plots, using libraries like Matplotlib, Seaborn, and Plotly."
             ],
             "projectImgs": [
                 "projects/food_order_analysis/1_imports.png",
@@ -362,7 +363,7 @@
         {
             "id": 9,
             "title": "Multi-Class Image Classification",
-            "description": "A deep learning on the Intel Image Classification dataset accquired from Kaggle. Demontrated skills in deep learning using Convolutional Neural Network (CNN) for the dataset to achieve about 80% accuray for the multi-class (6 classes) classification on the test data.",
+            "description": "This project focused on deep learning using a Convolutional Neural Network (CNN) applied to the Intel Image Classification dataset obtained from Kaggle. By leveraging CNN, the project showcased skills in achieving approximately 80% accuracy for the multi-class (6 classes) classification on the test data.",
             "type": "ai",
             "group": false,
             "source": "https://github.com/bhavik-knight/deep_learning_project_444",
@@ -378,18 +379,17 @@
                 "matplotlib"
             ],
             "details": [
-                "Proprocessed the images data acquired from Kaggle using scikit-learn, numpy, and panda according to the requirement",
-                "Utilized Keras to load data for the CNN which was based on LeNet with minor improvements to start the training",
-                "Achieved about 64% accuracy on the training data and about 31% accuracy on testing data with 1 epoch with this first model",
-                "For the next traning I added some feature maps at the dense layer before fully-connected layer to improve the model which gave me about 84% accuracy on the traning data for 5 epoches",
-                "To improve the model, experimented by converting the images to grayscale but it resulted in some erros regarding reshaping which was countered by adding rescaling layer (ideadlly solution was to do data-augmentation).",
-                "The above model after dropping some layers in between to provent overfitting improved the traning accuracy up to about 94%, and testing accuracy reached to 76% for 10 epoches",
-                "Since my GPU was not powerful enough, I didn't have capability to experiment much with large number of epoches, so what I though the best model is up to that point I trained it through 100 epoches",
-                "Added few Conv2D layers, and some batch normalization resulted in around 99% accuracy on traning data and 80% accuracy on the testing data",
-                "Experiments with different number of epoches, I concluded that increasing ephoces beyond a number doesn't necessarily improve the accuray, but performing cross validation does, and the ideal number of epoches for my model is 30",
-                "Plotted the results for different number of epoches with the model used for that particular training/testing",
-                "Craeted a table to show all the models and their perforamce to compare the models that I improved from basic LeNet to the best model I achived",
-                "Summarized my project and the thoughts techniques that can be used to improve the model in the future"
+                "Preprocessed the image data acquired from Kaggle using scikit-learn, numpy, and pandas according to the requirements.",
+                "Utilized Keras to load the data for the CNN, based on the LeNet architecture with minor improvements, to start the training.",
+                "Achieved approximately 64% accuracy on the training data and about 31% accuracy on the testing data with 1 epoch using the initial model.",
+                "Improved the model by adding feature maps at the dense layer before the fully-connected layer, resulting in around 84% accuracy on the training data after 5 epochs.",
+                "Experimented with converting the images to grayscale to further improve the model, but encountered reshaping errors that were resolved by adding a rescaling layer (ideally, data augmentation would have been the solution).",
+                "Further improved the model by dropping some layers to prevent overfitting, increasing the training accuracy to about 94% and reaching a testing accuracy of 76% after 10 epochs.",
+                "Trained the best model, up to that point, for 100 epochs, adding a few Conv2D layers and applying batch normalization, resulting in approximately 99% accuracy on the training data and 80% accuracy on the testing data.",
+                "Concluded from experiments with different numbers of epochs that increasing epochs beyond a certain point does not necessarily improve accuracy, but performing cross-validation does. Determined that the ideal number of epochs for the model is 30.",
+                "Plotted the results for different numbers of epochs, showcasing the performance of the model used for each particular training/testing.",
+                "Created a table to compare and display the performance of all the models, ranging from the basic LeNet to the best model achieved.",
+                "Summarized the project and provided thoughts on techniques that can be used to further improve the model in the future."
             ],
             "projectImgs": [
                 "projects/multiclass_classification/1_all_models.png",
@@ -406,7 +406,7 @@
         {
             "id": 10,
             "title": "Deep Learning on MNIST Dataset",
-            "description": "The cross-discipline competition between MACS, Bacher of Computer Science and PBDAI having total of 80+ students taking Machine Learnign Course at StFX. The MNIST dataset was given to us and the task was to get the least errors on the test data for which we were not given any labels.",
+            "description": "The Machine Learning Competition for the MNIST dataset, where the task was to achieve the lowest error rate on the test data without access to any labels.",
             "type": "ai",
             "group": false,
             "source": null,
@@ -421,15 +421,16 @@
                 "pandas"
             ],
             "details": [
-                "Achieved 2nd rank in the competition which was a big achievement for me; having no prior Data Science experience as I was learning that pre-requisite course in the parallel during the same term",
-                "Improved LeNet of Yann LeCun for this particular tasks by adding different layers to improve accuracy of the model",
-                "Conv2D layer to generate 32 feature maps, with 5x5 kernel, with unit stride and relu activation with bias",
-                "Normalization layers to stabilize the images, and converge faster",
-                "Pooling layer to extract the best feature of some regions to enhaced learning",
-                "Dropping few layers in-between to mitigate over-fitting by dropping connection and learn the patterns instead of memorizing",
-                "Dense layer to get fully-connected neural network layer, and Softmax layer with 10 units because this was a 10-class classification",
-                "Utilized all the layers above and using Stratified-Shffle-Split technique on the traning data to perform traning, testing and improve accuracy over 30 epochs",
-                "Generated error data from my internal training/testing, and my prediction on the test data to submit for the competition."
+                "This assignment was a cross-discipline competition with over 80 participants from BSc, MACS and PBDAI programs at StFX, focusing on the MNIST dataset.",
+                "Achieved the 2nd rank in the competition, despite having no prior Data Science experience and learning the prerequisite course simultaneously.",
+                "Enhanced the LeNet model by adding additional layers to improve its accuracy for the specific task.",
+                "Incorporated Conv2D layers with 32 feature maps, 5x5 kernel, unit stride, and relu activation with bias.",
+                "Implemented normalization layers to stabilize images and facilitate faster convergence.",
+                "Utilized pooling layers to extract key features from specific regions, enhancing the learning process.",
+                "Addressed overfitting concerns by dropping layers, allowing the model to learn patterns instead of memorizing data.",
+                "Employed a dense layer for a fully-connected neural network and a softmax layer with 10 units for the 10-class classification.",
+                "Trained and tested the model using Stratified-Shuffle-Split technique on the training data, improving accuracy over 30 epochs.",
+                "Generated error data from internal training/testing as well as predictions on the test data for submission in the competition."
             ],
             "projectImgs": [
                 "projects/mnist_deep_learning/1_second_lowest_error.png",
@@ -445,7 +446,7 @@
         {
             "id": 11,
             "title": "Image Reconstruction",
-            "description": "The evolutionary computation project that uses the genetic algorithm based on the survival of the fittest. This project demonstrate the use of the GA that is used to generate high quality solutions to optimization and research problems.",
+            "description": "The evolutionary computation project utilizes a genetic algorithm, which operates on the principle of survival of the fittest. The project serves as a demonstration of how genetic algorithms can be applied to generate high-quality solutions for optimization and research problems.",
             "type": "ai",
             "group": true,
             "source": "https://github.com/bhavik-knight/340-ec-final-project",
@@ -463,15 +464,14 @@
                 "windows"
             ],
             "details": [
-                "Demonstrated the image reconstruction using the Genetic Algorithm based on the Darwin's theory of natural selection",
-                "Given the input image, using PyGAD and other supporting library execute the GA",
-                "Create the initial population and evalute the fiteness of each chromosome",
-                "Select the fittest choromosome for the next generation, and perform recombination (crossover) which is equivalent to inherit genes from both parents",
-                "Peform the mutation that is equivalent of child having their own characteristics different from the parents",
-                "The new generation will be added to the population for the next iteration, and repeat the process until the desired criteria is achieved",
-                "The crossover generates the new child, and mutation brings the diversity in the population that is necessary to mitigatge local maxima/minima of the search space of the problem",
-                "Utilized different cross-over, and selection stratagies to achieve high quality solution in reasonable time",
-                "Documented our process and findings in the research paper format using LaTex for the project report"
+                "Demonstrated image reconstruction using the Genetic Algorithm, based on Darwin's theory of natural selection.",
+                "Implemented the Genetic Algorithm using PyGAD and other supporting libraries to execute the algorithm.",
+                "Created the initial population and evaluated the fitness of each chromosome in the population.",
+                "Selected the fittest chromosome for the next generation and performed recombination (crossover) to inherit genes from both parents.",
+                "Applied mutation to introduce diversity and prevent getting stuck in local maxima/minima of the search space.",
+                "Iterated the process by adding the new generation to the population until the desired criteria were achieved.",
+                "Explored different crossover and selection strategies to optimize the quality of solutions within a reasonable time.",
+                "Documented the process and findings in a research paper format, using LaTeX for the project report."
             ],
             "projectImgs": [
                 "projects/image_reconstruction/0_genetic_algorithms.png",
@@ -495,7 +495,7 @@
         {
             "id": 12,
             "title": "Particle Swarm Optimization",
-            "description": "An evolutionary algorithm to sovle optimization problem that emulates the social behavior of birds looking for food. This algorithm is a special one as it doens't need a problem to be differential unlike other classical optimization techniques",
+            "description": "An evolutionary algorithm technique was used to solve optimization problems by emulating the social behavior of birds searching for food. This unique algorithm does not require the problem to be differential, distinguishing it from other classical optimization techniques.",
             "type": "ai",
             "group": false,
             "source": "https://github.com/bhavik-knight/pso-ec-a3",
@@ -509,12 +509,12 @@
                 "latex"
             ],
             "details": [
-                "Ther idea is to improve the candidate solution against the fitness function iteratively",
-                "Each particle has in the swarm (group) has a position, velocity vector and fitness value and their best position and fiteness values are recorded",
-                "By communication the particles know the global best position and global best value of the swarm",
-                "The parameters of the algorithms are number of dimensions, lower and upper bound. The hyper-parameters are number of particles, max iterations, inertia component, congition of the particle component (local), and social influence of swarm component (global)",
-                "Optimized several functions like Sphere, Beale, Booth, Levi, etc. and generated the plots of the cost  vs iteration for each and particles' movements",
-                "Created a report of my work and findings in a research paper like format using LaTeX"
+                "The algorithm aims to iteratively improve candidate solutions based on a fitness function.",
+                "Each particle within the swarm possesses a position, velocity vector, and fitness value, with their best position and fitness values recorded.",
+                "Communication between particles allows them to access the global best position and value of the swarm.",
+                "The algorithm's parameters include the number of dimensions, lower and upper bounds, while hyperparameters consist of the number of particles, maximum iterations, inertia component, particle cognition (local), and swarm social influence (global).",
+                "Optimization was performed on various functions such as Sphere, Beale, Booth, Levi, etc., with plots generated to illustrate the cost versus iteration and particle movements.",
+                "The findings and work were documented in the form of a research paper using LaTeX."
             ],
             "projectImgs": [
                 "projects/pso/1_paper1.png",
@@ -543,7 +543,7 @@
         {
             "id": 13,
             "title": "Minesweeper",
-            "description": "My version of the classic Minesweeper game to demontrate Object Oriented Programming skills in python langague using PyGame library",
+            "description": "I developed my own version of the classic Minesweeper game using the PyGame library. This project served as a demonstration of my object-oriented programming skills, showcasing my ability to design and implement a game with interactive features and gameplay mechanics.",
             "type": "game",
             "group": false,
             "source": "https://github.com/bhavik-knight/minesweeper",
@@ -557,9 +557,9 @@
                 "youtube"
             ],
             "details": [
-                "Demonstrated the use of Pygame library by reading and understanding the documenatation to deliver the working game",
-                "Implemented the modular code using DRY principles, and effectively used defensive programming using python style guide",
-                "Recorded a project video & posted on my youtube channel explaining all features and basic explaination of the program"
+                "Demonstrated the use of the Pygame library by reading and understanding its documentation to create a functional Minesweeper game.",
+                "Implemented modular and reusable code following the DRY (Don't Repeat Yourself) principle and adhering to the Python style guide.",
+                "Created a project video and uploaded it to my YouTube channel, providing an explanation of all the game's features and a basic overview of the program."
             ],
             "projectImgs": [
                 "projects/minesweeper/1_game_window.png",
@@ -588,7 +588,7 @@
         {
             "id": 14,
             "title": "Snake",
-            "description": "My spin on classing Snake game from the old Nokia phones.",
+            "description": "Developed my own rendition of the iconic Snake game, drawing inspiration from the classic version found on Nokia phones. This project marked my introduction to the field of Computer Science.",
             "type": "game",
             "group": false,
             "source": "https://scratch.mit.edu/projects/72395498/editor/",
@@ -599,10 +599,10 @@
                 "windows"
             ],
             "details": [
-                "This was my first attempt at programming after I decided to change my career from Mechanical Engineering to Computer Science",
-                "The first mini-project submitted for the Harvard's CS50 course using the graphical langauge Scratch",
-                "Demonstrated expertise in this programming language to implement the functionality with increasing difficulty level",
-                "Learned and implemented programming concepts like variables, conditional, loops and control structure"
+                "Initiated my programming journey by switching careers from Mechanical Engineering to Computer Science.",
+                "Completed the first mini-project for the Harvard CS50 course using Scratch, a graphical programming language.",
+                "Showcased proficiency in Scratch language by implementing increasingly complex functionalities.",
+                "Gained practical experience in programming concepts such as variables, conditionals, loops, and control structures."
             ],
             "projectImgs": [
                 "projects/snake/0_instructions_page.png",
@@ -620,7 +620,7 @@
         {
             "id": 15,
             "title": "8 Puzzle Solver AI",
-            "description": "Implimented A* algorithm to solve the 8 Puzzle. Demonstrated expertise in the Object Oriented Programming, Data Structures and Algorithms.",
+            "description": "Successfully implemented the A* algorithm to solve the 8 Puzzle. Demonstrated my understanding of Data Structures and Algorithm practically.",
             "type": "ai",
             "group": false,
             "source": "https://github.com/bhavik-knight/8Puzzle-AI",
@@ -631,10 +631,10 @@
                 "windows"
             ],
             "details": [
-                "Created the grid and moved for the classic 8 Puzzle game using Object Oriented Programming",
-                "Implemented the A* algorithm to find the mininum number of moves to solve the game from the given initial configuration",
-                "Demonstrated DRY principles and Code modularity to extend the code for N-puzzle game",
-                "Modularized the game for the N-Puzzle given the size of grid N"
+                "Executed the Object-Oriented Programming approach to create a grid and facilitate movement for the classic 8 Puzzle game.",
+                "Implemented the A* algorithm to efficiently find the minimum number of moves required to solve the game starting from a given initial configuration.",
+                "Demonstrated adherence to the DRY (Don't Repeat Yourself) principle and code modularity, allowing for easy extension of the code to accommodate N-puzzle games.",
+                "Modularized the game to support N-Puzzle variations by adjusting the size of the grid to N."
             ],
             "projectImgs": [
                 "projects/puzzle_8_ai/1_astar1.png",
@@ -654,6 +654,43 @@
     ],
     "certificates": [
         {
+            "id": 7,
+            "title": "Career Essential in Software Development",
+            "platform": "Linkedin",
+            "institute": "Microsoft",
+            "about": "I completed this 3 coruse certification series to understand the core principles about Software Development",
+            "certificateDetails": [
+                {
+                    "certId": "l1",
+                    "certName": "Introduction to Career Skills in Software Development",
+                    "certImg": "certificates/linkedin/1_Introduction_to_Career_Skills_in_Software_Development.pdf",
+                    "uri": null,
+                    "learnings": "I gained knowledge about various branches within software development and received a comprehensive introduction to the field."
+                },
+                {
+                    "certId": "l2",
+                    "certName": "Programming Foundations: Fundamentals",
+                    "certImg": "certificates/linkedin/2_Programming_Foundations_Fundamentals.pdf",
+                    "uri": null,
+                    "learnings": "Learned about fundamentals of programming in the different languages like python, javascript, ruby, etc."
+                },
+                {
+                    "certId": "l3",
+                    "certName": "Programming Foundations: Beyond the Fundamentals",
+                    "certImg": "certificates/linkedin/3_Programming_Foundations_Beyond_the_Fundamentals.pdf",
+                    "uri": null,
+                    "learnings": "Learned how to work with collections, use external code, find and fix bugs, and more."
+                },
+                {
+                    "certId": "l4",
+                    "certName": "Career Essentials in Software Development",
+                    "certImg": "certificates/linkedin/4_Career_Essentials_in_Software_Development.pdf",
+                    "uri": null,
+                    "learnings": "I learned various skills needed for a career in software development, the core concepts and structure of programming languages and how to apply them in real world."
+                }
+            ]
+        },
+        {
             "id": 1,
             "title": "Google IT Professional Certificate",
             "platform": "Coursera",
@@ -665,56 +702,56 @@
                     "certName": "Technical Support Fundamentals",
                     "certImg": "certificates/google/google_it_course_1.pdf",
                     "uri": "https://coursera.org/share/dd6acf709cba5e5942c42e890da220f0",
-                    "learnings": "I learned about how to assemble a computer, basics of internet, overview of operation system and applications, problem-solving methodologies and soft-skills required in Information Technology field"
+                    "learnings": "I learned how to assemble a computer, gained knowledge about the basics of the internet, obtained an overview of operating systems and applications, learned problem-solving methodologies, and developed the necessary soft skills required in the field of Information Technology."
                 },
                 {
                     "certId": "c2",
                     "certName": "The Bits and Bytes of Computer Networking",
                     "certImg": "certificates/google/google_it_course_2.pdf",
                     "uri": "https://coursera.org/share/605e01e4cb5a3c481139666a9112b644",
-                    "learnings": "In this course I learned basics of computer networking; five-layer and OSI model; standard protocols; network troubleshooting; basics of DNS and DHCP server"
+                    "learnings": "In this course, I learned the basics of computer networking, including the five-layer and OSI model, standard protocols, network troubleshooting techniques, as well as the fundamentals of DNS and DHCP server functionality."
                 },
                 {
                     "certId": "c3",
                     "certName": "Operating Systems and You: Becoming a Power User",
                     "certImg": "certificates/google/google_it_course_3.pdf",
                     "uri": "https://coursera.org/share/c1ee69aa511fa4a7f19a05d1d92995f2",
-                    "learnings": "I learned about Windows and Linux OS; file systems; install, configure, and remove software; disk partitioning; set up users, groups and permissions; background processes and management; troubleshoot the common issues regarding OS"
+                    "learnings": "I gained knowledge about both Windows and Linux operating systems, including their respective file systems. I learned how to install, configure, and remove software, perform disk partitioning, set up users, groups, and permissions, manage background processes, and troubleshoot common issues related to operating systems."
                 },
                 {
                     "certId": "c4",
                     "certName": "System Administration and IT Infrastructure Services",
                     "certImg": "certificates/google/google_it_course_4.pdf",
                     "uri": "https://coursera.org/share/8d81d43f9fefaec24181cd57add956d9",
-                    "learnings": "In this course I learned about chosing the best hardware and services for organizations; manage infrastructure servers; Active directory and OpenLDAP; how to backup and recover data; utilize system adminstration knowledge to plan and improve processes for IT environments"
+                    "learnings": "In this course, I acquired knowledge on selecting the most suitable hardware and services for organizations. I also learned how to manage infrastructure servers, including topics such as Active Directory and OpenLDAP. Additionally, I gained understanding of data backup and recovery processes, and how to utilize system administration knowledge to plan and enhance IT environments."
                 },
                 {
                     "certId": "c5",
                     "certName": "IT Security: Defense against the digital dark arts",
                     "certImg": "certificates/google/google_it_course_5.pdf",
                     "uri": "https://coursera.org/share/0c3b147c46e28c84da792addfd4634a7",
-                    "learnings": "I learned basics of Cloud Computing; everything as a service; cloud storage; security principles and basics of ips/ids/firewall"
+                    "learnings": "I gained a foundational understanding of Cloud Computing. I learned about various aspects such as IaaS, Paas, SaaS, cloud storage, and security principles including IPS/IDS and firewall concepts."
                 },
                 {
                     "certId": "c6",
                     "certName": "Google IT Support",
                     "certImg": "certificates/google/google_it_professional_certificate.pdf",
                     "uri": "https://coursera.org/share/50bd1600dd46d9571b0dfd4b102fbc37",
-                    "learnings": "During this professional program in addition to fundamental of IT support, I learned differnet domains of IT such as Computer Networking, Operating Systems, System Administration, Computer Security, etc."
+                    "learnings": "During this professional program, I gained a comprehensive understanding of IT support and explored various domains within the field, including Computer Networking, Operating Systems, System Administration, Computer Security, and more."
                 },
                 {
                     "certId": "c7",
                     "certName": "Googlt IT Support Credly Badge",
                     "certImg": "certificates/google/google_it_support_certificate_badge.pdf",
                     "uri": "https://www.credly.com/badges/1a31d8bb-5869-4a21-bc53-df7f9c347873",
-                    "learnings": "I was rewarded this badge by Credly for completing the professional certification."
+                    "learnings": "I was awarded the professional certification badge by Credly in recognition of successfully completing the program."
                 },
                 {
                     "certId": "c8",
                     "certName": "Junior IT Analyst Program",
                     "certImg": "certificates/google/NPower_JITA_certificate.pdf",
                     "uri": null,
-                    "learnings": "I joined NPower Canada's Junior IT Analyst program to get hands on traning in the IT field to enhance my area in the field of Computer Networking and Security to combined my work experience as a Technician. Apart from learning technical skills, I learned valuable soft skills and valuable tips about job search in the Canadian market in this field."
+                    "learnings": "I enrolled in NPower Canada's Junior IT Analyst program with the aim of gaining practical training in the IT field, specifically focusing on computer networking and security, to complement my existing experience as a Technician. In addition to acquiring technical skills, the program provided valuable soft skills training and insightful guidance on job search strategies within the Canadian IT market."
                 }
             ]
         },
@@ -723,14 +760,14 @@
             "title": "Web Development",
             "platform": "Pluralsight",
             "institute": "Digital Nova Scotia",
-            "about": "Achieved this certificate as part of Skills for hire - Web development program of Digital Nova Scotia",
+            "about": "I earned this certificate as a participant in the Skills for Hire - Web Development program offered by Digital Nova Scotia.",
             "certificateDetails": [
                 {
                     "certId": "dns_1",
                     "certName": "Proficient in Web Development",
                     "certImg": "certificates/dns/dns_sfha_web.pdf",
                     "uri": null,
-                    "learnings": "Learned about web development fundamentals; back-end developement Php, NodeJS; front-end development HTML5, CSS3, Javascript (ES6), jQuery; docker; CI/CD Basics; AWS Basics"
+                    "learnings": "I learned fundamental concepts of web development, including back-end development using technologies like PHP and NodeJS, as well as front-end development utilizing HTML5, CSS3, JavaScript (ES6), and jQuery. Additionally, I gained exposure to Docker, CI/CD basics, and the fundamentals of AWS."
                 }
             ]
         },
@@ -739,21 +776,21 @@
             "title": "Programming Competitions",
             "platform": "ICPC Website",
             "institute": "International Collegiate Programming Contest",
-            "about": "I participated in the ICPC Programming competition representing StFX University as a part of team X-abytes-1 under the guidence of the professor Dr. Milton King.",
+            "about": "I participated in the ICPC Programming competition as a member of Team X-abytes-1, representing StFX University. Our team was mentored by Professor Dr. Milton King, who provided guidance and support throughout the competition.",
             "certificateDetails": [
                 {
                     "certId": "icpc_1",
                     "certName": "Honorable Certificate",
                     "certImg": "certificates/competition/2022_ICPC_Northeast_North_America_RC_Bhavik_Bhagat_MEDAL.pdf",
                     "uri": null,
-                    "learnings": "We had to apply our data strucutres and alogrithm knowledge here. I learned a lot about time-management and how to work under pressure with a team brainstroming the ideas."
+                    "learnings": "During the ICPC Programming competition, we were required to apply our knowledge of data structures and algorithms. This experience taught me valuable lessons in time management and working under pressure, as we had to brainstorm ideas and collaborate effectively as a team."
                 },
                 {
                     "certId": "icpc_2",
                     "certName": "Honorable Certificate",
                     "certImg": "certificates/competition/2022_ICPC_Northeast_North_America_RC_MEDAL_team.pdf",
                     "uri": null,
-                    "learnings": "We had a meeting before the competition where we were introdued the protocols to follow. During this compeition we learned about teamwork, and how to overcome the difficult problems by sharing the ideas to solve a problem and iteratively make the solution efficient."
+                    "learnings": "Throughout the competition, we gained valuable experience in teamwork and problem-solving. We learned how to effectively collaborate by sharing ideas and iterating on solutions to overcome challenging problems. This allowed us to improve the efficiency and effectiveness of our solutions."
                 }
             ]
         },
@@ -762,35 +799,35 @@
             "title": "Harvard Certificates",
             "platform": "Harvard & edX",
             "institute": "Harvard University",
-            "about": "My first ever Computer Science introductory course. I participated in the various events of Harvard's CS50 courses, and enrolled in other courses.",
+            "about": "I actively participated in Harvard's CS50 courses and other related events to enhance my understanding of Computer Science.",
             "certificateDetails": [
                 {
                     "certId": "harvard_1",
                     "certName": "CS50's Introduction to Computer Science",
                     "certImg": "certificates/harvard/Harvardx_CS50x_Introduction_to_Computer_Science.pdf",
                     "uri": "https://courses.edx.org/certificates/e85433344ee74aefb3578802c4fc45c7",
-                    "learnings": "I learned general overview of the Computer Science field and learned building blocks like basic data strucutres, algorithm, memory management, and fundamental concepts to build my career. I learned several programming languages like scratch, c, python, html, javascript, and solved challenging assignments like recovering images, spell-checker, game of fifteen using C - langauge."
+                    "learnings": "I gained a comprehensive understanding of the Computer Science field, covering topics such as data structures, algorithms, memory management, and fundamental concepts, and developed proficiency in multiple programming languages including Scratch, C, Python, HTML, and JavaScript, through hands-on assignments and projects such as image recovery, spell-checker, and the game of fifteen."
                 },
                 {
                     "certId": "harvard_2",
                     "certName": "Puzzle Day 2019",
                     "certImg": "certificates/harvard/Harvardx_CS50x_Puzzle_Day_2019.pdf",
                     "uri": "https://cs50.harvard.edu/certificates/34f3a67d-6862-4c59-90bb-f2bce5efcba9",
-                    "learnings": "I earned this certificate for participating in the puzzle day event in 2019. I was in the team with members from Belgium, Turkey, Ukraine, and Netherlands. We were colleagues in CS50 course and coordinated using Discord platform. We are rewarded the certificate for solving 9 out of 12 puzzles."
+                    "learnings": "I earned this certificate for participating in the 2019 Puzzle Day event as part of a diverse international team consisting of members from Belgium, Turkey, Ukraine, and the Netherlands. We collaborated and coordinated our efforts through the Discord platform as colleagues in the CS50 course, successfully solving 9 out of the 12 puzzles to receive this recognition."
                 },
                 {
                     "certId": "harvard_3",
                     "certName": "Puzzle Day 2020",
                     "certImg": "certificates/harvard/Harvardx_CS50x_Puzzle_Day_2020.pdf",
                     "uri": "https://cs50.harvard.edu/certificates/c6b50f16-00d9-4e1b-b37a-0a3953778ac6",
-                    "learnings": "I earned this certificate 2nd year in a row for the puzzle day online event. I participated as a one-member team to challenge myself this year for the event. I was rewarded the certificate for solving 6 out of 8 puzzles."
+                    "learnings": "I earned this certificate for the second year in a row by participating in the online Puzzle Day event. This year, I decided to challenge myself and participated as a one-member team. I was rewarded the certificate for successfully solving 6 out of 8 puzzles."
                 },
                 {
                     "certId": "harvard_4",
                     "certName": "Data Science: R Basics",
                     "certImg": "certificates/harvard/Harvardx_Data_Science_R_Basics_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/baa77fe96adf476d8f892c527d3e572e",
-                    "learnings": "I took the Data Science course to get familiar with the basics of the field because I was fascinated by the Machine Learning concepts that I was introduced in the MIT 6002x course. This was my first course in a specialization of this field."
+                    "learnings": "I enrolled in the Data Science course to gain a foundational understanding of the field, as I was captivated by the concepts of Machine Learning introduced in the MIT 6002x course. This course marked my first step in specializing in the field of Data Science."
                 }
             ]
         },
@@ -799,28 +836,28 @@
             "title": "MIT Certificates",
             "platform": "edX",
             "institute": "Massachusetts Institute of Technology",
-            "about": "After learning basic concepts of Computer Science from Harvard's CS50 course, I was recommended this course by my peers when I was looking for recommendation for Python coruses.",
+            "about": "After successfully completing Harvard's CS50 course and establishing a strong foundation in Computer Science, my peers highly recommended this course to me when I was seeking recommendations for Python courses.",
             "certificateDetails": [
                 {
                     "certId": "mit_1",
                     "certName": "Introduction to Computer Science and Programming Using Python",
                     "certImg": "certificates/mit/MITx_6.00.1x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/23f2cbca51ae432aa9c7b2846468157a",
-                    "learnings": "A deep dive in to core computer science concepts with the help of mathematics on the parts like big-oh analysis. Apart from learning technical skills, I learned time management and stress management as this was my first instructor-paced course where I had to submit assignments and complete exams by the set deadlines."
+                    "learnings": "During this course, I delved deep into core computer science concepts, including the application of mathematics in areas such as big-O analysis. In addition to acquiring technical skills, I also gained valuable insights into time management and stress management due to strict deadlines."
                 },
                 {
                     "certId": "mit_2",
                     "certName": "Introduction to Computational Thinking and Data Science",
                     "certImg": "certificates/mit/MITx_6.00.2x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/5f707d85691d4dfe9643fdcbfc53d4ee",
-                    "learnings": "This course challenged me in a whole new way, and I decided to build my career in the Data Science / Machine Learning in the future. I learned about graph data structure and related algorithms, stochastic programming and statistical thinking, Monte-Carlo simulation, various plotting libraries, and introduction to Machine Learning with KNN."
+                    "learnings": "This course presented me with new and exciting challenges, sparking my interest in pursuing a career in Data Science and Machine Learning. I gained knowledge in topics such as graph data structures and algorithms, stochastic programming and statistical thinking, Monte Carlo simulation, various plotting libraries, and an introduction to Machine Learning with K-Nearest Neighbors (KNN) algorithm."
                 },
                 {
                     "certId": "mit_3",
                     "certName": "Computational Thinking using Python",
                     "certImg": "certificates/mit/MITx_600_XSeries_edX_Credentials.pdf",
                     "uri": "https://credentials.edx.org/credentials/0b3244958d38408296d5c03d7af6026e/",
-                    "learnings": "This certificate was rewarded to me for completing X series program by completing the 6001x and 6002x courses from MIT."
+                    "learnings": "I received this certificate for successfully completing the X Series Program, which included the completion of both the MIT 6001x and 6002x courses."
                 }
             ]
         },
@@ -829,35 +866,35 @@
             "title": "Microsoft Certificates",
             "platform": "edX",
             "institute": "Microsoft",
-            "about": "",
+            "about": "I enrolled in these courses to acquire a solid understanding of the fundamentals of the Java programming language, laying the groundwork for my journey into software development.",
             "certificateDetails": [
                 {
                     "certId": "ms_1",
                     "certName": "Learn to Program in Java",
                     "certImg": "certificates/microsoft/Microsoft_DEV276x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/f5e302d222a84dbc89c5e775c64f7886",
-                    "learnings": "I leaned about basic programming concepts like data types, variables, logic, loops, control flows, functions, etc. and got familiar with various terminologies of Java langauge."
+                    "learnings": "I gained knowledge of fundamental programming concepts, such as data types, variables, logic, loops, control flow, functions, and other key terminologies in the Java programming language."
                 },
                 {
                     "certId": "ms_2",
                     "certName": "Object Oriented Programming in Java",
                     "certImg": "certificates/microsoft/Microsoft_DEV277x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/fcb211988bfc4c78911892cc130bc855",
-                    "learnings": "In this course I learned abotu arrays, classes & objects, inheritance, polymorphism, abstract classes, and interfaces."
+                    "learnings": "In this course, I acquired knowledge and skills in working with arrays, understanding classes and objects, implementing inheritance, utilizing polymorphism, working with abstract classes, and implementing interfaces."
                 },
                 {
                     "certId": "ms_3",
                     "certName": "Algorithms and Data Structures",
                     "certImg": "certificates/microsoft/Microsoft_DEV285x_Certificate_edX.pdf",
                     "uri": "https://courses.edx.org/certificates/fe6a9f7c165d44fbbf4876403a56ceda",
-                    "learnings": "During this course I learned abuot various searching and sorting algorithms like bubble sort, selection sort, merge sort, linear search, binary search, and data structures like liked list, stack, queue."
+                    "learnings": "During this course, I gained proficiency in various searching and sorting algorithms, including bubble sort, selection sort, merge sort, linear search, and binary search. Additionally, I learned about important data structures such as linked lists, stacks, and queues."
                 },
                 {
                     "certId": "ms_4",
                     "certName": "Introduction to Programming in Java",
                     "certImg": "certificates/microsoft/Microsoft_Professional_Certificate_edX_Credentials.pdf",
                     "uri": "https://credentials.edx.org/credentials/1e58f5c8e401420fb36f9e6a38b7079f",
-                    "learnings": "I was rewarded this certificate for completing the series of Java coruses offered by Microsoft. During the entire program I learned how to program using Java Language and terminologies related to the programming language."
+                    "learnings": "I was awarded this certificate for successfully completing the Java programming series offered by Microsoft. Throughout the program, I gained proficiency in programming using the Java language and acquired knowledge of relevant terminologies associated with the language."
                 }
             ]
         }
