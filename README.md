@@ -10,6 +10,7 @@ This is my website to demonstrate my diverse skills and work experience.
 - The website is tailored for the desktop enviromnent, however it is responsive for mobile, and other devices as well.
 - I developed 4 mini-projects along the way to learn ReactJS, experiment with different features like carousel, pdf-rendering, sending emails, connecting to database to fetch the data.
 - Containorized the app using docker, and image is available on the DockerHub.
+- I utilized chatGPT to improve the grammar, and sentence structure, for debugging and learning purpose to implement some features.
 
 ## Reference:
 - ReactJS, ChakraUI [net-ninja youtube channel](https://www.youtube.com/watch?v=jLd059lbJkw&list=PL4cUxeGkcC9hcnIeryurNMMcGBHp7AYlP&index=9)
