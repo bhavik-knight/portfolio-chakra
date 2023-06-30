@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "comfortaa";
+  src: url("fonts/comfortaa/Comfortaa-Regular.ttf") format("truetype");
+}
+
+
 * {
   font-family: "comfortaa";
   margin: 0;
