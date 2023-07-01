@@ -1,6 +1,6 @@
 import "./Skills.css"
 import { CreateSkillBadge } from "./CreateSkillBadge"
-import { skills } from "../data/portfolio_db.json"
+// import { skills } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, UnorderedList } from "@chakra-ui/react"
 import { Box, Flex, Center, Container } from "@chakra-ui/react"
@@ -13,6 +13,10 @@ import { ProgrammingParadigms } from "./ProgrammingParadigms"
 import { useState, useEffect } from "react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { CheckIcon } from "@chakra-ui/icons"
+
+import { app } from "../data/Firebase"
+import { getFirestore, collection, getDocs } from "firebase/firestore"
+import { getData } from "../data/getData"
 
 
 const textFontStyle = {
@@ -29,6 +33,14 @@ const headerFontStyle = {
 
 
 function Skills() {
+
+    const [skills, setSkills] = useState([])
+    useEffect(() => {
+        getData("skills")
+            .then(data => setSkills(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
     const [languages, setLanguages] = useState([])
     const [frameworks, setFrameworks] = useState([])
     const [technologies, setTechnologies] = useState([])
@@ -49,7 +61,7 @@ function Skills() {
             skill.name === "cloud" && setCloud(skill.data)
             skill.name === "databases" && setDatabases(skill.data)
         })
-    }, [languages, frameworks, technologies, os, management, apps])
+    }, [skills, languages, frameworks, technologies, os, management, apps])
 
 
     return (

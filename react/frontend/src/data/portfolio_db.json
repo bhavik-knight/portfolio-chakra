@@ -655,7 +655,7 @@
     "certificates": [
         {
             "id": 7,
-            "title": "Career Essential in Software Development",
+            "title": "Career Essentials in Software Development",
             "platform": "Linkedin",
             "institute": "Microsoft",
             "about": "I completed this 3 coruse certification series to understand the core principles about Software Development",
@@ -1152,7 +1152,7 @@
             "place": "Online",
             "learnings": [
                 {
-                    "domain": "Databse Management",
+                    "domain": "Database Management",
                     "technologies": "SQL, Relational Database Design, CRUD Operations, Normalization"
                 },
                 {

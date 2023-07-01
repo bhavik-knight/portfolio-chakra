@@ -1,6 +1,5 @@
-import { projects } from "../data/portfolio_db.json"
 import "./Projects.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Divider, ListIcon, List, ListItem, TagRightIcon } from "@chakra-ui/react"
 import { Heading, Text } from "@chakra-ui/react"
 import { Flex, Stack, VStack, HStack, } from "@chakra-ui/react"
@@ -8,7 +7,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Tabs, Tab, TabPanels, TabPanel, TabList, } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
 import { ProjectCard } from "./ProjectCard"
-import { ArrowForwardIcon, ChevronRightIcon } from "@chakra-ui/icons"
+import { getData } from "../data/getData"
 
 
 const textFontStyle = {
@@ -20,6 +19,16 @@ const textFontStyle = {
 
 
 function Projects() {
+    const [projects, setProjects] = useState([])
+    // fetch all projects data from the firebase db
+    useEffect(() => {
+        getData("projects")
+            .then(data => setProjects(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
+
+
     // domains
     const projectTypes = ["web", "data", "ai", "game"]
 
