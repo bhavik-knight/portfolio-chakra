@@ -8,7 +8,7 @@ async function getData(pageName) {
         const pageRef = collection(db, pageName)
         const querySnapshot = await getDocs(pageRef)
         let newData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-        return newData
+        return newData.reverse()
     } catch (error) {
         throw `Sorry! Unable to fetch the data for ${page}. ${error.message}`
     }
