@@ -22,7 +22,6 @@ import { useState, useEffect, useCallback, useRef, useLayoutEffect } from "react
 import { useMediaQuery } from "@chakra-ui/react"
 import { RenderCarousel } from "./RenderCarousel"
 import { ResponsiveIcons } from "./ResponsiveIcons"
-import { ExternalLinkIcon, CloseIcon } from "@chakra-ui/icons"
 import { CreateSkillBadge } from "./CreateSkillBadge"
 
 
