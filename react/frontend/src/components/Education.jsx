@@ -1,18 +1,17 @@
-import { education, training, extracurriculars, certificates } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text } from "@chakra-ui/react"
 import { Box, Stack, VStack, HStack, Flex, Divider, Spacer } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { useMediaQuery } from "@chakra-ui/react"
-import { useState, useEffect } from "react"
 import { Accordion, AccordionItem, AccordionIcon, AccordionButton, AccordionPanel } from "@chakra-ui/react"
 import { EducationCard } from "./EducationCard"
 import { TrainingCard } from "./TrainingCard"
 import { ExtracurricularCard } from "./ExtracurricularCard"
 import { CertificateCard } from "./CertificateCard"
 import { CertificateCardCarousel } from "./CertificateCardCarousel"
-
+import { useEffect, useState } from "react"
+import { getData } from "../data/getData"
 
 const textFontStyle = {
     fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
@@ -28,6 +27,35 @@ const headerFontStyle = {
 
 
 function Education() {
+    const [education, setEducation] = useState([])
+    useEffect(() => {
+        getData("education")
+            .then(data => setEducation(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
+    const [training, setTraining] = useState([])
+    useEffect(() => {
+        getData("training")
+            .then(data => setTraining(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
+    const [extracurriculars, setExtraCurriculars] = useState([])
+    useEffect(() => {
+        getData("extracurriculars")
+            .then(data => setExtraCurriculars(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
+    const [certificates, setCertificates] = useState([])
+    useEffect(() => {
+        getData("certificates")
+            .then(data => setCertificates(data))
+            .catch(error => console.log(error.message))
+
+    }, [])
+
     const isMobile = window.matchMedia("(max-width:992px)").matches
     const getCredentialInfoStyle = (isMobile) => {
         return isMobile ?

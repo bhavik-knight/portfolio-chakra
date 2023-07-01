@@ -1,4 +1,3 @@
-import { experiences, volunteer } from "../data/portfolio_db.json"
 import { nanoid } from "nanoid"
 import { Heading, Text, Spacer } from "@chakra-ui/react"
 import { Stack, Flex, Divider } from "@chakra-ui/react"
@@ -6,7 +5,11 @@ import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
 import { List, UnorderedList, ListItem } from "@chakra-ui/react"
 import { Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
 import { ExperienceCard } from "./ExperienceCard"
+import { useState, useEffect } from "react"
 
+import { app } from "../data/Firebase"
+import { getFirestore, collection, getDocs } from "firebase/firestore"
+import { getData } from "../data/getData"
 
 const textFontStyle = {
     fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
@@ -22,6 +25,22 @@ const headerFontStyle = {
 
 
 function Experiences() {
+    // fetch all experiences data from the firebase db
+    const [experiences, setExperiences] = useState([])
+    useEffect(() => {
+        getData("experiences")
+            .then(data => setExperiences(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
+    // fetch all volunteer data from the firebase db
+    const [volunteer, setVolunteer] = useState([])
+    useEffect(() => {
+        getData("volunteer")
+            .then(data => setVolunteer(data))
+            .catch(error => console.log(error.message))
+    }, [])
+
     return (
         <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
