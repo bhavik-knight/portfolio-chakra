@@ -40,7 +40,10 @@ function Skills() {
         getData("skills")
             .then(data => setSkills(data))
             .catch(error => console.log(error.message))
-            .finally(setLoading(skills.length === 0))
+    }, [])
+
+    useEffect(() => {
+        setLoading(skills.length === 0)
     }, [skills])
 
     const [languages, setLanguages] = useState([])
