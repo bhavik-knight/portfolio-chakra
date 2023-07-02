@@ -74,7 +74,7 @@ function CreateButton({ isMobile, page, activePage, selectPage }) {
                         onClick={event => selectPage(event)}
                         isActive={page === activePage}
                         name={page}
-                        icon={ResponsiveIcons[page].icon}
+                        icon={ResponsiveIcons[page]?.icon}
                     />
                     :
                     <Button
@@ -84,7 +84,7 @@ function CreateButton({ isMobile, page, activePage, selectPage }) {
                         onClick={(event) => selectPage(event)}
                         isActive={page === activePage}
                         name={page}
-                        leftIcon={ResponsiveIcons[page].icon}
+                        leftIcon={ResponsiveIcons[page]?.icon}
                         justifyContent="flex-start"
                         textTransform="capitalize"
                     >

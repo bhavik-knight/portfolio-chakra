@@ -140,7 +140,8 @@
                 "Created a database on Google Cloud Platform's Firebase, a Backend-as-a-Service solution, and utilized Firebase Storage for handling files.",
                 "Developed mini-projects to experiment with various features such as data fetching, forms, carousel creation, learning different hooks, implementing dark mode, and more.",
                 "Hosted the application on the Netlify platform, which continuously integrates updates from the master branch of the GitHub repository",
-                "Utilized chatGPT for prompt engineering purposes, leveraging its capabilities to debug code and learn the implementation of certain features."
+                "Utilized chatGPT for prompt engineering purposes, leveraging its capabilities to debug code and learn the implementation of certain features.",
+                "Integrated emailJS services to enable sending an email by submitting the form."
             ],
             "projectImgs": [
                 "projects/portfolio/1_landing_page.png",
@@ -655,7 +656,7 @@
     "certificates": [
         {
             "id": 7,
-            "title": "Career Essential in Software Development",
+            "title": "Career Essentials in Software Development",
             "platform": "Linkedin",
             "institute": "Microsoft",
             "about": "I completed this 3 coruse certification series to understand the core principles about Software Development",
@@ -1152,7 +1153,7 @@
             "place": "Online",
             "learnings": [
                 {
-                    "domain": "Databse Management",
+                    "domain": "Database Management",
                     "technologies": "SQL, Relational Database Design, CRUD Operations, Normalization"
                 },
                 {
