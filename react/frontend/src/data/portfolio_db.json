@@ -150,7 +150,10 @@
                 "projects/portfolio/4_tenzies.png",
                 "projects/portfolio/5_meme_generator.png",
                 "projects/portfolio/6_firebase_database.png",
-                "projects/portfolio/7_storage.png"
+                "projects/portfolio/7_storage.png",
+                "projects/portfolio/8_form_email.png",
+                "projects/portfolio/9_email_received_success.png",
+                "projects/portfolio/10_emailjs.png"
             ]
         },
         {
@@ -300,15 +303,15 @@
                 "projects/sentiment_analysis/16_most_common3.png",
                 "projects/sentiment_analysis/17_wordcloud.png",
                 "projects/sentiment_analysis/18_positive_wordcloud.png",
-                "projects/sentiment_analysis/18_top10_positive.png",
-                "projects/sentiment_analysis/19_negative_wordcloud.png",
-                "projects/sentiment_analysis/20_top10_negative.png",
-                "projects/sentiment_analysis/21_neutral_wordcloud.png",
-                "projects/sentiment_analysis/22_top10_neutral.png",
-                "projects/sentiment_analysis/23_likes.png",
-                "projects/sentiment_analysis/24_avg_likes.png",
-                "projects/sentiment_analysis/25_retweets.png",
-                "projects/sentiment_analysis/26_avg_retweets.png"
+                "projects/sentiment_analysis/19_top10_positive.png",
+                "projects/sentiment_analysis/20_negative_wordcloud.png",
+                "projects/sentiment_analysis/21_top10_negative.png",
+                "projects/sentiment_analysis/22_neutral_wordcloud.png",
+                "projects/sentiment_analysis/23_top10_neutral.png",
+                "projects/sentiment_analysis/24_likes.png",
+                "projects/sentiment_analysis/25_avg_likes.png",
+                "projects/sentiment_analysis/26_retweets.png",
+                "projects/sentiment_analysis/27_avg_retweets.png"
             ]
         },
         {
@@ -347,18 +350,18 @@
                 "projects/food_order_analysis/7_viz_restaurants_by_cuisine_type.png",
                 "projects/food_order_analysis/8_viz_top5_cuisine_type_with_most_restaurants.png",
                 "projects/food_order_analysis/9_top10_most_popular.png",
-                "projects/food_order_analysis/11_viz_top10_most_popular.png",
-                "projects/food_order_analysis/12_top10_most_popular_by_cuisine_type.png",
-                "projects/food_order_analysis/13_viz2.png",
-                "projects/food_order_analysis/14_viz3.png",
-                "projects/food_order_analysis/15_viz4.png",
-                "projects/food_order_analysis/16_viz5.png",
-                "projects/food_order_analysis/17_viz6.png",
-                "projects/food_order_analysis/18_ratings_of_shake_shack.png",
-                "projects/food_order_analysis/19_viz_shake_shack.png",
-                "projects/food_order_analysis/20_correlation_rating_food_prep_time.png",
-                "projects/food_order_analysis/21_viz_correlation.png",
-                "projects/food_order_analysis/22_correlation_calculation.png"
+                "projects/food_order_analysis/10_viz_top10_most_popular.png",
+                "projects/food_order_analysis/11_top10_most_popular_by_cuisine_type.png",
+                "projects/food_order_analysis/12_viz2.png",
+                "projects/food_order_analysis/13_viz3.png",
+                "projects/food_order_analysis/14_viz4.png",
+                "projects/food_order_analysis/15_viz5.png",
+                "projects/food_order_analysis/16_viz6.png",
+                "projects/food_order_analysis/17_ratings_of_shake_shack.png",
+                "projects/food_order_analysis/18_viz_shake_shack.png",
+                "projects/food_order_analysis/19_correlation_rating_food_prep_time.png",
+                "projects/food_order_analysis/20_viz_correlation.png",
+                "projects/food_order_analysis/21_correlation_calculation.png"
             ]
         },
         {
@@ -578,7 +581,7 @@
                 "projects/minesweeper/13_grid4.png",
                 "projects/minesweeper/14_grid5.png",
                 "projects/minesweeper/15_grid6.png",
-                "projects/minesweeper/16_contants.png",
+                "projects/minesweeper/16_constants.png",
                 "projects/minesweeper/17_buttons.png",
                 "projects/minesweeper/18_mines10.png",
                 "projects/minesweeper/19_game_won.png",
