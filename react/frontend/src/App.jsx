@@ -19,7 +19,7 @@ import { ResponsiveIcons } from "./components/ResponsiveIcons"
 function App() {
     // check for mobile or not
     const [isMobile] = useMediaQuery("(max-width: 992px)")
-    const [isLandscape, setIsLandscape] = useState(false)
+    const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight)
     const [sidenavHeader, setSidenavHeader] = useState(false)
     const [marginTopPages, setMarginTopPages] = useState(
         { base: "50px", md: "50px", lg: "60px" }
@@ -162,6 +162,7 @@ function App() {
                     w={{ base: "100%", lg: "15%" }}
                     px={{ base: 0, lg: 4 }}
                     sidenavHeader={sidenavHeader}
+                    isLandscape={isLandscape}
                 />
             }
 

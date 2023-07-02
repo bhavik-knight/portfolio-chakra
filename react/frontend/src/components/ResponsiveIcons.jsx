@@ -20,6 +20,7 @@ import { SiTeamviewer } from "@react-icons/all-files/si/SiTeamviewer"
 import { SiZendesk } from "@react-icons/all-files/si/SiZendesk"
 import { SiMicrosoftoffice } from "@react-icons/all-files/si/SiMicrosoftoffice"
 
+// others
 import { SiNetlify } from "@react-icons/all-files/si/SiNetlify"
 import { SiLatex } from "@react-icons/all-files/si/SiLatex"
 import { SiMicrosoft } from "@react-icons/all-files/si/SiMicrosoft"
@@ -44,6 +45,8 @@ import { BiLinkAlt } from "@react-icons/all-files/bi/BiLinkAlt"
 import { FcViewDetails } from "@react-icons/all-files/fc/FcViewDetails"
 import { SiBitbucket } from "@react-icons/all-files/si/SiBitbucket"
 import { FaGitlab } from "@react-icons/all-files/fa/FaGitlab"
+import { FaPlay } from "@react-icons/all-files/fa/FaPlay"
+import { FaPause } from "@react-icons/all-files/fa/FaPause"
 
 // languages
 import { FaJava } from "@react-icons/all-files/fa/FaJava"
@@ -145,6 +148,8 @@ const ResponsiveIcons = {
     "link": { name: "Link", icon: <BiLinkAlt className="icons" /> },
     "close": { name: "Close", icon: <MdClose className="icons" /> },
     "details": { name: "Details", icon: <FcViewDetails className="icons" /> },
+    "play": { name: "Play", icon: <FaPlay className="icons" /> },
+    "pause": { name: "Pause", icon: <FaPause className="icons" /> },
 
     // languages
     "html": { name: "HTML5", icon: <FaHtml5 className="icons" /> },
@@ -211,7 +216,7 @@ const ResponsiveIcons = {
     // tools / tech / cloud
     "git": { name: "Git", icon: <FaGitAlt className="icons" /> },
     "bitbucket": { name: "Bitbucket", icon: <SiBitbucket className="icons" /> },
-    "gitlab": { name: "GitLab", icon: <FaGithub className="icons" /> },
+    "gitlab": { name: "GitLab", icon: <FaGitlab className="icons" /> },
     "docker": { name: "Docker", icon: <FaDocker className="icons" /> },
     "dockerhub": { name: "DockerHub", icon: <FaDocker className="icons" /> },
     "vim": { name: "Vim", icon: <DiVim className="icons" /> },

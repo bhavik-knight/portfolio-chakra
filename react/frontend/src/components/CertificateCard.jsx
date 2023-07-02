@@ -59,6 +59,17 @@ function CertificateCard({ certs }) {
     const [cardWidth, setCardWidth] = useState(() => getWidth())
     const [cardHeight, setCardHeight] = useState(() => getHeight(cardWidth))
 
+    // to keep track of landscape or not
+    const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight)
+    useEffect(() => {
+        function handleOrientation() {
+            setIsLandscape(window.innerWidth > window.innerHeight)
+        }
+
+        window.addEventListener("orientationchange", handleOrientation)
+        return () => window.removeEventListener("orientationchange", handleOrientation)
+    }, [])
+
     // certificate pdf dimentions
     const [certDim, setCertDim] = useState({
         width: { base: cardWidth, md: cardWidth * 0.8 },
@@ -134,7 +145,7 @@ function CertificateCard({ certs }) {
 
                 <AccordionPanel
                     ref={panelRef}
-                    px={{ base: 0, lg: 4 }} py={{ base: 0, lg: 4 }}
+                    px={{ base: 0, md: 2, lg: 4 }} py={{ base: 0, lg: 4 }}
                     size={{ base: "md", md: "lg" }}
                 >
                     <VStack my={0} gap={1} spacing={0} py={1}>
@@ -154,7 +165,10 @@ function CertificateCard({ certs }) {
 
                     <Divider mx="auto" width="95%" my={1} />
 
-                    <Box px={(panelRef.current?.offsetWidth - cardWidth) / 2}>
+                    <Box
+                        px={isMobile ? (isLandscape && ((panelRef.current?.offsetWidth - cardWidth) / 2)) : 1}
+                        w="100%"
+                    >
                         <RenderCarousel
                             items={certificateList}
                             cardWidth={cardWidth}
@@ -220,7 +234,7 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
                 width={certDim.width}
                 height={certDim.height}
             >
-                <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
+                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.7.107/build/pdf.worker.min.js">
                     <Viewer fileUrl={c.certImg} />
                 </Worker>
             </CardBody>

@@ -9,6 +9,7 @@ import { BiRadioCircle } from "@react-icons/all-files/bi/BiRadioCircle"
 import { VscCircleFilled } from "@react-icons/all-files/vsc/VscCircleFilled"
 import { useMediaQuery } from "@chakra-ui/react"
 import { first } from "lodash"
+import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
 function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", timeInterval = 5 }) {
@@ -70,6 +71,22 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
     }, [handleNextClick])
 
 
+    // autoplay: play / pause functionality
+    const [autoplay, setAutoplay] = useState(true)
+    function handleAutoplay() {
+        setAutoplay(prevAutoplay => !prevAutoplay)
+    }
+    useEffect(() => {
+        if (!autoplay) {
+            if (timeRef.current) {
+                clearTimeout(timeRef.current)
+            } else {
+                handleNextClick
+            }
+        }
+    }, [autoplay])
+
+
     // pagination buttons
     const paginationButtons = (btnType) => {
         // to get the numbered pagination or dots
@@ -111,37 +128,45 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
     const firstLastBtnStyles = {
         variant: "outline",
         size: { base: "xs", md: "sm", lg: "md" },
-        w: "fit-content",
+        // w: "fit-content",
         _hover: { boxShadow: "1px 1px 4px" }
     }
 
+
     return (
         items.length !== 0 &&
-        <Box mx="auto" py={2}>
+        <Box py={2} px={1} w="100%">
             {/* top text */}
             <HStack
                 as={Center}
                 justify="space-between" mx="auto"
-                w={{ base: "100%", lg: "90%" }}
+                w={{ base: "100%", lg: cardWidth }}
             >
                 <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(0)}>First</Button>
-                <Center as={Text} size={{ base: "sm", lg: "md" }}>{current + 1} of {length}</Center>
+                <Flex size={{ base: "sm", lg: "md" }} mx={1} gap={1} as={Center}>
+                    <IconButton
+                        {...firstLastBtnStyles}
+                        isRound
+                        onClick={handleAutoplay}
+                        icon={autoplay ? ResponsiveIcons.pause.icon : ResponsiveIcons.play.icon}
+                        aria-label="autoplay button"
+                    />
+                    {current + 1} of {length}
+                </Flex>
                 <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(length - 1)}>Last</Button>
             </HStack>
 
             {/* moddle carousel card area */}
-            <Box mx="auto" w="100%"
-            // bg="yellow"
-            >
+            <Box mx="auto" w="100%">
                 {/* carousel part */}
                 <Card
+                    ref={timeRef}
                     overflow="hidden"
                     className="wrapper-card"
                     h={cardHeight}
                     w={{ base: "100%", lg: cardWidth }}
                     px={0}
                     mx="auto"
-                    py="auto"
                     border="1px solid"
                     borderRadius="1em"
                 >
@@ -159,7 +184,7 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
             {/* pagination area */}
             <Flex
                 mx="auto"
-                width={{ base: "100%", lg: "90%" }}
+                width={{ base: "100%", lg: cardWidth }}
                 direction="row"
                 alignItems="center"
             >
