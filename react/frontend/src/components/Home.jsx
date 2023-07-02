@@ -113,7 +113,7 @@ function Home() {
                         as={Container}
                         mx="auto"
                     >
-                        <Image className="sticker" src="./logos/bhavik_sticker.png" objectFit="contain" alt="bhavik sticker" />
+                        <Image className="sticker" src="./images/bhavik_sticker.png" objectFit="contain" alt="bhavik sticker" />
                     </Flex>
 
                     <Stack
