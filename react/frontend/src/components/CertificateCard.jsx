@@ -173,7 +173,7 @@ function CertificateCard({ certs }) {
                             items={certificateList}
                             cardWidth={cardWidth}
                             cardHeight={cardHeight}
-                            timeInterval={10}
+                            timeInterval={5}
                         />
                     </Box>
 
