@@ -12,7 +12,7 @@ import { first } from "lodash"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
-function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", timeInterval = 5 }) {
+function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", timeInterval = 4 }) {
 
     const [isMobile] = useMediaQuery("(max-width:992px)")
 
@@ -80,8 +80,6 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
         if (!autoplay) {
             if (timeRef.current) {
                 clearTimeout(timeRef.current)
-            } else {
-                handleNextClick
             }
         }
     }, [autoplay])
