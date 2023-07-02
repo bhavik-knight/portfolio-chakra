@@ -47,6 +47,7 @@ import { SiBitbucket } from "@react-icons/all-files/si/SiBitbucket"
 import { FaGitlab } from "@react-icons/all-files/fa/FaGitlab"
 import { FaPlay } from "@react-icons/all-files/fa/FaPlay"
 import { FaPause } from "@react-icons/all-files/fa/FaPause"
+import { FaRegFilePdf } from "@react-icons/all-files/fa/FaRegFilePdf"
 
 // languages
 import { FaJava } from "@react-icons/all-files/fa/FaJava"
@@ -150,6 +151,8 @@ const ResponsiveIcons = {
     "details": { name: "Details", icon: <FcViewDetails className="icons" /> },
     "play": { name: "Play", icon: <FaPlay className="icons" /> },
     "pause": { name: "Pause", icon: <FaPause className="icons" /> },
+    "pdf": { name: "Filetype PDF", icon: <FaRegFilePdf className="icons" /> },
+    "resume": { name: "Resume PDF", icon: <FaRegFilePdf className="icons" /> },
 
     // languages
     "html": { name: "HTML5", icon: <FaHtml5 className="icons" /> },
