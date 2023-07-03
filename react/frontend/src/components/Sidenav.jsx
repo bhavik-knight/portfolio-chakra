@@ -7,7 +7,7 @@ import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
 const btnStyles = {
-    variant: "outline",
+    variant: "ghost",
     _hover: { boxShadow: "1px 1px 8px" },
     p: { base: 0, md: 2, lg: 4 }
 }
