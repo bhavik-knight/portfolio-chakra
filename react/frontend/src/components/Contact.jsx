@@ -117,7 +117,7 @@ function Contact() {
                                 boxSize={{ base: "100%", lg: "80%" }}
                                 display={{ base: "flex", md: "none", lg: "flex" }}
                             >
-                                <Image src="logos/BhavikQR.png" alt="qr-code" borderRadius="1em" />
+                                <Image src="images/BhavikQR.png" alt="qr-code" borderRadius="1em" />
                             </Box>
 
                             <Center>

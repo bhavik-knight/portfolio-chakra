@@ -13,7 +13,7 @@ const btnStyles = {
 }
 
 
-function Sidenav({ pages, activePage, selectPage, sidenavHeader }) {
+function Sidenav({ pages, activePage, selectPage, sidenavHeader, isLandscape }) {
 
     // to check the screen is large or not to display icons on sidenav buttons
     const [isMobile] = useMediaQuery("(max-width: 992px)")
@@ -56,7 +56,7 @@ function Sidenav({ pages, activePage, selectPage, sidenavHeader }) {
 }
 
 
-function CreateButton({ isMobile, page, activePage, selectPage }) {
+function CreateButton({ isMobile, page, activePage, selectPage, isLandscape }) {
     return (
         <Tooltip
             hasArrow

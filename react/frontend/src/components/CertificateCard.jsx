@@ -14,6 +14,9 @@ import { RenderCarousel } from "./RenderCarousel"
 import { Viewer, Worker } from "@react-pdf-viewer/core"
 import "@react-pdf-viewer/core/lib/styles/index.css"
 
+import packageJson from '../../package.json'
+const pdfjsVersion = packageJson.dependencies['pdfjs-dist'].slice(1)
+
 // text-font-styles
 const textFontStyle = {
     fontSize: { base: "0.8em", md: "0.9em", lg: "0.95em" },
@@ -58,6 +61,17 @@ function CertificateCard({ certs }) {
     // card carrying all details + credentials
     const [cardWidth, setCardWidth] = useState(() => getWidth())
     const [cardHeight, setCardHeight] = useState(() => getHeight(cardWidth))
+
+    // to keep track of landscape or not
+    const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight)
+    useEffect(() => {
+        function handleOrientation() {
+            setIsLandscape(window.innerWidth > window.innerHeight)
+        }
+
+        window.addEventListener("orientationchange", handleOrientation)
+        return () => window.removeEventListener("orientationchange", handleOrientation)
+    }, [])
 
     // certificate pdf dimentions
     const [certDim, setCertDim] = useState({
@@ -134,7 +148,7 @@ function CertificateCard({ certs }) {
 
                 <AccordionPanel
                     ref={panelRef}
-                    px={{ base: 0, lg: 4 }} py={{ base: 0, lg: 4 }}
+                    px={{ base: 0, md: 2, lg: 4 }} py={{ base: 0, lg: 4 }}
                     size={{ base: "md", md: "lg" }}
                 >
                     <VStack my={0} gap={1} spacing={0} py={1}>
@@ -154,12 +168,15 @@ function CertificateCard({ certs }) {
 
                     <Divider mx="auto" width="95%" my={1} />
 
-                    <Box px={(panelRef.current?.offsetWidth - cardWidth) / 2}>
+                    <Box
+                        px={isMobile ? (isLandscape && ((panelRef.current?.offsetWidth - cardWidth) / 2)) : 1}
+                        w="100%"
+                    >
                         <RenderCarousel
                             items={certificateList}
                             cardWidth={cardWidth}
                             cardHeight={cardHeight}
-                            timeInterval={10}
+                            timeInterval={5}
                         />
                     </Box>
 
@@ -220,7 +237,7 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
                 width={certDim.width}
                 height={certDim.height}
             >
-                <Worker workerUrl="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js">
+                <Worker workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.js`}>
                     <Viewer fileUrl={c.certImg} />
                 </Worker>
             </CardBody>
