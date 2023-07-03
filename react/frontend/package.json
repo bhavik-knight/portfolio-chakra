@@ -22,7 +22,7 @@
     "formik": "^2.4.2",
     "framer-motion": "^10.12.5",
     "nanoid": "^4.0.2",
-    "pdfjs-dist": "^3.7.107",
+    "pdfjs-dist": "^3.8.162",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
