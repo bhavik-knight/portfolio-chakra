@@ -7,7 +7,7 @@ import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
 const btnStyles = {
-    variant: "ghost",
+    variant: "outline",
     _hover: { boxShadow: "1px 1px 8px" },
     p: { base: 0, md: 2, lg: 4 }
 }
@@ -19,25 +19,24 @@ function Sidenav({ pages, activePage, selectPage, sidenavHeader, isLandscape }) 
     const [isMobile] = useMediaQuery("(max-width: 992px)")
     const topPosition = sidenavHeader ? 0 : { base: "50px", lg: "60px" }
     const bgColor = sidenavHeader ? "transparent" : { base: useColorModeValue("gray.100", "gray.800"), lg: "transparent" }
-    const alignStyle = sidenavHeader ? "center" : "none"
+    const alignStyle = sidenavHeader ? "center" : "flex-start"
 
     return (
-        <Stack
-            as={ButtonGroup}
+        <ButtonGroup
+            as={isMobile ? HStack : VStack}
+            bg={bgColor}
             isAttached={isMobile}
             px={{ base: 0, lg: 2 }}
-            py={{ base: 0, md: 2, lg: 4 }}
-            m={0}
+            py={{ base: 0, lg: 4 }}
             mx={sidenavHeader && "auto"}
             spacing={0}
+            gap={0}
             w={sidenavHeader ? "fit-content" : { base: "100vw", lg: "fit-content" }}
             h={sidenavHeader ? "50px" : "fit-content"}
             position="sticky"
             justify={{ base: "center", lg: "flex-start" }}
             alignItems={alignStyle}
-            direction={{ base: "row", lg: "column" }}
             top={topPosition}
-            bg={bgColor}
             zIndex={sidenavHeader ? 10 : 5}
         >
             {
@@ -51,7 +50,7 @@ function Sidenav({ pages, activePage, selectPage, sidenavHeader, isLandscape }) 
                     />
                 ))
             }
-        </Stack >
+        </ButtonGroup >
     )
 }
 
@@ -87,6 +86,7 @@ function CreateButton({ isMobile, page, activePage, selectPage, isLandscape }) {
                         leftIcon={ResponsiveIcons[page]?.icon}
                         justifyContent="flex-start"
                         textTransform="capitalize"
+                        w="100%"
                     >
                         {page}
                     </Button>
