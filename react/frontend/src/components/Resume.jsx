@@ -4,7 +4,6 @@ import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { Heading, Text, chakra } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { useRef, useState, useEffect } from "react"
-import { useColorModeValue } from "@chakra-ui/react"
 
 // for pdf rendering
 import { Worker, Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core"
@@ -31,9 +30,14 @@ const headerFontStyle = {
     mx: "auto",
 }
 
+// change this name for the resume filename
+const fileName = "BhavikBhagat_Resume_JrFullstackDev.pdf"
 
 function Resume() {
+    // get url of storage where pdf is stored
+    const [resumeURL, setResumeURL] = useState(`images/${fileName}`)
 
+    // to keep track of the area where pdf to be rendered
     const pdfRef = useRef()
     const [pdfWidth, setPdfWidth] = useState(0)
     useEffect(() => {
@@ -50,13 +54,19 @@ function Resume() {
     const transform = (slot) => ({
         ...slot,
         Open: () => <></>,
+        OpenMenuItem: () => <></>,
         SwitchTheme: () => <></>,
+        SwitchThemeMenuItem: () => <></>,
         CurrentPageInput: () => <></>,
         NumberOfPages: () => <></>,
         GoToNextPage: () => <></>,
+        GoToNextPageMenuItem: () => <></>,
         GoToPreviousPage: () => <></>,
+        GoToPreviousPageMenuItem: () => <></>,
         GoToFirstPage: () => <></>,
+        GoToFirstPageMenuItem: () => <></>,
         GoToLastPage: () => <></>,
+        GoToLastPageMenuItem: () => <></>,
     })
 
 
@@ -84,9 +94,9 @@ function Resume() {
                 <CardBody ref={pdfRef} m={0} p={0}>
                     <Worker workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.js`}>
                         <Viewer
-                            fileUrl="images/BhavikBhagat_Resume_JrSoftwareDev.pdf"
+                            fileUrl={resumeURL}
+                            withCredentials={true}
                             plugins={[toolbarPluginInstance]}
-                            theme="auto"
                             defaultScale={SpecialZoomLevel.PageWidth}
                         />
                     </Worker>
