@@ -195,7 +195,7 @@ const ResponsiveIcons = {
     "imageio": { name: "Imageio" },
     "pyswarms": { name: "Pyswarms" },
     "pygame": { name: "Pygame" },
-    "beautifulsoup": { name: "Beautiful Soup" },
+    "beautifulsoup": { name: "BeautifulSoup" },
     "seaborn": { name: "Seaborn" },
     "plotly": { name: "Plotly" },
 
