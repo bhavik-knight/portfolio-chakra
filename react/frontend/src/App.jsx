@@ -12,6 +12,7 @@ import { Certificates } from "./components/Certificates"
 import { Experiences } from "./components/Experiences"
 import { Home } from "./components/Home"
 import { Contact } from "./components/Contact"
+import { Resume } from "./components/Resume"
 import { ContactForm } from "./components/ContactForm"
 import { ResponsiveIcons } from "./components/ResponsiveIcons"
 
@@ -114,6 +115,11 @@ function App() {
             "icon": ResponsiveIcons.contact.icon,
             "page": <Contact />
         },
+
+        "resume": {
+            "icon": ResponsiveIcons.pdf.icon,
+            "page": <Resume />
+        }
         // "certificates": {
         //     "icon": ResponsiveIcons.certificates.icon,
         //     "page": <Certificates />

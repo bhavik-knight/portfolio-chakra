@@ -14,6 +14,9 @@ import { RenderCarousel } from "./RenderCarousel"
 import { Viewer, Worker } from "@react-pdf-viewer/core"
 import "@react-pdf-viewer/core/lib/styles/index.css"
 
+import packageJson from '../../package.json'
+const pdfjsVersion = packageJson.dependencies['pdfjs-dist'].slice(1)
+
 // text-font-styles
 const textFontStyle = {
     fontSize: { base: "0.8em", md: "0.9em", lg: "0.95em" },
@@ -234,7 +237,7 @@ function CreateCertificate({ c, certRef, cardWidth, cardHeight, certDim }) {
                 width={certDim.width}
                 height={certDim.height}
             >
-                <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.7.107/build/pdf.worker.min.js">
+                <Worker workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.js`}>
                     <Viewer fileUrl={c.certImg} />
                 </Worker>
             </CardBody>
