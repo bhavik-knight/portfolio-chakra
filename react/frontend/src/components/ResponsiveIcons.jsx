@@ -46,7 +46,9 @@ import { FcViewDetails } from "@react-icons/all-files/fc/FcViewDetails"
 import { SiBitbucket } from "@react-icons/all-files/si/SiBitbucket"
 import { FaGitlab } from "@react-icons/all-files/fa/FaGitlab"
 import { FaPlay } from "@react-icons/all-files/fa/FaPlay"
+import { BsPlayFill } from "@react-icons/all-files/bs/BsPlayFill"
 import { FaPause } from "@react-icons/all-files/fa/FaPause"
+import { BsPauseFill } from "@react-icons/all-files/bs/BsPauseFill"
 import { FaRegFilePdf } from "@react-icons/all-files/fa/FaRegFilePdf"
 
 // languages
@@ -149,8 +151,8 @@ const ResponsiveIcons = {
     "link": { name: "Link", icon: <BiLinkAlt className="icons" /> },
     "close": { name: "Close", icon: <MdClose className="icons" /> },
     "details": { name: "Details", icon: <FcViewDetails className="icons" /> },
-    "play": { name: "Play", icon: <FaPlay className="icons" /> },
-    "pause": { name: "Pause", icon: <FaPause className="icons" /> },
+    "play": { name: "Play", icon: <BsPlayFill className="icons" /> },
+    "pause": { name: "Pause", icon: <BsPauseFill className="icons" /> },
     "pdf": { name: "Filetype PDF", icon: <FaRegFilePdf className="icons" /> },
     "resume": { name: "Resume PDF", icon: <FaRegFilePdf className="icons" /> },
 
