@@ -108,7 +108,7 @@ function Contact() {
                                 </Text>
                                 <Flex alignItems="center" gap={1}>
                                     {ResponsiveIcons["phone"]["icon"]}
-                                    <Text fontSize={["0.9em", "0.95em", "1em"]}>(902)-338-06821</Text>
+                                    <Text fontSize={["0.9em", "0.95em", "1em"]}>(902)-338-0682</Text>
                                 </Flex>
                             </Flex>
 
