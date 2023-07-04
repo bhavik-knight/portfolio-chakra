@@ -12,6 +12,13 @@ This is my website to demonstrate my diverse skills and work experience.
 - Containorized the app using docker, and image is available on the DockerHub.
 - I utilized chatGPT to improve the grammar, and sentence structure, for debugging and learning purpose to implement some features.
 
+
+## Intructions to run:
+- You can pull the image fron the docker hub using the command: `docker pull b05k19/portfolio:1.0`
+- run using this command `docker run -d -p 5000:3000 b05k19/portfolio:1.0`
+- the app will be running at port `5000`, you can check it using `localhost:5000` url in your browser
+
+
 ## Reference:
 - ReactJS, ChakraUI [net-ninja youtube channel](https://www.youtube.com/watch?v=jLd059lbJkw&list=PL4cUxeGkcC9hcnIeryurNMMcGBHp7AYlP&index=9)
 - useState vs useRef: https://blog.logrocket.com/usestate-vs-useref/
