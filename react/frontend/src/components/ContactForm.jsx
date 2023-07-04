@@ -45,7 +45,7 @@ const formValidationSchema = yup.object({
         .string(),
     email: yup
         .string()
-        .required("Email is required to send the email!")
+        // .required("Email is required to send the email!")
         .matches(emailRegEx, "Invalid email! Please check your email."),
     subject: yup
         .string()
@@ -141,7 +141,7 @@ function ContactForm() {
                             label="Email ID"
                             id="email"
                             name="email"
-                            required={true}
+                            required={false}
                             placeholder="jane.doe@example.com"
                         />
 
