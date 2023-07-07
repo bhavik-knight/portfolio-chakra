@@ -1,15 +1,16 @@
 import "./Home.css"
-import { List, UnorderedList, ListItem } from "@chakra-ui/react"
-import { Heading, Text, Image, AspectRatio } from "@chakra-ui/react"
-import { Stack, VStack, StackDivider, Container, Flex, Center } from "@chakra-ui/react"
-import { Divider, Spacer, Button } from "@chakra-ui/react"
-import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
-import { useMediaQuery } from "@chakra-ui/react"
 import { AboutMe } from "./AboutMe"
+
+import { List, ListItem } from "@chakra-ui/react"
+import { Text, Image } from "@chakra-ui/react"
+import { Stack, VStack, StackDivider, Container, Flex, Center } from "@chakra-ui/react"
+import { Divider, Spacer } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody } from "@chakra-ui/react"
+import { useMediaQuery } from "@chakra-ui/react"
 
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
@@ -26,7 +27,7 @@ function Home() {
     const [isMobile] = useMediaQuery("(max-width: 992px)")
 
     return (
-        <Stack p={{ base: 1, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
+        <Stack p={{ base: 1, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%" >
 
             {/* summary */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>

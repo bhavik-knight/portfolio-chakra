@@ -1,28 +1,26 @@
 import "./ProjectDetailsModal.css"
-import { nanoid } from "nanoid"
-import {
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalFooter,
-    ModalBody,
-    ModalCloseButton,
-    useColorModeValue,
-} from "@chakra-ui/react"
-
-import { useDisclosure } from "@chakra-ui/react"
-import { AspectRatio, Box, Flex, Stack, Center, Container, Grid } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Button, ButtonGroup, Tooltip } from "@chakra-ui/react"
-import { Heading, Text, Divider, Spacer, Img } from "@chakra-ui/react"
-import { UnorderedList, List, ListItem } from "@chakra-ui/react"
-import { Image, Tag } from "@chakra-ui/react"
-import { useState, useEffect, useCallback, useRef, useLayoutEffect } from "react"
-import { useMediaQuery } from "@chakra-ui/react"
 import { RenderCarousel } from "./RenderCarousel"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 import { CreateSkillBadge } from "./CreateSkillBadge"
+
+import { nanoid } from "nanoid"
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody } from "@chakra-ui/react"
+
+import { Box, Flex, Stack } from "@chakra-ui/react"
+import { Button, ButtonGroup } from "@chakra-ui/react"
+import { Text, Divider, Spacer } from "@chakra-ui/react"
+import { UnorderedList, ListItem } from "@chakra-ui/react"
+import { Image } from "@chakra-ui/react"
+import { useMediaQuery, useColorModeValue } from "@chakra-ui/react"
+import { useState, useEffect, useRef } from "react"
+
+
+const textFontStyle = {
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 2, md: 4, lg: 8 },
+    py: 2
+}
 
 
 function ProjectDetailsModal({ isOpen, onClose, project }) {
@@ -38,32 +36,29 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
 
         // orientation angle 90 means - horizontal / landscape mode
         let newWidth = screenObj.availWidth
-        // screenObj.orientation.angle === 90 ? screenObj.availWidth * 0.8 - 12 : screenObj.availWidth
         return Math.min(newWidth, 980)
     }
 
     function getCardHeight(width) {
-        let screenObj = window.screen
-
+        // let screenObj = window.screen
+        let isLandscape = window.innerWidth > window.innerHeight
         // if phone is held horizontally / landscape mode - width can be more than 2x to height
         // in otherwords aspect ratio can be bigger than 2:1 depending on phone
         // that is why set height accordingly by taking 80% of height available without padding; margin
         // if phone is help vertically / portait mode - height is far more than width
         // in such cases we can take height hakf of the width
-        let newHeight = screenObj.orientation.angle === 90 ? screenObj.availHeight * 0.8 - 12 : width * 0.6
+        let newHeight = isMobile ? (isLandscape && width * 0.4) : width * 0.6
         return Math.max(newHeight, 200)
     }
 
     // to keep track of the dimensions
     const [cardWidth, setCardWidth] = useState(() => getCardWidth())
-    const [cardHeight, setCardHeight] = useState(() => getCardHeight(getCardWidth()))
+    const [cardHeight, setCardHeight] = useState(() => getCardHeight(cardWidth))
 
     // to store all project images at once
     const [projectImages, setProjectImages] = useState(
         () => getProjectImages({ project, cardWidth, cardHeight })
     )
-
-
 
     useEffect(() => {
         // to handle what happens when screen resizes
@@ -77,7 +72,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                 setCardHeight(newHeight)
             } else {
                 setCardWidth(getCardWidth())
-                setCardHeight(getCardHeight(getCardWidth()))
+                setCardHeight(getCardHeight(cardWidth))
             }
 
             setProjectImages(getProjectImages({ project, cardWidth, cardHeight }))
@@ -88,6 +83,8 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         const handleOrientation = () => {
             handleResize()
         }
+
+        handleResize()
 
         // listen for screen resize
         window.addEventListener("resize", handleResize)
@@ -104,7 +101,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
             window.removeEventListener("orientationchange", handleOrientation)
         }
 
-    }, [cardWidth, cardHeight])
+    }, [cardWidth, cardHeight, isMobile])
 
     // some styles for the buttons: source; link; close
     const btnHoverStyle = {
@@ -124,7 +121,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         >
             <ModalOverlay />
             <ModalContent
-                my={{ base: 2, md: 2, lg: "auto" }}
+                my={{ base: 2, lg: "auto" }}
             >
 
                 <ModalHeader
@@ -174,10 +171,8 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
                 <Divider mx="auto" width="95%" my={0} />
 
                 <ModalBody w="100%" px={{ base: 0, lg: 2 }}>
-                    <Box px={8}>
-                        <UnorderedList
-                            fontSize={{ base: "0.8em", md: "0.9em", lg: "1em" }}
-                        >
+                    <Box px={{ base: 2, lg: 8 }}>
+                        <UnorderedList {...textFontStyle}>
                             {
                                 project.details.map(task => {
                                     return (

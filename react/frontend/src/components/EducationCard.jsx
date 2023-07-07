@@ -1,18 +1,17 @@
 import { nanoid } from "nanoid"
-import { useState, useEffect } from "react"
-import { useBoolean } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Flex, Center, Container, Spacer, Divider, Tag } from "@chakra-ui/react"
-import { Stack, HStack, VStack } from "@chakra-ui/react"
+import { Flex, Spacer, Tag } from "@chakra-ui/react"
+import { HStack, VStack } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
 import { Button } from "@chakra-ui/react"
 import { ChevronDownIcon, StarIcon } from "@chakra-ui/icons"
-import { TableContainer, Table, TableCaption, Thead, Tbody, Tfoot, Th, Tr, Td } from "@chakra-ui/react"
+import { Table, TableCaption, Thead, Tbody, Tfoot, Th, Tr, Td } from "@chakra-ui/react"
 import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
+import { useBoolean } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
 
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2

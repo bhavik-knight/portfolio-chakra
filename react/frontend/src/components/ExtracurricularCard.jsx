@@ -1,14 +1,14 @@
 import "./ExtracurricularCard.css"
+
 import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
-import { Flex, Container, Center, Image } from "@chakra-ui/react"
-import { Stack, HStack, VStack } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
+import { Flex, Image } from "@chakra-ui/react"
+import { Card, CardBody, CardFooter } from "@chakra-ui/react"
 import { Text, Heading, Spacer, Divider } from "@chakra-ui/react"
 import { useColorModeValue } from "@chakra-ui/react"
 
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2

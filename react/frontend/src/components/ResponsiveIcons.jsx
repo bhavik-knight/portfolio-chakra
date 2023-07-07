@@ -1,7 +1,4 @@
 import "./ResponsiveIcons.css"
-import { useMediaQuery } from "@chakra-ui/react"
-import { Icon } from "@chakra-ui/icons"
-import { useState, useEffect } from "react"
 
 // skills
 

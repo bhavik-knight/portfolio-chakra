@@ -1,17 +1,18 @@
 import "./Projects.css"
-import { useState, useEffect } from "react"
-import { Divider, ListIcon, List, ListItem, TagRightIcon, Spinner } from "@chakra-ui/react"
-import { Heading, Text } from "@chakra-ui/react"
-import { Flex, Stack, Center, VStack, HStack, } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Tabs, Tab, TabPanels, TabPanel, TabList, } from "@chakra-ui/react"
-import { nanoid } from "nanoid"
 import { ProjectCard } from "./ProjectCard"
 import { getData } from "../data/getData"
 
+import { nanoid } from "nanoid"
+import { Divider, List, ListItem, Spinner } from "@chakra-ui/react"
+import { Heading, } from "@chakra-ui/react"
+import { Flex, Stack, Center, } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody } from "@chakra-ui/react"
+import { Tabs, Tab, TabPanels, TabPanel, TabList, } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
+
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
@@ -99,7 +100,7 @@ function Projects() {
                         <TabPanels>
                             {
                                 projectTypes.map(type =>
-                                    <TabPanel as={Flex} key={nanoid()} justifyContent="space-evenly" flexWrap="wrap" px={0}>
+                                    <TabPanel as={Flex} key={nanoid()} justifyContent="space-evenly" flexWrap="wrap" px={0} gap={1}>
                                         {
                                             projects
                                                 .filter(p => p.type === type)

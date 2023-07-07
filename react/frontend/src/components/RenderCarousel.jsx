@@ -1,15 +1,22 @@
+import { ResponsiveIcons } from "./ResponsiveIcons"
+
 import { nanoid } from "nanoid"
-import { useState, useEffect, useRef } from "react"
-import { Box, Container, Center, Wrap, Flex, Stack, HStack, VStack } from "@chakra-ui/react"
-import { Image, Text } from "@chakra-ui/react"
+import { Box, Center, Flex, HStack } from "@chakra-ui/react"
+import { Text } from "@chakra-ui/react"
 import { Button, ButtonGroup, IconButton } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
 import { BiRadioCircle } from "@react-icons/all-files/bi/BiRadioCircle"
 import { VscCircleFilled } from "@react-icons/all-files/vsc/VscCircleFilled"
 import { useMediaQuery } from "@chakra-ui/react"
-import { first } from "lodash"
-import { ResponsiveIcons } from "./ResponsiveIcons"
+import { useState, useEffect, useRef } from "react"
+
+
+const textFontStyle = {
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
+    textAlign: "justify",
+    px: { base: 4, lg: 8 },
+    py: 2
+}
 
 
 function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", timeInterval = 4 }) {
@@ -141,23 +148,26 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
                 w={{ base: "100%", lg: cardWidth }}
             >
                 <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(0)}>First</Button>
-                <Flex size={{ base: "sm", lg: "md" }} mx={1} gap={1} as={Center}>
+                <Flex size={{ base: "sm", lg: "md" }} mx={1} gap={1} alignItems="center">
                     <IconButton
+                        className="btnIcon"
                         {...firstLastBtnStyles}
                         isRound
                         onClick={handleAutoplay}
                         icon={autoplay ? ResponsiveIcons.pause.icon : ResponsiveIcons.play.icon}
                         aria-label="autoplay button"
                     />
-                    {current + 1} of {length}
+                    <Text px={1}>
+                        {current + 1} of {length}
+                    </Text>
                 </Flex>
                 <Button {...firstLastBtnStyles} onClick={() => handleBtnClick(length - 1)}>Last</Button>
             </HStack>
 
             {/* moddle carousel card area */}
-            <Box mx="auto" w="100%">
+            <Box mx="auto" w="100%" my={1}>
                 {/* carousel part */}
-                <Card
+                <Box
                     ref={timeRef}
                     overflow="hidden"
                     className="wrapper-card"
@@ -168,14 +178,16 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
                     border="1px solid"
                     borderRadius="1em"
                 >
-                    <Flex
+                    <Box
+                        alignSelf="center"
+                        as={Flex}
                         width={cardWidth * length}
                         transition="transform ease-out 1s"
                         transform={`translate(${-(current * cardWidth)}px)`}
                     >
                         {items}
-                    </Flex>
-                </Card>
+                    </Box>
+                </Box>
 
             </Box >
 
@@ -190,11 +202,12 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
                 {/* left arrow button */}
                 <IconButton
                     isRound
+                    className="btnIcon"
                     icon={<ArrowBackIcon />}
                     aria-label="previous-button"
                     onClick={handlePrevClick}
                     _hover={{ boxShadow: "1px 1px 4px" }}
-                    size={{ base: "xs", lg: "md" }}
+                    size={{ base: "xs", md: "sm", lg: "md" }}
                     variant="outline"
                 />
 
@@ -212,11 +225,12 @@ function RenderCarousel({ items, cardWidth, cardHeight, btnType = "numbers", tim
                 {/* right arrow button */}
                 <IconButton
                     isRound
+                    className="btnIcon"
                     icon={<ArrowForwardIcon />}
                     aria-label="next-button"
                     onClick={handleNextClick}
                     _hover={{ boxShadow: "1px 1px 4px" }}
-                    size={{ base: "xs", lg: "md" }}
+                    size={{ base: "xs", md: "sm", lg: "md" }}
                     variant="outline"
                 />
 

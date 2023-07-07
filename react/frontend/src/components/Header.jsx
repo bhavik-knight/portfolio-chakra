@@ -1,12 +1,9 @@
 import "./Header.css"
 import { ResponsiveIcons } from "./ResponsiveIcons"
-import { useState, useRef, useEffect } from "react"
-import { useColorModeValue, useMediaQuery } from "@chakra-ui/react"
-import { Heading, Spacer, Menu, Flex, Image, Text } from "@chakra-ui/react"
-import { Tooltip, Button, Icon, IconButton, ButtonGroup } from "@chakra-ui/react"
-import { Container, Center, Box, Stack } from "@chakra-ui/react"
-import { Sidenav } from "./Sidenav"
-import { isString } from "formik"
+
+import { Flex, Text } from "@chakra-ui/react"
+import { Tooltip, IconButton, ButtonGroup } from "@chakra-ui/react"
+import { useMediaQuery } from "@chakra-ui/react"
 
 
 function Header({ colorMode, changeColorMode, title, selectPage, bgColor, isScrolled }) {
@@ -48,7 +45,8 @@ function Header({ colorMode, changeColorMode, title, selectPage, bgColor, isScro
             alignItems="center"
             justify="space-between"
             bg={bgColor}
-            zIndex={10}
+            zIndex={999}
+            sx={{ WebkitTransform: `translate3d(0, 0, 0)` }}
             boxShadow={isScrolled && "0px 0px 16px 0px"}
         >
             <Tooltip hasArrow label="home-logo" ariaLabel="home-logo" placement="right">

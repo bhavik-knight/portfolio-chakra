@@ -1,12 +1,12 @@
-import { useRef, useState, useEffect } from "react"
-import { useMediaQuery, useToast, useColorModeValue } from "@chakra-ui/react"
-import { ResponsiveIcons } from "./ResponsiveIcons"
-import { Divider, Spacer, Text, Heading, Image, Link } from "@chakra-ui/react"
-import { StackDivider, Stack, HStack, VStack } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Box, Flex, Container, Center } from "@chakra-ui/react"
-import { ButtonGroup, Button, IconButton, Tooltip } from "@chakra-ui/react"
 import { ContactForm } from "./ContactForm"
+import { ResponsiveIcons } from "./ResponsiveIcons"
+
+import { Divider, Text, Heading, Image, Link } from "@chakra-ui/react"
+import { StackDivider, Stack, VStack } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
+import { Box, Flex, Center } from "@chakra-ui/react"
+import { ButtonGroup, IconButton, Tooltip } from "@chakra-ui/react"
+import { useMediaQuery, useColorModeValue } from "@chakra-ui/react"
 
 
 // box styles for form and QR code
@@ -19,7 +19,7 @@ const boxStyles = {
 
 // body text font style
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
@@ -27,7 +27,7 @@ const textFontStyle = {
 
 // card header style
 const headerFontStyle = {
-    fontSize: { base: "md", md: "lg", lg: "xl" },
+    fontSize: { base: "lg", md: "xl", lg: "2xl" },
     mx: "auto",
 }
 
@@ -106,6 +106,9 @@ function Contact() {
                                     <span className="logoText">a</span>
                                     <span className="logoText">t</span>
                                 </Text>
+
+                                <EmailCard handleEmailClick={handleEmailClick} display={{ base: "none", md: "flex", lg: "none" }} />
+
                                 <Flex alignItems="center" gap={1}>
                                     {ResponsiveIcons["phone"]["icon"]}
                                     <Text fontSize={["0.9em", "0.95em", "1em"]}>(902)-338-0682</Text>
@@ -120,17 +123,7 @@ function Contact() {
                                 <Image src="images/BhavikQR.png" alt="qr-code" borderRadius="1em" />
                             </Box>
 
-                            <Center>
-                                {/* ref: https://stackoverflow.com/questions/63782544/react-open-mailto-e-mail-client-onclick-with-body-from-textarea */}
-                                <Link to="#" onClick={handleEmailClick}>
-                                    <Flex alignItems="center" gap={1}>
-                                        {ResponsiveIcons["email"]["icon"]}
-                                        <Text fontSize={["0.9em", "0.95em", "1em"]}>
-                                            bhavik.bhagat.jobs@gmail.com
-                                        </Text>
-                                    </Flex>
-                                </Link>
-                            </Center>
+                            <EmailCard handleEmailClick={handleEmailClick} display={{ base: "flex", md: "none", lg: "none" }} />
 
                             <Center >
                                 <ButtonGroup
@@ -186,6 +179,25 @@ function Contact() {
                 </CardFooter>
             </Card >
         </Stack >
+    )
+}
+
+
+// this card to be displayed at the bottom of QR code on portaint mode on phone, and large screen
+// on landscape mode mobile, hide QR code, and move it in the line with name + phone
+function EmailCard({ handleEmailClick, display }) {
+    return (
+        <Center display={display}>
+            {/* ref: https://stackoverflow.com/questions/63782544/react-open-mailto-e-mail-client-onclick-with-body-from-textarea */}
+            <Link to="#" onClick={handleEmailClick}>
+                <Flex alignItems="center" gap={1}>
+                    {ResponsiveIcons["email"]["icon"]}
+                    <Text fontSize={["0.9em", "0.95em", "1em"]}>
+                        bhavik.bhagat.jobs@gmail.com
+                    </Text>
+                </Flex>
+            </Link>
+        </Center>
     )
 }
 
