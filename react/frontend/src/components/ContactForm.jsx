@@ -1,7 +1,8 @@
-import { useToast } from "@chakra-ui/react"
-import { Stack, HStack, VStack, Box } from "@chakra-ui/react"
-import { Button, Text } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
+
+import { useToast } from "@chakra-ui/react"
+import { Stack, Box } from "@chakra-ui/react"
+import { Button, Text } from "@chakra-ui/react"
 
 // form related import
 import * as yup from "yup"

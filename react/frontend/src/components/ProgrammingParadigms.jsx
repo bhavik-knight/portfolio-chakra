@@ -1,17 +1,19 @@
-import { Heading, Text, UnorderedList } from "@chakra-ui/react"
+import { Heading, UnorderedList } from "@chakra-ui/react"
 import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
-import { Stack, VStack, HStack } from "@chakra-ui/react"
-import { Divider, Spacer } from "@chakra-ui/react"
+import { Stack, } from "@chakra-ui/react"
+import { Divider } from "@chakra-ui/react"
 import { List, ListItem } from "@chakra-ui/react"
 
 function ProgrammingParadigms() {
     return (
-
         <Card as="section" _hover={{ boxShadow: "2px 2px 4px 2px" }}>
+
             <CardHeader as={Heading} mx="auto" my={0} py={1} fontSize={{ base: "md", lg: "2xl" }}>
                 Programming Paradigms
             </CardHeader>
+
             <Divider mx="auto" width="95%" my={1} />
+
             <CardBody>
                 <UnorderedList ps={4}>
                     <ListItem>
@@ -69,6 +71,7 @@ function ProgrammingParadigms() {
                     </CardBody>
                 </Card>
             </CardFooter>
+
         </Card >
     )
 }

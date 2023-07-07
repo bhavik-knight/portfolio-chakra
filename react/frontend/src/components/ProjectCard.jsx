@@ -1,16 +1,16 @@
-import { useColorMode, useColorModeValue, useDisclosure } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Center, SimpleGrid, Grid, Stack, Flex, Wrap, WrapItem, } from "@chakra-ui/react"
-import { Img, Heading, Text, Divider } from "@chakra-ui/react"
-import { Tooltip, Button, Badge } from "@chakra-ui/react"
-import { nanoid } from "nanoid"
-import { icons } from "./Icons"
 import { ProjectDetailsModal } from "./ProjectDetailsModal"
 import { ResponsiveIcons } from "./ResponsiveIcons"
 
+import { nanoid } from "nanoid"
+import { useColorModeValue, useDisclosure } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
+import { Center, Stack, Flex, Wrap } from "@chakra-ui/react"
+import { Image, Divider } from "@chakra-ui/react"
+import { Button, Badge } from "@chakra-ui/react"
+
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
@@ -35,7 +35,7 @@ function ProjectCard({ project }) {
         >
             <Stack as={Center}>
                 <Flex>
-                    <Img src={project.displayImg} alt="project display image" className="projectDisplayImg" />
+                    <Image src={project.displayImg} alt="project display image" className="projectDisplayImg" />
                 </Flex>
 
                 <Divider />

@@ -1,6 +1,7 @@
+import { ResponsiveIcons } from "./ResponsiveIcons"
+
 import { VStack, Center } from "@chakra-ui/react"
 import { Text, Tooltip } from "@chakra-ui/react"
-import { ResponsiveIcons } from "./ResponsiveIcons"
 
 
 function CreateSkillBadge({ skill }) {

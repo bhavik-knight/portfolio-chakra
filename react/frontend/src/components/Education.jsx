@@ -1,27 +1,27 @@
-import { nanoid } from "nanoid"
-import { Heading, Text } from "@chakra-ui/react"
-import { Box, Center, Stack, VStack, HStack, Flex, Divider, Spacer, Spinner } from "@chakra-ui/react"
-import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
-import { List, UnorderedList, ListItem } from "@chakra-ui/react"
-import { useMediaQuery } from "@chakra-ui/react"
-import { Accordion, AccordionItem, AccordionIcon, AccordionButton, AccordionPanel } from "@chakra-ui/react"
+import { getData } from "../data/getData"
+import { CertificateCard } from "./CertificateCard"
 import { EducationCard } from "./EducationCard"
 import { TrainingCard } from "./TrainingCard"
 import { ExtracurricularCard } from "./ExtracurricularCard"
-import { CertificateCard } from "./CertificateCard"
-import { CertificateCardCarousel } from "./CertificateCardCarousel"
+
+import { nanoid } from "nanoid"
+import { Heading, Text } from "@chakra-ui/react"
+import { Center, Stack, Divider, Spinner } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody } from "@chakra-ui/react"
+import { List, ListItem } from "@chakra-ui/react"
+import { Accordion } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
-import { getData } from "../data/getData"
+
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
 }
 
 const headerFontStyle = {
-    fontSize: { base: "md", md: "lg", lg: "xl" },
+    fontSize: { base: "lg", md: "xl", lg: "2xl" },
     mx: "auto",
 }
 

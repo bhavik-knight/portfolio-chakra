@@ -1,5 +1,5 @@
 import './App.css'
-import { useState, useEffect, useRef, createContext, useContext } from "react"
+import { useState, useEffect, useLayoutEffect, useRef, createContext, useContext } from "react"
 import { Stack, HStack, VStack, StackDivider, useMediaQuery, useColorModeValue } from "@chakra-ui/react"
 import { Box, Flex, Wrap, WrapItem, Menu, Grid, GridItem, ButtonGroup, useBoolean, useColorMode } from "@chakra-ui/react"
 import { Header } from "./components/Header"
@@ -8,7 +8,6 @@ import { Sidenav } from "./components/Sidenav"
 import { Skills } from "./components/Skills"
 import { Projects } from "./components/Projects"
 import { Education } from "./components/Education"
-import { Certificates } from "./components/Certificates"
 import { Experiences } from "./components/Experiences"
 import { Home } from "./components/Home"
 import { Contact } from "./components/Contact"
@@ -76,10 +75,9 @@ function App() {
             // console.log(`nbg ${downScroll}`)
         }
 
+        handleScroll()
         // add event listener to check for vertical scroll
         window.addEventListener("scroll", handleScroll)
-
-        handleScroll()
         return () => window.removeEventListener("scroll", handleScroll)
     }, [downScroll])
 
@@ -120,10 +118,6 @@ function App() {
             "icon": ResponsiveIcons.pdf.icon,
             "page": <Resume />
         }
-        // "certificates": {
-        //     "icon": ResponsiveIcons.certificates.icon,
-        //     "page": <Certificates />
-        // }
     }
 
     // to load a particular page on button click

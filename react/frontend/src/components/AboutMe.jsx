@@ -1,25 +1,25 @@
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Heading, Text } from "@chakra-ui/react"
-import { Stack, HStack, VStack } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody } from "@chakra-ui/react"
+import { Heading } from "@chakra-ui/react"
+import { Stack } from "@chakra-ui/react"
 import { List, ListItem } from "@chakra-ui/react"
 import { Flex, Divider } from "@chakra-ui/react"
 
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
 }
 
 const headerFontStyle = {
-    fontSize: { base: "md", md: "lg", lg: "xl" },
+    fontSize: { base: "lg", md: "xl", lg: "2xl" },
     mx: "auto",
 }
 
 function AboutMe() {
     return (
-        <Card as="section" _hover={{ boxshadow: "4px 4px 16px" }}>
+        <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
             <CardHeader as={Heading} {...headerFontStyle}>
                 About me
             </CardHeader>

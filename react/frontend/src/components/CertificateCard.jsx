@@ -1,14 +1,14 @@
-import { nanoid } from "nanoid"
-import { useState, useEffect, useRef, useContext, useLayoutEffect, useCallback, createContext } from "react"
-import { useMediaQuery } from "@chakra-ui/react"
-import { AccordionItem, AccordionPanel, AccordionButton, AccordionIcon } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Stack, HStack, VStack, StackDivider } from "@chakra-ui/react"
-import { Heading, Text, Spacer, Divider } from "@chakra-ui/react"
-import { Button, IconButton, Icon } from "@chakra-ui/react"
-import { Flex, Center, Container, Box } from "@chakra-ui/react"
 import { RenderCarousel } from "./RenderCarousel"
 
+import { nanoid } from "nanoid"
+import { useMediaQuery } from "@chakra-ui/react"
+import { AccordionItem, AccordionPanel, AccordionButton, AccordionIcon } from "@chakra-ui/react"
+import { Card, CardBody, CardFooter } from "@chakra-ui/react"
+import { VStack } from "@chakra-ui/react"
+import { Heading, Text, Divider } from "@chakra-ui/react"
+import { Button } from "@chakra-ui/react"
+import { Flex, Box } from "@chakra-ui/react"
+import { useState, useEffect, useRef, useContext, useLayoutEffect, useCallback, createContext } from "react"
 
 // for pdfs
 import { Viewer, Worker } from "@react-pdf-viewer/core"
@@ -19,7 +19,7 @@ const pdfjsVersion = packageJson.dependencies['pdfjs-dist'].slice(1)
 
 // text-font-styles
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "0.95em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 2, lg: 4 },
     py: 1
@@ -27,7 +27,7 @@ const textFontStyle = {
 
 // use for card-headers
 const headerFontStyle = {
-    fontSize: { base: "xs", md: "sm", lg: "md" },
+    fontSize: { base: "sm", md: "md", lg: "lg" },
 }
 
 

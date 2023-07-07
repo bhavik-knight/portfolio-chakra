@@ -2,26 +2,23 @@ import { getData } from "../data/getData"
 import { ExperienceCard } from "./ExperienceCard"
 
 import { nanoid } from "nanoid"
-
-import { Heading, Text, Spacer } from "@chakra-ui/react"
-import { Stack, Flex, Divider } from "@chakra-ui/react"
-import { Card, CardHeader, CardFooter, CardBody } from "@chakra-ui/react"
-import { List, UnorderedList, ListItem } from "@chakra-ui/react"
-import { Accordion, AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
+import { Heading, Text } from "@chakra-ui/react"
+import { Stack, Divider } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody } from "@chakra-ui/react"
+import { Accordion } from "@chakra-ui/react"
 import { Spinner, Center } from "@chakra-ui/react"
-
 import { useState, useEffect } from "react"
 
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
 }
 
 const headerFontStyle = {
-    fontSize: { base: "md", md: "lg", lg: "xl" },
+    fontSize: { base: "lg", md: "xl", lg: "2xl" },
     mx: "auto",
 }
 

@@ -1,15 +1,16 @@
-import { Stack, Box, Center, Container, useColorMode } from "@chakra-ui/react"
-import { Spinner, Divider, Spacer } from "@chakra-ui/react"
-import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
-import { Heading, Text, chakra } from "@chakra-ui/react"
 import { ResponsiveIcons } from "./ResponsiveIcons"
+
+import { Stack, } from "@chakra-ui/react"
+import { Divider } from "@chakra-ui/react"
+import { Card, CardHeader, CardBody } from "@chakra-ui/react"
+import { Heading, Text } from "@chakra-ui/react"
 import { useRef, useState, useEffect } from "react"
 
 // for pdf rendering
 import { Worker, Viewer, SpecialZoomLevel } from "@react-pdf-viewer/core"
 import "@react-pdf-viewer/core/lib/styles/index.css"
 
-import { toolbarPlugin, ToolbarSlot, TransformToolbarSlot } from "@react-pdf-viewer/toolbar"
+import { toolbarPlugin } from "@react-pdf-viewer/toolbar"
 import "@react-pdf-viewer/toolbar/lib/styles/index.css"
 
 import packageJson from '../../package.json'
@@ -18,7 +19,7 @@ const pdfjsVersion = packageJson.dependencies['pdfjs-dist'].slice(1)
 
 // body text font style
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
@@ -26,7 +27,7 @@ const textFontStyle = {
 
 // card header style
 const headerFontStyle = {
-    fontSize: { base: "md", md: "lg", lg: "xl" },
+    fontSize: { base: "lg", md: "xl", lg: "2xl" },
     mx: "auto",
 }
 

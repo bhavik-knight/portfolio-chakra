@@ -1,18 +1,19 @@
-import { IconButton, Spinner, chakra } from "@chakra-ui/react"
 import { nanoid } from "nanoid"
-import { Wrap, Box, Stack, VStack, HStack, Flex, Spacer, Container, Center } from "@chakra-ui/react"
-import { Button, ButtonGroup, Image, Text, Heading } from "@chakra-ui/react"
-import { UnorderedList, List, ListItem } from "@chakra-ui/react"
+import { IconButton } from "@chakra-ui/react"
+import { Box, HStack, Flex, Center } from "@chakra-ui/react"
+import { Button, ButtonGroup, Text, Heading } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody, CardFooter } from "@chakra-ui/react"
 import { useState, useRef, useEffect, useCallback } from "react"
 import { useMediaQuery } from "@chakra-ui/react"
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons"
+
+// pdf related imports
 import { Worker, Viewer } from "@react-pdf-viewer/core"
 import "@react-pdf-viewer/core/lib/styles/index.css"
 
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2

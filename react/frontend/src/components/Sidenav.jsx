@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react"
-import { Button, ButtonGroup, IconButton, Icon, Tooltip } from "@chakra-ui/react"
-import { WrapItem, Text, Divider, Wrap, List, ListItem, Flex, useMediaQuery, useColorModeValue } from "@chakra-ui/react"
-import { Stack, HStack, VStack } from "@chakra-ui/react"
-import { nanoid } from "nanoid"
 import { ResponsiveIcons } from "./ResponsiveIcons"
+import { nanoid } from "nanoid"
+import { Button, ButtonGroup, IconButton, Tooltip } from "@chakra-ui/react"
+import { useMediaQuery, useColorModeValue } from "@chakra-ui/react"
+import { HStack, VStack } from "@chakra-ui/react"
 
 
 const btnStyles = {
@@ -37,7 +36,8 @@ function Sidenav({ pages, activePage, selectPage, sidenavHeader, isLandscape }) 
             justify={{ base: "center", lg: "flex-start" }}
             alignItems={alignStyle}
             top={topPosition}
-            zIndex={sidenavHeader ? 10 : 5}
+            zIndex={sidenavHeader ? 999 : 5}
+            sx={{ WebkitTransform: `translate3d(0, 0, 0)` }}
         >
             {
                 Object.keys(pages).map((page) => (

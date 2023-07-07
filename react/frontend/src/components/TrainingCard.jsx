@@ -1,14 +1,13 @@
 import { nanoid } from "nanoid"
 import { AccordionItem, AccordionButton, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
-import { Flex, Box, Spacer, Divider } from "@chakra-ui/react"
-import { Stack, HStack, VStack } from "@chakra-ui/react"
+import { Flex, Spacer, Divider } from "@chakra-ui/react"
+import { VStack } from "@chakra-ui/react"
 import { Text, Heading } from "@chakra-ui/react"
-import { UnorderedList, List, ListItem } from "@chakra-ui/react"
 import { Table, Thead, Tbody, Tfoot, Th, Tr, Td, TableCaption, TableContainer } from "@chakra-ui/react"
 
 
 const textFontStyle = {
-    fontSize: { base: "0.8em", md: "0.9em", lg: "1em" },
+    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
     py: 2
