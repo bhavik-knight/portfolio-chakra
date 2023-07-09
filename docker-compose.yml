@@ -18,3 +18,7 @@ services:
     # bind the ports
     ports:
       - 2019:3000
+
+    # environtment
+    environment:
+      - NODE_ENV=development
