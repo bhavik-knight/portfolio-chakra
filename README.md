@@ -15,7 +15,7 @@ This is my website to demonstrate my diverse skills and work experience.
 
 ## Intructions to run:
 - You can pull the image fron the docker hub using the command: `docker pull b05k19/portfolio:1.0`
-- run using this command `docker run -d -p 5000:3000 b05k19/portfolio:1.0`
+- run using this command `docker run -d -p 5000:3000 b05k19/portfolio:1.1`
 - the app will be running at port `5000`, you can check it using `localhost:5000` url in your browser
 
 

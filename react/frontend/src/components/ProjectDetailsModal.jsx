@@ -32,11 +32,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
     const [isMobile] = useMediaQuery("(max-width: 992px)")
 
     function getCardWidth() {
-        let screenObj = window.screen
-
-        // orientation angle 90 means - horizontal / landscape mode
-        let newWidth = screenObj.availWidth
-        return Math.min(newWidth, 980)
+        return Math.min(window.screen.availWidth, 980)
     }
 
     function getCardHeight(width) {
@@ -44,10 +40,12 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         let isLandscape = window.innerWidth > window.innerHeight
         // if phone is held horizontally / landscape mode - width can be more than 2x to height
         // in otherwords aspect ratio can be bigger than 2:1 depending on phone
-        // that is why set height accordingly by taking 80% of height available without padding; margin
+        // ~~that is why set height accordingly by taking 80% of height available without padding; margin~~
+        // taking height as 40 % of the width on landscape mode
         // if phone is help vertically / portait mode - height is far more than width
-        // in such cases we can take height hakf of the width
-        let newHeight = isMobile ? (isLandscape && width * 0.4) : width * 0.6
+        // in such cases we can take height 60% of the width
+        let newHeight = isMobile ? (isLandscape ? width * 0.4 : width * 0.6) : width * 0.6
+        console.log(`project details modal: m ${isMobile}, ls: ${isLandscape}, w:${width}, h: ${newHeight}`)
         return Math.max(newHeight, 200)
     }
 
