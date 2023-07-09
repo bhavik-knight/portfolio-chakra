@@ -12,10 +12,13 @@ RUN npm create vite frontend -- --template react
 WORKDIR /home/ubuntu/frontend
 
 # copy package.json from local directory to docker
-COPY ./frontend/package.json .
+COPY ./frontend/package.json ./frontend/package-lock.json ./
+
+# to speed up process of docker-compose up build
+RUN npm config set registry https://registry.npmjs.org/
 
 # install everything that is needed for our project
-RUN npm install
+RUN npm ci
 
 # copy rest of the stuff from local directory to docker
 COPY ./frontend .

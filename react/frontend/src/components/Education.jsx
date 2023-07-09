@@ -10,6 +10,7 @@ import { Center, Stack, Divider, Spinner } from "@chakra-ui/react"
 import { Card, CardHeader, CardBody } from "@chakra-ui/react"
 import { List, ListItem } from "@chakra-ui/react"
 import { Accordion } from "@chakra-ui/react"
+import { useMediaQuery } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 
 
@@ -75,7 +76,7 @@ function Education() {
         )
     }, [education, training, extracurriculars, certificates])
 
-    const isMobile = window.matchMedia("(max-width:992px)").matches
+    const [isMobile] = useMediaQuery("(max-width:992px")
     const getCredentialInfoStyle = (isMobile) => {
         return isMobile ?
             { bg: "green", color: "white", display: "flex" } :
@@ -88,6 +89,7 @@ function Education() {
             setCredentialInfoStyle(getCredentialInfoStyle(isMobile))
         }
 
+        handleResize()
         window.addEventListener("resize", handleResize)
         return () => window.removeEventListener("resize", handleResize)
     }, [isMobile])
