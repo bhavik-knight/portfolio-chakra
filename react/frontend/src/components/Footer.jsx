@@ -14,7 +14,8 @@ function Footer(props) {
             className="footer"
             w="100vw"
             position="relative"
-            h={{ base: "50px", md: "50px", lg: "60px" }}
+            // h={{ base: "50px", md: "50px", lg: "60px" }}
+            h={{ base: "50px", lg: "5vh" }}
             left={0} right={0} bottom={0}
             boxShadow="0 0 16px 0"
             justify="space-between"

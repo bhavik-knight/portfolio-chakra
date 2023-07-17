@@ -45,16 +45,15 @@ function Projects() {
     return (
         loading ?
             <Stack
-                p={{ base: 0, lg: 2 }}
                 gap={{ base: 1, lg: 2 }}
                 as={Center}
-                minH="100vh"
+                minH="90vh"
                 w="100%"
             >
                 <Spinner size="xl" />
             </Stack >
             :
-            <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
+            <Stack gap={{ base: 1, lg: 2 }} w="100%" minH="90vh">
                 {/* some text */}
                 <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                     <CardHeader as={Heading} mx="auto" my={1} py={1}>

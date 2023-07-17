@@ -27,7 +27,7 @@ function Home() {
     const [isMobile] = useMediaQuery("(max-width: 992px)")
 
     return (
-        <Stack p={{ base: 1, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%" >
+        <Stack gap={{ base: 1, lg: 2 }} w="100%" minH="90vh">
 
             {/* summary */}
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
@@ -91,13 +91,13 @@ function Home() {
                             Aspiring full-stack developer with a strong enthusiasm for the latest technologies and self-learning through MOOCs.
                         </ListItem>
                         <ListItem>
-                            I am looking full-time work. But also open to freelancing opportunities and eager to collaborate on cool web app projects.
+                            I am looking full-time work in the domain. But also open to freelancing opportunities and eager to collaborate on cool web app projects.
                         </ListItem>
                         <ListItem>
                             Earned multiple online certifications from prestigious institutions like Harvard, MIT, and Microsoft, etc.
                         </ListItem>
                         <ListItem>
-                            Currently, I am preparing for AWS Cloud Practitioner Certification exam to demonstrate my skills in the domain.
+                            Currently, I am preparing for AWS Cloud Practitioner Certification exam.
                         </ListItem>
                     </Stack>
                 </CardBody>

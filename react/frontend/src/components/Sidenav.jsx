@@ -16,7 +16,7 @@ function Sidenav({ pages, activePage, selectPage, sidenavHeader, isLandscape }) 
 
     // to check the screen is large or not to display icons on sidenav buttons
     const [isMobile] = useMediaQuery("(max-width: 992px)")
-    const topPosition = sidenavHeader ? 0 : { base: "50px", lg: "60px" }
+    const topPosition = sidenavHeader ? 0 : { base: "50px", lg: "5vh" }
     const bgColor = sidenavHeader ? "transparent" : { base: useColorModeValue("gray.100", "gray.800"), lg: "transparent" }
     const alignStyle = sidenavHeader ? "center" : "flex-start"
 
