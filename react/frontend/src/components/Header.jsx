@@ -41,7 +41,8 @@ function Header({ colorMode, changeColorMode, title, selectPage, bgColor, isScro
             top={0} left={0} right={0}
             my={0}
             px={{ base: 2, lg: 4 }}
-            h={{ base: "50px", md: "50px", lg: "60px" }}
+            // h={{ base: "50px", md: "50px", lg: "60px" }}
+            h={{ base: "50px", lg: "5vh" }}
             alignItems="center"
             justify="space-between"
             bg={bgColor}

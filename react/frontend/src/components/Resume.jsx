@@ -72,7 +72,7 @@ function Resume() {
 
 
     return (
-        <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%" minH="100vh">
+        <Stack gap={{ base: 1, lg: 2 }} w="100%" minH="90vh">
             <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                 <CardHeader as={Heading} mx="auto" my={1} py={1}>
                     Resume
