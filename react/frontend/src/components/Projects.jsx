@@ -37,7 +37,7 @@ function Projects() {
 
 
     // domains
-    const projectTypes = ["web", "data", "ai", "game"]
+    const projectTypes = ["web", "data", "ai"]
 
     // to keep track of active tab
     const [tabIndex, setTabIndex] = useState(0)
@@ -93,7 +93,7 @@ function Projects() {
                             <Tab _selected={{ bg: "red", color: "black" }} _hover={{ border: `1px solid red` }}>Web Dev</Tab>
                             <Tab _selected={{ bg: "green", color: "white" }} _hover={{ border: `1px solid green` }}>Data</Tab>
                             <Tab _selected={{ bg: "blue", color: "white" }} _hover={{ border: `1px solid blue` }}>ML/AI</Tab>
-                            <Tab _selected={{ bg: "yellow", color: "black" }} _hover={{ border: `1px solid yellow` }}>Game Dev</Tab>
+                            {/* <Tab _selected={{ bg: "yellow", color: "black" }} _hover={{ border: `1px solid yellow` }}>Game Dev</Tab> */}
                         </TabList>
 
                         {/* tab content */}

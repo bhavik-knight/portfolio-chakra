@@ -88,16 +88,16 @@ function Home() {
                 <CardBody>
                     <Stack as={List} spacing={2} {...textFontStyle}>
                         <ListItem>
-                            I am an aspiring full-stack developer, actively looking for my first break into the programming industry.
+                            Aspiring full-stack developer with a strong enthusiasm for the latest technologies and self-learning through MOOCs.
                         </ListItem>
                         <ListItem>
-                            I am open to freelancing work. If you have cool project ideas, let's connect, collaborate and build some cool web apps together.
+                            I am looking full-time work. But also open to freelancing opportunities and eager to collaborate on cool web app projects.
                         </ListItem>
                         <ListItem>
-                            I have a strong enthusiasm for staying up-to-date with the latest technologies, consistently expanding my skills through self-learning and leveraging MOOCs (Massive Open Online Courses).
+                            Earned multiple online certifications from prestigious institutions like Harvard, MIT, and Microsoft, etc.
                         </ListItem>
                         <ListItem>
-                            Currently, I am learning promote-engineering to leverage chatGPT to enhance my coding experience.
+                            Currently, I am preparing for AWS Cloud Practitioner Certification exam to demonstrate my skills in the domain.
                         </ListItem>
                     </Stack>
                 </CardBody>
@@ -158,7 +158,7 @@ function Home() {
                 </Stack>
             </Card >
 
-            <AboutMe />
+            {/* <AboutMe /> */}
         </Stack >
     )
 }
