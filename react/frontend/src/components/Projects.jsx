@@ -37,7 +37,7 @@ function Projects() {
 
 
     // domains
-    const projectTypes = ["web", "data", "ai", "game"]
+    const projectTypes = ["web", "data", "ai"]
 
     // to keep track of active tab
     const [tabIndex, setTabIndex] = useState(0)
@@ -45,16 +45,15 @@ function Projects() {
     return (
         loading ?
             <Stack
-                p={{ base: 0, lg: 2 }}
                 gap={{ base: 1, lg: 2 }}
                 as={Center}
-                minH="100vh"
+                minH="90vh"
                 w="100%"
             >
                 <Spinner size="xl" />
             </Stack >
             :
-            <Stack p={{ base: 0, lg: 2 }} gap={{ base: 1, lg: 2 }} w="100%">
+            <Stack gap={{ base: 1, lg: 2 }} w="100%" minH="90vh">
                 {/* some text */}
                 <Card as="section" _hover={{ boxShadow: "4px 4px 16px" }}>
                     <CardHeader as={Heading} mx="auto" my={1} py={1}>
@@ -93,7 +92,7 @@ function Projects() {
                             <Tab _selected={{ bg: "red", color: "black" }} _hover={{ border: `1px solid red` }}>Web Dev</Tab>
                             <Tab _selected={{ bg: "green", color: "white" }} _hover={{ border: `1px solid green` }}>Data</Tab>
                             <Tab _selected={{ bg: "blue", color: "white" }} _hover={{ border: `1px solid blue` }}>ML/AI</Tab>
-                            <Tab _selected={{ bg: "yellow", color: "black" }} _hover={{ border: `1px solid yellow` }}>Game Dev</Tab>
+                            {/* <Tab _selected={{ bg: "yellow", color: "black" }} _hover={{ border: `1px solid yellow` }}>Game Dev</Tab> */}
                         </TabList>
 
                         {/* tab content */}

@@ -45,7 +45,7 @@ function ProjectDetailsModal({ isOpen, onClose, project }) {
         // if phone is help vertically / portait mode - height is far more than width
         // in such cases we can take height 60% of the width
         let newHeight = isMobile ? (isLandscape ? width * 0.4 : width * 0.6) : width * 0.6
-        console.log(`project details modal: m ${isMobile}, ls: ${isLandscape}, w:${width}, h: ${newHeight}`)
+        // console.log(`project details modal: m ${isMobile}, ls: ${isLandscape}, w:${width}, h: ${newHeight}`)
         return Math.max(newHeight, 200)
     }
 
