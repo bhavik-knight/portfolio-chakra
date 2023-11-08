@@ -15,7 +15,8 @@ const textFontStyle = {
 
 function ExperienceCard({ job }) {
     return (
-        <AccordionItem py={2}>
+        <AccordionItem py={2} display={(job.technical || job.volunteer) ? "block" : "none"
+        }>
             <AccordionButton
                 as={Heading}
                 fontSize={{ base: "sm", md: "md", lg: "xl" }}

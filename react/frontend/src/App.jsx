@@ -22,7 +22,7 @@ function App() {
     const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight)
     const [sidenavHeader, setSidenavHeader] = useState(false)
     const [marginTopPages, setMarginTopPages] = useState(
-        { base: "50px", md: "50px", lg: "60px" }
+        { base: "50px", lg: "5vh" }
     )
 
     // to handle orientation change effect: for landscape mode
@@ -170,9 +170,9 @@ function App() {
                 as="main"
                 w={{ base: "100%" }}
                 maxW={{ lg: "80%" }}
-                // mt={{ base: "50px", md: "50px", lg: "60px" }}
                 mt={marginTopPages}
-                mx="auto" py={2}
+                mb={2}
+                mx="auto"
             >
                 {pages[currentPage].page}
             </Flex>
