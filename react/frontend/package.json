@@ -22,10 +22,13 @@
     "formik": "^2.4.2",
     "framer-motion": "^10.12.5",
     "nanoid": "^4.0.2",
+    "npm-check-updates": "^16.14.6",
     "pdfjs-dist": "^3.8.162",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "update": "^0.4.2",
+    "upgrade": "^1.1.0",
     "yup": "^1.2.0"
   },
   "devDependencies": {

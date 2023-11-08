@@ -163,7 +163,7 @@ function CertificateCard({ certs }) {
                             <Text py={0}>{certs.institute}</Text>
                         </Flex>
 
-                        <Text {...textFontStyle} my={{ base: 0, base: 1 }} py={1} w="100%">{certs.about}</Text>
+                        <Text {...textFontStyle} my={{ base: 0, md: 1 }} py={1} w="100%">{certs.about}</Text>
                     </VStack>
 
                     <Divider mx="auto" width="95%" my={1} />
