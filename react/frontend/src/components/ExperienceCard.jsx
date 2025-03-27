@@ -1,32 +1,31 @@
-import { nanoid } from "nanoid"
-import { AccordionButton, AccordionItem, AccordionIcon, AccordionPanel } from "@chakra-ui/react"
-import { Text, Heading } from "@chakra-ui/react"
-import { Flex, Divider, Stack, Spacer } from "@chakra-ui/react"
-import { UnorderedList, ListItem } from "@chakra-ui/react"
-
+import { nanoid } from "nanoid";
+import { AccordionButton, AccordionItem, AccordionIcon, AccordionPanel } from "@chakra-ui/react";
+import { Text, Heading } from "@chakra-ui/react";
+import { Flex, Divider, Stack, Spacer } from "@chakra-ui/react";
+import { UnorderedList, ListItem } from "@chakra-ui/react";
 
 const textFontStyle = {
     fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
-    py: 2
-}
-
+    py: 2,
+};
 
 function ExperienceCard({ job }) {
     return (
-        <AccordionItem py={2} display={(job.technical || job.volunteer) ? "block" : "none"
-        }>
+        <AccordionItem
+            py={2}
+            display={"block"}>
             <AccordionButton
                 as={Heading}
                 fontSize={{ base: "sm", md: "md", lg: "xl" }}
                 _hover={{ cursor: "pointer" }}
-                _expanded={{ boxShadow: "0px 2px 8px" }}
-            >
-                <Flex width="100%" direction={{ base: "column", md: "row" }} wrap="wrap">
-                    <Text>
-                        {job.title}
-                    </Text>
+                _expanded={{ boxShadow: "0px 2px 8px" }}>
+                <Flex
+                    width="100%"
+                    direction={{ base: "column", md: "row" }}
+                    wrap="wrap">
+                    <Text>{job.title}</Text>
                     <Spacer />
                     <Text px={{ base: 0, lg: 2 }}>
                         {job.start} - {job.end}
@@ -37,29 +36,35 @@ function ExperienceCard({ job }) {
 
             <AccordionPanel
                 p={{ base: 0, lg: 4 }}
-                size={{ base: "md", lg: "lg" }}
-            >
-                <Text {...textFontStyle} mt={2}>
+                size={{ base: "md", lg: "lg" }}>
+                <Text
+                    {...textFontStyle}
+                    mt={2}>
                     {job.company} | {job.place}
                 </Text>
 
-                <Divider mx="auto" my={1} width="95%" />
+                <Divider
+                    mx="auto"
+                    my={1}
+                    width="95%"
+                />
 
-                <Stack as={UnorderedList} {...textFontStyle}>
-                    {
-                        job.responsibilities.map(responsibility => {
-                            return (
-                                <ListItem key={nanoid()} textAlign="justify">
-                                    {responsibility}
-                                </ListItem>
-                            )
-                        })
-                    }
+                <Stack
+                    as={UnorderedList}
+                    {...textFontStyle}>
+                    {job.responsibilities.map((responsibility) => {
+                        return (
+                            <ListItem
+                                key={nanoid()}
+                                textAlign="justify">
+                                {responsibility}
+                            </ListItem>
+                        );
+                    })}
                 </Stack>
             </AccordionPanel>
-        </AccordionItem >
-
-    )
+        </AccordionItem>
+    );
 }
 
-export { ExperienceCard }
+export { ExperienceCard };
