@@ -4,10 +4,12 @@ import { ExperienceCard } from "./ExperienceCard";
 import { nanoid } from "nanoid";
 import { Heading, Text } from "@chakra-ui/react";
 import { Stack, Divider } from "@chakra-ui/react";
+import { List, ListItem, ListIcon } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody } from "@chakra-ui/react";
 import { Accordion } from "@chakra-ui/react";
 import { Spinner, Center } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import { MdWork } from "react-icons/md";
 
 const textFontStyle = {
     fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
@@ -77,12 +79,24 @@ function Experiences() {
                 />
 
                 <CardBody>
-                    <Text {...textFontStyle}>
-                        I am actively seeking a Full-Stack Developer role. I am enthusiatic to contributing to projects
-                        as part of a team and learning from experts in the field, where I can apply my technical skills
-                        gained from self-learning and transferable skills acquired through my previous work experiences
-                        and trainings.
-                    </Text>
+                    <Stack
+                        as={List}
+                        spacing={2}
+                        {...textFontStyle}>
+                        <ListItem>
+                            <ListIcon as={MdWork} />I am actively seeking a Software Developer role.
+                        </ListItem>
+                        <ListItem>
+                            <ListIcon as={MdWork} />I am enthusiastic about contributing to projects that can positively
+                            impact the environment and local communities as part of a team, collaborating with experts
+                            in the field.
+                        </ListItem>
+                        <ListItem>
+                            <ListIcon as={MdWork} />I would like to demonstrate my technical and transferable skills
+                            gained through my previous work experience, self-learning, and professional training by
+                            working on innovative projects.
+                        </ListItem>
+                    </Stack>
                 </CardBody>
             </Card>
 

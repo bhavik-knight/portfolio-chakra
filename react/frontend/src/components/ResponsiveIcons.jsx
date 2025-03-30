@@ -44,7 +44,6 @@ import { GrVmware } from "react-icons/gr";
 // languages
 import { FaJava } from "@react-icons/all-files/fa/FaJava";
 import { SiPhp } from "@react-icons/all-files/si/SiPhp";
-import { FaPhp } from "@react-icons/all-files/fa/FaPhp";
 import { SiCplusplus } from "@react-icons/all-files/si/SiCplusplus";
 import { FaPython } from "@react-icons/all-files/fa/FaPython";
 import { FaHtml5 } from "@react-icons/all-files/fa/FaHtml5";
@@ -106,19 +105,21 @@ import {
     SiNumpy,
     SiScipy,
     SiSqlite,
+    SiCucumber,
+    SiNodedotjs,
+    SiAndroid,
+    SiLinux,
+    SiScratch,
 } from "react-icons/si";
 
 // db
-import { DiSqllite } from "@react-icons/all-files/di/DiSqllite";
 import { GrMysql } from "@react-icons/all-files/gr/GrMysql";
 
 // cloud
 import { FaFly } from "@react-icons/all-files/fa/FaFly";
 
 // os
-import { FcLinux } from "@react-icons/all-files/fc/FcLinux";
 import { FaUbuntu } from "@react-icons/all-files/fa/FaUbuntu";
-import { FcAndroidOs } from "@react-icons/all-files/fc/FcAndroidOs";
 
 // top navbar
 import { FaGithub } from "@react-icons/all-files/fa/FaGithub";
@@ -195,7 +196,7 @@ const ResponsiveIcons = {
     sql: { name: "SQL", icon: <AiOutlineConsoleSql className="icons" /> },
     r: { name: "R", icon: <FaRProject className="icons" /> },
     kotlin: { name: "Kotlin", icon: <SiKotlin className="icons" /> },
-    scratch: { name: "Scratch" },
+    scratch: { name: "Scratch", icon: <SiScratch className="icons" /> },
 
     // framework/libraries
     react: { name: "ReactJS", icon: <FaReact className="icons" /> },
@@ -205,11 +206,11 @@ const ResponsiveIcons = {
     bootstrap: { name: "Bootstrap", icon: <FaBootstrap className="icons" /> },
     flask: { name: "Flask", icon: <SiFlask className="icons" /> },
     keras: { name: "Keras", icon: <SiKeras className="icons" /> },
-    tensorflow: { name: "TensorFlow", icon: <SiTensorflow className="icons" /> },
+    tensorflow: { name: "Tensorflow", icon: <SiTensorflow className="icons" /> },
     django: { name: "Django", icon: <SiDjango className="icons" /> },
     numpy: { name: "Numpy", icon: <SiNumpy className="icons" /> },
-    chakraui: { name: "ChakraUI", icon: <SiChakraui className="icons" /> },
-    materialui: { name: "MaterialUI", icon: <SiMui className="icons" /> },
+    chakraui: { name: "Chakra UI", icon: <SiChakraui className="icons" /> },
+    materialui: { name: "Material UI", icon: <SiMui className="icons" /> },
     tidyverse: { name: "Tidyverse", icon: <SiTidyverse className="icons" /> },
     ggplot: { name: "ggplot2" },
     nltk: { name: "NLTK", fullName: "Natual Language Toolkit" },
@@ -231,9 +232,11 @@ const ResponsiveIcons = {
     junit: { name: "JUnit", icon: <SiJunit5 className="icons" /> },
     selenium: { name: "Selenium", icon: <SiSelenium className="icons" /> },
     mockito: { name: "Mockito" },
-    nextjs: { name: "NextJS", icon: <TbBrandNextjs className="icons" /> },
+    nextjs: { name: "Next JS", icon: <TbBrandNextjs className="icons" /> },
+    nodejs: { name: "Node JS", icon: <SiNodedotjs className="icons" /> },
     fastapi: { name: "FastAPI", icon: <SiFastapi className="icons" /> },
     swagger: { name: "Swagger", icon: <SiSwagger className="icons" /> },
+    cucumber: { name: "Cucumber", icon: <SiCucumber className="icons" /> },
 
     // cloud / db
     aws: { name: "AWS", icon: <SiAmazonaws className="icons" /> },
@@ -272,8 +275,8 @@ const ResponsiveIcons = {
     powershell: { name: "PowerShell", icon: <SiPowershell className="icons" /> },
 
     // os
-    android: { name: "AndroidOS", icon: <FcAndroidOs className="icons" /> },
-    linux: { name: "Linux", icon: <FcLinux className="icons" /> },
+    android: { name: "Android", icon: <SiAndroid className="icons" /> },
+    linux: { name: "Linux", icon: <SiLinux className="icons" /> },
     windows: { name: "Windows", icon: <SiMicrosoft className="icons" /> },
     ubuntu: { name: "Ubuntu", icon: <FaUbuntu className="icons" /> },
     linuxmint: { name: "Linux Mint", icon: <SiLinuxmint className="icons" /> },
@@ -291,12 +294,12 @@ const ResponsiveIcons = {
     discord: { name: "Discord", icon: <FaDiscord className="icons" /> },
     zendesk: { name: "Zendesk", icon: <SiZendesk className="icons" /> },
     latex: { name: "LaTeX", icon: <SiLatex className="icons" /> },
-    teamviewer: { name: "TeamViewer", icon: <SiTeamviewer className="icons" /> },
+    teamviewer: { name: "Team Viewer", icon: <SiTeamviewer className="icons" /> },
     office365: { name: "Office_365", icon: <SiMicrosoftoffice className="icons" />, fullName: "Microsoft Office 365" },
     advancedexcel: { name: "MS_Excel", icon: <SiMicrosoftexcel className="icons" />, fullName: "Advanced Excel" },
     msteams: { name: "MS_Teams", icon: <SiMicrosoftteams className="icons" />, fullName: "Microsoft Teams" },
     vmware: { name: "VMware", icon: <GrVmware className="icons" />, fullName: "VMware" },
-    virtualbox: { name: "VirtualBox", icon: <SiVirtualbox className="icons" /> },
+    virtualbox: { name: "Virtual Box", icon: <SiVirtualbox className="icons" /> },
     "erd+": { name: "ERD+", fullName: "Entity Relationship Diagram" },
     "3nf": { name: "3NF", fullName: "Third Normal Form" },
     rmarkdown: { name: "R Markdown" },

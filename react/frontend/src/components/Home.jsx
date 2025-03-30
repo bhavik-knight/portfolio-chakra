@@ -10,10 +10,10 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { GoDot, GoDotFill } from "react-icons/go";
 
 const textFontStyle = {
-    fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
+    fontSize: { md: "0.8em", lg: "0.85em" },
     textAlign: "justify",
     px: { base: 4, lg: 8 },
-    py: 2,
+    py: { base: 2, lg: 4 },
 };
 
 const headerFontStyle = {
@@ -170,8 +170,7 @@ function Home() {
                         justifyContent="space-around"
                         alignItems="center"
                         flexWrap="wrap"
-                        {...textFontStyle}
-                        p={0}>
+                        p={2}>
                         {getHomeSkillsCard(
                             "Full Stack Development",
                             "Worked on numerous Full Stack projects using Django, Flask, PHP, HTML, CSS, JavaScript, jQuery, Bootstrap, ReactJS, ChakraUI, MySQL, and PostgreSQL. Hosted the apps on Heroku, Netlify, and AWS.",
@@ -209,7 +208,7 @@ function getHomeSkillsCard(skillName, details, color) {
             borderBottom={`1px solid ${color}`}
             _hover={{ boxShadow: `4px 4px 16px ${color}` }}
             width={{ base: "100%", md: "40%" }}
-            height={{ base: "100px", md: "200px" }}
+            height={{ base: "100px", md: "220px" }}
             className="homeSkills">
             <Text
                 as="strong"
@@ -218,7 +217,8 @@ function getHomeSkillsCard(skillName, details, color) {
             </Text>
             <CardBody
                 className="homeSkillDetails"
-                textAlign="justify">
+                textAlign="justify"
+                {...textFontStyle}>
                 <Text noOfLines={[4, 4, 8]}> {details} </Text>
             </CardBody>
         </Card>

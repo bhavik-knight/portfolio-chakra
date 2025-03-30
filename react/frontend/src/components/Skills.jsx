@@ -26,6 +26,15 @@ const headerFontStyle = {
     mx: "auto",
 };
 
+const cardBodyStyle = {
+    wrap: "wrap",
+    justifyContent: "space-around",
+    alignItems: "center",
+    width: { base: "100%", md: "90%", lg: "80%" },
+    mx: "auto",
+    gap: { base: 2, lg: 4 },
+};
+
 function Skills() {
     const [skills, setSkills] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -165,8 +174,7 @@ function Skills() {
 
                 <CardBody
                     as={Flex}
-                    wrap="wrap"
-                    justifyContent="space-evenly">
+                    {...cardBodyStyle}>
                     {languages.map((l) => (
                         <CreateSkillBadge
                             key={nanoid()}
@@ -194,8 +202,7 @@ function Skills() {
 
                 <CardBody
                     as={Flex}
-                    wrap="wrap"
-                    justifyContent="space-evenly">
+                    {...cardBodyStyle}>
                     {frameworks.map((fw) => (
                         <CreateSkillBadge
                             key={nanoid()}
@@ -223,8 +230,7 @@ function Skills() {
 
                 <CardBody
                     as={Flex}
-                    wrap="wrap"
-                    justifyContent="space-evenly">
+                    {...cardBodyStyle}>
                     {technologies.map((tech) => (
                         <CreateSkillBadge
                             key={nanoid()}
@@ -264,8 +270,7 @@ function Skills() {
 
                 <CardBody
                     as={Flex}
-                    wrap="wrap"
-                    justifyContent="space-evenly">
+                    {...cardBodyStyle}>
                     {os.map((o) => (
                         <CreateSkillBadge
                             key={nanoid()}
@@ -299,8 +304,7 @@ function Skills() {
 
                 <CardBody
                     as={Flex}
-                    wrap="wrap"
-                    justifyContent="space-evenly">
+                    {...cardBodyStyle}>
                     {management.map((mgmt) => (
                         <CreateSkillBadge
                             key={nanoid()}
