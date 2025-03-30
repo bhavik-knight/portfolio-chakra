@@ -3,12 +3,13 @@ import { ProjectCard } from "./ProjectCard";
 import { getData } from "../data/getData";
 
 import { nanoid } from "nanoid";
-import { Divider, List, ListItem, Spinner } from "@chakra-ui/react";
+import { Divider, List, ListItem, ListIcon, Spinner } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 import { Flex, Stack, Center } from "@chakra-ui/react";
 import { Card, CardHeader, CardBody } from "@chakra-ui/react";
 import { Tabs, Tab, TabPanels, TabPanel, TabList } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
+import { GiFilmProjector } from "react-icons/gi";
 
 const textFontStyle = {
     fontSize: { base: "0.9em", md: "0.95em", lg: "1em" },
@@ -76,14 +77,15 @@ function Projects() {
                         spacing={2}
                         {...textFontStyle}>
                         <ListItem>
-                            I demonstrated diverse programming skills through numerous projects in the fields of Web
-                            Development, Data Analytics, Data Science, and Machine Learning.
+                            <ListIcon as={GiFilmProjector} />I demonstrated diverse programming skills through numerous
+                            projects in the fields of Web Development, Data Analytics, Data Science, and Machine
+                            Learning.
                         </ListItem>
                         <ListItem>
-                            I developed most of the projects shared here independently. However, I also actively
-                            contributed in many group projects. Some of them are displayed here that demonstrats my
-                            skills in specific domain and application of understanding of the concepts using various
-                            framework/libraries.
+                            <ListIcon as={GiFilmProjector} />I developed most of the projects shared here independently.
+                            However, I also actively contributed in many group projects. Some of them are displayed here
+                            that demonstrats my skills in specific domain and application of understanding of the
+                            concepts using various framework/libraries.
                         </ListItem>
                     </Stack>
                 </CardBody>
